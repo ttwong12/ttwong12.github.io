@@ -1,6 +1,0 @@
-#! /bin/csh
-foreach f ( *.gif )
-  giftoppm < $f | ppmtogif -interlace > temp.gif
-  mv -f temp.gif $f
-  chmod 644 $f
-end
