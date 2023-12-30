@@ -82,7 +82,7 @@ function includeHTML() {
 </ol><h5>SIGGRAPH / SIGGRAPH Asia: (published in ACM Trans. on Graphics)</h5><ol>
 
 
-  <li><div w3-include-html="https://ttwong12.github.io/papers/_reference/xia-2022-disentangled.html"></div> 
+  <li><div w3-include-html="./papers/_reference/xia-2022-disentangled.html"></div> 
   <li><!--#include virtual="/~ttwong/papers/_reference/xia-2022-disentangled.html"-->
   <li><!--#include virtual="/~ttwong/papers/_reference/zhang-2022-sprite.html"-->
   <li><!--#include virtual="/~ttwong/papers/_reference/xie-2021-seamless.html"-->
