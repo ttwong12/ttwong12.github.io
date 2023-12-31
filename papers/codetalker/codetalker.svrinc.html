@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>CodeTalker: Speech-Driven 3D Facial Animation with Discrete
+    Motion Prior</title>
+</head>
+
+<body>
+    <center>
+        <table border="0" width="920" id="table1" height="568">
+            <tr>
+                <td colspan="2" width="864" height="22">
+                    <b>
+                        <i>
+                            <font FACE="Tahoma" size="4"
+                            color="#666666">CVPR</font>
+                        </i>
+                        <i>
+                            <font face="Tahoma" size="4"
+                            color="#C0C0C0">2023</font>
+                        </i>
+                        <i>
+                            <font FACE="Tahoma" size="4"
+                            color="#666666"></font>
+                        </i>
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" width="864" height="78">
+                    <p style="margin-top: 13px; margin-bottom: 13px" align="center">
+                        <font FACE="Tahoma" style="font-size: 32pt; font-weight: 700">CodeTalker: Speech-Driven 3D Facial Animation with Discrete Motion Prior</font>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" width="864" height="19">
+                    <p align="center">
+                        <font face="Arial">
+                            <b>
+                            <b>
+<!--#include virtual="./papers/_author/jbxing.html"-->
+                                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+<!--#include virtual="./papers/_author/mhxia.html"-->
+                                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+<!--#include virtual="./papers/_author/yczhang.html"-->
+                                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+<!--#include virtual="./papers/_author/xdcun.html"-->
+                                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+<!--#include virtual="./papers/_author/jwang.html"-->
+                                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+<!--#include virtual="./papers/_author/ttwong.html"-->
+                            </b>
+                        </font>
+                    </p>
+            </tr>
+            <tr>
+                <td colspan="2" width="864" height="50">
+                    <p align="center"><b>
+                            <font style="font-size: 13pt; font-weight: 700;"
+                            face="Arial"><i>
+Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2023),
+</i><br> June 2023, to appear.
+                            </font>
+                        </b>
+                        <br><a href="https://doubiiu.github.io/projects/codetalker/">
+                        [alternative project
+                        website]</a>
+                    </p>
+
+                </td>
+            </tr>
+            <tr>
+                <td  colspan="2">
+                    <p align="center">
+
+
+                <video autoplay loop controls playsinline width=800> <source src="./codetalker.mp4"
+                type="video/mp4"></video>
+
+
+
+
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table width="935" height="350">
+            <tr>
+                <td width="43" height="350" rowspan="4"></td>
+                <td width="552" height="350" rowspan="4">
+                    <font FACE="Arial" style="font-weight: normal">
+
+                        <p align="left">
+                            <b>
+                                <font size="5" face="Arial">
+                                    Abstract
+                                </font>
+                            </b>
+                        </p>
+                        <p align="justify">
+                            <font face="Arial">
+
+Speech-driven 3D facial animation has been widely studied, yet there is still a gap to achieving realism and vividness due to the highly ill-posed nature and scarcity of audio-visual data. Existing works typically formulate the cross-modal mapping into a regression task, which suffers from the regression-to-mean problem leading to over-smoothed facial motions. In this paper, we propose to cast speech-driven facial animation as a code query task in a finite proxy space of the learned codebook, which effectively promotes the vividness of the generated motions by reducing the cross-modal mapping uncertainty. The codebook is learned by self-reconstruction over real facial motions and thus embedded with realistic facial motion priors. Over the discrete motion space, a temporal autoregressive model is employed to sequentially synthesize facial motions from the input speech signal, which guarantees lip-sync as well as plausible facial expressions. We demonstrate that our approach outperforms current state-of-the-art methods both qualitatively and quantitatively. Also, a user study further justifies our superiority in perceptual quality.
+ 
+                        </p>
+                </td>
+                <td width="15" height="350" rowspan="4"></td>
+                <td width="105" height="80">
+                    <p align="center">
+                        <a
+                            href="codetalker.pdf">
+                            <img border="1" src="images/thumb_paper.jpg" style="width:80%">
+                        </a>
+                    </p>
+                </td>
+                <td height="105">
+                    <p style="margin-top: 0; margin-bottom: 0">
+                        <a
+                            href="codetalker.pdf">
+                            <font face="Arial"><b>Paper</b></font>
+                        </a>
+                    </p>
+                    <p style="margin-top: 0; margin-bottom: 0">
+                        <font face="Arial">(PDF, 2.9M)</font>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="105" height="80">
+                    <p align="center">
+                        <a href="https://github.com/Doubiiu/CodeTalker">
+                            <img border="1" src="images/thumb_github.png" style="width:80%">
+                        </a>
+                    </p>
+                </td>
+                <td height="100">
+                    <p style="margin-top: 0; margin-bottom: 0">
+                        <font face="Arial"><b><a href="https://github.com/Doubiiu/CodeTalker">Source
+                        Code</a></b></font>
+                    </p>
+                    <p style="margin-top: 0; margin-bottom: 0">
+                        <font face="Arial"></font>
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <table width="935" height="200">
+            <tr>
+                <td width="43"></td>
+                <td width="552" align="left">
+                    <font FACE="Arial">
+                        <p align="left"><b>BibTex:</b></p>
+                        <p align="left">
+                            <font face="Courier New" size="2" color="#666666">
+                                <pre>
+@article{xing-2023-codetalker,
+  author    = {Jinbo Xing and Menghan Xia and Yuechen Zhang and Xiaodong Cun and 
+               Jue Wang and Tien-Tsin Wong},
+  title     = {CodeTalker: Speech-Driven 3D Facial Animation with Discrete Motion Prior},
+  journal   = {IEEE Conference on Computer Vision and Pattern Recognition 2023 (CVPR 2023)},
+  year      = {2023},
+  month     = {June},
+  note      = {to appear}
+}                            </pre>
+
+                        </p>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </center>
+</body>
+
+</html>

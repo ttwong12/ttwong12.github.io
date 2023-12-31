@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>DISCO: Disentangled Image Colorization via Global Anchors</title>
+</head>
+
+<body>
+    <center>
+        <table border="0" width="920" id="table1" height="568">
+            <tr>
+                <td colspan="2" width="864" height="22">
+                    <b>
+                        <i>
+                            <font FACE="Tahoma" size="4"
+                            color="#666666">SIGGRAPH</font>
+                        </i>
+                        <i>
+                            <font face="Tahoma" size="4"
+                            color="#C0C0C0">ASIA</font>
+                        </i>
+                        <i>
+                            <font FACE="Tahoma" size="4"
+                            color="#666666">2022</font>
+                        </i>
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" width="864" height="78">
+                    <p style="margin-top: 13px; margin-bottom: 13px" align="center">
+                        <font FACE="Tahoma" style="font-size: 32pt; font-weight: 700">DISCO: Disentangled Image Colorization via Global Anchors</font>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" width="864" height="19">
+                    <p align="center">
+                        <font face="Arial">
+                            <b>
+                            <b>
+<!--#include virtual="./papers/_author/mhxia.html"-->
+                                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+<!--#include virtual="./papers/_author/wbhu.html"-->
+                                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+<!--#include virtual="./papers/_author/ttwong.html"-->
+                                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+<!--#include virtual="./papers/_author/jwang.html"-->
+                            </b>
+                        </font>
+                    </p>
+            </tr>
+            <tr>
+                <td colspan="2" width="864" height="50">
+                    <p align="center"><b>
+                            <font style="font-size: 13pt; font-weight: 700;"
+                            face="Arial"><i>ACM Transactions on Graphics
+                            (SIGGRAPH Asia 2022 issue)</i>,<br> Vol. 41, No.
+                            6, December 2022, pp. 204:1-204:13.
+                            </font>
+                        </b>
+                        <br><a href="https://menghanxia.github.io/projects/disco.html">
+                        [alternative project
+                        website]</a>
+                    </p>
+
+                </td>
+            </tr>
+            <tr>
+                <td  colspan="2">
+                    <p align="center">
+                        <img border="0" src="images/teaser.jpg" width=800>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table width="935" height="350">
+            <tr>
+                <td width="43" height="350" rowspan="4"></td>
+                <td width="552" height="350" rowspan="4">
+                    <font FACE="Arial" style="font-weight: normal">
+
+                        <p align="left">
+                            <b>
+                                <font size="5" face="Arial">
+                                    Abstract
+                                </font>
+                            </b>
+                        </p>
+                        <p align="justify">
+                            <font face="Arial">
+
+Colorization is multimodal by nature and challenges existing frameworks to achieve
+colorful and structurally consistent results. Even the sophisticated autoregressive
+model struggles to maintain long-distance color consistency due to the fragility of
+sequential dependence. To overcome this challenge, we propose a novel colorization 
+framework that disentangles color multimodality and structure consistency through 
+global color anchors, so that both aspects could be learned effectively. Our key 
+insight is that several carefully located anchors could approximately represent 
+the color distribution of an image, and conditioned on the anchor colors, we can
+ predict the image color in a deterministic manner by utilizing internal correlation.
+ To this end, we construct a colorization model with dual branches, where the color 
+ modeler predicts the color distribution for anchor color representation, and the 
+ color generator predicts the pixel colors by referring the sampled anchor colors.
+ Importantly, the anchors are located under two principles: color independence and
+ global coverage, which is realized with clustering analysis on the deep color 
+ features. To simplify the computation, we creatively adopt soft superpixel 
+ segmentation to reduce the image primitives, which still nicely reserves the 
+ reversibility to pixel-wise representation. Extensive experiments show that 
+ our method achieves notable superiority over various mainstream frameworks in 
+ perceptual quality. Thanks to anchor-based color representation, our model has
+ the flexibility to support diverse and controllable colorization as well.
+ 
+                        </p>
+                </td>
+                <td width="15" height="350" rowspan="4"></td>
+                <td width="105" height="80">
+                    <p align="center">
+                        <a
+                            href="https://menghanxia.github.io/projects/disco/disco_main.pdf">
+                            <img border="1" src="images/thumb_paper.jpg" style="width:80%">
+                        </a>
+                    </p>
+                </td>
+                <td height="105">
+                    <p style="margin-top: 0; margin-bottom: 0">
+                        <a
+                            href="https://menghanxia.github.io/projects/disco/disco_main.pdf">
+                            <font face="Arial"><b>Paper</b></font>
+                        </a>
+                    </p>
+                    <p style="margin-top: 0; margin-bottom: 0">
+                        <font face="Arial">(PDF, 47M)</font>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="105" height="80">
+                    <p align="center">
+                        <a href="https://menghanxia.github.io/projects/disco.html">
+                            <img border="1" src="images/thumb_github.png" style="width:80%">
+                        </a>
+                    </p>
+                </td>
+                <td height="100">
+                    <p style="margin-top: 0; margin-bottom: 0">
+                        <font face="Arial"><b><a href="https://menghanxia.github.io/projects/disco.html">Source
+                                    Code/Demo </a></b></font>
+                    </p>
+                    <p style="margin-top: 0; margin-bottom: 0">
+                        <font face="Arial"></font>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <table width="935" height="200">
+        <tbody><tr>
+            <td width="25" height="400" rowspan="4"></td>
+            <td width="552" height="400" rowspan="3">
+            <font face="Arial" style="font-weight: normal">
+                <p align="left"><b><font size="5" face="Arial">
+                    Video</font></b></p>
+                <p align="justify"><font face="Arial">
+                    <video controls width="640"> <source src="disco.mp4" type="video/mp4"></video>
+            </font>
+        </td>
+    </tr></tbody></table>
+        <table width="935" height="200">
+            <tr>
+                <td width="43"></td>
+                <td width="552" align="left">
+                    <font FACE="Arial">
+                        <p align="left"><b>BibTex:</b></p>
+                        <p align="left">
+                            <font face="Courier New" size="2" color="#666666">
+                                <pre>
+@article{xia-2022-disco,
+    author    = {Menghan Xia and Wenbo Hu and Tien-Tsin Wong and Jue Wang},
+    title     = {DISCO: Disentangled Image Colorization via Global Anchors},
+    journal   = {ACM Transactions on Graphics (SIGGRAPH Asia 2022 issue)},
+    volume    = {41},
+    number    = {6},
+    year      = {2022},
+    month     = {December},
+    pages     = {204:1-204:13}
+}
+                            </pre>
+
+                        </p>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </center>
+</body>
+
+</html>
