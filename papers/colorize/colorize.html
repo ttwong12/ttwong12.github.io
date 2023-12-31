@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Two-stage Sketch Colorization</title>
+</head>
+
+<body>
+<b>
+<center>
+<table border="0" width="920" id="table1" height="568">
+	<tr>
+		<td colspan="2" width="864" height="22"><b>
+
+<font FACE="Tahoma" size="4" color="#666666">
+    <i>SIGGRAPH</i></font><i><font face="Tahoma" size="4" color="#C0C0C0">ASIA</font><font color="#666666" face="Tahoma"><font size="4">2018</font></i></b></td>
+	</tr>
+	<tr>
+		<td colspan="2" width="864" height="78">
+		<p style="margin-top: 13px; margin-bottom: 13px" align="center">
+        <font FACE="Tahoma" style="font-size: 32pt; font-weight: 700">Two-stage Sketch Colorization</font></td>
+	</tr>
+	<tr>
+		<td colspan="2" width="864" height="19">
+		<p align="center"><font face="Arial">
+		<b>
+        <a href="https://lllyasviel.github.io/Style2PaintsResearch/">Lvmin Zhang</a>
+
+<!----------------------------------------------------------------------------------------------------->
+
+                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+        <a href="https://moeka.me/">Chengze Li</a>
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+        <a href="/myself.html">Tien-Tsin Wong</a>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+        Yi Ji
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+        Chunping Liu
+
+<!----------------------------------------------------------------------------------------------------->
+
+			
+		</b>
+	</tr>
+	<tr>
+            <td colspan="2" width="864" height="50">
+            <p align="center"><b>
+            <font style="font-size: 13pt; font-weight: 700;" face="Arial"><i>ACM 
+            Transactions on Graphics (SIGGRAPH Asia 2018 issue)</i>, Vol. 37, No. 6,
+            November 2018, pp. 261:1-261:14.</font></b></td>
+        </tr>
+        <tr>
+            <td width="924" height="314" colspan="2">
+            <p align="center">
+            <img border="0" src="img/teaser.jpg" style="width:80%"></td>
+            </font>
+        </tr>
+    </table>
+    <br>
+    <table width = "935" height = "350">
+        <tr>
+            <td width = "43" height = "350" rowspan = "4"></td>
+            <td width = "552" height = "350" rowspan = "4">
+            	<font FACE="Arial"  style="font-weight: normal">
+                <p align="left"><b><font size="5" face="Arial">
+                Abstract</font></b></p>
+                <p align="justify"><font face="Arial">
+Sketch or line art colorization is a research field with significant
+market demand. Different from photo colorization which strongly relies on texture
+information, sketch colorization is more challenging as sketches may not
+have texture. Even worse, color, texture, and gradient have to be generated
+from the abstract sketch lines. In this paper, we propose a semi-automatic
+learning-based framework to colorize sketches with proper color, texture as
+well as gradient. Our framework consists of two stages. In the first drafting
+stage, our model guesses color regions and splashes a rich variety of colors
+over the sketch to obtain a color draft. In the second refinement stage, it
+detects the unnatural colors and artifacts, and try to fix and refine the result.
+Comparing to existing approaches, this two-stage design effectively divides
+the complex colorization task into two simpler and goal-clearer subtasks.
+This eases the learning and raises the quality of colorization. Our model
+resolves the artifacts such as water-color blurring, color distortion, and dull
+textures.
+
+<p>
+We build an interactive software based on our model for evaluation. Users
+can iteratively edit and refine the colorization. We evaluate our learning
+model and the interactive system through an extensive user
+study. Statistics shows that our method outperforms the state-of-art
+techniques and industrial applications in several aspects including, the visual
+quality, the ability of user control, user experience, and other metrics.
+
+ <br><br><br><br><br><br><br><br></font></p>
+            </td>
+            <td width = "15" height = "350" rowspan = "4"></td>
+            <td width = "105" height = "80">
+                <p align="center">
+		<a href="colorize.pdf">
+                <img border="1" src="img/thumb_paper.jpg" style="width:80%"></a>
+            </td>
+            <td height = "105">
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial"><b>Paper</b></font></p>
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial">(PDF, 9.68MB)</font></p>
+            </td>
+        </tr>
+        <tr>
+            <td width = "105" height = "80">
+                <p align="center">
+		<a href="colorize.mp4">
+                <img border="" src="img/thumb_video.jpg" style="width:80%"></a>
+            </td>
+            <td height = "80">
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial"><b>Video Demo</b></font></p>
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial">(MP4,
+                7.26MB)</font></p>
+            </td>
+        </tr>
+        <tr>
+            <td width = "105" height = "200">
+            </td>
+        </tr>
+        
+    </table>
+    <table width="935" height="200">
+        <tr>
+            <td width="43"></td>
+            <td width="552" align="left">
+            <font FACE="Arial">
+            <p align="left"><b>BibTex:</b></p>
+            <p align="left"><font face="Courier New" size="2" color="#666666">
+<pre>
+    @article{xia-2018-invertible,
+        author   = {Lvmin Zhang and Chengze Li and Tien-Tsin Wong and  Yi Ji
+		        and Chunping Liu},
+        title    = {Two-stage Sketch Colorization},
+        journal  = {ACM Transactions on Graphics (SIGGRAPH Asia 2018 issue)},
+        month    = {November},
+        year     = {2018},
+        volume   = {37},
+        number   = {6},       
+        pages    = {261:1-261:14} 
+    }
+</pre>            
+
+            </p></td>
+            <td></td>
+        </tr>
+    </table>
+
+    </body>
+    </html>

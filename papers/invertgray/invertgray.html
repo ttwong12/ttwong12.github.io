@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Invertible Grayscale</title>
+</head>
+
+<body>
+<b>
+<center>
+<table border="0" width="920" id="table1" height="568">
+	<tr>
+		<td colspan="2" width="864" height="22"><b>
+
+<font FACE="Tahoma" size="4" color="#666666">
+    <i>SIGGRAPH</i></font><i><font face="Tahoma" size="4" color="#C0C0C0">ASIA</font><font color="#666666" face="Tahoma"><font size="4">2018</font></i></b></td>
+	</tr>
+	<tr>
+		<td colspan="2" width="864" height="78">
+		<p style="margin-top: 13px; margin-bottom: 13px" align="center">
+        <font FACE="Tahoma" style="font-size: 32pt; font-weight: 700">Invertible Grayscale</font></td>
+	</tr>
+	<tr>
+		<td colspan="2" width="864" height="19">
+		<p align="center"><font face="Arial">
+		<b>
+        <a href="https://menghanxia.github.io/">Menghan Xia</a>
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+        <a href="https://www.cihe.edu.hk/en/schools-and-offices/schools-and-departments/school-of-computing-and-information-sciences/staff-directory/dr-tina-liu-xueting/index.html">Xueting Liu</a>
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+        <a href="/myself.html">Tien-Tsin Wong</a>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+			
+		</b>
+	</tr>
+	<tr>
+            <td colspan="2" width="864" height="50">
+            <p align="center"><b>
+            <font style="font-size: 13pt; font-weight: 700;" face="Arial"><i>ACM 
+            Transactions on Graphics (SIGGRAPH Asia 2018 issue)</i>, Vol. 37, No. 6,
+            November 2018, pp. 246:1-246:10.</font></b></td>
+        </tr>
+        <tr>
+            <td width="924" height="314" colspan="2">
+            <p align="center">
+            <img border="0" src="img/teaser.jpg" style="width:100%"></td>
+            </font>
+        </tr>
+    </table>
+    <br>
+    <table width = "935" height = "350">
+        <tr>
+            <td width = "43" height = "350" rowspan = "4"></td>
+            <td width = "552" height = "350" rowspan = "4">
+            	<font FACE="Arial"  style="font-weight: normal">
+                <p align="left"><b><font size="5" face="Arial">
+                Abstract</font></b></p>
+                <p align="justify"><font face="Arial">Once a color image is converted to grayscale, it is a common belief 
+				that the original color cannot be fully restored, even with the state-of-the-art colorization methods. 
+				In this paper, we propose an innovative method to synthesize invertible grayscale. It is a grayscale image 
+				that can fully restore its original color. The key idea here is to encode the original color information into 
+				the synthesized grayscale, in a way that users cannot recognize any anomalies. We propose to learn and 
+				embed the color-encoding scheme via a convolutional neural network (CNN). It consists of an encoding 
+				network to convert a color image to grayscale, and a decoding network to invert the grayscale to color. 
+				We then design a loss function to ensure the trained network possesses three required properties: 
+				(a) color invertibility, (b) grayscale conformity, and (c) resistance to quantization error. We have conducted
+				intensive quantitative experiments and user studies over a large amount of color images to validate the 
+				proposed method. Regardless of the genre and content of the color input, convincing results are obtained 
+				in all cases. <br><br><br><br><br><br><br><br></font></p>
+            </td>
+            <td width = "15" height = "350" rowspan = "4"></td>
+            <td width = "105" height = "80">
+                <p align="center">
+				<a href="invertgray.pdf">
+                <img border="1" src="img/thumb_paper.png" style="width:80%"></a>
+            </td>
+            <td height = "105">
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial"><b>Paper</b></font></p>
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial">(PDF, 22.0M)</font></p>
+            </td>
+        </tr>
+        <tr>
+            <td width = "105" height = "80">
+                <p align="center">
+				<a href="invertgray_supp.pdf">
+                <img border="1" src="img/thumb_supp.png" style="width:80%"></a>
+            </td>
+            <td height = "105">
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial"><b>Supplementary Material</b></font></p>
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial">(MP4, 14.9M)</font></p>
+            </td>
+        </tr>
+		<tr>
+            <td width = "105" height = "80">
+                <p align="center">
+				<a href="invertgray.mp4">
+                <img border="" src="img/thumb_video.png" style="width:80%"></a>
+            </td>
+            <td height = "105">
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial"><b>Video Demo</b></font></p>
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial">(MP4, 21.5M)</font></p>
+            </td>
+        </tr>
+		<tr>
+            <td width = "105" height = "80">
+                <p align="center">
+                <img border="0" src="img/thumb_github.png" style="width:80%">
+            </td>
+            <td height = "100">
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial"><b><a href="https://github.com/MenghanXia/InvertibelGrayscale">Source Code</a></b></font></p>
+            </td>
+        </tr>
+    </table>
+    <table width="935" height="200">
+        <tr>
+            <td width="43"></td>
+            <td width="552" align="left">
+            <font FACE="Arial">
+            <p align="left"><b>BibTex:</b></p>
+            <p align="left"><font face="Courier New" size="2" color="#666666">
+<pre>
+    @article{xia-2018-invertible,
+        author   = {Menghan Xia and Xueting Liu and Tien-Tsin Wong},
+        title    = {Invertible Grayscale},
+        journal  = {ACM Transactions on Graphics (SIGGRAPH Asia 2018 issue)},
+        month    = {November},
+        year     = {2018},
+        volume   = {37},
+        number   = {6},     
+        pages    = {246:1-246:10}
+    }
+</pre>            
+
+            </p></td>
+            <td></td>
+        </tr>
+    </table>
+
+    </body>
+    </html>
