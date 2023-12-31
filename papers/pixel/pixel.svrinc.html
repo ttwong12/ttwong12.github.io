@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Deep Unsupervised Pixelization</title>
+</head>
+
+<body>
+<b>
+<center>
+<table border="0" width="920" id="table1" height="568">
+	<tr>
+		<td colspan="2" width="864" height="22"><b>
+
+<font FACE="Tahoma" size="4" color="#666666">
+    <i>SIGGRAPH </i></font><i><font face="Tahoma" size="4" color="#C0C0C0">ASIA</font><font color="#666666" face="Tahoma"><font size="4">2018</font></i></b></td>
+	</tr>
+	<tr>
+		<td colspan="2" width="864" height="78">
+		<p style="margin-top: 13px; margin-bottom: 13px" align="center">
+        <font FACE="Tahoma" style="font-size: 32pt; font-weight: 700">Deep Unsupervised Pixelization</font></td>
+	</tr>
+	<tr>
+		<td colspan="2" width="864" height="19">
+		<p align="center"><font face="Arial">
+		<b>
+        <!--#include virtual="./papers/_author/chan.html"-->
+                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+        <!--#include virtual="./papers/_author/qwen.html"-->
+                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+        <!--#include virtual="./papers/_author/she.html"-->
+                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+        <!--#include virtual="./papers/_author/qzhu.html"-->
+                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+        <!--#include virtual="./papers/_author/ytan.html"-->
+                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+        <!--#include virtual="./papers/_author/ghan.html"-->
+                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+        <!--#include virtual="./papers/_author/ttwong.html"-->
+                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>						
+		</b>
+	</tr>
+	<tr>
+            <td colspan="2" width="864" height="50">
+            <p align="center"><b>
+            <font style="font-size: 13pt; font-weight: 700;" face="Arial"><i>ACM 
+            Transactions on Graphics (SIGGRAPH Asia 2018 issue)</i>, Vol. 37, No. 6,
+            November 2018, pp. 243:1-243:11. </font></b></td>
+        </tr>
+        <tr>
+            <td width="924" height="314" colspan="2">
+            <p align="center">
+            <img border="0" src="img/teaser.png" style="width:100%"></td>
+            </font>
+        </tr>
+    </table>
+    <br>
+    <table width = "935" height = "400">
+        <tr>
+            <td width = "43" height = "400" rowspan = "3"></td>
+            <td width = "552" height = "400" rowspan = "3">
+            	<font FACE="Arial"  style="font-weight: normal">
+                <p align="left"><b><font size="5" face="Arial">
+                Abstract</font></b></p>
+                <p align="justify"><font face="Arial">In this paper, we present a novel unsupervised learning method for pixelization. Due to the difficulty in creating pixel art, preparing the paired training data for supervised learning is impractical. Instead, we propose an unsupervised learning framework to circumvent such difficulty. We leverage the dual nature of the pixelization and depixelization, and model these two tasks in the same network in a bi-directional manner with the input itself as training supervision. These two tasks are modeled as a cascaded network which consists of three stages for different purposes.
+				GridNet transfers the input image into multi-scale grid-structured images with different aliasing effects. PixelNet associated with GridNet to synthesize pixel arts with sharp edges and perceptually optimal local structures. DepixelNet connects the previous network and aims to recover the pixelized result to the original image.
+				For the sake of unsupervised learning, the mirror loss is proposed to hold the reversibility of feature representations in the process. In addition, adversarial, L1, and gradient losses are involved in the network to obtain pixel arts by retaining color correctness and smoothness.
+				We show that our technique can synthesize crisper and perceptually more appropriate pixel arts than state-of-the-art image downscaling methods. We evaluate the proposed method with extensive experiments on many images. The proposed method outperforms state-of-the-art methods in terms of visual quality and user preference.</font></p>
+            </td>
+            <td width = "13" height = "400" rowspan = "3"></td>
+            <td width = "105" height = "105">
+                <p align="center">
+    <a href="pixel.pdf">
+                <img border="1" src="img/thumb_paper.png" style="width:80%"></a>
+            </td>
+            <td height = "105">
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial"><b>Paper</b></font></p>
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial">(PDF, 12.5M)</font></p>
+            </td>
+        </tr>
+        <tr>
+            <td width = "105" height = "105">
+                <p align="center">
+    <a href="pixel-supp.pdf">
+                <img border="1" src="img/thumb_supp.png" style="width:80%"></a>
+            </td>
+            <td height = "105">
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial"><b>Supplementary Material</b></font></p>
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial">(PDF, 13.5M)</font></p>
+            </td>
+        </tr>
+	
+        <tr>
+                <td width = "105" height = "105">
+                        <p align="center"></p>
+                    </td>
+                    <td height = "105">
+                        <p style="margin-top: 0; margin-bottom: 0"><font face="Arial"><b>Source code will be released soon</b></font></p>
+                    </td>
+        </tr>
+
+		
+		
+    </table>
+    <table width="935" height="200">
+        <tr>
+            <td width="43"></td>
+            <td width="552" align="left">
+            <font FACE="Arial">
+            <p align="left"><b>BibTex:</b></p>
+            <p align="left"><font face="Courier New" size="2" color="#666666">
+<pre>
+    @article{han-2018-pixelization,
+        author   = {Chu Han and Qiang Wen and Shengfeng He and Qianshu Zhu and Yinjie Tan and Guoqiang Han and Tien-Tsin Wong},
+        title    = {Deep Unsupervised Pixelization},
+        journal  = {ACM Transactions on Graphics (SIGGRAPH Asia 2018 issue)},
+        month    = {November},
+        year     = {2018},
+        volume   = {37},
+        number   = {6},
+        pages    = {243:1-243:11}
+    }
+</pre>            
+
+            </p></td>
+            <td></td>
+        </tr>
+    </table>
+
+    </body>
+    </html>
