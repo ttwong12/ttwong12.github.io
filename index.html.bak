@@ -3,7 +3,7 @@
 
 <blockquote>
 
-<body background="./icon/desktop.jpg">
+<body background="/~ttwong/icon/desktop.jpg">
 <center>
 <table border=0 CELLSPACING=0 CELLPADDING=0 >
 <tr><td HALIGN="CENTER" VALIGN="TOP" >
@@ -19,7 +19,7 @@
 Welcome to my home page! You can find my resume, my published papers
 and also many interesting computer graphics related links here. 
 
-<!--#include virtual="./whatsnew.html"-->
+<!--#include virtual="/~ttwong/whatsnew.html"-->
 
 <!--------------------------------------------------------------------------->
 <HR>
@@ -162,9 +162,9 @@ This web page is designed by myself. If you have any problem in using this
 webpage, or any suggestion to improve it, feel free to contact me directly. 
 <DL>
 <DT>Permanent E-mail address:
-<DD> <img src="./icon/mailacm.jpg"> 
+<DD> <img src="/~ttwong/icon/mailacm.jpg"> 
 <DT>Current E-mail address:
-<DD> <img src="./icon/mailcuhk.jpg"> 
+<DD> <img src="/~ttwong/icon/mailcuhk.jpg"> 
 <DT>Tel:
 <DD> 852-3943-8433
 <DT>Fax:
