@@ -259,11 +259,113 @@ single color dress will be colorized in single color.
 <!----------------------------------------------------------------------------------------------------->
 
 
-<!--#include virtual="./papers/dashline/liu-2022-neural-desc.html"-->
+<p>
+<table border=0><tr><td width=300 height=80 align=right valign=top>
 
-<!--#include virtual="./papers/linevector/liu-2022-end-desc.html"-->
+  <a href="./papers/dashline/dashline.html">
+  <img width=300 src="./papers/dashline/images/icon.gif" border=0></a><br>
+ 
 
-<!--#include virtual="./papers/invhalftone/xia-2021-deep-desc.html"-->
+</td><td width=20>
+</td><td align=left valign=top  width=600><font face="Verdana" size="2">
+
+  <font size=+0 face="Arial,Helvetica"><b> 
+  Dashed Curves Vectorization</b>
+  <i><b> (CVPR 2022)</b></i></font><br> 
+  <p>
+Dashed lines/curves vectorization has never been successfully handled so
+far. We take one step further to vectorize dashed curves using an end-to-end neural
+approach. Instead of exporting multiple disjoint line segments, we can export a
+semantic meaningful vectorized curve that connects all involved dashes. Even the raster input contains multiple intersecting dashed curves,
+we are able to identify them correctly and individually.
+  
+
+<br>
+
+<b>
+[<a href="./papers/dashline/dashline.html"-->more</a>]
+[<a href="./papers/dashline/dashline.pdf">paper</a>]
+[<a href="./papers/dashline/dashline.mp4">presentation video</a>]
+[<a href="https://github.com/hyliu/DashedCurveRecognition">code (in preparation)</a>]
+</td></tr></table>
+<p><br>
+
+<!----------------------------------------------------------------------------------------------------->
+
+
+<p>
+<table border=0><tr><td width=300 height=80 align=right valign=top>
+
+  <a href="./papers/linevector/linevector.html">
+  <img src="./papers/linevector/images/icon.png" border=0></a><br>
+ 
+
+</td><td width=20>
+</td><td align=left valign=top  width=600><font face="Verdana" size="2">
+
+  <font size=+0 face="Arial,Helvetica"><b> 
+  End-to-End Line Drawing Vectorization</b>
+  <i><b> (AAAI 2022)</b></i></font><br> 
+  <p>
+
+Line vectorization has long been an open problem. Many approaches have been
+proposed, and they usually involve multiple steps that may be proned to
+input violating the assumptions. In this project, we propose a neural model
+that can take arbitrary line drawing as input and directly export vectorized
+output, without the hassles of unstable intermediate steps.
+
+<br>
+
+<b>
+[<a
+href="./papers/linevector/linevector.html"-->more</a>]
+[<a href="./papers/linevector/linevector.pdf">paper</a>]
+[<a href="https://github.com/hyliu/e2eLineVec">code (in preparation)</a>]
+</td></tr></table>
+<p><br>
+
+<!----------------------------------------------------------------------------------------------------->
+
+
+<p>
+<table border=0><tr><td width=300 height=80 align=right valign=top>
+
+  <a href="./papers/invhalftone/invhalftone.html">
+  <img src="./papers/invhalftone/img/icon.gif" border=0></a><br>
+ 
+
+</td><td width=20>
+</td><td align=left valign=top  width=600><font face="Verdana" size="2">
+
+  <font size=+0 face="Arial,Helvetica"><b> 
+  Invertible Halftoning  </b>
+  <i><b> (ICCV 2021)</b></i></font><br> 
+  <p>
+
+Once we can store color information in grayscale, the next step is to store
+it in halftone. This problem is much harder because of the drastically reduced
+solution space of bitonal image (1 bit per pixel). Besides storing the color
+information, the binary pattern also serves to preserve the orginal
+structural content while avoid to introduce extra visual pattern (blue-noise
+property). Also, convolutional neural networks is not good in generating
+binary pattern. See how we solve it.
+
+
+<br>
+
+<b>
+[<a href="./papers/invhalftone/invhalftone.html">more</a>]
+[<a href="./papers/invhalftone/invhalftone.pdf">paper</a>]
+[<a href="./papers/invhalftone/invhalftone_supp.pdf">supplement</a>]
+[<a href="./papers/invhalftone/invhalftone_video.mp4">video</a>]
+[<a href="https://github.com/MenghanXia/ReversibleHalftoning">code</a>]
+[<a href="https://replicate.ai/menghanxia/reversiblehalftoning">demo</a>]
+
+</td></tr></table>
+<p><br>
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 <!--#include virtual="./papers/mangainpaint/xie-2021-seamless-desc.html"-->
 

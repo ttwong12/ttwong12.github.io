@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>End-to-End Line Drawing Vectorization</title>
+</head>
+
+<body>
+    <center>
+        <table border="0" width="920" id="table1" height="568">
+            <tr>
+                <td colspan="2" width="864" height="22">
+                    <b>
+                        <i>
+                            <font FACE="Tahoma" size="4" color="#666666">AAAI</font>
+                        </i>
+                        <i>
+                            <font face="Tahoma" size="4" color="#C0C0C0">2022</font>
+                        </i>
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" width="864" height="78">
+                    <p style="margin-top: 13px; margin-bottom: 13px" align="center">
+                        <font FACE="Tahoma" style="font-size: 32pt; font-weight: 700">End-to-End Line Drawing
+                            Vectorization</font>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" width="864" height="19">
+                    <p align="center">
+                        <font face="Arial">
+                            <b>
+<!--#include virtual="./papers/_author/hyliu.html"-->
+                                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+<!--#include virtual="./papers/_author/czli.html"-->
+                                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+<!--#include virtual="./papers/_author/xtliu.html"-->
+                                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+<!--#include virtual="./papers/_author/ttwong.html"-->
+
+                            </b>
+                        </font>
+                    </p>
+            </tr>
+            <tr>
+                <td colspan="2" width="864" height="50">
+                    <p align="center"><b>
+                            <font style="font-size: 13pt; font-weight: 700;" face="Arial"><i>
+                            Proceedings of Thirty-Sixth AAAI Conference on Artificial Intelligence (AAAI2022)</i>,
+                            <br>
+                            Vol. 36, No. 4, Feburary 2022, pp. 4559-4566.                            </font>
+                        </b>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="924" height="314" colspan="2">
+                    <p align="center">
+                        <img border="0" src="images/teaser.png">
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table width="935" height="350">
+            <tr>
+                <td width="43" height="350" rowspan="4"></td>
+                <td width="552" height="350" rowspan="4">
+                    <font FACE="Arial" style="font-weight: normal">
+
+                        <p align="left">
+                            <b>
+                                <font size="5" face="Arial">
+                                    Abstract
+                                </font>
+                            </b>
+                        </p>
+                        <p align="justify">
+                            <font face="Arial">
+                                Vector graphics is broadly used in a variety of forms, such as illustrations, logos,
+                                posters, billboards, and printed ads. Despite its broad use, many artists still
+                                prefer to draw with pen and paper, which leads to a high demand of converting raster
+                                designs into the vector form. In particular, line drawing is a primary art and
+                                attracts many research efforts in automatically converting raster line drawings to
+                                vector form. However, the existing methods generally adopt a two-step approach,
+                                stroke segmentation and vectorization. Without vector guidance, the raster-based
+                                stroke segmentation frequently obtains unsatisfying segmentation results, such as
+                                over-grouped strokes and broken strokes. In this paper, we make an attempt in
+                                proposing an end-to-end vectorization method which directly generates vectorized
+                                stroke primitives from raster line drawing in one step. We propose a
+                                Transformer-based framework to perform stroke tracing like human does in an
+                                automatic stroke-by-stroke way with a novel stroke feature representation and
+                                multi-modal supervision to achieve vectorization with high quality and fidelity.
+                                Qualitative and quantitative evaluations show that our method achieves state of the
+                                art performance.
+                            </font>
+                        </p>
+                </td>
+                <td width="15" height="350" rowspan="4"></td>
+                <td width="105" height="80">
+                    <p align="center">
+                        <a
+                            href="linevector.pdf">
+                            <img border="1" src="images/thumb_paper.png" style="width:80%">
+                        </a>
+                    </p>
+                </td>
+                <td height="105">
+                    <p style="margin-top: 0; margin-bottom: 0">
+                        <a
+                            href="linevector.pdf">
+                            <font face="Arial"><b>Paper</b></font>
+                        </a>
+                    </p>
+                    <p style="margin-top: 0; margin-bottom: 0">
+                        <font face="Arial">(PDF, 1.0M)</font>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="105" height="80">
+                    <p align="center">
+                        <a href="https://github.com/hyliu/e2eLineVec">
+                            <img border="1" src="images/thumb_github.png" style="width:80%">
+                        </a>
+                    </p>
+                </td>
+                <td height="100">
+                    <p style="margin-top: 0; margin-bottom: 0">
+                        <font face="Arial"><b><a href="https://github.com/hyliu/e2eLineVec">Source
+                                    Code </a></b></font>
+                    </p>
+                    <p style="margin-top: 0; margin-bottom: 0">
+                        <font face="Arial">(To be released)</font>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <table width="935" height="200">
+            <tr>
+                <td width="43"></td>
+                <td width="552" align="left">
+                    <font FACE="Arial">
+                        <p align="left"><b>BibTex:</b></p>
+                        <p align="left">
+                            <font face="Courier New" size="2" color="#666666">
+                                <pre>
+@inproceedings{liu2022-e2e-line-vec,
+    author    = {Hanyuan Liu and Chengze Li and Xueting Liu and Tien-Tsin Wong},
+    title     = {End-to-End Line Drawing Vectorization},
+    booktitle = {Proceedings of Thirty-Sixth AAAI Conference on Artificial Intelligence (AAAI2022)},
+    volume    = {36},
+    number    = {4},
+    year      = {2022},
+    month     = {Feburary},
+    pages     = {4559-4566}
+}
+                            </pre>
+
+                        </p>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </center>
+</body>
+
+</html>

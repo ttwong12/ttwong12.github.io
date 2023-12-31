@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Neural Recognition of Dashed Curves with Gestalt Law of Continuity</title>
+</head>
+
+<body>
+    <center>
+        <table border="0" width="920" id="table1" height="568">
+            <tr>
+                <td colspan="2" width="864" height="22">
+                    <b>
+                        <i>
+                            <font FACE="Tahoma" size="4" color="#666666">CVPR</font>
+                        </i>
+                        <i>
+                            <font face="Tahoma" size="4" color="#C0C0C0">2022</font>
+                        </i>
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" width="864" height="78">
+                    <p style="margin-top: 13px; margin-bottom: 13px" align="center">
+                        <font FACE="Tahoma" style="font-size: 32pt; font-weight: 700">Neural Recognition of Dashed Curves with Gestalt Law of Continuity</font>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" width="864" height="19">
+                    <p align="center">
+                        <font face="Arial">
+                            <b>
+                            <b>
+<!--#include virtual="./papers/_author/hyliu.html"-->
+                                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+<!--#include virtual="./papers/_author/czli.html"-->
+                                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+<!--#include virtual="./papers/_author/xtliu.html"-->
+                                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+<!--#include virtual="./papers/_author/ttwong.html"-->
+                            </b>
+                        </font>
+                    </p>
+            </tr>
+            <tr>
+                <td colspan="2" width="864" height="50">
+                    <p align="center"><b>
+                            <font style="font-size: 13pt; font-weight: 700;" face="Arial"><i>Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (CVPR
+                            2022)</i>,<br> June 2022, pp. 1373-1382.
+                            </font>
+                        </b>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="924" height="314" colspan="2">
+                    <p align="center">
+                        <img border="0" src="images/teaser.png">
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table width="935" height="350">
+            <tr>
+                <td width="43" height="350" rowspan="4"></td>
+                <td width="552" height="350" rowspan="4">
+                    <font FACE="Arial" style="font-weight: normal">
+
+                        <p align="left">
+                            <b>
+                                <font size="5" face="Arial">
+                                    Abstract
+                                </font>
+                            </b>
+                        </p>
+                        <p align="justify">
+                            <font face="Arial">
+                                Dashed curve is a frequently used curve form and is widely used in various drawing and
+                                illustration applications. While humans can intuitively recognize dashed curves from
+                                disjoint curve segments based on the law of continuity in Gestalt psychology, it is
+                                extremely difficult for computers to model the Gestalt law of continuity and recognize
+                                the dashed curves since high-level semantic understanding is needed for this task. The
+                                various appearances and styles of the dashed curves posed on a potentially noisy
+                                background further complicate the task. In this paper, we propose an innovative
+                                Transformer-based framework to recognize dashed curves based on both high-level features
+                                and low-level clues. The framework manages to learn the computational analogy of the
+                                Gestalt Law in various domains to locate and extract instances of dashed curves in both
+                                raster and vector representations. Qualitative and quantitative evaluations demonstrate
+                                the efficiency and robustness of our framework over all existing solutions.
+                            </font>
+                        </p>
+                </td>
+                <td width="15" height="350" rowspan="4"></td>
+                <td width="105" height="80">
+                    <p align="center">
+                        <a href="dashline.pdf">
+                            <img border="1" src="images/thumb_paper.png" style="width:80%">
+                        </a>
+                    </p>
+                </td>
+                <td height="105">
+                    <p style="margin-top: 0; margin-bottom: 0">
+                        <a
+                            href="dashline.pdf">
+                            <font face="Arial"><b>Paper</b></font>
+                        </a>
+                    </p>
+                    <p style="margin-top: 0; margin-bottom: 0">
+                        <font face="Arial">(PDF, 9.0M)</font>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="105" height="80">
+                    <p align="center">
+                        <a href="https://github.com/hyliu/DashedCurveRecognition">
+                            <img border="1" src="images/thumb_github.png" style="width:80%">
+                        </a>
+                    </p>
+                </td>
+                <td height="100">
+                    <p style="margin-top: 0; margin-bottom: 0">
+                        <font face="Arial"><b><a href="https://github.com/hyliu/DashedCurveRecognition">Source
+                                    Code </a></b></font>
+                    </p>
+                    <p style="margin-top: 0; margin-bottom: 0">
+                        <font face="Arial">(To be released)</font>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <table width="935" height="200">
+        <tbody><tr>
+            <td width="25" height="400" rowspan="4"></td>
+            <td width="552" height="400" rowspan="3">
+            <font face="Arial" style="font-weight: normal">
+                <p align="left"><b><font size="5" face="Arial">
+                    Video</font></b></p>
+                <p align="justify"><font face="Arial">
+                    <video controls width="640"> <source src="dashline.mp4" type="video/mp4"></video>
+                </font></p>
+            </font>
+        </td>
+    </tr></tbody></table>
+        <table width="935" height="200">
+            <tr>
+                <td width="43"></td>
+                <td width="552" align="left">
+                    <font FACE="Arial">
+                        <p align="left"><b>BibTex:</b></p>
+                        <p align="left">
+                            <font face="Courier New" size="2" color="#666666">
+                                <pre>
+@inproceedings{liu2022-dashed-curve,
+    author = {Hanyuan Liu and Chengze Li and Xueting Liu and Tien-Tsin Wong},
+    title = {Neural Recognition of Dashed Curves with Gestalt Law of Continuity},
+    booktitle = {Proceedings of IEEE Conference on Computer Vision and Pattern Recognition 2022 (CVPR 2022)},
+    year      = {2022},
+    month     = {June},
+    pages     = {1373-1382}
+}
+                            </pre>
+
+                        </p>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </center>
+</body>
+
+</html>
