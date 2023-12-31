@@ -1,0 +1,32 @@
+<p>
+<table border=0><tr><td width=300 height=80 align=right valign=top>
+
+  <a href="./papers/toontrack/toontrack.html">
+  <img src="papers/toontrack/train_icon.gif" border=0></a><br>
+ 
+
+</td><td width=20>
+</td><td align=left valign=top  width=600><font face="Verdana" size="2">
+
+  <font size=+0 face="Arial,Helvetica"><b> 
+  Globally Optimal Toon Tracking </b>
+  <i><b> (SIGGRAPH 2016)</b></i></font><br> 
+  <p>
+
+
+
+Tracking the corresponding regions throughout a cartoon sequence is
+necessary in postprocessing, such as colorization and stereoscopization. 
+But it is not available from animators and vision technqiues do not work
+well for cartoons.  By formulating the region tracking as a global
+optimatization problem and model the region motion trajectory, we can
+significantly raise the accuracy to a usable level.  <br>
+
+
+<b>
+[<a href="./papers/toontrack/toontrack.html">more</a>]
+[<a href="http://appsrv.cse.cuhk.edu.hk./cgi-bin/paper-download/download.cgi?path=toontrack&dl=toontrack.pdf">paper</a>]
+
+
+</td></tr></table>
+<p><br>

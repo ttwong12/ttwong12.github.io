@@ -1,0 +1,119 @@
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Closure-aware Sketch Simplification</title>
+</head>
+
+<b>
+<center>
+<table border="0" width="920" id="table1" height="568">
+	<tr>
+		<td colspan="2" width="864" height="22"><b>
+
+<font FACE="Tahoma" size="4" color="#666666">
+		<i>SIGGRAPH</i></font><i><font face="Tahoma" size="4" color="#C0C0C0">ASIA</font><font color="#666666" face="Tahoma"><font size="4">2015</font></i></b></td>
+	</tr>
+	<tr>
+		<td colspan="2" width="864" height="78">
+		<p style="margin-top: 13px; margin-bottom: 13px" align="center">
+        <font FACE="Tahoma" style="font-size: 32pt; font-weight: 700">Closure-aware Sketch Simplification</font></td>
+	</tr>
+	<tr>
+		<td colspan="2" width="864" height="19">
+		<p align="center"><font face="Arial">
+		<b>
+	<a href="https://www.cihe.edu.hk/en/schools-and-offices/schools-and-departments/school-of-computing-and-information-sciences/staff-directory/dr-tina-liu-xueting/index.html">Xueting Liu</a>
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+	<a href="/myself.html">Tien-Tsin Wong</a>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+	<a href="http://www.cse.cuhk.edu.hk/~pheng/">Pheng-Ann Heng</a>
+
+<!----------------------------------------------------------------------------------------------------->
+
+                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+		</b>
+	</tr>
+	<tr>
+		<td colspan="2" width="864" height="50">
+		<p align="center"><b>
+        <font style="font-size: 13pt; font-weight: 700;" face="Arial"><i>ACM 
+        Transactions on Graphics (SIGGRAPH Asia 2015 issue)</i>, Vol. 34, No. 6, November 2015, pp. 168:1-168:10.</font></b></td>
+	</tr>
+	<tr>
+		<td width="924" height="314" colspan="2">
+		<p align="center">
+        <img border="0" src="teaser_clock.png" ></td>
+		</font>
+	</tr>
+</table>
+<br>
+<table width = "935" height = "400">
+	<tr>
+		<td width = "43" height = "400" rowspan = "3"></td>
+		<td width = "552" height = "400" rowspan = "3">
+			<p align="left"><b><font size="5" face="Arial">
+			Abstract</font></b></p>
+			<p align="justify"><font face="Arial">In this paper, we propose a novel approach to simplify sketch drawings. The core problem is how to group sketchy strokes meaningfully, and this depends on how humans understand the sketches. The existing methods mainly rely on thresholding low-level geometric properties among the strokes, such as proximity, continuity and parallelism. However, it is not uncommon to have strokes with equal geometric properties but different semantics. The lack of semantic analysis will lead to the inability in differentiating the above semantically different scenarios. In this paper, we point out that, due to the gestalt phenomenon of <b><i>closure</i></b>, the grouping of strokes is actually highly influenced by the interpretation of regions. On the other hand, the interpretation of regions is also influenced by the interpretation of strokes since regions are formed and depicted by strokes. This is actually a chicken-or-the-egg dilemma and we solve it by an iterative cyclic refinement approach. Once the formed stroke groups are stabilized, we can simplify the sketchy strokes by replacing each stroke group with a smooth curve. We evaluate our method on a wide range of different sketch styles and semantically meaningful simplification results can be obtained in all test cases.</font></p>
+		</td>
+		<td width = "13" height = "400" rowspan = "3"></td>
+		<td width = "105" height = "105">
+			<p align="center">
+<a href="sketch.pdf">
+			<img border="0" src="thumb_paper.png"></a>
+		</td>
+		<td height = "105">
+			<p style="margin-top: 0; margin-bottom: 0"><font face="Arial"><b>Paper</b></font></p>
+			<p style="margin-top: 0; margin-bottom: 0"><font face="Arial">(PDF, 1.9M)</font></p>
+		</td>
+	</tr>
+	<tr>
+		<td width = "105" height = "105">
+			<p align="center">
+<a href="sketch_supp.pdf">
+			<img border="0" src="thumb_supp.png"></a>
+		</td>
+		<td height = "105">
+			<p style="margin-top: 0; margin-bottom: 0"><font face="Arial"><b>Supplementary Material</b></font></p>
+			<p style="margin-top: 0; margin-bottom: 0"><font face="Arial">(PDF, 1.4M)</font></p>
+		</td>
+	</tr>
+	<tr>
+		<td height = "150"></td>
+	</tr>
+</table>
+<table width="935" height="200">
+	<tr>
+		<td width="43"></td>
+		<td width="552" align="left">
+		<font FACE="Arial">
+		<p align="left"><b>BibTex:</b></p>
+		<p align="left"><font face="Courier New" size="2" color="#666666">
+		@article{liu-2015-closure,<br>
+&nbsp;&nbsp;&nbsp; author&nbsp;&nbsp; = {Xueting Liu and Tien-Tsin Wong and <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pheng-Ann Heng},<br>
+&nbsp;&nbsp;&nbsp; title&nbsp;&nbsp;&nbsp;&nbsp;= {Closure-aware Sketch Simplification},<br>
+&nbsp;&nbsp;&nbsp; journal&nbsp; = {ACM Transactions on Graphics <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+</font>
+        <font face="Courier New" size="2" color="#666666">
+		(SIGGRAPH Asia 2015 issue)},<br>
+&nbsp;&nbsp;&nbsp; month&nbsp;&nbsp;&nbsp; = {November},<br>
+&nbsp;&nbsp;&nbsp; year&nbsp;&nbsp;&nbsp; &nbsp;= {2015},<br>
+&nbsp;&nbsp;&nbsp; volume &nbsp; = {34},<br>
+&nbsp;&nbsp;&nbsp; number&nbsp;&nbsp; = {6},<br>
+&nbsp;&nbsp;&nbsp; pages&nbsp;&nbsp;&nbsp; = {168:1--168:10},<br>
+		}</font></p></td>
+		<td></td>
+	</tr>
+</table>
+		
