@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Mononizing Binocular Videos</title>
+</head>
+
+<body>
+<center>
+    <table border="0" width="920" id="table1" height="568">
+        <tr>
+            <td colspan="2" width="864" height="22">
+                <b> 
+                <font FACE="Tahoma" size="4" color="#666666">
+    <i>SIGGRAPH</i></font><i><font face="Tahoma" size="4" color="#C0C0C0">ASIA</font><font color="#666666" face="Tahoma"><font size="4">2020</font></i></b>
+                    </i>
+                </b>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" width="864" height="78">
+                <p style="margin-top: 13px; margin-bottom: 13px" align="center">
+                    <font FACE="Tahoma" style="font-size: 32pt; font-weight: 700">Mononizing Binocular Videos</font>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" width="864" height="19">
+                <p align="center">
+                    <font face="Arial">
+                        <b>
+                            <a href="https://wbhu.github.io/">Wenbo Hu</a>
+
+<!----------------------------------------------------------------------------------------------------->
+
+                            <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+                            <a href="https://menghanxia.github.io/">Menghan Xia</a>
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+                            <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+                            <a href="http://www.cse.cuhk.edu.hk/~cwfu/">Chi-Wing Fu</a>
+
+<!----------------------------------------------------------------------------------------------------->
+
+                            <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+                            <a href="/myself.html">Tien-Tsin Wong</a>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+        
+                            <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+                        </b>
+                    </font>
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" width="864" height="50">
+                <p align="center">
+                    <b>
+                        <font style="font-size: 13pt; font-weight: 700;" face="Arial"><i>ACM Transactions on Graphics
+                            (SIGGRAPH Asia 2020 issue)</i>, Vol. 39, No. 6, December 2020, pp. 228:1-228:16.
+                        </font>
+                    </b>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td width="924" height="314" colspan="2">
+                <p align="center">
+                    <img border="0" src="img/teaser.jpg" style="width:100%">
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <table width="935" height="400">
+        <tr>
+            <td width="43" height="400" rowspan="3"></td>
+            <td width="552" height="400" rowspan="3">
+                <font FACE="Arial" style="font-weight: normal">
+                    <p align="left"><b><font size="5" face="Arial">
+                        Abstract</font></b></p>
+                    <p align="justify"><font face="Arial">
+                        This paper presents the idea of mono-nizing binocular videos and a framework
+                        to effectively realize it. Mono-nize means we purposely convert a
+                        binocular video into a regular monocular video with the stereo information
+                        implicitly encoded in a visual but nearly-imperceptible form. Hence, we
+                        can impartially distribute and show the mononized video as an ordinary
+                        monocular video. Unlike ordinary monocular videos, we can restore from it
+                        the original binocular video and show it on a stereoscopic display. To start,
+                        we formulate an encoding-and-decoding framework with the pyramidal deformable
+                        fusion module to exploit long-range correspondences between the
+                        left and right views, a quantization layer to suppress the restoring artifacts,
+                        and the compression noise simulation module to resist the compression
+                        noise introduced by modern video codecs. Our framework is self-supervised,
+                        as we articulate our objective function with loss terms defined on the input:
+                        a monocular term for creating the mononized video, an invertibility term
+                        for restoring the original video, and a temporal term for frame-to-frame
+                        coherence. Further, we conducted extensive experiments to evaluate our
+                        generated mononized videos and restored binocular videos for diverse types
+                        of images and 3D movies. Quantitative results on both standard metrics and
+                        user perception studies show the effectiveness of our method.
+                    </font></p>
+                </font>
+            </td>
+            <td width="13" height="400" rowspan="3"></td>
+            <td width="105" height="105">
+                <p align="center">
+                    <a href="invbino.pdf">
+                        <img border="1" src="img/thumb_paper.jpg" style="width:80%"></a>
+            </td>
+            <td height="105">
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial"><b>Paper</b></font></p>
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial">(PDF, 26.8MB)</font></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="105" height="105">
+                <p align="center">
+                    <a href="invbino_supp.pdf">
+                        <img border="1" src="img/thumb_supp.jpg" style="width:80%"></a>
+            </td>
+            <td height="105">
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial"><b>Supplementary Material</b></font>
+                </p>
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial">(PDF, 36.0MB)</font></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="105" height="105">
+                <p align="center">
+                    <a href="https://github.com/wbhu/Mono3D">
+                        <img border="1" src="img/thumb_github.png" style="width:80%"></a>
+            </td>
+            <td height="105">
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial"><b>Source Code</b></font></p>
+            </td>
+        </tr>
+    </table>
+
+
+    <br>
+    <table width="935" height="400">
+        <tr>
+            <td width="43" height="400" rowspan="3"></td>
+            <td width="552" height="400" rowspan="3">
+                <font FACE="Arial" style="font-weight: normal">
+                    <p align="left"><b><font size="5" face="Arial">
+                        Video</font></b></p>
+                    <p align="justify"><font face="Arial">
+                        <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/videoseries?list=PL3zJztb9e6XVa266_SeX0Dj66Vjy5f720"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </font></p>
+                </font>
+            </td>
+            <td width="13" height="310" rowspan="3"></td>
+            <td width="105" height="105">
+                <p align="center">
+
+            </td>
+            <td height="105">
+
+            </td>
+        </tr>
+
+    </table>
+
+
+    <table width="935" height="200">
+        <tr>
+            <td width="552" align="left">
+                <font FACE="Arial">
+                    <p align="left"><b>BibTex:</b></p>
+
+                    <p align="left"><font face="Courier New" size="2" color="#666666">
+<pre>
+    @article{hu-2020-mononizing,
+        author   = {Wenbo Hu and Menghan Xia and Chi-Wing Fu and Tien-Tsin Wong},
+        title    = {Mononizing Binocular Videos},
+        journal  = {ACM Transactions on Graphics (SIGGRAPH Asia 2020 issue)},
+        month    = {December},
+        year     = {2020},
+        volume   = {39},
+        number   = {6},
+        pages    = {228:1-228:16}
+    }
+</pre>
+                    </p>
+            </td>
+        </tr>
+    </table>
+
+</center>
+</body>
+</html>

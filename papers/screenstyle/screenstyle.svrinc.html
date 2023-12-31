@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title> Manga Filling Style Conversion with Sreen VAE</title>
+</head>
+
+<body>
+<b>
+<center>
+<table border="0" width="920" id="table1" height="568">
+	<tr>
+		<td colspan="2" width="864" height="22"><b>
+
+<font FACE="Tahoma" size="4" color="#666666">
+<i>SIGGRAPH</i></font><i><font face="Tahoma" size="4" color="#C0C0C0">ASIA</font><i><font face="Tahoma" size="4" color="#C0C0C0"></font><font color="#666666" face="Tahoma"><font size="4">2020</font></i></b></td>
+	</tr>
+	<tr>
+		<td colspan="2" width="864" height="78">
+		<p style="margin-top: 13px; margin-bottom: 13px" align="center">
+        <font FACE="Tahoma" style="font-size: 32pt; font-weight: 700">Manga Filling Style Conversion with Screentone Variational Autoencoder</font></td>
+	</tr>
+	<tr>
+		<td colspan="2" width="864" height="19">
+		<p align="center"><font face="Arial">
+		<b>
+<!--#include virtual="./papers/_author/msxie.html"-->
+                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+<!--#include virtual="./papers/_author/czli.html"-->
+                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+<!--#include virtual="./papers/_author/xtliu.html"-->
+                <font size="2"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sup></font>
+<!--#include virtual="./papers/_author/ttwong.html"-->
+		</b>
+	</tr>
+	<tr>
+            <td colspan="2" width="864" height="50">
+            <p align="center"><b>
+            <font style="font-size: 13pt; font-weight: 700;" face="Arial"><i>ACM 
+            Transactions on Graphics (SIGGRAPH Asia 2020 issue)</i>, Vol. 39, No. 6, December
+            2020, pp. 226:1-226:15</font></b></td>
+        </tr>
+        <tr>
+            <td width="924" height="314" colspan="2">
+            <p align="center">
+            <img border="0" src="img/teaser.png" style="width:100%"></td>
+            </font>
+        </tr>
+    </table>
+    <br>
+    <table width = "935" height = "350">
+        <tr>
+            <td width = "43" height = "350" rowspan = "4"></td>
+            <td width = "552" height = "350" rowspan = "4">
+             <font FACE="Arial" style="font-weight: normal">
+
+                <p align="left"><b><font size="5" face="Arial">
+                Abstract</font></b></p>
+                <p align="justify"><font face="Arial">
+                    Western color comics and Japanese-style screened manga are two popular
+                    comic styles. They mainly differ in the style of region-filling. However, the
+                    conversion between the two region-filling styles is very challenging, and
+                    manually done currently. In this paper, we identify that the major obstacle
+                    in the conversion between the two filling styles stems from the difference
+                    between the fundamental properties of screened region-filling and colored
+                    region-filling. To resolve this obstacle, we propose a screentone variational
+                    autoencoder, ScreenVAE, to map the screened manga to an intermediate do-
+                    main. This intermediate domain can summarize local texture characteristics
+                    and is interpolative. With this domain, we effectively unify the properties of
+                    screening and color-filling, and ease the learning for bidirectional translation
+                    between screened manga and color comics. To carry out the bidirectional
+                    translation, we further propose a network to learn the translation between 
+                    the intermediate domain and color comics. Our model can generate quality
+                    screened manga given a color comic, and generate color comic that retains
+                    the original screening intention by the bitonal manga artist. Several results
+                    are shown to demonstrate the effectiveness and convenience of the proposed
+                    method. We also demonstrate how the intermediate domain can assist other
+                    applications such as manga inpainting and photo-to-comic conversion.
+				<br><br><br><br><br><br><br><br></font></p>
+            </td>
+            <td width = "15" height = "350" rowspan = "4"></td>
+            <td width = "105" height = "80">
+                <p align="center">
+ <a href="screenstyle.pdf">
+
+                 <img border="1" src="img/manga_paper.jpg" style="width:80%"></a>
+            </td>
+            <td height = "105">
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial"><b>Paper</b></font></p>
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial">(PDF,
+                42.5M)</font></p>
+            </td>
+        </tr>
+        <tr>
+            <td width = "105" height = "80">
+                <p align="center">
+ <a href="screenstyle_supp.pdf">
+                <img border="1" src="img/manga_supp.jpg" style="width:80%"></a>
+            </td>
+            <td height = "105">
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial"><b>Supplementary Material</b></font></p>
+            </td>
+        </tr>
+        <tr>
+            <td width = "105" height = "80">
+                <p align="center">
+                <img border="0" src="img/thumb_github.png" style="width:80%">
+            </td>
+            <td height = "100">
+                <p style="margin-top: 0; margin-bottom: 0"><font face="Arial"><b><a
+                href="https://github.com/msxie92/ScreenStyle">Source Code</a></b></font></p>
+            </td>
+        </tr>
+    </table>
+    <table width="935" height="200">
+        <tr>
+            <td width="43"></td>
+            <td width="552" align="left">
+            <font FACE="Arial">
+            <p align="left"><b>BibTex:</b></p>
+            <p align="left"><font face="Courier New" size="2" color="#666666">
+<pre>
+    @article{xie-2018-manga,
+        author   = {Minshan Xie and Chengze Li and Xueting Liu and Tien-Tsin Wong},
+        title    = {Manga Filling Style Conversion with Screentone Variational Autoencoder},
+        journal  = {ACM Transactions on Graphics (SIGGRAPH Asia 2020 issue)},
+        month    = {December},
+        year     = {2020},
+        volume   = {39},
+        number   = {6},
+        pages    = {226:1--226:15}
+    }
+</pre>            
+
+            </p></td>
+            <td></td>
+        </tr>
+    </table>
+
+    </body>
+    </html>

@@ -474,11 +474,115 @@ href="./papers/mangainpaint/mangainpaint.pdf">paper</a>]
 <!----------------------------------------------------------------------------------------------------->
 
 
-<!--#include virtual="./papers/invbino/hu-2020-mononizing-desc.html"-->
+<p>
+<table border=0><tr><td width=300 height=80 align=right valign=top>
 
-<!--#include virtual="./papers/screenstyle/xie-2020-manga-desc.html"-->
+  <a href="./papers/invbino/invbino.html">
+  <img src="papers/invbino/img/icon.png" border=0></a><br>
+ 
 
-<!--#include virtual="./papers/embedframe/zhu-2020-video-desc.html"-->
+</td><td width=20>
+</td><td align=left valign=top  width=600><font face="Verdana" size="2">
+
+  <font size=+0 face="Arial,Helvetica"><b> 
+  Mononizing Binocular Videos </b>
+  <i><b> (SIGGRAPH Asia 2020)</b></i></font><br> 
+  <p>
+
+Here we present a fully backward compatible solution to represent a
+binocular video as an ordinary monocular video.  So that, it can be played
+back, compressed with standard video codec, transmitted, just like any
+ordinary monocular video.  The only uniqueness is that it can also be
+optionally restored back to its original binocular form, whenever
+stereoscopic playback is needed. We achieved this by employing the
+InvertibleX Model. In addition, compressing our mononized
+video even outperforms the state-of-the-art multiview video encoding.
+
+
+<br>
+
+<b>
+[<a href="./papers/invbino/invbino.html">more</a>]
+[<a href="https://youtu.be/rbZR_sF9B5E?list=PL3zJztb9e6XVa266_SeX0Dj66Vjy5f720">youtube</a>]
+[<a href="./papers/invbino/invbino.pdf">paper</a>]
+[<a href="https://github.com/wbhu/Mono3D">code</a>]
+</td></tr></table>
+<p><br>
+
+<!----------------------------------------------------------------------------------------------------->
+
+
+<p>
+<table border=0><tr><td width=300 height=80 align=right valign=top>
+
+  <a href="./papers/screenstyle/screenstyle.html">
+  <img src="papers/screenstyle/img/icon.gif" border=0></a><br>
+ 
+
+</td><td width=20>
+</td><td align=left valign=top  width=600><font face="Verdana" size="2">
+
+  <font size=+0 face="Arial,Helvetica"><b> 
+  Manga Filling with ScreenVAE </b>
+  <i><b> (SIGGRAPH Asia 2020)</b></i></font><br> 
+  <p>
+
+While automatic converting color comic to screened manga is doable, translating  a bitonal
+screened manga to color comic is never done automatically before. The major 
+bottleneck lies on the fundamental difference in characterizing how a region
+is filled. While a color can be characterized at a single point, a screentone has
+to be characterized by a region. To enable the effective automatic 
+transation between the color comic and the screened manga, we propose to
+unify such fundamental difference, by introducing an intermediate
+representation, ScreenVAE map, which converts the region-wise screentone to
+a point-wise representation. 
+
+<br>
+
+<b>
+[<a href="./papers/screenstyle/screenstyle.html">more</a>]
+[<a href="./papers/screenstyle/screenstyle.pdf">paper</a>]
+[<a href="https://github.com/msxie92/ScreenStyle">code</a>]
+</td></tr></table>
+<p><br>
+
+<!----------------------------------------------------------------------------------------------------->
+
+
+<p>
+<table border=0><tr><td width=300 height=80 align=right valign=top>
+
+  <a href="./papers/embedframe/embedframe.html">
+  <img src="./papers/embedframe/img/icon.gif"  border=0></a><br>
+ 
+
+</td><td width=20>
+</td><td align=left valign=top  width=600><font face="Verdana" size="2">
+
+  <font size=+0 face="Arial,Helvetica"><b> 
+  Video Snapshot</b> (a real live photo)
+  <i><b> (IEEE TPAMI 2021)</b></i></font><br> 
+  <p>
+
+While iPhone keeps a short video for each "live photo", we propose a method to
+embed a short video into a single frame, in other words, a real live photo. We employ
+the InvertibleX Model to first encode the neighboring frames into a
+single visualizable frame. Whenever the video is needed, a decoding subnetwork
+can be used to expand (restore) it.
+
+
+<br>
+
+<b>
+[<a href="./papers/embedframe/embedframe.html">more</a>]
+[<a href="https://youtu.be/H5UA5jH4BaQ">youtube</a>]
+[<a href="./papers/embedframe/embedframe.pdf"-->paper</a>]
+[<a href="https://github.com/chuchienshu/Video-Snapshot">code</a>]
+</td></tr></table>
+<p><br>
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 <!--#include virtual="./papers/deepcvdvideo/hu-2019-colorblind-desc.html"-->
 
