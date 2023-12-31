@@ -1,0 +1,198 @@
+<HTML>
+<HEAD>
+   <TITLE> Sampling with Hammersley and Halton Points </TITLE>
+</HEAD>
+<BODY BACKGROUND="/~ttwong/icon/desktop.jpg">
+
+<center><table border=0>
+<tr><td>
+<img src="thammer.gif">
+</td><td width=30></td><td width=600>
+<H2>Sampling with Hammersley and Halton Points </H2>
+<P>
+   <!--#include virtual="/~ttwong/papers/_author/ttwong.html"-->,
+   <!--#include virtual="/~ttwong/papers/_author/wsluk.html"-->
+   and
+   <!--#include virtual="/~ttwong/papers/_author/pheng.html"-->,<br>
+<i> Journal of Graphics Tools </i>, vol. 2, no. 2, 1997, pp 9-24.
+</td></tr>
+</table></center>
+
+
+
+<font face="Times New Roman" font size="3">
+<blockquote>
+
+<DIV ALIGN = JUSTIFY>	
+<h3>Abstract</h3>
+<dl><dd>
+<dd>The Hammersley and Halton point sets, two well known low discrepancy
+sequences, have been used for quasi-Monte Carlo integration in previous
+research. A deterministic formula generates a uniformly distributed and
+stochastic-looking sampling pattern, at low computational cost. The Halton
+point set is also useful for incremental sampling. In this paper, we discuss
+detailed implementation issues and our experience of choosing suitable bases
+of the point sets, not just on the 2D plane, but also on a spherical
+surface. The sampling scheme is also applied to ray tracing, with a
+significant improvement in error. 
+<p>
+</dl>
+
+
+<h3>Download Paper</h3>
+<ul>
+<li>PostScript:
+   <a href="http://appsrv.cse.cuhk.edu.hk/~ttwong/cgi-bin/paper-download/download.cgi?path=udpoint&dl=udpoint.ps.gz">
+   udpoint.ps.gz</a> (989,314 bytes)<br>
+<li>Acrobat:
+   <a href="http://appsrv.cse.cuhk.edu.hk/~ttwong/cgi-bin/paper-download/download.cgi?path=udpoint&dl=udpoint.pdf">
+   udpoint.pdf</a> (681 KB)<br>
+</ul>
+<p>
+
+
+
+
+<h3>Executable Demo</h3>
+
+<P>Two executable demostration programs are available for download.Program
+<TT>sphere</TT> demostrates the appearances of various Hammersley and Halton
+point sets on the sphere. Program <TT>plane</TT> demonstrates the appearances
+of various Hammersley and Halton point sets on the 2D plane.
+</P>
+
+<center>
+<TABLE BORDER=1 >
+<TR>
+<TD ALIGN=CENTER><A HREF="http://appsrv.cse.cuhk.edu.hk/~ttwong/cgi-bin/software-udpoint/download.cgi?downwhat=sphere.gz"><IMG SRC="icon/ish02.jpg" BORDER=0 ></A></TD>
+<TD align=center><A HREF="http://appsrv.cse.cuhk.edu.hk/~ttwong/cgi-bin/software-udpoint/download.cgi?downwhat=plane.gz"><IMG SRC="icon/iph02.jpg" BORDER=0></A></TD>
+<TD ALIGN=CENTER><A HREF="http://appsrv.cse.cuhk.edu.hk/~ttwong/cgi-bin/software-udpoint/download.cgi?downwhat=sphere.zip"><IMG SRC="icon/ish02.jpg" BORDER=0 ></A></TD>
+<TD align=center><A HREF="http://appsrv.cse.cuhk.edu.hk/~ttwong/cgi-bin/software-udpoint/download.cgi?downwhat=plane.zip"><IMG SRC="icon/iph02.jpg" BORDER=0></A></TD>
+</TR>
+
+<TR align=center>
+<TD width=80><A HREF="http://appsrv.cse.cuhk.edu.hk/~ttwong/cgi-bin/software-udpoint/download.cgi?downwhat=sphere.gz">sphere.gz<br>(SGI)</A></TD>
+<TD width=80><A HREF="http://appsrv.cse.cuhk.edu.hk/~ttwong/cgi-bin/software-udpoint/download.cgi?downwhat=plane.gz">plane.gz<br>(SGI)</A></TD>
+<TD width=80><A HREF="http://appsrv.cse.cuhk.edu.hk/~ttwong/cgi-bin/software-udpoint/download.cgi?downwhat=sphere.zip">sphere.zip<br>(Win 98/NT)</A></TD>
+<TD width=80><A HREF="http://appsrv.cse.cuhk.edu.hk/~ttwong/cgi-bin/software-udpoint/download.cgi?downwhat=plane.zip">plane.zip<br>(Win 98/NT)</A></TD>
+</TR>
+</TABLE>
+</center>
+
+<P><I>Running instructions for both programs: </I>When the program (both
+demo programs) starts, users can press key <TT>&quot;<FONT SIZE=+1>1</FONT>&quot;
+- &quot;<FONT SIZE=+1>9</FONT>&quot;</TT> and <TT>&quot;<FONT SIZE=+1>A</FONT>&quot;
+- &quot;<FONT SIZE=+1>B</FONT>&quot;</TT>. Each key toggles the drawing
+of one point set (see the following table):</P>
+
+<center>
+<TABLE BORDER=1 >
+<TR>
+<TD>Key pressed </TD>
+
+<TD>Point set being drawn or erased</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER VALIGN=CENTER><TT><FONT SIZE=+1>1</FONT></TT></TD>
+
+<TD>Random points with uniform distribution.</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER VALIGN=CENTER><TT><FONT SIZE=+1>2</FONT></TT></TD>
+
+<TD>Hammersley points with p<SUB>1</SUB> = 2.</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER VALIGN=CENTER><TT><FONT SIZE=+1>3</FONT></TT></TD>
+
+<TD>Hammersley points with p<SUB>1</SUB> = 3.</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER VALIGN=CENTER><TT><FONT SIZE=+1>4</FONT></TT></TD>
+
+<TD>Hammersley points with p<SUB>1</SUB> = 5.</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER VALIGN=CENTER><TT><FONT SIZE=+1>5</FONT></TT></TD>
+
+<TD>Hammersley points with p<SUB>1</SUB> = 7.</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER VALIGN=CENTER><TT><FONT SIZE=+1>6</FONT></TT></TD>
+
+<TD>Hammersley points with p<SUB>1</SUB> = 11.</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER VALIGN=CENTER><TT><FONT SIZE=+1>7</FONT></TT></TD>
+
+<TD>Halton points with p<SUB>1</SUB> = 2, p<SUB>2</SUB> = 3.</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER VALIGN=CENTER><TT><FONT SIZE=+1>8</FONT></TT></TD>
+
+<TD>Halton points with p<SUB>1</SUB> = 2, p<SUB>2</SUB> = 5.</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER VALIGN=CENTER><TT><FONT SIZE=+1>9</FONT></TT></TD>
+
+<TD>Halton points with p<SUB>1</SUB> = 2, p<SUB>2</SUB> = 7.</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER VALIGN=CENTER><TT><FONT SIZE=+1>A</FONT></TT></TD>
+
+<TD>Halton points with p<SUB>1</SUB> = 3, p<SUB>2</SUB> = 5.</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER VALIGN=CENTER><TT><FONT SIZE=+1>B</FONT></TT></TD>
+
+<TD>Halton points with p<SUB>1</SUB> = 3, p<SUB>2</SUB> = 7.</TD>
+</TR>
+</TABLE>
+</center>
+
+<h3>Download Source Code</h3>
+Source code of the demo program using OpenGL (or Mesa), GLUT:
+<a href="http://appsrv.cse.cuhk.edu.hk/~ttwong/cgi-bin/software-udpoint/download.cgi?downwhat=udpoint.zip">
+udpoint.zip</a>.
+The source codes listed in the appendix of the paper are also inside this
+demo package. The program works on both UNIX/Xwindows and Windows 98/NT.
+
+<h3>Ray Tracing Images</h3>
+
+<P>To verify the usefulness of the sampling scheme. We implemented it in a
+ray tracer. Two scenes are tested: <TT>check</TT> and <TT>check45</TT>. Due
+to the page limit of the paper, the generated images are not included in the
+paper. Instead, they are included in this web page.  Click the following
+icons of two test scenes <TT>checker</TT> and <TT>checker45</TT> for visual
+comparison of generated images of various sampling schemes.
+
+<p><center>
+<table border=1>
+<tr><td  ALIGN=CENTER>
+<A HREF="image/check.html"><img src="icon/check.jpg" border=0></A>
+</td><td  ALIGN=CENTER>
+<A HREF="image/check45.html"><img src="icon/check45.jpg" border=0></A>
+</tr><tr>
+<td>check</td>
+<td>check45</td>
+</table>
+</center>
+
+
+<!--#include virtual="/~ttwong/footer1.html"-->
+</blockquote>
+</font>
+
+</BODY>
+</HTML>

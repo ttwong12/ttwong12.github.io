@@ -1,41 +1,7 @@
 
-<!DOCTYPE html>
-<html>
-<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain attribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-};
-</script>
-
-
-
 <html>
 <title>Publication (Recent and Selected) </title>
-<body background="/~ttwong/icon/desktop.jpg">
+<body background="./icon/desktop.jpg">
 <blockquote>
 
 <center><table border=5><tr><td width=820>
@@ -82,128 +48,717 @@ function includeHTML() {
 </ol><h5>SIGGRAPH / SIGGRAPH Asia: (published in ACM Trans. on Graphics)</h5><ol>
 
 
-  <li><div w3-include-html="https://ttwong12.github.io/papers/_reference/xia-2022-disentangled.html"></div> 
-  <li><div w3-include-html="./papers/_reference/xia-2022-disentangled.html"></div> 
-  <li><!--#include virtual="./papers/_reference/xia-2022-disentangled.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/zhang-2022-sprite.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/xie-2021-seamless.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/xie-2020-manga.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/hu-2020-mononizing.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/hu-2019-colorblind2.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/xia-2018-invertible.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/zhang-2018-two.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/han-2018-deep.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/li-2017-deep.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/kwan-2016-pyramid.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/shen-2016-seamless.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/zhu-2016-globally.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/liu-2015-closure.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/liu-2013-stereoscopizing.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/yang-2012-binocular.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/nan-2011-conjoining.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/xin-2011-making.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wu-2010-resizing.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wang-2010-data.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/xu-2010-structure.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/chu-2010-camouflage.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/qu-2008-richness.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/liu-2008-intrinsic.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/xu-2008-animating.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/pang-2008-structure.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/chi-2008-self.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/kopf-2007-solid.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/qu-2006-manga.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/chen-2005-visual.html"-->
+  <li>"<a href="/~ttwong/papers/disco/disco.html">DISCO: Disentangled Image Colorization via Global
+Anchors</a>",<br>
+M. Xia, W. Hu, T. T. Wong and J. Wang,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH Asia 2022 issue)</i>,
+Vol. 41, No. 6, December 2022, pp. 204:1-204:13.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Sprite-from-Sprite: Cartoon Animation Decomposition with Self-supervised Sprite Estimation</u>",<br>
+L. Zhang, T. T. Wong and Y. Liu,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH Asia 2022 issue)</i>,
+Vol. 41, No. 6, December 2022, pp. 192:1-192:12.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="/~ttwong/papers/mangainpaint/mangainpaint.htm">Seamless Manga Inpainting with Semantics
+Awareness</a>",<br>
+M. Xie, M. Xia, X. Liu, C. Li and T. T. Wong,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH 2021 issue)</i>,
+Vol. 40, No. 4, August 2021, pp. 96:1-96:11.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="/~ttwong/papers/screenstyle/screenstyle.html">
+Manga Filling Style Conversion with Screentone Variational Autoencoder</a>",<br>
+M. Xie, C. Li, X. Liu and T. T. Wong,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH Asia 2020 issue)</i>,
+Vol. 39, November 2020, pp. 226:1-226:15.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="/~ttwong/papers/invbino/invbino.html">Mononizing Binocular
+Videos</a>",<br>
+W. Hu, M. Xia, C. W. Fu and T. T. Wong,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH Asia 2020 issue)</i>,
+Vol. 39, November 2020, pp: 228:1-228:16.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/deepcvdvideo/deepcvdvideo.html">
+Colorblind-Shareable Videos by Synthesizing Temporal-Coherent Polynomial Coefficients</a>",<br>
+X. Hu, X. Liu, Z. Zhang, M. Xia, C. Li and T. T. Wong,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH Asia 2019 issue)</i>,
+Vol. 38, No. 6, November 2019, pp. 174:1-174:12.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/invertgray/invertgray.html">
+Invertible Grayscale</a>",<br>
+M. Xia, X. Liu and T. T. Wong,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH Asia 2018 issue)</i>,
+Vol. 37, November 2018, pp. 246:1-246:10.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/colorize/colorize.html">
+Two-stage Sketch Colorization</a>",<br>
+L.M. Zhang, C. Li, T. T. Wong, Y. Ji and C.P. Liu,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH Asia 2018 issue)</i>,
+Vol. 37, November 2018, pp. 261:1-261:14.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/pixel/pixel.html">
+Deep Unsupervised Pixelization</a>",<br>
+C. Han, Q. Wen, S. He, Q. Zhu, Y. Tan, G. Han and T. T. Wong,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH Asia 2018 issue)</i>,
+Vol. 37, November 2018, pp. 243:1-243:11.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/linelearn/linelearn.html">
+Deep Extraction of Manga Structural Lines</a>",<br>
+C. Li, X. Liu and T. T. Wong,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH 2017 issue)</i>,
+Vol. 36, No. 4, July 2017, pp. 117:1-117:10.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/pad/pad.html">
+Pyramid of Arclength Descriptor for Generating Collage of Shapes</a>",<br>
+K. C. Kwan, L. T. Sinn, C. Han, T. T. Wong and  C. W. Fu,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH Asia 2016 issue)</i>,
+Vol. 35, No. 6, November 2016, pp. 229:1-229:10.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/colorblind/colorblind.html">
+Seamless Visual Sharing with Color Vision Deficiencies</a>",<br>
+W. Shen, X. Mao, X. Hu and T. T. Wong,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH 2016 issue)</i>,
+Vol. 35, No. 3, July 2016, pp. 70:1-70:12.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/toontrack/toontrack.html">
+Globally Optimal Toon Tracking</a>",<br>
+H. Zhu, X. Liu, T. T. Wong and P. A. Heng,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH 2016 issue)</i>,
+Vol. 35, No. 3, July 2016, pp. 75:1-75:10.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/sketch/sketch.html">Closure-aware Sketch Simplification</a>",<br>
+X. Liu, T. T. Wong, and  P. A. Heng,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH Asia 2015 issue)</i>,
+Vol. 34, No. 6, November 2015, pp.168:1-168:10.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="/~ttwong/papers/3dcel/3dcel.html">Stereoscopizing Cel Animations</a>",<br>
+X. Liu, X. Mao, X. Yang, L. Zhang and T. T. Wong,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH Asia 2013 issue)</i>,
+Vol. 32, No. 6, November 2013, pp.223:1-223:10.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/binovision/binovision.html">
+Binocular Tone Mapping</a>",<br>
+X. Yang, L. Zhang, T. T. Wong and P. A. Heng,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH 2012 issue)</i>,
+Vol. 31, No. 4, July 2012, pp. 93:1-93:10.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/gestalt/gestalt.html">Conjoining
+Gestalt Rules for Abstraction of Architectural Drawings</a>",<br>
+L. Nan, A. Sharf, K. Xie, T. T. Wong, O. Deussen, D. Cohen-Or and  B. Chen,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH Asia 2011 issue)</i>,
+Vol. 30, No. 6, December 2011, pp. 185:1-185:10.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/puzzle/puzzle.html">Making Burr Puzzles from 3D Models</a>",<br>
+S. Xin, C. F. Lai, C. W. Fu, T. T. Wong, Y. He and D. Cohen-Or,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH 2011 issue)</i>,
+Vol. 30, No. 4, August 2011, pp. 97:1-97:8.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/sumresize/sumresize.html">Resizing
+ by Symmetry-Summarization</a>",<br>
+H. Wu, Y. Wang, K. C. Feng, T. T. Wong, T. Y. Lee and P. A. Heng,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH Asia 2010 issue)</i>,
+Vol. 29, No. 6, December 2010, pp.159:1-159:9.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/colormood/colormood.html">Data-Driven Image Color Theme Enhancement</a>",<br>
+B. Wang, Y. Yu, T. T. Wong, C. Chen and Y. Q. Xu,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH Asia 2010 issue)</i>,
+Vol. 29, No. 6, December 2010, pp. 146:1-146:10.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/asciiart/asciiart.html">Structure-based ASCII Art</a>",<br>
+X. Xu, L. Zhang and T. T. Wong,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH 2010 issue)</i>,
+Vol. 29, No. 4, July 2010, pp. 52-1-52:9.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/camouflage/camouflage.html">Camouflage Images</a>",<br>
+H. K. Chu, W. H. Hsu, N. Mitra, D. Cohen-Or, T. T. Wong and T. Y. Lee,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH 2010 issue)</i>,
+Vol. 29, No. 4, July 2010, pp. 51:1-51:8.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/screen/screen.html">
+Richness-Preserving Manga Screening</a>",<br>
+Y. Qu, W. M. Pang, T. T. Wong and P. A. Heng,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH Asia 2008 issue)</i>,
+Vol. 27, December 2008, pp. 155:1-155:8.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/incolor/incolor.html">
+Intrinsic Colorization</a>",<br>
+X. Liu, L. Wan, Y. Qu, T. T. Wong, S. Lin, C. S. Leung and P. A. Heng,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH Asia 2008 issue)</i>,
+Vol. 27, December 2008, pp. 152:1-152:9.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/flock/flock.html">
+Animating Animal Motion from Still</a>",<br>
+X. Xu, L. Wan, X. Liu, T. T. Wong, L. Wang and C. S. Leung,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH Asia 2008 issue)</i>,
+Vol. 27, December 2008, pp. 117:1-117:8.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/structurehalftone/structurehalftone.html">
+Structure-Aware Halftoning</a>",<br>
+W. M. Pang, Y. Qu, T. T. Wong, D. Cohen-Or and P. A. Heng,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH 2008 issue)</i>,
+Vol. 27, No. 3, August 2008, pp. 89:1-89:8.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/illusion/illusion.html">
+Self-Animating Images: Illusory Motion Using Repeated Asymmetric Patterns</a>",<br>
+M. T. Chi, T. Y. Lee, Y. Qu and T. T. Wong,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH 2008 issue)</i>,
+Vol. 27, No. 3, August 2008, pp. 62:1-62:8.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/solid/solid.html">Solid 
+Texture Synthesis from 2D Exemplars</a>",<br>
+J. Kopf, C. W. Fu, D. Cohen-Or, O. Deussen, D. Lischinski and T. T. Wong,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH 2007 issue)</i>,
+Vol. 26, No. 3, July 2007, pp. 2-1--2-9.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="/~ttwong/papers/manga/manga.html">Manga Colorization</a>",<br>
+Y. Qu, T. T. Wong and P. A. Heng,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH 2006 issue)</i>,
+Vol. 25, No. 3, July 2006, pp. 1214-1220.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Visual Simulation of Weathering By gamma-ton Tracing</u>",<br>
+Y. Chen, L. Xia, T. T. Wong, X. Tong, H. Bao, B. Guo and H. Y. Shum,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH 2005 issue)</i>,
+Vol. 24, No. 3, August 2005, pp. 1127-1133.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 </ol><h5>Others:</h5><ol>
 
-  <li><!--#include virtual="/~ttwong/papers/_reference/wang-2006-deringing.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/jayaraman-2018-globally.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/kwan-2018-packing.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/xu-2017-ascii.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/ho-2015-all.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/ma-2013-change.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/liu-2012-statistical.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wan-2011-spatiotemporal.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/zhang-2011-motion.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/ho-2011-unicube.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wan-2010-evolving.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/lam-2010-all.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/zhang-2009-refilming.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/leung-2007-tileable.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wan-2007-isocube.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/zhang-2007-stereoscopic.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/lam-2006-noise.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/fu-2004-binary.html"-->
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/artifact/artifact.html">
+Deringing Cartoons by Image Analogies</a>",<br>
+G. Wang, T. T. Wong and P. A. Heng,<br>
+<i>ACM Transactions on Graphics</i>,
+Vol. 25, No. 4, October 2006, pp. 1360-1379.<p>
 
-  <li><!--#include virtual="/~ttwong/papers/_reference/zhao-2013-cube2video.html"--> 
-  <li><!--#include virtual="/~ttwong/papers/_reference/xiao-2013-example.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/fu-2009-rhombic.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wong-2007-discrete.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/tang-2005-system.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wong-2002-plenoptic.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/zhang-2009-consistent.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wu-2006-dense.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/leung-2009-efficient.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/leung-2006-rbf.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/ho-2005-compressing.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wong-2003-compression.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/heng-2006-intelligent.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/heng-2004-virtual2.html"-->
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Globally Consistent Wrinkle-Aware Shading of Line Drawings</u>",<br>
+P. K. Jayaraman, C. W. Fu, J. Zheng, X. Liu and T. T. Wong,<br>
+<i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 24, No. 7, 2018, pp. 2103-2117.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Packing Vertex Data into Hardware-Decompressible Textures</u>",<br>
+K. C. Kwan, X. Xu, L. Wan, T. T. Wong and W. M. Pang,<br>
+<i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 24, No. 5, May 2018, pp. 1705-1716.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>ASCII Art Synthesis from Natural Photographs</u>",<br>
+X. Xu, L. Zhong, M. Xie, X. Liu, J. Qin and T. T. Wong,<br>
+<i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 23, No. 8, 2017, pp. 1910-1923.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>All-Frequency Direct Illumination with Vectorized Visibility</u>",<br>
+T. Y. Ho, Y. Xiao, R. B. Feng, C. S. Leung and T. T. Wong,<br>
+<i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 21, No. 8, August 2015, pp. 945-958.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Change Blindness Images</u>",<br>
+L. Q. Ma, K. Xu, T. T. Wong, B. Y. Jiang and S. M. Hu,<br>
+<i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 19, No. 11, November 2013, pp. 1808-1819.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Statistical Invariance for Texture Synthesis</u>",<br>
+X. Liu, L. Jiang, T. T. Wong and C. W. Fu,<br>
+<i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 18, No. 11, November 2012, pp. 1836-1848.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Spatiotemporal Sampling of Dynamic Environment Sequences</u>",<br>
+L. Wan, S. K. Mak, T. T. Wong and C. S. Leung,<br>
+<i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 17, No. 10, October 2011, pp. 1499-1509.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Motion Imitation with a Handheld Camera</u>",<br>
+G. Zhang, H. Jiang, J. Huang, J. Jia, T. T. Wong, K. Zhou and H. Bao,<br>
+<i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 17, No. 10, October 2011, pp. 1475-1486.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Unicube for Dynamic Environment Mapping</u>",<br>
+T. Y. Ho, L. Wan, P. M. Lam, C. S. Leung and T. T. Wong,<br>
+<i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 17, No. 1, January 2011, pp. 51-63.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/maze/maze.html">Evolving Mazes from Images</a>",<br>
+L. Wan, X. Liu, T. T. Wong and C. S. Leung,<br>
+<i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 16, No. 2, March/April 2010, pp. 287-297.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>All-Frequency Lighting with Multiscale Spherical Radial Basis Function</u>",<br>
+P. M. Lam, T. Y. Ho, C. S. Leung and T. T. Wong,<br>
+<i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 16, No. 1, January/February 2010, pp. 43-56.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/refilm/refilm.html">Re-filming
+ with Depth-inferred Videos</a>",<br>
+G. Zhang, Z. Dong, J. Jia, L. Wan, T. T. Wong and H. Bao,<br>
+<i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 15, No. 5, September 2009, pp. 828-840.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="/~ttwong/papers/btftile/btftile.html">Tileable BTF</a>",<br>
+M. K. Leung, W. M. Pang, C. W. Fu, T. T. Wong and P. A. Heng,<br>
+<i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 13, No. 5, September-October 2007, pp. 953-965.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="/~ttwong/papers/isocube/isocube.html">Isocube: Exploiting the Cubemap Hardware</a>",<br>
+L. Wan, T. T. Wong and C. S. Leung,<br>
+<i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 13, No. 4, July/August 2007, pp. 720-731.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Stereoscopic Video Synthesis from a Monocular Video</u>",<br>
+G. Zhang, W. Hua, X. Qin, T. T. Wong and H. Bao,<br>
+<i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 13, No. 4, July/August 2007, pp. 686-696.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/shfit/shfit.html">
+Noise-Resistant Fitting for Spherical Harmonics</a>",<br>
+P. M. Lam, C. S. Leung and T. T. Wong,<br>
+<i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 12, No. 2, March/April 2006, pp. 254-265.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/bspi/bspi.html">
+Binary-Space-Partitioned Images for Resolving Image-based Visibility</a>",<br>
+C. W. Fu, T. T. Wong, W. S. Tong, C. K. Tang and A. J. Hanson,<br>
+<i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 10, No. 1, January-February 2004, pp. 58-71.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+
+  <li>"<u>Cube2Video: Navigate Cubic Panoramas in Real-Time</u>",<br>
+Q. Zhao, L. Wan, W. Feng, J. Zhang and T. T. Wong,<br>
+<i>IEEE Transactions on Multimedia</i>,
+Vol. 15, No. 8, December 2013, pp. 1745-1754.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+ 
+  <li>"<u>Example-based Color Transfer for Gradient Meshes</u>",<br>
+Y. Xiao, L. Wan, C. S. Leung, Y. K. Lai and T. T. Wong,<br>
+<i>IEEE Transactions on Multimedia</i>,
+Vol. 15, No. 3, April 2013, pp. 549-560.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/rhombic/rhombic.html">
+The Rhombic Dodecahedron Map: An Efficient Scheme for Encoding Panoramic Video</a>",<br>
+C. W. Fu, L. Wan, T. T. Wong and C. S. Leung,<br>
+<i>IEEE Transactions on Multimedia</i>,
+Vol. 11, No. 4, June 2009, pp. 634-644.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/dwtgpu/dwtgpu.html">
+Discrete Wavelet Transform on Consumer-Level Graphics Hardware</a>",<br>
+T. T. Wong, C. S. Leung, P. A. Heng and J. Wang,<br>
+<i>IEEE Transactions on Multimedia</i>,
+Vol. 9, No. 3, April 2007, pp. 668-673.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/cockpit/cockpit.html">
+A System for Real-time Panorama Generation and Display in Tele-immersive Applications</a>",<br>
+W. K. Tang, T. T. Wong and P. A. Heng,<br>
+<i>IEEE Transactions on Multimedia</i>,
+Vol. 7, No. 2, April 2005, pp. 280-292.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/plenill2/plenill2.html">
+The Plenoptic Illumination Function</a>",<br>
+T. T. Wong, C. W. Fu, P. A. Heng and C. S. Leung,<br>
+<i>IEEE Transactions on Multimedia</i>,
+Vol. 4, No. 3, September 2002, pp. 361-371.<br>
+(This paper received the IEEE Transactions on Multimedia Prize Paper Award
+2005.)<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Consistent Depth Maps Recovery from a Video Sequence</u>",<br>
+G. Zhang, J. Jia, T. T. Wong and H. Bao,<br>
+<i>IEEE Transactions on Pattern Analysis and Machine Intelligence</i>,
+Vol. 31, No. 6, June 2009, pp. 974-988.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Dense Photometric Stereo: a Markov Random Field Approach</u>",<br>
+T. P. Wu, K. L. Tang, C. K. Tang and T. T. Wong,<br>
+<i>IEEE Transactions on Pattern Analysis and Machine Intelligence</i>,
+Vol. 28, No. 11, November 2006, pp. 1830-1846.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Efficient Relighting of RBF based Illumination Adjustable Images</u>",<br>
+T. Y. Ho, C. S. Leung, P. M. Lam and T. T. Wong,<br>
+<i>IEEE Transactions on Neural Networks</i>,
+Vol. 20, No. 12, December 2009, pp. 1987-1993.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>An RBF-based Image Compression Method for Image-based Rendering</u>",<br>
+C. S. Leung, T. T. Wong, P. M. Lam and K. H. Choy,<br>
+<i>IEEE Transactions on Image Processing</i>,
+Vol. 15, No. 4, April 2006, pp. 1031-1041.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/pca/pca.html">
+Compressing the Illumination-Adjustable Images with Principal Component Analysis</a>",<br>
+P. M. Ho, T. T. Wong and C. S. Leung,<br>
+<i>IEEE Transactions on Circuits and Systems for Video Technology</i>,
+Vol. 15, No. 3, March 2005, pp. 355-364.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/plenwave/plenwave.html">
+Compression of Illumination-Adjustable Images</a>",<br>
+T. T. Wong and C. S. Leung,<br>
+<i>IEEE Transactions on Circuits and Systems for Video Technology (special issue on Image-based Modeling, Rendering and Animation)</i>,
+Vol. 13, No. 11, November 2003, pp. 1107-1118.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Intelligent Inferencing and Haptic Simulation for Chinese Acupuncture Learning and Training</u>",<br>
+P. A. Heng, T. T. Wong, R. Yang, Y. P. Chui, Y. Xie, K. S. Leung and P. C. Leung,<br>
+<i>IEEE Transactions on Information Technology in Biomedicine</i>,
+Vol. 10, No. 1, January 2006, pp. 28-41.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>A Virtual Reality Training System for Knee Arthroscopic Surgery</u>",<br>
+P. A. Heng, C. Y. Cheng, T. T. Wong, Y. Xu, Y. P. Chui, K. M. Chan and S. K. Tso,<br>
+<i>IEEE Transactions on Information Technology in Biomedicine</i>,
+Vol. 8, No. 2, June 2004, pp. 217-227.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 <! IEEE CGA >
-  <li><!--#include virtual="/~ttwong/papers/_reference/pang-2004-estimating.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wong-2001-interactive.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/hsu-1995-simulating.html"-->
+  <li>"<u>Estimating Light Vectors in Real Time</u>",<br>
+W. M. Pang, T. T. Wong and P. A. Heng,<br>
+<i>IEEE Computer Graphics & Applications</i>,
+Vol. 24, No. 3, May-June 2004, pp. 36-43.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/pano/pano.html">
+Interactive Relighting of Panoramas</a>",<br>
+T. T. Wong, C. W. Fu and P. A. Heng,<br>
+<i>IEEE Computer Graphics & Applications</i>,
+Vol. 21, No. 2, March-April 2001, pp. 32-41.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/dust/dust.html">
+Simulating Dust Accumulation</a>",<br>
+S. C. Hsu and T. T. Wong,<br>
+<i>IEEE Computer Graphics & Applications</i>,
+Vol. 15, No. 1, January 1995, pp. 18-22.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 <! IEEE magazine >
-  <li><!--#include virtual="/~ttwong/papers/_reference/fok-2007-evolutionary.html"-->
+  <li>"<a href="/~ttwong/papers/ecgpu/ecgpu.html">
+Evolutionary Computing on Consumer Graphics Hardware</a>",<br>
+K. L. Fok, T. T. Wong and M. L. Wong,<br>
+<i>IEEE Intelligent Systems</i>,
+Vol. 22, No. 2, March/April 2007, pp. 69-78.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 <! International Journal on Computer Vision>
-  <li><!--#include virtual="/~ttwong/papers/_reference/lin-2002-relighting.html"-->
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/illusam2/illusam2.html">
+Relighting with the Reflected Irradiance Field: Representation, Sampling and Reconstruction</a>",<br>
+Z. Lin, T. T. Wong and H. Y. Shum,<br>
+<i>International Journal of Computer Vision</i>,
+Vol. 49, No. 2-3, September-October 2002, pp. 229-246.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 <! Computer Vision and Image Understanding >
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wang-2004-data.html"-->
+  <!li><!!--#include virtual="./papers/_reference/wang-2004-data.html"-->
 
 <! Pattern Recognition>
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wang-2004-eigen.html"-->
+  <!li><!!--#include virtual="./papers/_reference/wang-2004-eigen.html"-->
 
 <! Signal Processing: Image Communication >
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wang-2004-data2.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/lam-2004-compression.html"-->
+  <!li><!!--#include virtual="./papers/_reference/wang-2004-data2.html"-->
+  <!li><!!--#include virtual="./papers/_reference/lam-2004-compression.html"-->
 
 <! Computer Graphics Forum >
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/liu-2001-constrained.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/poston-1998-multiresolution.html"-->
+  <!li><!!--#include virtual="./papers/_reference/liu-2001-constrained.html"-->
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/asc/asc.html">
+Multiresolution Isosurface Extraction with Adaptive Skeleton Climbing</a>",<br>
+T. Poston, T. T. Wong and P. A. Heng,<br>
+<i>Computer Graphics Forum</i>,
+Vol. 17, No. 3, September 1998, pp. 137-148.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 <! Journal of Visualization and Computer Animation >
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wong-1998-illumination.html"-->
+  <!li><!!--#include virtual="./papers/_reference/wong-1998-illumination.html"-->
 
 <! Computer & Graphics >
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/fang-2001-continuous.html"-->
+  <!li><!!--#include virtual="./papers/_reference/fang-2001-continuous.html"-->
 
 <! Others with impact factors>
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wang-2004-compressing.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wang-2003-improved.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/leung-2004-rls.html"-->
+  <!li><!!--#include virtual="./papers/_reference/wang-2004-compressing.html"-->
+  <!li><!!--#include virtual="./papers/_reference/wang-2003-improved.html"-->
+  <!li><!!--#include virtual="./papers/_reference/leung-2004-rls.html"-->
 
 <! Journal of Graphics Tools >
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wong-2000-accelerating.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/fu-1998-triangle.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/feng-1998-accurate.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wong-1997-sampling.html"-->
+  <!li><!!--#include virtual="./papers/_reference/wong-2000-accelerating.html"-->
+  <!li><!!--#include virtual="./papers/_reference/fu-1998-triangle.html"-->
+  <!li><!!--#include virtual="./papers/_reference/feng-1998-accurate.html"-->
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/udpoint/udpoints.html">
+Sampling with Hammersley and Halton Points</a>",<br>
+T. T. Wong, W. S. Luk and P. A. Heng,<br>
+<i>Journal of Graphics Tools</i>,
+Vol. 2, No. 2, 1997, pp. 9-24.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 <! International Journal of Virtual Reality >
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/heng-2000-virtual.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wong-2000-navigation.html"-->
+  <!li><!!--#include virtual="./papers/_reference/heng-2000-virtual.html"-->
+  <!li><!!--#include virtual="./papers/_reference/wong-2000-navigation.html"-->
 
 <! International Journal of Image and Graphics >
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/heng-2006-haptic.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/heng-2001-interactive.html"-->
+  <!li><!!--#include virtual="./papers/_reference/heng-2006-haptic.html"-->
+  <!li><!!--#include virtual="./papers/_reference/heng-2001-interactive.html"-->
 
 <! Others without impact factor>
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wang-2003-comparison.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/tang-2003-immersive.html"-->
+  <!li><!!--#include virtual="./papers/_reference/wang-2003-comparison.html"-->
+  <!li><!!--#include virtual="./papers/_reference/tang-2003-immersive.html"-->
 
 </ol>
 </font>
@@ -217,28 +772,126 @@ function includeHTML() {
 <font face="Verdana" size="2">
 
 <! Shader X series>
-  <li><!--#include virtual="/~ttwong/papers/_reference/wan-2008-isocube.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/ho-2008-uniform.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/leung-2008-removing.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/pang-2007-implementing.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wong-2006-real.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wong-2006-shader.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/leung-2006-texture.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wong-2005-lighting.html"-->
+  <li>"<u>Isocube: A Cubemap with Uniformly Distributed and Equally Important Texels</u>",<br>
+L. Wan, T. T. Wong, C. S. Leung and C. W. Fu,<br>
+<i>Shader X6: Advanced Rendering Techniques</i>,
+Edited by W. Engel, Charles River Media, 2008, pp. 83-92.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Uniform Cubemaps for Dynamic Environments</u>",<br>
+T. Y. Ho, C. S. Leung and T. T. Wong,<br>
+<i>Shader X6: Advanced Rendering Techniques</i>,
+Edited by W. Engel, Charles River Media, 2008, pp. 93-102.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Removing Shadow Volume Artifacts by Spatial Adjustment</u>",<br>
+C. S. Leung, T. Y. Ho and T. T. Wong,<br>
+<i>Shader X6: Advanced Rendering Techniques</i>,
+Edited by W. Engel, Charles River Media, 2008, pp. 301-308.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Implementing High-Quality PRNG on GPUs</u>",<br>
+W. M. Pang, T. T. Wong and P. A. Heng,<br>
+<i>Shader X5: Advanced Rendering Techniques</i>,
+Edited by W. Engel, Charles River Media, 2007, pp. 579-590.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Real-Time Environment Mapping with Equal Solid-Angle Spherical Quad-Map</u>",<br>
+T. T. Wong, L. Wan, C. S. Leung and P. M. Lam,<br>
+<i>Shader X4: Advanced Rendering Techniques</i>,
+Edited by W. Engel, Charles River Media, 2006, pp. 221-233.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <!li><!!--#include virtual="./papers/_reference/wong-2006-shader.html"-->
+  <li>"<u>Texture Compression with Coefficient Domain Shaders</u>",<br>
+C. S. Leung, P. M. Lam and T. T. Wong,<br>
+<i>Shader X4: Advanced Rendering Techniques</i>,
+Edited by W. Engel, Charles River Media, 2006, pp. 251-262.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Lighting Precomputation Using the Relighting Map</u>",<br>
+T. T. Wong, C. S. Leung and K. H. Choy,<br>
+<i>Shader X3: Advanced Rendering with Direct X and OpenGL</i>,
+Edited by W. Engel, Charles River Media, 2005, pp. 379-392.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 <! Graphics Programming Method>
-  <li><!--#include virtual="/~ttwong/papers/_reference/wong-2003-real.html"-->
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/panoshad/panoshad.html">
+Real-Time Relighting of Compressed Panoramas</a>",<br>
+T. T. Wong, S. H. Or and C. W. Fu,<br>
+<i>Graphics Programming Methods</i>,
+Edited by J. Lander, Charles River Media, 2003, pp. 375-288.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 <! Graphics Gems>
-  <li><!--#include virtual="/~ttwong/papers/_reference/wong-1995-halftoning.html"-->
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/halftone/sfc.html">
+Halftoning with Selective Precipitation and Adaptive Clustering</a>",<br>
+T. T. Wong and S. C. Hsu,<br>
+<i>Graphics Gems V</i>,
+Edited by A. Paeth, AP Professional, 1995, pp. 302-313.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 <! Other graphics books>
-  <li><!--#include virtual="/~ttwong/papers/_reference/wong-2005-sampling.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wong-2004-image.html"-->
+  <li>"<u>Sampling with Hammersley and Halton Points</u>",<br>
+T. T. Wong, W. S. Luk and P. A. Heng,<br>
+<i>Graphics Tools: The JGT Editors' Choice</i>,
+Edited by R. Barzel, AK Peters, 2005, pp. 255-270.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Image-based Relighting: Representation and Compression</u>",<br>
+T. T. Wong and P. A. Heng,<br>
+<i>Integrated Image and Graphics Technologies</i>,
+Edited by D. Zhang, M. Kamel and G. Baciu, Kluwer Academic Publisher, 2004, pp. 161-180.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 <! Non-graphics books> 
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/shi-2006-unifying.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wong-2006-parallel.html"-->
+  <!li><!!--#include virtual="./papers/_reference/shi-2006-unifying.html"-->
+  <li>"<u>Parallel Evolutionary Algorithms on Consumer-Level Graphics Processing Unit</u>",<br>
+T. T. Wong and M. L. Wong,<br>
+<i>Parallel Evolutionary Computations</i>,
+Edited by N. Nedjah, E. Alba and L.  M. Mourelle, Springer, 2006, pp. 133-154.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 </font>
 </ol></td></tr></table>
@@ -256,56 +909,300 @@ function includeHTML() {
 </ul><h5>SIGGRAPH / SIGGRAPH Asia (see Journal section above)</h5><ul>
 
 </ul><h5>GDC (Game Developers Conference)</h5><ul>
-  <li><!--#include virtual="/~ttwong/papers/_reference/wong-2007-there.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wan-2007-sphere.html"-->
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/srbf/srbf.html">
+Is There Anything Comparable to Spherical Harmonics But Simpler</a>",<br>
+T. T. Wong and C. S. Leung,<br>
+in <i>Game Developers Conference 2007 (GDC2007)</i>,
+San Francisco, California, USA, March 2007. <p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/spheremap/spheremap.html">
+Sphere Maps with the Near-Equal Solid-Angle Property</a>",<br>
+L. Wan and T. T. Wong,<br>
+in <i>Game Developers Conference 2007 (GDC2007)</i>,
+San Francisco, California, USA, March 2007. <p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 </ul><h5>Eurographics:</h5><ul>
-  <li><!--#include virtual="/~ttwong/papers/_reference/poston-1998-multiresolution.html"-->
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/asc/asc.html">
+Multiresolution Isosurface Extraction with Adaptive Skeleton Climbing</a>",<br>
+T. Poston, T. T. Wong and P. A. Heng,<br>
+<i>Computer Graphics Forum</i>,
+Vol. 17, No. 3, September 1998, pp. 137-148.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 </ul><h5>EGSR/EGWR:</h5><ul>
 <!-- Eurographic Rendering Workshop/Symposium -->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wan-2005-spherical.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/fu-1999-computing.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wong-1997-image.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wong-1997-geometry.html"-->
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/q2tree/q2tree.html">
+Spherical Q2-tree for Sampling Dynamic Environment Sequences</a>",<br>
+L. Wan, T. T. Wong and C. S. Leung,<br>
+in <i>Proceedings of Eurographics Symposium on Rendering 2005 (EGSR 2005)</i>,
+Konstanz, Germany, June 2005, pp. 21-30.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/panowalk/panowalk.html">
+Computing Visibility for Triangulated Panoramas</a>",<br>
+C. W. Fu, T. T. Wong and P. A. Heng,<br>
+in <i>Proceedings of the 10-th Eurographics Workshop on Rendering (Rendering Techniques'99)</i>,
+Granada, Spain, June 1999, pp. 169-182.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/lightfld/lightfld.html">
+Image-based Rendering with Controllable Illumination</a>",<br>
+T. T. Wong, P. A. Heng, S. H. Or and W. Y. Ng,<br>
+in <i>Proceedings of the 8-th Eurographics Workshop on Rendering (Rendering Techniques'97)</i>,
+St. Etienne, France, June 1997, pp. 13-22.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/imperfct/imperfct.html">
+A Geometry Dependent Texture Generation Framework for Simulating Surface Imperfections</a>",<br>
+T. T. Wong, W. Y. Ng and P. A. Heng,<br>
+in <i>Proceedings of the 8-th Eurographics Workshop on Rendering (Rendering Techniques'97)</i>,
+St. Etienne, France, June 1997, pp. 139-150.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 
 </ul><h5>IEEE ICCV:</h5><ul>
 <!-- IEEE ICCV -->
-  <li><!--#include virtual="/~ttwong/papers/_reference/xia-2021-deep.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/zhang-2007-moving.html"-->
+  <li>"<a href="/~ttwong/papers/invhalftone/invhalftone.html">Deep Halftoning with Reversible Binary Pattern</a>",<br>
+M. Xia, W. Hu, X. Liu and T. T. Wong,<br>
+in <i>Proceedings of 2021 IEEE/CVF International Conference on Computer Vision (ICCV 2021)</i>,
+October 2021, pp. 13980-13989.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Moving Object Extraction with a Hand-held Camera</u>",<br>
+G. Zhang, J. Jia, W. Xiong, T. T. Wong, P. A. Heng and H. Bao,<br>
+in <i>Proceedings of the Eleventh IEEE International Conference on Computer Vision (ICCV 2007)</i>,
+Rio de Janeiro, Brazil, October 2007, electronic only.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 </ul><h5>IEEE CVPR:</h5><ul>
 <!-- IEEE CVPR -->
-  <li><!--#include virtual="/~ttwong/papers/_reference/xing-2023-codetalker.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/liu-2022-neural.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/hu-2021-bidirectional.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/xie-2021-exploiting.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/zhang-2021-user.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/zhang-2008-recovering.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/zhang-2007-robust.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/tang-2005-dense.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/tang-2005-markov.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/jiang-2003-practical.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/lin-2001-relighting.html"-->
+  <li>"<a href="/~ttwong/papers/codetalker/codetalker.html">CodeTalker: Speech-Driven 3D Facial Animation with Discrete Motion Prior</a>",<br>
+J. Xing, M. Xia, Y. Zhang, X. Cun, J. Wang and T. T. Wong,<br>
+in <i>Proceedings of IEEE Computer Society Conference on Computer Vision and Pattern Recognition 2023 (CVPR 2023)</i>,
+June 2023, pp. 12780-12790.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="/~ttwong/papers/dashline/dashline.html">Neural Recognition of Dashed Curves with Gestalt Law of
+Continuity</a>",<br>
+H. Liu, C. Li, X. Liu and T. T. Wong,<br>
+in <i>Proceedings of IEEE Computer Society Conference on Computer Vision and Pattern Recognition 2022 (CVPR 2022)</i>,
+June 2022, pp. 1373-1382.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="/~ttwong/papers/bpnet/bpnet.html">Bidirectional Projection Network for Cross Dimension Scene
+Understanding</a>",<br>
+W. Hu, H. Zhao, L. Jiang, J. Jia and T. T. Wong,<br>
+in <i>Proceedings of IEEE Computer Society Conference on Computer Vision and Pattern Recognition 2021 (CVPR 2021)</i>,
+June 2021, pp. 14368-14377.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="/~ttwong/papers/mangarestore/mangarestore.html">Exploiting Aliasing for Manga Restoration</a>",<br>
+M. Xie, M. Xia and T. T. Wong,<br>
+in <i>Proceedings of IEEE Computer Society Conference on Computer Vision and Pattern Recognition 2021 (CVPR 2021)</i>,
+June 2021, pp. 13400-13409.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="https://lllyasviel.github.io/SplitFilling/">User-Guided Line Art Flat Filling with Split Filling
+Mechanism</a>",<br>
+L.M. Zhang, C. Li, E. S. Serra, Y. Ji, T. T. Wong and C.P. Liu,<br>
+in <i>Proceedings of IEEE Computer Society Conference on Computer Vision and Pattern Recognition 2021 (CVPR 2021)</i>,
+June 2021, pp. 9884-9893.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Recovering Consistent Video Depth Maps via Bundle Optimization</u>",<br>
+G. Zhang, J. Jia, T. T. Wong and H. Bao,<br>
+in <i>Proceedings of IEEE Computer Society Conference on Computer Vision and Pattern Recognition 2008 (CVPR 2008)</i>,
+Anchorage, Alaska, USA, June 2008, electronic only.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Robust Metric Reconstruction from Challenging Video Sequences</u>",<br>
+G. Zhang, X. Qin, W. Hua, T. T. Wong, P. A. Heng and H. Bao,<br>
+in <i>Proceedings of IEEE Computer Society Conference on Computer Vision and Pattern Recognition 2007 (CVPR 2007)</i>,
+Minneaopolis, Minnesota, USA, June 2007, electronic only.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Dense Photometric Stereo Using Tensorial Belief Propagation</u>",<br>
+K. L. Tang, C. K. Tang and T. T. Wong,<br>
+in <i>Proceedings of IEEE Computer Vision and Pattern Recognition 2005 (CVPR 2005)</i>,
+Vol. I, San Diego, California, USA, June 2005, pp. 132-139.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>A Markov Random Field Approach for Dense Photometric Stereo</u>",<br>
+K. L. Tang, C. K. Tang and T. T. Wong,<br>
+in <i>Proceedings of IEEE Computer Vision and Pattern Recognition 2005 (CVPR 2005)</i>,
+Vol. II, San Diego, California, USA, June 2005, pp. 1197.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/superes/superes.html">
+Practical Super-Resolution from Dynamic Video Sequences</a>",<br>
+Z. Jiang, T. T. Wong and H. Bao,<br>
+in <i>Proceedings of IEEE Computer Vision and Pattern Recognition 2003 (CVPR 2003)</i>,
+Vol. II, Madison, Wisconsin, USA, June 2003, pp. 549-554.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/illusam4/illusam4.html">
+Relighting with the Reflected Irradiance Field: Representation, Sampling and Reconstruction</a>",<br>
+Z. Lin, T. T. Wong and H. Y. Shum,<br>
+in <i>Proceedings of IEEE Computer Vision and Pattern Recognition 2001 (CVPR 2001)</i>,
+Vol. I, Hawaii, December 2001, pp. 561-567.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 </ul><h5>ACM MM:</h5><ul>
 <!-- ACM Multimedia -->
-  <li><!--#include virtual="/~ttwong/papers/_reference/hu-2021-conditional.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/tang-2002-immersive.html"-->
+  <li>"<u>Conditional Directed Graph Convolution for 3D Human Pose Estimation</u>",<br>
+W. Hu, C. Zhang, F. Zhan, L. Zhang and T. T. Wong,<br>
+in <i>Proceedings of ACM Multimedia 2021 (MM 2021)</i>,
+October 2021, electronic only.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>The Immersive Cockpit</u>",<br>
+W. K. Tang, T. T. Wong and P. A. Heng,<br>
+in <i>Proceedings of ACM Multimedia 2002</i>,
+Juan Les Pins, France, December 2002, pp. 658-659.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 </ul><h5>MICCAI:</h5><ul>
 <!-- MICCAI -->
-  <li><!--#include virtual="/~ttwong/papers/_reference/ni-2008-volumetric.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/pang-2007-orthopedics.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/shi-2007-landmark.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/shi-2006-morphometric.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wang-2005-support.html"-->
-  <li><!--#include virtual="/~ttwong/papers/_reference/qu-2004-segmentation.html"-->
+  <li>"<u>Volumetric Ultrasound Panorama Based on 3D SIFT</u>",<br>
+D. Ni, Y. Qu, X. Yang, Y. P. Chui, T. T. Wong, S. S. M. Ho and P. A. Heng,<br>
+in <i>Proceedings of the 11th International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI2008)</i>,
+New York, USA, September 2008, pp. 52-60.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Orthopedics Surgery Trainer with PPU-accelerated Blood and Tissue Simulation</u>",<br>
+W. M. Pang, J. Qin, Y. P. Chui, T. T. Wong and P. A. Heng,<br>
+in <i>Proceedings of the 10th International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI2007)</i>,
+Brisbane, Australia, October 2007, pp. 842-849.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Landmark Correspondence Optimization for Coupled Surfaces</u>",<br>
+L. Shi, D. Wang, P. A. Heng, T. T. Wong, W. C. W. Chu, B. H. Y. Yeung and J. C. Y. Cheng,<br>
+in <i>Proceedings of the 10th International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI2007)</i>,
+Brisbance, Australia, October 2007, pp. 818-825.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Morphometric Analysis for Pathological Abnormality Detection in the Skull Vaults of Adolescent Idiopathic Scoliosis Patients</u>",<br>
+L. Shi, P. A. Heng, T. T. Wong, W. C. W. Chu, B. H. Y. Yeung and J. C. Y. Cheng,<br>
+in <i>Proceedings of the 9th International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI2006)</i>,
+Copenhagen, Denmark, October 2006, pp. 175-182.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Support Vector Clustering for Brain Activation Detection</u>",<br>
+D. Wang, L. Shi, D. S. Yeung, P. A. Heng, T. T. Wong and E. C. C. Tsang,<br>
+in <i>Proceedings of the 8th International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI2005)</i>,
+Palm Springs, California, USA, October 2005, pp. 572-579.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+  <li>"<u>Segmentation of Left Ventricle via Level Set Method Based on Enriched Speed Term</u>",<br>
+Y. Qu, Q. Chen, P. A. Heng and T. T. Wong,<br>
+in <i>Proceedings of the 7th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2004)</i>,
+Vol. I, Saint-Malo, France, September 2004, pp. 435-442.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 </ul><h5>ACM GPGPU:</h5><ul>
 <!-- ACM Workshop on GPGPU -->
-  <li><!--#include virtual="/~ttwong/papers/_reference/wang-2004-discrete.html"-->
+  <li>"<u>Discrete Wavelet Transform on GPU</u>",<br>
+J. Wang, T. T. Wong, P. A. Heng and C. S. Leung,<br>
+in <i>Proceedings of ACM Workshop on General Purpose Computing on Graphics Processors</i>,
+Los Angeles, USA, August 2004, pp. C-41.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 
 
@@ -315,37 +1212,37 @@ function includeHTML() {
 
 
 <!---- HIDDEN: Less important conference publication -->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/or-2004-efficient.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/lu-2004-photo.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/lu-2004-digital.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wang-2004-training.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/heng-2004-haptic.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wang-2004-real.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/heng-2004-virtual.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/ho-2003-pca.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/leung-2003-data.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wong-2003-image.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wong-2003-instant.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/leung-2003-haptic.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/heng-2003-computer.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/tang-2002-immersive2.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/or-2002-recovering.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wang-2002-multiisovalues.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wang-2002-extraction.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wang-2001-template.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/heng-2001-edge.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/liu-2000-progressive.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/or-1999-image.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/chan-1999-panoramic.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/or-1999-using.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wong-1999-multiresolution.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/heng-1999-freehand.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/heng-1999-interactive.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/heng-1998-skeleton.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wong-1997-geometric.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/poston-1997-skeleton.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/wong-1997-illuminating.html"-->
-  <!li><!!--#include virtual="/~ttwong/papers/_reference/luk-1997-two.html"-->
+  <!li><!!--#include virtual="./papers/_reference/or-2004-efficient.html"-->
+  <!li><!!--#include virtual="./papers/_reference/lu-2004-photo.html"-->
+  <!li><!!--#include virtual="./papers/_reference/lu-2004-digital.html"-->
+  <!li><!!--#include virtual="./papers/_reference/wang-2004-training.html"-->
+  <!li><!!--#include virtual="./papers/_reference/heng-2004-haptic.html"-->
+  <!li><!!--#include virtual="./papers/_reference/wang-2004-real.html"-->
+  <!li><!!--#include virtual="./papers/_reference/heng-2004-virtual.html"-->
+  <!li><!!--#include virtual="./papers/_reference/ho-2003-pca.html"-->
+  <!li><!!--#include virtual="./papers/_reference/leung-2003-data.html"-->
+  <!li><!!--#include virtual="./papers/_reference/wong-2003-image.html"-->
+  <!li><!!--#include virtual="./papers/_reference/wong-2003-instant.html"-->
+  <!li><!!--#include virtual="./papers/_reference/leung-2003-haptic.html"-->
+  <!li><!!--#include virtual="./papers/_reference/heng-2003-computer.html"-->
+  <!li><!!--#include virtual="./papers/_reference/tang-2002-immersive2.html"-->
+  <!li><!!--#include virtual="./papers/_reference/or-2002-recovering.html"-->
+  <!li><!!--#include virtual="./papers/_reference/wang-2002-multiisovalues.html"-->
+  <!li><!!--#include virtual="./papers/_reference/wang-2002-extraction.html"-->
+  <!li><!!--#include virtual="./papers/_reference/wang-2001-template.html"-->
+  <!li><!!--#include virtual="./papers/_reference/heng-2001-edge.html"-->
+  <!li><!!--#include virtual="./papers/_reference/liu-2000-progressive.html"-->
+  <!li><!!--#include virtual="./papers/_reference/or-1999-image.html"-->
+  <!li><!!--#include virtual="./papers/_reference/chan-1999-panoramic.html"-->
+  <!li><!!--#include virtual="./papers/_reference/or-1999-using.html"-->
+  <!li><!!--#include virtual="./papers/_reference/wong-1999-multiresolution.html"-->
+  <!li><!!--#include virtual="./papers/_reference/heng-1999-freehand.html"-->
+  <!li><!!--#include virtual="./papers/_reference/heng-1999-interactive.html"-->
+  <!li><!!--#include virtual="./papers/_reference/heng-1998-skeleton.html"-->
+  <!li><!!--#include virtual="./papers/_reference/wong-1997-geometric.html"-->
+  <!li><!!--#include virtual="./papers/_reference/poston-1997-skeleton.html"-->
+  <!li><!!--#include virtual="./papers/_reference/wong-1997-illuminating.html"-->
+  <!li><!!--#include virtual="./papers/_reference/luk-1997-two.html"-->
 
 
 
@@ -361,8 +1258,24 @@ function includeHTML() {
 <table border=0><tr><td width=800><ol>
 <font face="Verdana" size="2">
 
-<li><!--#include virtual="/~ttwong/papers/_reference/wong-1994-modelling.html"-->
-<li><!--#include virtual="/~ttwong/papers/_reference/wong-1998-time.html"-->
+<li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/mphil/mphil.html">
+The Modelling of Natural Imperfections and an Improved Space Filling Curve Halftoning Technique</a>",<br>
+T. T. Wong,<br>
+Master Thesis, Computer Science Department, The Chinese University of Hong Kong, 1994.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+<li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/papers/phdthess/phdthess.html">
+Time-Critical Modeling and Rendering: Geometric-based and Image-based Approaches</a>",<br>
+T. T. Wong,<br>
+PhD Thesis, Department of Computer Science & Engineering, The Chinese University of Hong Kong, 1998.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 </font>
 </ol></td></tr></table>
@@ -372,7 +1285,16 @@ function includeHTML() {
 <table border=0><tr><td width=800><ol>
 <font face="Verdana" size="2">
 
-<li><!--#include virtual="./papers/_reference/wong-2002-solving.html"-->
+<li>"<a href="http://www.cse.cuhk.edu.hk/~ttwong/teachingshare/teachingshare.html">
+Solving Visibility with Epipolor Geometry</a>",<br>
+T. T. Wong,<br>
+<i>IEEE Computer Graphics & Applications</i>,
+Vol. 22, No. 3, July-August 2002, CD-ROM (An academic tutorial published electronically in IEEE CGA CD-ROM which is included as part of the July-August issue of the journal).<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 </font>
 </ol></td></tr></table>

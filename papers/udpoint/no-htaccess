@@ -1,0 +1,8 @@
+<Limit GET> 
+deny from .ust.hk
+deny from .hku.hk
+deny from .edu.hk
+deny from .cuhk.edu.hk
+deny from .cuhk.hk
+allow from pc89163.cs.cuhk.hk
+</Limit>

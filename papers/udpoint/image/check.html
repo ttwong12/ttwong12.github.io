@@ -1,0 +1,75 @@
+<HTML>
+<HEAD>
+   <TITLE> Visual comparison for scene "checker" </title>
+</HEAD>
+<BODY BACKGROUND="/~ttwong/icon/desktop.jpg">
+
+<h3>Visual comparison for scene "checker"</h3>
+The images are ranked by the pixel error in luminance as in the paper.
+A 24-bit display is better for viewing the following images.
+
+<CENTER><TABLE BORDER=1>
+<TR>
+<TD><IMG SRC="check/control.gif"></TD>
+<TD><IMG SRC="check/hammers.gif"></TD>
+</TR>
+<TR>
+<TD>"Correct" image.<br>
+    No error</TD>
+<TD>Hammersley points with p<SUB>1</SUB> = 2.<br>
+    Mean(|<I>E</I>|)=0.0086, S.D.(|<I>E</I>|)=0.0247<br>
+    R.M.S.(<I>E</I>)=0.0261, Max.(|<I>E</I>|)=0.3451</TD>
+</TR>
+<TR>
+<TD><IMG SRC="check/multijit.gif"></TD>
+<TD><IMG SRC="check/hammers3.gif"></TD>
+</TR>
+<TR>
+<TD>multi-jittered sampling, n=4, N=16.<br>
+    Mean(|<I>E</I>|)=0.0091, S.D.(|<I>E</I>|)=0.0261<br>
+    R.M.S.(<I>E</I>)=0.0277, Max.(|<I>E</I>|)=0.3843</TD>
+<TD>Hammersley points with p<SUB>1</SUB> = 3.<br>
+    Mean(|<I>E</I>|)=0.0097, S.D.(|<I>E</I>|)=0.0265<br>
+    R.M.S.(<I>E</I>)=0.0282, Max.(|<I>E</I>|)=0.3961</TD>
+</TR>
+<TR>
+<TD><IMG SRC="check/halton27.gif"></TD>
+<TD><IMG SRC="check/halton.gif"></TD>
+</TR>
+<TR>
+<TD>Halton points with p<SUB>1</SUB> = 2, p<SUB>2</SUB> = 7.<br>
+    Mean(|<I>E</I>|)=0.0105, S.D.(|<I>E</I>|)=0.0280<br>
+    R.M.S.(<I>E</I>)=0.0299, Max.(|<I>E</I>|)=0.3451</TD>
+<TD>Halton points with p<SUB>1</SUB> = 2, p<SUB>2</SUB> = 3.<br>
+    Mean(|<I>E</I>|)=0.0110, S.D.(|<I>E</I>|)=0.0291<br>
+    R.M.S.(<I>E</I>)=0.0312, Max.(|<I>E</I>|)=0.3686</TD>
+</TR>
+<TR>
+<TD><IMG SRC="check/jitter.gif"></TD>
+<TD><IMG SRC="check/poisson.gif" ></TD>
+</TR>
+<TR>
+<TD>jittered sampling, 4x4.<br>
+    Mean(|<I>E</I>|)=0.0128, S.D.(|<I>E</I>|)=0.0335<br>
+    R.M.S.(<I>E</I>)=0.0358, Max.(|<I>E</I>|)=0.3804</TD>
+<TD>Poisson disk, <I>d </I>= 0.2.<br>
+    Mean(|<I>E</I>|)=0.0132, S.D.(|<I>E</I>|)=0.0338<br>
+    R.M.S.(<I>E</I>)=0.0363, Max.(|<I>E</I>|)=0.3804</TD>
+</TR>
+<TD><IMG SRC="check/random.gif"></TD>
+<TD><IMG SRC="check/regular.gif"></TD>
+</TR>
+<TR>
+<TD>random sampling.<br>
+    Mean(|<I>E</I>|)=0.0179, S.D.(|<I>E</I>|)=0.0443<br>
+    R.M.S.(<I>E</I>)=0.0478, Max.(|<I>E</I>|)=0.3961</TD>
+<TD>regular sampling.<br>
+    Mean(|<I>E</I>|)=0.0188, S.D.(|<I>E</I>|)=0.0491<br>
+    R.M.S.(<I>E</I>)=0.0526, Max.(|<I>E</I>|)=0.5098</TD>
+</TR>
+</TABLE></CENTER>
+
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,40 @@
+
+<table border=0><tr>
+
+<td width=80 height=80 align=right valign=top>
+
+   <a href="/~ttwong/papers/udpoint/udpoints.html">
+   <img src="papers/udpoint/lihamm.png" border=0>
+   </a>
+
+</td>
+
+<td width=20>
+
+</td><td align=left valign=top width=600><font face="Verdana" size="2">
+
+  <font size=+0 face=Helvetica,Ariel><b>
+  Hammersley and Halton Points
+  </b> <i><b>(JGT 1997)</b></i></font><br>
+  <p>
+
+  With a set of simple equations, we can generate uniformly distributed
+  (low-discrepancy) but deterministic sample points over the spherical
+  surface. The total number of sample points can be arbitrarily specified.
+  All these features make it a neat and handy tool for sphere sampling.
+
+ <br>
+
+<b>
+[<a href="/~ttwong/papers/udpoint/udpoints.html">more</a>]
+[<a href="http://appsrv.cse.cuhk.edu.hk/~ttwong/cgi-bin/paper-download/download.cgi?path=udpoint&dl=udpoint.pdf">paper</a>]
+[<a href="/~ttwong/software/udpoint/udpoint-intro.html">software</a>]
+
+</b>
+
+
+</td>
+
+</tr></table>
+<p><br>
+

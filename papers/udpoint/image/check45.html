@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+   <TITLE> Visual comparison for scene "checker45" </title>
+</HEAD>
+<BODY BACKGROUND="/~ttwong/icon/desktop.jpg">
+
+<h3>Visual comparison for scene "checker45"</h3>
+The images are ranked by the pixel error in luminance as in the paper.
+A 24-bit display is better for viewing the following images.
+
+
+
+<CENTER><TABLE BORDER=1>
+<TR>
+<TD><IMG SRC="check45/control.gif"></TD>
+<TD><IMG SRC="check45/hammers.gif"></TD>
+</TR>
+<TR>
+<TD>"Correct" image.<br>
+    No error</TD>
+<TD>Hammersley points with p<SUB>1</SUB> = 2.<br>
+    Mean(|<I>E</I>|)=0.0101, S.D.(|<I>E</I>|)=0.0264<br>
+    R.M.S.(<I>E</I>)=0.0282, Max.(|<I>E</I>|)=0.3882</TD>
+</TR>
+<TR>
+<TD><IMG SRC="check45/multijit.gif"></TD>
+<TD><IMG SRC="check45/hammers3.gif"></TD>
+</TR>
+<TR>
+<TD>multi-jittered sampling, n=4, N=16.<br>
+    Mean(|<I>E</I>|)=0.0103, S.D.(|<I>E</I>|)=0.0270<br>
+    R.M.S.(<I>E</I>)=0.0289, Max.(|<I>E</I>|)=0.3686</TD>
+<TD>Hammersley points with p<SUB>1</SUB> = 3.<br>
+    Mean(|<I>E</I>|)=0.0106, S.D.(|<I>E</I>|)=0.0274<br>
+    R.M.S.(<I>E</I>)=0.0294, Max.(|<I>E</I>|)=0.4431</TD>
+</TR>
+<TR>
+<TD><IMG SRC="check45/halton.gif"></TD>
+<TD><IMG SRC="check45/halton27.gif"></TD>
+</TR>
+<TR>
+<TD>Halton points with p<SUB>1</SUB> = 2, p<SUB>2</SUB> = 3.<br>
+    Mean(|<I>E</I>|)=0.0114, S.D.(|<I>E</I>|)=0.0287<br>
+    R.M.S.(<I>E</I>)=0.0309, Max.(|<I>E</I>|)=0.3882</TD>
+<TD>Halton points with p<SUB>1</SUB> = 2, p<SUB>2</SUB> = 7.<br>
+    Mean(|<I>E</I>|)=0.0131, S.D.(|<I>E</I>|)=0.0289<br>
+    R.M.S.(<I>E</I>)=0.0310, Max.(|<I>E</I>|)=0.4118</TD>
+</TR>
+<TR>
+<TD><IMG SRC="check45/jitter.gif"></TD>
+<TD><IMG SRC="check45/poisson.gif" ></TD>
+</TR>
+<TR>
+<TD>jittered sampling, 4x4.<br>
+    Mean(|<I>E</I>|)=0.0131, S.D.(|<I>E</I>|)=0.0332<br>
+    R.M.S.(<I>E</I>)=0.0357, Max.(|<I>E</I>|)=0.3765</TD>
+<TD>Poisson disk, <I>d </I>= 0.2.<br>
+    Mean(|<I>E</I>|)=0.0133, S.D.(|<I>E</I>|)=0.0332<br>
+    R.M.S.(<I>E</I>)=0.0358, Max.(|<I>E</I>|)=0.4118</TD>
+</TR>
+<TD><IMG SRC="check45/regular.gif"></TD>
+<TD><IMG SRC="check45/random.gif"></TD>
+</TR>
+<TR>
+<TD>regular sampling.<br>
+    Mean(|<I>E</I>|)=0.0138, S.D.(|<I>E</I>|)=0.0393<br>
+    R.M.S.(<I>E</I>)=0.0416, Max.(|<I>E</I>|)=0.5059</TD>
+<TD>random sampling.<br>
+    Mean(|<I>E</I>|)=0.0185, S.D.(|<I>E</I>|)=0.0446<br>
+    R.M.S.(<I>E</I>)=0.0483, Max.(|<I>E</I>|)=0.4000</TD>
+</TR>
+</TABLE></CENTER>
+
+
+</BODY>
+</HTML>
