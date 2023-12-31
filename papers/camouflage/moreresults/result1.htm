@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>Result 1</title>
+</head>
+
+<body>
+
+<script language="JavaScript">
+<!--
+// PRELOADING IMAGES
+if (document.images) {
+
+ img1_on =new Image();  img1_on.src ="./rst1_a.jpg"; 
+ img1_off=new Image();  img1_off.src="./rst1.jpg"; 
+}
+
+function movr(k) {
+ if (document.images) 
+  eval('document.img'+k+'.src=img'+k+'_on.src');
+}
+
+function mout(k) {
+ if (document.images) 
+  eval('document.img'+k+'.src=img'+k+'_off.src');
+}
+
+function handleOver() {
+ if (document.images) 
+  document.imgName.src=img_on.src;
+}
+
+function handleOut() {
+ if (document.images) 
+  document.imgName.src=img_off.src;
+}
+
+//-->
+</script>
+
+
+<center>
+<table >
+<tr><td height="39">
+<p align="center"><font face="Arial">Move your cursor onto the image to 
+visualize the hidden figures.</font></td></tr>
+<tr><td>
+
+<table border="6" cellspacing="1" bordercolorlight="#C0C0C0" bordercolordark="#808080"><tr><td>
+<a 
+onMouseOver="movr(1);return true;" 
+onMouseOut="mout(1);return true;" 
+onClick="return false;"
+>
+<img name=img1  border=0 
+alt="This image changes when you point at it!"
+src="./rst1.jpg" 
+></a>&nbsp;
+</td></tr></table>
+
+
+</td></tr>
+
+</table>
+</center>
+
+</body>
+
+</html>
