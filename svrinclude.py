@@ -56,7 +56,9 @@ def insert_server_side_include(htmlfile):
     
 if __name__ == "__main__":    
 
-    svrinc_list = glob.glob('*.svrinc.html')
+    svrinc_list = glob.glob('**/*.svrinc.html', recursive=True)
+    pprint (svrinc_list)
+    input('enter')
     for html in svrinc_list:
         insert_server_side_include(html)
     
