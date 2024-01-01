@@ -1,0 +1,117 @@
+<html>
+<title>Halftoning with Selective Preciptation and Adaptive Clustering</title>
+<body background="./icon/desktop.jpg">
+
+<font face="Times New Roman" font size="3">
+<blockquote>
+
+<center><table border=0>
+<tr><td>
+<img src="tf16.jpg">
+</td><td width=30></td><td width=600>
+<h2>Halftoning with Selective Preciptation and Adaptive Clustering</h2>
+<p>
+<a href="/myself.html">Tien-Tsin Wong</a>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+and 
+Siu-chi Hsu
+
+<!----------------------------------------------------------------------------------------------------->
+,<br>
+<i>Graphics Gems V</i>, Edited by Alan Paeth, AP Professional, 
+1995, pp. 302-313.
+</td></tr>
+</table></center>
+
+
+<DIV ALIGN = JUSTIFY>	
+<h3>Abstract</h3>
+<dl><dd>
+Halftoning techniques are used to display continuous tone pictures on
+bilevel displays and printers (or on those with a very limited number
+of shades). The most popular and well-known techniques are ordered 
+dither and error diffusion. The latter produces aperiodic patterns
+with limited low-frequency components, a useful property, but its
+dispersed dots suffer from an excessive smudging, which is especially
+objectionable on high-resolution devices. Ordered dither, on the 
+other hand, is capable of clustering the dots produced by using a properly
+designed dither matrix. However, a regular dither pattern is then 
+clearly visible in the output picture. A comparison of most digital 
+halftoning techniques can be found in the literature.
+
+<dd>Recently, researchers have been investigating new halftoning techniques
+that traverse images along a space-filling curve, based upon a Peano
+curve algorithm of the last decade. The space-filling curve halftoning
+is attractive because of the pleasant smooth grains in the resultant 
+image and the aperiodicity of the halftone pattern. Velho and de Miranda
+Gomes further proposed a clustered-dot space filling curve halftoning
+algorithm that reduces the smudging problem. However, clustering the
+dot naively would blur the image excessively. This gem presents two 
+improvements, selective precipitation and adaptive clustering, used
+to minimize blurring.
+<p>
+</dl>
+
+
+
+<h3>Download Paper</h3>
+<ul>
+<li>Acrobat:
+   <a href="sfc.pdf">
+   sfc.pdf</a> (203 KB)<br>
+</ul>
+<p>
+
+
+
+
+
+
+<h3>Source Code</h3>
+Click <a href="/software/sfc/sfc.tar.gz">
+sfc.tar.gz </a> to download the latest version
+of the test program of the halftone technique presented in this gem.
+
+
+
+<h3>Interesting Images</h3>
+<p>
+ The original grayscale image named F16 factory. The image size is 256x256.
+<dd> <img src="f16fact.gif">
+<p>
+
+ The halftone result if we use the original clustered-dot space filling
+     curve halftoning method. The image size is 256x256.
+<dd> <img src="f16factbad.gif">
+<p>
+
+ The improved result when adaptive clustering and selective
+     precipitation are performed. The image size is 256x256.
+<dd> <img src="f16factgd.gif">
+<p>
+
+
+
+
+
+
+<h3>Related Publications</h3>
+<ol>
+<li>"<a href="./papers/mphil/mphil.html">
+The Modelling of Natural Imperfections and an Improved Space Filling Curve Halftoning Technique</a>",<br>
+T. T. Wong,<br>
+Master Thesis, Computer Science Department, The Chinese University of Hong Kong, 1994.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+</ol>
+
+
+</blockquote>
+</font>
