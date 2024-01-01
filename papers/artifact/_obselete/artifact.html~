@@ -1,0 +1,282 @@
+<html>
+<title>
+A Learning-by-Example Method for Reducing 
+BDCT Compression Artifact in High-Contrast Images
+</title>
+<body background="/~ttwong/icon/desktop.gif">
+
+
+<blockquote>
+
+
+<p>
+<center><table border=0>
+<tr><td>
+    <TABLE cellSpacing=0 cellPadding=0 border=0 walign="center">
+    <TR><TD><IMG border=0 src="icon/iartifact.gif"></A></TD>
+        <TD><IMG src="icon/shadowleft.jpg"></TD>
+    <TR><TD><IMG src="icon/shadowbottom.jpg"></TD>
+        <TD><IMG src="icon/shadowbottomleft.jpg"></TD></TR>
+    </TABLE>
+</td><td width=30></td><td width=600>
+<h2>A Learning-by-Example Method for Reducing 
+BDCT Compression Artifact in High-Contrast Images</h2>
+<p>
+
+<!--#include virtual="/~ttwong/papers/_author/gywang.html"-->,
+<!--#include virtual="/~ttwong/papers/_author/ttwong.html"-->
+and
+<!--#include virtual="/~ttwong/papers/_author/pheng.html"-->
+<br>
+submitted to <i>IEEE Transactions on Circuits and Systems for Video Technology</i>.
+</td></tr>
+</table></center>
+
+
+<div ALIGN = JUSTIFY> <h3>Abstract</h3> 
+
+<dl><dd><dd> 
+In this paper, we propose a novel learning-by-example method to reduce BDCT 
+compression artifact in high-contrast images (images with large smooth color 
+areas and strong edges/outlines). The quantization procedure of BDCT compression
+(such as JPEG) introduces annoying visual artifact. Our main focus is on the 
+removal of ringing artifact that is seldom addressed by existing methods. 
+In the proposed method, the contaminated image is modeled as a Markov random 
+field (MRF). We `learn' the behavior of contamination by extracting massive 
+number of artifact patterns from a training set, and organizing them using 
+tree-structured vector quantization (TSVQ). Instead of post-filtering the input 
+contaminated image, we synthesize an artifact-reduced image. We show that 
+substantial improvement is achieved using the proposed method. Our method is 
+non-iterative and hence it can remove artifact within a very short period of 
+time. 
+</dl>
+
+
+
+<h3>Demo Movie</h3>
+<p>
+
+
+<blockquote>
+The following movie demonstrates the procedure and result of the
+proposed synthesis method.
+
+<table cellSpacing="0" cellPadding="0" border="0">
+  <tbody>
+    <tr>
+      <td align="middle" height="150">
+        <table border="3" width="104">
+          <tbody>
+            <tr>
+              <td width="93"><a href="demo.avi"><img border="0" src="icon/movie.gif" width="177" height="126"></a></td>
+            </tr>
+          </tbody>
+        </table>
+      <td width="20"></td>
+      <td width="450">A movie showing the procedure and result of the proposed  
+        method. (Size: 2.9MB)</td>
+    </tr>
+  </tbody>
+</table>
+</blockquote>
+
+<h3>Statistical and Visual Comparisons</h3>
+
+<blockquote>
+The following table visually and statistically compares the original, the
+contaminated and the artifact-reduced (synthesized) images.  Four test
+images are shown. All of them are <b>not</b> inside the training set.  The
+first column shows the test images (shrinked) while the original images
+(enlarged) are shown in the second column. The third column shows the JPEG
+contaminated images. The fourth to the seventh columns show the
+artifact-reduced results with 100k to 700k artifact patterns in the training
+set.
+<p>
+
+
+For statistical comparison, PSNR with respect to the original image is
+listed below each image (contaminated or artifact-reduced). The value inside
+the round bracket indicates the PSNR improvement comparing to the
+contaminated image. The total time for artifact-reduction (or synthesis) is shown
+below each image. In general, as the size of training set increases, the
+PSNR improves and the synthesize time slightly increases. 
+<p>
+
+We achieve the visual comparison in two ways. Firstly, the red box in each
+test image (in the first column) is blowed up for partial-area comparison.
+The blow-ups are put in the table (columns 2 - 7)  for side-by-side visual comparison.
+Secondly, the corresponding complete images can be shown by clicking the
+blow-up icons in the table. To clearly observe the artifact, all complete
+images are enlarged by the HTML configuration.
+
+<p>
+
+</blockquote>
+
+
+<center>
+</p>
+<table border=5 cellpadding=0 height="627">
+<tr><td width=150 valign=center align=center rowspan="2" height="64">
+</td><td width=100 align=center rowspan="2" height="64"> original
+</td><td width=100 align=center rowspan="2" height="64"> contaminated
+</td><td width=400 align=center colspan="4" height="30"> synthesized<br> (the
+following numbers are the no of artifact pattern in training set)
+
+</td></tr>
+<tr><td align=center height="30">  100,000
+</td><td align=center height="30"> 300,000
+</td><td align=center height="30">  500,000
+</td><td align=center height="30"> 700,000
+
+</td></tr><tr>
+
+<td align=center  height="150"><img border="0" src="images/hat/icon/hat-icon.gif" width="150"><br><b>hat</b>
+</td><td height=134>
+<a href="hat-original.html"><img border="0" src="images/hat/icon/hat-original-icon.bmp" width="100" height="100"></a>
+</td><td height=134>
+<p align="center"><a href="hat-contaminated.html"><img border="0" src="images/hat/icon/hat-contaminated-icon.bmp" width="97" height="100"></a></p>
+</td><td height=134>
+<a href="hat-synthesized-100k.html"><img border="0" src="images/hat/icon/hat-synthesized-100k-icon.bmp" width="100" height="100"></a>
+</td><td height=134>
+<a href="hat-synthesized-300k.html"><img border="0" src="images/hat/icon/hat-synthesized-300k-icon.bmp" width="100" height="100"></a>
+</td><td height=134>
+<a href="hat-synthesized-500k.html"><img border="0" src="images/hat/icon/hat-synthesized-500k-icon.bmp" width="100" height="100"></a>
+</td><td height=134>
+<a href="hat-synthesized-700k.html"><img border="0" src="images/hat/icon/hat-synthesized-700k-icon.bmp" width="100" height="100"></a>
+
+</td></tr><tr><td align=center  height="48"> <b>PSNR (dB)</b>
+</td><td align=center height="48"> -
+</td><td align=center height="48"> 37.03  
+</td><td align=center height="48"> 41.56 <br>(+4.53) 
+</td><td align=center height="48"> 43.38 <br>(+6.34)
+</td><td align=center height="48"> 43.85 <br>(+6.81)
+</td><td align=center height="48"> 51.80 <br>(+14.76)
+
+</td></tr><tr><td align=center  height="16"> <b> Timing (s)</b>
+</td><td align=center height="16"> -
+</td><td align=center height="16"> -
+</td><td align=center height="16"> 6.51
+</td><td align=center height="16"> 7.36
+</td><td align=center height="16"> 7.57
+</td><td align=center height="16"> 7.83
+
+
+</td></tr><tr>
+<td align=center  height="150"><img border="0" src="images/knife/icon/knife-icon.gif" width="150"><br><b>knife</b>
+</td><td height=134>
+<a href="knife-original.html"><img border="0" src="images/knife/icon/knife-original-icon.bmp" width="100" height="100"></a>
+</td><td height=134>
+<p align="center"><a href="knife-contaminated.html"><img border="0" src="images/knife/icon/knife-contaminated-icon.bmp" width="97" height="100"></a></p>
+</td><td height=134>
+<a href="knife-synthesized-100k.html"><img border="0" src="images/knife/icon/knife-synthesized-100k-icon.bmp" width="100" height="100"></a>
+</td><td height=134>
+<a href="knife-synthesized-300k.html"><img border="0" src="images/knife/icon/knife-synthesized-300k-icon.bmp" width="100" height="100"></a>
+</td><td height=134>
+<a href="knife-synthesized-500k.html"><img border="0" src="images/knife/icon/knife-synthesized-500k-icon.bmp" width="100" height="100"></a>
+</td><td height=134>
+<a href="knife-synthesized-700k.html"><img border="0" src="images/knife/icon/knife-synthesized-700k-icon.bmp" width="100" height="100"></a>
+
+</td></tr><tr><td align=center height="48"> <b>PSNR (dB)</b>
+</td><td align=center height="48"> -
+</td><td align=center height="48"> 35.29 
+</td><td align=center height="48"> 37.56 <br>(+2.27)
+</td><td align=center height="48"> 37.98 <br>(+2.69)
+</td><td align=center height="48"> 38.18 <br>(+2.89)
+</td><td align=center height="48"> 38.33 <br>(+3.04)
+
+</td></tr><tr><td align=center height="21"> <b> Timing (s)</b>
+</td><td align=center height="21"> -
+</td><td align=center height="21"> -
+</td><td align=center height="21"> 7.39
+</td><td align=center height="21"> 8.39
+</td><td align=center height="21">  8.53
+</td><td align=center height="21"> 8.73
+
+</td></tr><tr>
+
+<td align=center  height="150"><img border="0" src="images/trumpet/icon/trumpet-icon.gif" height="150"><br><b>trumpet</b>
+</td><td height=134>
+<a href="trumpet-original.html"><img border="0" src="images/trumpet/icon/trumpet-original-icon.bmp" width="100" height="100"></a>
+</td><td height=134>
+<p align="center"><a href="trumpet-contaminated.html"><img border="0" src="images/trumpet/icon/trumpet-contaminated-icon.bmp" width="97" height="100"></a></p>
+</td><td height=134>
+<a href="trumpet-synthesized-100k.html"><img border="0" src="images/trumpet/icon/trumpet-synthesized-100k-icon.bmp" width="100" height="100"></a>
+</td><td height=134>
+<a href="trumpet-synthesized-300k.html"><img border="0" src="images/trumpet/icon/trumpet-synthesized-300k-icon.bmp" width="100" height="100"></a>
+</td><td height=134>
+<a href="trumpet-synthesized-500k.html"><img border="0" src="images/trumpet/icon/trumpet-synthesized-500k-icon.bmp" width="100" height="100"></a>
+</td><td height=134>
+<a href="trumpet-synthesized-700k.html"><img border="0" src="images/trumpet/icon/trumpet-synthesized-700k-icon.bmp" width="100" height="100"></a>
+
+</td></tr><tr><td align=center height="48"> <b>PSNR (dB)</b>
+</td><td align=center  height="48"> -
+</td><td align=center  height="48"> 36.46 
+</td><td align=center  height="48"> 41.03 <br>(+4.57)
+</td><td align=center  height="48"> 42.09 <br>(+5.63)
+</td><td align=center  height="48"> 42.37 <br>(+5.91)
+</td><td align=center  height="48"> 48.43 <br>(+11.98)
+</td></tr>
+<tr>
+
+<td align=center  height="16"> <b> Timing (s)</b>
+</td><td align=center height="16"> -
+</td><td align=center height="16"> -
+</td><td align=center height="16"> 11.99
+</td><td align=center height="16"> 13.43
+</td><td align=center height="16"> 13.87
+</td><td align=center height="16"> 14.00
+
+
+</td>
+</tr>
+<tr>
+
+<td align=center  height="150"><img border="0" src="images/culogo/icon/culogo-icon.gif" width="150" ><br><b>CUHK Logo</b>
+</td><td height=134>
+<a href="culogo-original.html"><img border="0" src="images/culogo/icon/culogo-original-icon.bmp" width="100" height="100"></a>
+</td><td height=134>
+<p align="center"><a href="culogo-contaminated.html"><img border="0" src="images/culogo/icon/culogo-contaminated-icon.bmp" width="97" height="100"></a></p>
+</td><td height=134>
+<a href="culogo-synthesized-100k.html"><img border="0" src="images/culogo/icon/culogo-synthesized-100k-icon.bmp" width="100" height="100"></a>
+</td><td height=134>
+<a href="culogo-synthesized-300k.html"><img border="0" src="images/culogo/icon/culogo-synthesized-300k-icon.bmp" width="100" height="100"></a>
+</td><td height=134>
+<a href="culogo-synthesized-500k.html"><img border="0" src="images/culogo/icon/culogo-synthesized-500k-icon.bmp" width="100" height="100"></a>
+</td><td height=134>
+<a href="culogo-synthesized-700k.html"><img border="0" src="images/culogo/icon/culogo-synthesized-700k-icon.bmp" width="100" height="100"></a>
+
+</tr>
+<tr>
+<td align=center height="48"> <b>PSNR (dB)</b>
+</td><td align=center height="48"> -
+</td><td align=center height="48"> 35.64 
+</td><td align=center height="48"> 41.09 <br>(+5.45)
+</td><td align=center height="48"> 43.09 <br>(+7.45)
+</td><td align=center height="48"> 43.71 <br>(+8.07)
+</td><td align=center height="48"> 44.34 <br>(+8.69)
+</td>
+</tr>
+<tr>
+
+<td align=center height="16"> <b> Timing (s)</b>
+</td><td align=center height="16"> -
+</td><td align=center height="16"> -
+</td><td align=center height="16"> 28.59
+</td><td align=center height="16"> 32.43
+</td><td align=center height="16"> 33.35
+</td><td align=center height="16"> 33.95
+
+
+</td>
+</tr>
+</table>
+</center>
+
+
+
+
+<!--#include virtual="/~ttwong/footer1.html"-->
+
+</blockquote>
+</html>

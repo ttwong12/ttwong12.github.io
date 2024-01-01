@@ -1,0 +1,345 @@
+<HTML><HEAD><TITLE>Deringing Cartoons by Image Analogies</TITLE>
+</HEAD>
+<BODY background=desktop.gif>
+<font face="Times New Roman" font size="3">
+<BLOCKQUOTE>
+  <P>
+  <CENTER>
+  <TABLE border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE cellSpacing=0 cellPadding=0 border=0 walign="center">
+          <TBODY>
+          <TR>
+            <TD><IMG src="iartifact.gif" border=0></A></TD>
+            <TD><IMG src="shadowleft.jpg"></TD>
+          <TR>
+            <TD><IMG src="shadowbottom.jpg"></TD>
+            <TD><IMG 
+        src="shadowbottomleft.jpg"></TD></TR></TBODY></TABLE></TD>
+      <TD width=30></TD>
+      <TD width=600>
+        <H2>Deringing Cartoons by Image Analogies</H2>
+        <P><!--#include virtual="./papers/_author/gywang.html"-->, 
+           <!--#include virtual="./papers/_author/ttwong.html"-->
+        and <!--#include virtual="./papers/_author/pheng.html"-->
+        <BR><I>ACM Transactions on Graphics</I>, Vol. 25, No. 4, October
+        2006, pp. 1360-1379. </P></TD></TR></TBODY></TABLE></CENTER>
+  <DIV align=justify>
+  <H3>Abstract</H3>
+  <DL>
+    <DD>
+    <DD>In this paper, we propose a novel method to reduce ringing artifacts in BDCT-encoded
+cartoon images using image analogies. The quantization procedure of BDCT compression
+(such as JPEG and MPEG) introduces annoying visual artifacts. Our main focus is on the
+removal of ringing artifacts that are seldom addressed by existing methods. In the
+proposed method, the contaminated image is modeled as a Markov random field (MRF). We
+'learn' the behavior of contamination by extracting massive number of artifact patterns
+from a training set, and organizing them using tree-structured vector quantization
+(TSVQ). Instead of <i>post-filtering</i> the input contaminated image, we
+<i>synthesize</i> an artifact-reduced image. Our method is non-iterative and hence it
+can remove artifacts within a very short period of time. We show that substantial
+improvement is achieved using the proposed method in terms of visual quality and
+statistics. </DD></DL>
+<p>
+
+
+<H3>Download Paper</H3>
+  <UL>
+    <LI>Acrobat:  
+    <a href="dering.pdf">dering.pdf</a>
+    (1.4 MB) </LI></UL>
+  <P>
+  
+
+
+
+
+<H3>Demo Movie</H3>
+  <P>
+  <BLOCKQUOTE>The following movies demonstrate the procedure and results of the 
+    proposed deringing method. 
+    <TABLE cellSpacing=0 cellPadding=0 border=0>
+      <TBODY>
+      <TR>
+        <TD align=middle height=150>
+          <TABLE width=104 border=3>
+            <TBODY>
+            <TR>
+              <TD width=93><A 
+                href="demo.avi"><IMG 
+                height=126 src="movie.gif" width=177 
+              border=0></A></TD></TR></TBODY></TABLE>
+        <TD width=20></TD>
+        <TD width=450>This sequence demonstrates the procedure and result of the proposed 
+          method. (Size: 16.6 MB)</TD></TR></TBODY></TABLE></BLOCKQUOTE>
+  <P>
+  <BLOCKQUOTE>
+    <TABLE cellSpacing=0 cellPadding=0 border=0>
+      <TBODY>
+      <TR>
+        <TD align=middle height=150>
+          <TABLE width=104 border=3>
+            <TBODY>
+            <TR>
+              <TD width=93><A 
+                href="video_deringing.avi"><IMG 
+                src="mpeg.jpg" 
+              border=0></A></TD></TR></TBODY></TABLE>
+        <TD width=20></TD>
+        <TD width=450>This sequence shows the result of deringing a MPEG video. (Size: 7.11 MB)</TD></TR></TBODY></TABLE></BLOCKQUOTE>  <P>
+ 
+
+<p>
+
+
+<H3>Download Software</H3>
+Our implemented prototype, <b>arti</b>, can be downloaded and tested 
+from <a href="/software/arti/arti.html">arti homepage</a>.
+<p>
+
+
+
+
+<H3>Comparison</H3>
+  <BLOCKQUOTE>The following table visually and statistically compares the 
+    original, the contaminated and the artifact-reduced (synthesized) images. Results of other methods are also shown. 
+    Four test images are tested. All of them are <B>not</B> inside the training 
+    set. The first column shows the test images (shrinked for visualization)
+    while the original 
+    full-size images are accessible on the second column. The third column shows the 
+    JPEG contaminated images. The fourth column shows the 
+    artifact-reduced results from our method. The fifth to the eighth columns show the results of
+    bilateral filtering, signal adaptive filtering, Zakhor method (POCS), and baseline
+    image analogies.
+    <P>
+    For statistical comparison, PSNR and SSIM with respect to the original image are 
+    listed below each deringed image. The value inside 
+    the round bracket indicates the PSNR and SSIM improvements comparing to the 
+    contaminated image. 
+    
+    <P>For a quick side-by-side comparison, the boxed region in 
+    each test image is blown up on columns 2 - 9. Besides, 
+    the corresponding full-size images are accessible by clicking the blow-up icons
+    in the table. 
+    <P></P></BLOCKQUOTE>
+    
+ 
+  
+  <CENTER>
+  <P></P>
+  <TABLE height=627 cellPadding=0 border=5>
+    <TBODY>
+    <TR>
+      <TD vAlign=center align=middle width=150 height=64></TD>
+      <TD align=middle width=100 height=64><b>Original</b> </TD>
+      <TD align=middle width=100 height=64><b>JPEG</b> </TD>
+      <TD align=middle width=100 height=64><b>Ours</b> </TD>
+      <TD align=middle width=100 height=64><b>Bilateral filter</b></TD>
+      <TD align=middle width=100 height=64><b>SAF</b> </TD>
+      <TD align=middle width=100 height=64><b>Zakhor (POCS)</b> </TD>
+      <TD align=middle width=100 height=64><b>Baseline image analogies</b></TD></TR>
+    <TR>
+      <TD align=middle height=150><IMG src="dog-icon.gif" 
+        width=150 border=0><BR><B>dog</B> </TD>
+      <TD height=134><A 
+        href="dog_ori.html"><IMG 
+        height=100 src="patch_dog_ori.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A 
+        href="dog_jpg.html"><IMG 
+        height=100 src="patch_dog_jpg.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A 
+        href="dog_our.html"><IMG 
+        height=100 src="patch_dog_our.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A 
+        href="dog_bil.html"><IMG 
+        height=100 src="patch_dog_bil.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A 
+        href="dog_saf.html"><IMG 
+        height=100 src="patch_dog_saf.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A 
+        href="dog_zakhor.html"><IMG 
+        height=100 src="patch_dog_zakhor.bmp" width=100 
+        border=0></A> </TD>  
+      <TD height=134><A 
+        href="dog_analogy.html"><IMG 
+        height=100 src="patch_dog_analogy.bmp" width=100 
+        border=0></A> </TD></TR>
+    <TR>
+      <TD align=middle>PSNR (dB) </TD>
+      <TD align=middle></TD>
+      <TD align=middle>34.09 </TD>
+      <TD align=middle>34.93 <BR>(+0.84) </TD>
+      <TD align=middle>34.63 <BR>(+0.54) </TD>
+      <TD align=middle>29.72 <BR>(-4.37) </TD>
+      <TD align=middle>27.81 <BR>(-6.28) </TD>
+      <TD align=middle>23.81 <BR>(-10.28)</TD></TR>
+    <TR>
+      <TD align=middle>SSIM </TD>
+      <TD align=middle> </TD>
+      <TD align=middle>0.943 </TD>
+      <TD align=middle>0.975 <BR>(+0.032) </TD>
+      <TD align=middle>0.966 <BR>(+0.023) </TD>
+      <TD align=middle>0.944 <BR>(+0.001) </TD>
+      <TD align=middle>0.920 <BR>(-0.023) </TD>
+      <TD align=middle>0.891 <BR>(-0.052) </TD></TR>
+    <TR>
+      <TD align=middle height=150><IMG src="sunflower-icon.gif" 
+        width=150 border=0><BR><B>sunflower</B> </TD>
+      <TD height=134><A 
+        href="sunflower_ori.html"><IMG 
+        height=100 src="patch_sunflower_ori.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A 
+        href="sunflower_jpg.html"><IMG 
+        height=100 src="patch_sunflower_jpg.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A 
+        href="sunflower_our.html"><IMG 
+        height=100 src="patch_sunflower_our.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A 
+        href="sunflower_bil.html"><IMG 
+        height=100 src="patch_sunflower_bil.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A 
+        href="sunflower_saf.html"><IMG 
+        height=100 src="patch_sunflower_saf.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A 
+        href="sunflower_zakhor.html"><IMG 
+        height=100 src="patch_sunflower_zakhor.bmp" width=100 
+        border=0></A> </TD>  
+      <TD height=134><A 
+        href="sunflower_analogy.html"><IMG 
+        height=100 src="patch_sunflower_analogy.bmp" width=100 
+        border=0></A> </TD></TR>
+    <TR>
+      <TD align=middle>PSNR (dB) </TD>
+      <TD align=middle> </TD>
+      <TD align=middle>30.60 </TD>
+      <TD align=middle>30.80 <BR>(+0.20) </TD>
+      <TD align=middle>30.67 <BR>(+0.07) </TD>
+      <TD align=middle>30.12 <BR>(-0.48) </TD>
+      <TD align=middle>30.17 <BR>(-0.43) </TD>
+      <TD align=middle>19.82 <BR>(-10.78) </TD></TR>
+    <TR>
+      <TD align=middle>SSIM </TD>
+      <TD align=middle> </TD>
+      <TD align=middle>0.889 </TD>
+      <TD align=middle>0.901 <BR>(+0.012) </TD>
+      <TD align=middle>0.897 <BR>(+0.008) </TD>
+      <TD align=middle>0.897 <BR>(+0.008) </TD>
+      <TD align=middle>0.892 <BR>(+0.003) </TD>
+      <TD align=middle>0.791 <BR>(-0.098) </TD></TR>
+    <TR>
+      <TD align=middle height=150><IMG height=150 
+        src="elephant-icon.gif" border=0><BR><b>elephant</b> </TD>
+      <TD height=134><A 
+        href="elephant_ori.html"><IMG 
+        height=100 src="patch_elephant_ori.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A 
+        href="elephant_jpg.html"><IMG 
+        height=100 src="patch_elephant_jpg.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A 
+        href="elephant_our.html"><IMG 
+        height=100 src="patch_elephant_our.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A 
+        href="elephant_bil.html"><IMG 
+        height=100 src="patch_elephant_bil.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A 
+        href="elephant_saf.html"><IMG 
+        height=100 src="patch_elephant_saf.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A 
+        href="elephant_zakhor.html"><IMG 
+        height=100 src="patch_elephant_zakhor.bmp" width=100 
+        border=0></A> </TD>  
+      <TD height=134><A 
+        href="elephant_analogy.html"><IMG 
+        height=100 src="patch_elephant_analogy.bmp" width=100 
+        border=0></A> </TD></TR>
+    <TR>
+      <TD align=middle>PSNR (dB)</TD>
+      <TD align=middle> </TD>
+      <TD align=middle>36.29 </TD>
+      <TD align=middle>36.63 <BR>(+0.34) </TD>
+      <TD align=middle>35.31 <BR>(-0.98) </TD>
+      <TD align=middle>35.56 <BR>(-0.73) </TD>
+      <TD align=middle>33.24 <BR>(-3.05) </TD>
+      <TD align=middle>22.05 <BR>(-14.24)</TD></TR>
+    <TR>
+      <TD align=middle>SSIM </TD>
+      <TD align=middle> </TD>
+      <TD align=middle>0.953 </TD>
+      <TD align=middle>0.971 <BR>(+0.018) </TD>
+      <TD align=middle>0.949 <BR>(-0.004) </TD>
+      <TD align=middle>0.954 <BR>(+0.001) </TD>
+      <TD align=middle>0.937 <BR>(-0.016) </TD>
+      <TD align=middle>0.762 <BR>(-0.191) </TD></TR>
+    <TR>
+      <TD align=middle height=150><IMG src="tripod-icon.gif" 
+        width=150 border=0><BR><B>tripod</B> </TD>
+      <TD height=134><A href="tripod_ori.html"><IMG 
+        height=100 src="patch_tripod_ori.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A href="tripod_jpg.html"><IMG 
+        height=100 src="patch_tripod_jpg.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A 
+        href="tripod_our.html"><IMG 
+        height=100 src="patch_tripod_our.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A 
+        href="tripod_bil.html"><IMG 
+        height=100 src="patch_tripod_bil.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A 
+        href="tripod_saf.html"><IMG 
+        height=100 src="patch_tripod_saf.bmp" width=100 
+        border=0></A> </TD>
+      <TD height=134><A 
+        href="tripod_zakhor.html"><IMG 
+        height=100 src="patch_tripod_zakhor.bmp" width=100 
+        border=0></A> </TD>  
+      <TD height=134><A 
+        href="tripod_analogy.html"><IMG 
+        height=100 src="patch_tripod_analogy.bmp" width=100 
+        border=0></A> </TD></TR>
+    <TR>
+      <TD align=middle>PSNR (dB) </TD>
+      <TD align=middle> </TD>
+      <TD align=middle>36.13 </TD>
+      <TD align=middle>36.76 <BR>(+0.63) </TD>
+      <TD align=middle>35.51 <BR>(-0.62) </TD>
+      <TD align=middle>35.17 <BR>(-0.96) </TD>
+      <TD align=middle>32.42 <BR>(-3.71) </TD>
+      <TD align=middle>20.15 <BR>(-15.98) </TD></TR>
+    <TR>
+      <TD align=middle>SSIM </TD>
+      <TD align=middle> </TD>
+      <TD align=middle>0.957 </TD>
+      <TD align=middle>0.970 <BR>(+0.013) </TD>
+      <TD align=middle>0.959 <BR>(+0.002) </TD>
+      <TD align=middle>0.956 <BR>(-0.001) </TD>
+      <TD align=middle>0.944 <BR>(-0.013) </TD>
+      <TD align=middle>0.844 <BR>(-0.113) </TD></TR>
+  </TBODY></TABLE></CENTER>
+
+
+
+
+
+</BLOCKQUOTE>
+</font>
+</BODY></HTML>

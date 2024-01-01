@@ -1,0 +1,264 @@
+<html>
+<title>
+A Learning-by-Example Method for Reducing 
+BDCT Compression Artifact in High-Contrast Images
+</title>
+<body background="desktop.jpg">
+
+
+<blockquote>
+
+
+<p>
+<center><table border=0>
+<tr><td>
+<img src="images/bspi.jpg">
+</td><td width=30></td><td width=600>
+<h2>A Learning-by-Example Method for Reducing 
+BDCT Compression Artifact in High-Contrast Images</h2>
+<p>
+<a href="http://www.cse.cuhk.edu.hk/~gywang/">Guangyu Wang</a>,
+<a href="/~ttwong/myself.html">Tien-Tsin Wong</a>
+and 
+<a href="http://www.cse.cuhk.edu.hk/~pheng/">Pheng-Ann Heng</a>,
+<br>
+submitted to <i>IEEE Transactions on Circuits and Systems for Video Technology</i>.
+</td></tr>
+</table></center>
+
+
+<div ALIGN = JUSTIFY> <h3>Abstract</h3> 
+
+<dl><dd><dd> 
+In this paper, we propose a novel learning-by-example method to reduce BDCT 
+compression artifact in high-contrast images (images with large smooth color 
+areas and strong edges/outlines). The quantization procedure of BDCT compression
+(such as JPEG) introduces annoying visual artifact. Our main focus is on the 
+removal of ringing artifact that is seldom addressed by existing methods. 
+In the proposed method, the contaminated image is modeled as a Markov random 
+field (MRF). We `learn' the behavior of contamination by extracting massive 
+number of artifact patterns from a training set, and organizing them using 
+tree-structured vector quantization (TSVQ). Instead of post-filtering the input 
+contaminated image, we synthesize an artifact-reduced image. We show that 
+substantial improvement is achieved using the proposed method. Our method is 
+non-iterative and hence it can remove artifact within a very short period of 
+time. 
+</dl>
+
+
+
+<h3>Demo Movie</h3>
+<p>
+
+
+The following movies demonstrate the procedure and result of the proposed 
+synthesis method.
+<table cellSpacing="0" cellPadding="0" border="0">
+  <tbody>
+    <tr>
+      <td align="middle" height="150">
+        <table border="3" width="104">
+          <tbody>
+            <tr>
+              <td width="93"><a href="demo.avi"><img border="0" src="movie.gif" width="177" height="126"></a></td>
+            </tr>
+          </tbody>
+        </table>
+      <td width="20"></td>
+      <td width="450">A movie showing the procedure and result of the proposed  
+        method. (Size: 5.25MB)</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<h3>Visual Comparison</h3>
+
+The following table visually and statistically compares the      
+original, contaminated and the artifact-removed (synthesized) images. 
+For comparison, we show the 
+The PSNR with respect to the original images are listed below each image.
+The value inside the round bracket means the PSNR improvement comparing
+to the contaminated image. In general, as the number
+Please click the icon image to see real   
+images. PSNR is shown below each image, accompanied by PSNR improvement in the parentheses.   
+Time of synthesizing the whole image is also listed.&nbsp;    
+<p>
+
+<center>
+</p>
+<table border=5 cellpadding=0 height="627">
+<tr><td width=107 valign=center align=center rowspan="2" height="64"><b>Number 
+    of artifact patterns in TSVQ</b>
+</td><td width=100 align=center rowspan="2" height="64"> original
+</td><td width=100 align=center rowspan="2" height="64"> contaminated
+</td><td width=400 align=center colspan="4" height="30"> synthesized
+
+</td></tr>
+<tr><td align=center height="30">  100,000
+</td><td align=center height="30"> 300,000
+</td><td align=center height="30">  500,000
+</td><td align=center height="30"> 700,000
+
+</td></tr><tr><td align=center  height="134"><img border="0" src="images/hat/116_2.GIF" width="97" height="100"><br><b>hat</b>
+</td><td height=134>
+<a href="images/hat/116_2.PNG"><img border="0" src="images/hat/116_2.GIF" width="97" height="100"></a>
+</td><td height=134>
+<p align="center"><a href="images/hat/116_2.JPG"><img border="0" src="images/hat/116_2.GIF" width="97" height="100"></a></p>
+</td><td height=134>
+<a href="images/hat/116_test_tif(1).bmp"><img border="0" src="images/hat/116_2.GIF" width="97" height="100"></a>
+</td><td height=134>
+<a href="images/hat/116_test_tif(3).PNG"><img border="0" src="images/hat/116_2.GIF" width="97" height="100"></a>
+</td><td height=134>
+<a href="images/hat/116_test_tif(5).PNG"><img border="0" src="images/hat/116_2.GIF" width="97" height="100"></a>
+</td><td height=134>
+<a href="images/hat/116_test_tif(7).PNG"><img border="0" src="images/hat/116_2.GIF" width="97" height="100"></a>
+
+</td></tr><tr><td align=center  height="48"> <b>PSNR (dB)</b>
+</td><td align=center height="48"> -
+</td><td align=center height="48"> 37.03  
+</td><td align=center height="48"> 41.56 <br>(+4.53) 
+</td><td align=center height="48"> 43.38 <br>(+6.34)
+</td><td align=center height="48"> 43.85 <br>(+6.81)
+</td><td align=center height="48"> 51.80 <br>(+14.76)
+
+</td></tr><tr><td align=center  height="16"> <b> Timing (s)</b>
+</td><td align=center height="16"> -
+</td><td align=center height="16"> -
+</td><td align=center height="16"> 6.51
+</td><td align=center height="16"> 7.36
+</td><td align=center height="16"> 7.57
+</td><td align=center height="16"> 7.83
+
+
+</td></tr><tr><td align=center  height="96"><b>knife</b>
+</td><td height=96>
+<a href="images/knife/149_2.PNG"><img border="0" src="images/knife/149_2.GIF" width="100" height="64"></a>
+</td><td height=96>
+<a href="images/knife/149_2.JPG"><img border="0" src="images/knife/149_2.GIF" width="100" height="64"></a>
+</td><td height=96>
+<a href="images/knife/149_test_tif(1).PNG"><img border="0" src="images/knife/149_2.GIF" width="100" height="64"></a>
+</td><td height=96>
+<a href="images/knife/149_test_tif(3).PNG"><img border="0" src="images/knife/149_2.GIF" width="100" height="64"></a>
+</td><td height=96>
+<a href="images/knife/149_test_tif(5).PNG"><img border="0" src="images/knife/149_2.GIF" width="100" height="64"></a>
+</td><td height=96>
+<a href="images/knife/149_test_tif(7).PNG"><img border="0" src="images/knife/149_2.GIF" width="100" height="64"></a>
+
+</td></tr><tr><td align=center height="48"> <b>PSNR (dB)</b>
+</td><td align=center height="48"> -
+</td><td align=center height="48"> 35.29 
+</td><td align=center height="48"> 37.56 <br>(+2.27)
+</td><td align=center height="48"> 37.98 <br>(+2.69)
+</td><td align=center height="48"> 38.18 <br>(+2.89)
+</td><td align=center height="48"> 38.33 <br>(+3.04)
+
+</td></tr><tr><td align=center height="21"> <b> Timing (s)</b>
+</td><td align=center height="21"> -
+</td><td align=center height="21"> -
+</td><td align=center height="21"> 7.39
+</td><td align=center height="21"> 8.39
+</td><td align=center height="21">  8.53
+</td><td align=center height="21"> 8.73
+
+</td></tr><tr><td align=center height="96"><b>trumpet</b>
+</td><td height=96 align="center">
+<a href="images/trumpet/99_2.PNG"><img border="0" src="images/trumpet/99_2.GIF" width="59" height="100"></a>
+</td><td height=96 align="center">
+<a href="images/trumpet/99_2.JPG"><img border="0" src="images/trumpet/99_2.GIF" width="59" height="100"></a>
+</td><td height=96 align="center">
+<a href="images/trumpet/99_test_tif(1).PNG"><img border="0" src="images/trumpet/99_2.GIF" width="59" height="100"></a>
+</td><td height=96 align="center">
+<a href="images/trumpet/99_test_tif(3).PNG"><img border="0" src="images/trumpet/99_2.GIF" width="59" height="100"></a>
+</td><td height=96 align="center">
+<a href="images/trumpet/99_test_tif(5).PNG"><img border="0" src="images/trumpet/99_2.GIF" width="59" height="100"></a>
+</td><td height=96 align="center">
+<a href="images/trumpet/99_test_tif(7).PNG"><img border="0" src="images/trumpet/99_2.GIF" width="59" height="100"></a>
+</td></tr><tr><td align=center height="48"> <b>PSNR (dB)</b>
+</td><td align=center  height="48"> -
+</td><td align=center  height="48"> 36.46 
+</td><td align=center  height="48"> 41.03 <br>(+4.57)
+</td><td align=center  height="48"> 42.09 <br>(+5.63)
+</td><td align=center  height="48"> 42.37 <br>(+5.91)
+</td><td align=center  height="48"> 48.43 <br>(+11.98)
+</td></tr>
+<tr>
+
+<td align=center  height="16"> <b> Timing (s)</b>
+</td><td align=center height="16"> -
+</td><td align=center height="16"> -
+</td><td align=center height="16"> 11.99
+</td><td align=center height="16"> 13.43
+</td><td align=center height="16"> 13.87
+</td><td align=center height="16"> 14.00
+
+
+</td>
+</tr>
+<tr>
+  <td align=center  height="96"><b>CUHK logo</b>
+</td><td height=96>
+<a href="images/culogo/158_2.PNG"><img border="0" src="images/culogo/158_2.GIF" width="100" height="69"></a>
+</td><td height=96>
+<a href="images/culogo/158_2.JPG"><img border="0" src="images/culogo/158_2.GIF" width="100" height="69"></a>
+</td><td height=96>
+<a href="images/culogo/158_test_tif(1).PNG"><img border="0" src="images/culogo/158_2.GIF" width="100" height="69"></a>
+</td><td height=96>
+<a href="images/culogo/158_test_tif(3).PNG"><img border="0" src="images/culogo/158_2.GIF" width="100" height="69"></a>
+</td><td height=96>
+<a href="images/culogo/158_test_tif(5).PNG"><img border="0" src="images/culogo/158_2.GIF" width="100" height="69"></a>
+</td><td height=96>
+<a href="images/culogo/158_test_tif(7).PNG"><img border="0" src="images/culogo/158_2.GIF" width="100" height="69"></a>
+</td>
+</tr>
+<tr>
+<td align=center height="48"> <b>PSNR (dB)</b>
+</td><td align=center height="48"> -
+</td><td align=center height="48"> 35.64 
+</td><td align=center height="48"> 41.09 <br>(+5.45)
+</td><td align=center height="48"> 43.09 <br>(+7.45)
+</td><td align=center height="48"> 43.71 <br>(+8.07)
+</td><td align=center height="48"> 44.34 <br>(+8.69)
+</td>
+</tr>
+<tr>
+
+<td align=center height="16"> <b> Timing (s)</b>
+</td><td align=center height="16"> -
+</td><td align=center height="16"> -
+</td><td align=center height="16"> 28.59
+</td><td align=center height="16"> 32.43
+</td><td align=center height="16"> 33.35
+</td><td align=center height="16"> 33.95
+
+
+</td>
+</tr>
+</table>
+</center>
+
+
+
+
+<p>
+<hr>
+<center>
+<table border=1>
+<tr>
+<td align=center><A HREF="/~ttwong/Index.html">
+  <IMG border=0 align=top SRC="home.gif" width="40" height="40"></A></td>
+</tr>
+<tr>
+<td>Home</td>
+</tr>
+</table>
+</center>
+
+<CENTER><FONT SIZE=-1>
+Copyright ?1996-2003 Tien-Tsin Wong. All rights reserved.<br> 
+E-mail: <A HREF="mailto:ttwong@acm.org">ttwong@acm.org</A> 
+</FONT></CENTER>
+
+</blockquote>
+</html>

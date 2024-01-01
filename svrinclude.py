@@ -45,7 +45,7 @@ def insert_server_side_include(htmlfile):
                 line = line.replace(svr_phrase, content)                                
             #else:
             except:
-                print ('Skipping %s ...' % incfile)        
+                print ('Skipping %s ...' % incfile)                
         out_html.append(line)
     
     outhtmlfile = htmlfile.replace('.svrinc','')
