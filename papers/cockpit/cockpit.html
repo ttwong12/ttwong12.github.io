@@ -1,0 +1,252 @@
+<html>
+<title>A System for Real-Time Panorama Generation and Display in
+Tele-immersive Applications
+</title>
+<body background="/icon/desktop.jpg">
+
+<font face="Times New Roman" font size="3">
+
+<blockquote>
+<center><table border=0>
+<tr><td>
+<img src="image/icockpit.jpg">
+</td><td width=30></td><td width=600>
+<h2>A System for Real-Time Panorama Generation and Display in Tele-immersive
+Applications</h2>
+<p>
+Wai-Kwan Tang
+
+<!----------------------------------------------------------------------------------------------------->
+,
+<a href="/myself.html">Tien-Tsin Wong</a>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+,
+and 
+<a href="http://www.cse.cuhk.edu.hk/~pheng/">Pheng-Ann Heng</a>
+
+<!----------------------------------------------------------------------------------------------------->
+,<br>
+<i>IEEE Transactions on Multimedia</i>, Vol. 7, No. 2, April 2005, pp.
+280-292.
+</td></tr>
+</table></center>
+
+
+<DIV ALIGN = JUSTIFY>	
+<h3>Abstract</h3> 
+<dl><dd>
+<dd> 
+Wide field-of-view is necessary for many industrial applications, such as
+air traffic control, large vehicle driving and navigation.  Unfortunately,
+the supporting structure/frame in most systems usually blocks part of the
+view, results in `blind spot'' and raises the risk to the pilot. In this
+paper, we introduce a video-based tele-immersive system, called the <i>
+Immersive Cockpit</i>. It captures live videos from the working site and
+recreates an immersive environment at the remote site where the pilot
+situates. It immerses the pilot at the remote site with a panoramic view of
+the environment, hence improves interactivity and safety. The design goals
+of our system are <i>real-time</i>, <i>live</i>, <i>low-cost</i> and
+<i>scalable</i>. We stitch multiple video streams captured from ordinary CCD
+cameras to generate a panoramic video. To avoid being blocked by the
+supporting frame, we allow a flexible placement of cameras. This approach
+trades the accuracy of the generated panoramic image for a larger
+field-of-view. To reduce the computation, parameters for stitching are
+determined once during the system initialization. The panoramic video is
+presented on an immersive display which covers the field-of-view of the
+viewer. We discuss how to correctly present the panoramic video on this
+non-planar immersive display screen by sweet spot relocation. We also
+present the result and the performance evaluation of the system.
+</dl>
+
+
+
+<h3>Download Paper</h3>
+<ul>
+<li>Acrobat:
+    <a href="cockpit.pdf">
+    cockpit.pdf (size: 14MB)</a><br>
+</ul>
+<p>
+
+
+
+<h3>Movies</h3> 
+
+The following movies demonstrate the motivation, setup, operation and
+result of the Immersive Cockpit.
+
+<center>
+<table border=0 cellpadding=0 cellspacing=0>
+
+<tr><td align=center height=150>
+<table border=3><td width=100>
+<a href="mpeg/blockedview.mpg">
+<img src="image/iblockedview.jpg"  ALIGN=TOP border=0></a>
+</td></table>
+<td width=20></td>
+<td width=450><DIV ALIGN = JUSTIFY>
+<b>Motivation</b>: Our view is usually blocked by the supporting structure. This 
+motivates us to develop a wide field-of-view tele-immserive system, the 
+Immersive Cockpit. (Size: 1.46MB)
+</td></tr>
+
+
+<tr><td align=center height=150> 
+<table border=3><td width=100>
+<a href="mpeg/camera_group.mpg"> 
+<img src="image/icamera_group.jpg" ALIGN=TOP border=0></a>
+</td></table> 
+<td width=20></td>
+<td width=450><DIV ALIGN = JUSTIFY>
+
+<b>Setup:</b> In our current implementation, we use 8 cameras (divided 
+into 2 groups) to acquire live videos. A video quad merger combines 4 
+video streams from the cameras to form a single 4-view stream. (Size: 
+1.02MB) 
+
+</td></tr>
+
+
+<tr><td align=center height=150> 
+<table border=3><td width=100>
+<a href="mpeg/camera_placement.mpg"> 
+<img src="image/icamera_placement.jpg" ALIGN=TOP border=0></a>
+</td></table> 
+<td width=20></td>
+<td width=450><DIV ALIGN = JUSTIFY>
+<b>Setup:</b> In order to minimize the occlusion due to the supporting frames,
+cameras are placed in a flexible manner. This video sequence shows the camera
+placement for our outdoor scene capture.
+(Size: 1.59MB) 
+</td></tr>
+
+
+<tr><td align=center height=150> 
+<table border=3><td width=100>
+<a href="mpeg/mark.mpg"> 
+<img src="image/imark.jpg" ALIGN=TOP border=0></a>
+</td></table> 
+<td width=20></td>
+<td width=450><DIV ALIGN = JUSTIFY>
+<b>Operation: </b> Separated video streams are then combined to form a 
+panoramic video by first identifying the correspondences. Screenshot 
+from each video stream are used for stitching. Users roughly identify 
+the correspondences and the system refines them for panoramic video 
+stitching.
+(Size: 1.46MB) 
+</td></tr>
+
+
+<tr><td align=center height=150> 
+<table border=3><td width=100>
+<a href="mpeg/vs_zoomout.mpg"> 
+<img src="image/ivs_zoomout.jpg" ALIGN=TOP border=0></a>
+</td></table> 
+<td width=20></td>
+<td width=450><DIV ALIGN = JUSTIFY>
+<b>Outdoor Result:</b> The live panoramic video stream is displayed on a 
+hemispherical display, the VisionStation. The large field of view 
+provides the immersiveness to the user. (Size: 1.59MB) 
+</td></tr>
+
+
+<tr><td align=center height=150> 
+<table border=3><td width=100>
+<a href="mpeg/outdoor_car1.mpg"> 
+<img src="image/ioutdoor.jpg" ALIGN=TOP border=0></a>
+</td></table> 
+<td width=20></td>
+<td width=450><DIV ALIGN = JUSTIFY>
+
+<b>Outdoor Result:</b> In this demo video, the outdoor environment of 
+our engineering building is captured and stitched to form a panoramic 
+video stream which is ready to display on the VisionStation. In order
+to correctly display on the hemispherical screen, the stitched panorama is
+pre-warped before projecting it on the hemispherical screen. The pre-warped
+panoramic video look distorted when it is shown on a flat panel. Note that the video is life as
+car movement is captured.
+(Size: 1.47MB) 
+
+</td></tr>
+
+
+<tr><td align=center height=150> 
+<table border=3><td width=100>
+<a href="mpeg/rotate.mpg"> 
+<img src="image/irotate.jpg" ALIGN=TOP border=0></a>
+</td></table> 
+<td width=20></td>
+<td width=450><DIV ALIGN = JUSTIFY>
+<b>Outdoor Result:</b> By warping the triangular mesh, we can perform 
+rotation on the spherical display. Again, when it is displayed on a flat 
+panel, the panoramic video is distorted. 
+(Size: 1.46MB) 
+
+</td></tr>
+
+
+
+<tr><td align=center height=150> 
+<table border=3><td width=100>
+<a href="mpeg/corridor.mpg"> 
+<img src="image/icorridor.jpg" ALIGN=TOP border=0></a>
+</td></table> 
+<td width=20></td>
+<td width=450><DIV ALIGN = JUSTIFY>
+<b>Dynamic Camera (Corridor):</b> The left result is captured with the
+dynamic camera cluster. The capture system moves along the corridor on the
+10/F of our engineering building.
+(Size: 1.58MB) 
+
+</td></tr>
+
+
+
+
+<tr><td align=center height=150> 
+<table border=3><td width=100>
+<a href="mpeg/cafeteria.mpg"> 
+<img src="image/icafeteria.jpg" ALIGN=TOP border=0></a>
+</td></table> 
+<td width=20></td>
+<td width=450><DIV ALIGN = JUSTIFY>
+<b>Dynamic Camera (Cafeteria):</b> Another dynamic result: Cafeteria. This
+time the moving direction is orthogonal to the "main" camera viewing
+direction. (Size: 1.46MB) 
+
+</td></tr>
+
+
+
+
+
+
+
+</table>
+</center>
+
+
+
+
+<h3>Related Publications</h3>
+<ol>
+<li>"<u>The Immersive Cockpit</u>",<br>
+W. K. Tang, T. T. Wong and P. A. Heng,<br>
+in <i>Proceedings of ACM Multimedia 2002</i>,
+Juan Les Pins, France, December 2002, pp. 658-659.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+</ol>
+
+
+
+
+
+</blockquote>
+</font>
