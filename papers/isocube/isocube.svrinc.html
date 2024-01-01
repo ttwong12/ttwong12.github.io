@@ -1,0 +1,154 @@
+<html>
+<title>
+Isocube: Exploiting the Cubemap Hardware
+</title>
+<body background="/icon/desktop.jpg">
+
+
+
+<font face="Times New Roman" font size="3">
+<blockquote>
+
+<center><table border=0>
+<tr><td>
+
+<table border=0 CELLSPACING=0 CELLPADDING=0 walign=center>
+<tr><td><img src="iisocube.jpg"  ></td>
+    <td><img src="shadowleft.jpg" ></td>
+<tr><td><img src="shadowbottom.jpg"  ></td>
+    <td><img src="shadowbottomleft.jpg" ></td></tr>
+</table>
+
+</td><td width=30></td><td width=600>
+<h2>Isocube: Exploiting the Cubemap Hardware</h2>
+
+<p>
+<!--#include virtual="./papers/_author/lwan.html"-->,
+<!--#include virtual="./papers/_author/ttwong.html"-->,
+and 
+<!--#include virtual="./papers/_author/csleung.html"-->
+<br>
+in <i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 13, No. 4, July/August 2007, pp. 720-731.
+<p>
+</td></tr>
+</table></center>
+
+
+<DIV ALIGN = JUSTIFY>	
+<h3>Abstract</h3> 
+<dl>
+
+<dd> This paper proposes a novel six-face 
+spherical map, isocube, that fully 
+utilizes the cubemap hardware built in most 
+GPUs. Unlike the cubemap, the 
+proposed isocube uniformly samples the unit sphere 
+(uniformly distributed) 
+and all samples span the same solid angle (equally 
+important). Its mapping 
+computation contains only a small overhead. By feeding 
+the cubemap hardware 
+with the six-face isocube map, the isocube can exploit all 
+built-in texturing 
+operators tailored for the cubemap and achieve a very high 
+frame rate. In 
+addition, we develop an anisotropic filtering that compensates 
+aliasing 
+artifacts due to texture magnification. This filtering technique 
+extends the 
+existing hardware anisotropic filtering and can be applied to, not 
+just the 
+proposed isocube, but also other texture mapping applications.<p>
+
+</dl>
+
+<h3>Download Paper</h3>
+<ul>
+<li> Acrobat: 
+     <a href="isocube.pdf">
+     isocube.pdf</a> (9.62MB)
+
+</ul>
+<p>
+
+
+
+<h3>Companion Video</h3>
+<ul>
+<li> <a href="isocube.avi">
+     isocube.avi</a>  (DivX, 12.7MB)
+
+</ul>
+<p>
+
+
+<h3>Download Software</h3>
+<ul>
+<li> You can try out the mapping by downloading our software <a
+     href="./software/spheremap/spheremap.html">sphermap 1.0</a>
+</ul>
+<p>
+
+
+<h3>Isocube vs Cubemap</h3>
+
+<blockquote>
+Here we compare the isocube to the traditional cubemap.
+<p>
+</blockquote>
+
+  <P><STRONG>Click the thumbnail to enlarge.</STRONG> </P>
+  <CENTER>
+  <TABLE height=148 width=733 border=1>
+    <TBODY>
+    <TR>
+      <TD width=96 height=22>
+        <DIV align=center>
+			<p align="center"></DIV></TD>
+      <TD>
+        <DIV align=center>
+			<p align="center"><strong>Sample distribution</strong></DIV></TD>
+      <TD>
+        <DIV align=center>
+			<p align="center"><strong>Texel shape</strong></DIV></TD>
+      <TD>
+        <DIV align=center>
+			<p align="center"><strong>Cross image</strong></DIV></TD></TR>
+    <TR>
+      <TD>
+        <P align=center><strong>CUBEMAP</strong></P></TD>
+      <TD>
+		<p align="center"><a href="image/cube12pt.jpg">
+		<img border="0" src="image/icube12pt.jpg" ></a></TD>
+      <TD>
+		<p align="center"><a href="image/cube12.jpg">
+		<img border="0" src="image/icube12.jpg" ></a></TD>
+      <TD width=220>
+		<p align="center"><a href="image/cubecross-mark.jpg">
+		<img border="0" src="image/icubecross-mark.jpg"></a></TD>
+      </TR>
+    <TR>
+      <TD>
+        <p align="center"><strong>ISOCUBE</strong></TD>
+      <TD>
+		<p align="center"><a href="image/isocube12pt.jpg">
+		<img border="0" src="image/iisocube12pt.jpg" ></a></TD>
+      <TD>
+		<p align="center"><a href="image/isocube12.jpg">
+		<img border="0" src="image/iisocube12.jpg" ></a></TD>
+      <TD width=220>
+		<p align="center"><a href="image/isocross-mark.jpg">
+		<img border="0" src="image/iisocross-mark.jpg" ></a></TD>
+      </TR>
+    </TBODY></TABLE></CENTER>
+  <P>
+
+
+
+
+
+
+
+
+</BODY></HTML>
