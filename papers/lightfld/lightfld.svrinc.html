@@ -1,0 +1,108 @@
+<html>
+<title>
+Image-based Rendering with Controllable Illumination
+</title>
+<body background="/icon/desktop.jpg">
+
+<font face="Times New Roman" font size="3">
+<blockquote>
+
+<center><table border=0>
+<tr><td>
+<img src="tptsrc.jpg">
+</td><td width=30></td><td width=600>
+<h2>Image-based Rendering with Controllable Illumination</h2>
+<p>
+<!--#include virtual="./papers/_author/ttwong.html"-->,
+<!--#include virtual="./papers/_author/pheng.html"-->,
+<!--#include virtual="./papers/_author/shor.html"-->
+and
+<!--#include virtual="./papers/_author/wyng.html"-->,
+<br>
+<i>in Proceedings of the 8-th Eurographics Workshop on Rendering</i>,
+St. Etienne, France, June 1997, pp 13-22.
+</td></tr>
+</table></center>
+
+
+<DIV ALIGN = JUSTIFY>	
+<h3>Abstract</h3> 
+<dl><dd>
+This paper discusses a new image-based rendering method, 
+based on the light field and Lumigraph system,
+which allows illumination to be changed interactively. 
+Although our approach does not try to
+recover or use any geometrical information (e.g. depth or surface normal)
+to calculate the illumination,
+the resulting images are physically correct.
+
+<dd>The scene is first sampled from
+different view points and under different illuminations. By treating 
+each pixel on the back plane of the light slab as a <i>surface element</i>,
+the sampled images are used to measure the <i>apparent</i> BRDF of each
+<i>surface element</i>. The tabular BRDF data of each pixel
+is further transformed
+to the spherical harmonics domain for efficient storage. Whenever the user
+changes the illumination setting, a certain number of views are reconstructed.
+The correct user perspective view
+is then displayed using the texture mapping technique of the Lumigraph system.
+Then, the intensity, the type and the number of the light sources can
+be manipulated interactively.
+</dl>
+
+<h3>Download Paper</h3>
+<ul>
+<li>Acrobat:
+    <a href="illumin.pdf">
+    illumin.pdf</a> (size: 637 KB)(with correction done on 23 Sept 1997)<br>
+</ul>
+<p>
+
+
+
+<h3>Movies</h3>
+The following movies demonstrate the reconstructed results of an image-based
+scene illuminated by different types of light sources.
+
+<center>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td align=center>
+
+<table border=3><td width=100>
+<a href="dirsrc.mpg">
+<img src="dirsrc.jpg"  ALIGN=TOP border=0></a>
+</td></table>
+
+</td><td width=20></td>
+<td align=center>
+
+<table border=3><td width=100>
+<a href="ptsrc.mpg">
+<img src="ptsrc.jpg"  ALIGN=TOP border=0></a>
+</td></table
+
+</td></tr><tr><td width=250 align=center valign=top>
+
+Illuminated by a directional source.
+
+</td><td width=20></td>
+<td width=250 align=center valign=top>
+
+Illuminated by a point light source.
+
+</td></tr>
+</table>
+</center>
+
+
+<h3>Related Publications</h3>
+<ol>
+<li><!--#include virtual="./papers/_reference/wong-2003-real.html"-->
+<li><!--#include virtual="./papers/_reference/wong-2001-interactive.html"-->
+<li><!--#include virtual="./papers/_reference/wong-2002-plenoptic.html"-->
+</ol>
+
+
+
+</blockquote>
+</font>

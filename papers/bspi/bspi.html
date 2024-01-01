@@ -1,0 +1,148 @@
+<html>
+<title>
+Binary-Space-Partitioned Images for Resolving Image-Based Visibility
+</title>
+<body background="images/desktop.jpg">
+
+
+<font face="Times New Roman" font size="3">
+<blockquote>
+
+<p>
+<center><table border=0>
+<tr><td>
+<img src="images/bspi.jpg">
+</td><td width=30></td><td width=600>
+<h2>Binary-Space-Partitioned Images for Resolving Image-Based Visibility</h2>
+<p>
+<a href="http://www.cse.cuhk.edu.hk/~cwfu/">Chi-Wing Fu</a>
+
+<!----------------------------------------------------------------------------------------------------->
+,
+<a href="/myself.html">Tien-Tsin Wong</a>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+,
+Wai-Shun Tong
+
+
+<!----------------------------------------------------------------------------------------------------->
+,
+<a href="http://www.cs.ust.hk/~cktang/">Chi-Keung Tang</a>
+
+<!----------------------------------------------------------------------------------------------------->
+, 
+and 
+<a href="http://www.cs.indiana.edu/~hanson/">Andrew J. Hanson</a>
+
+
+<!----------------------------------------------------------------------------------------------------->
+<br>
+<i>IEEE Transactions on Visualization and Computer Graphics</i>, 
+Vol. 10, No. 1, January-February 2004, pp. 58-71.
+</td></tr>
+</table></center>
+
+
+<div ALIGN = JUSTIFY> <h3>Abstract</h3> 
+
+<dl><dd><dd> We propose a novel 2D representation for 3D visibility sorting,
+the <i>Binary-Space-Partitioned Image (BSPI)</i>, to accelerate real-time
+image-based rendering.  BSPI is an efficient 2D realization of a 3D BSP
+tree, which is commonly used in computer graphics for time-critical
+visibility sorting.  Since the overall structure of a BSP tree is encoded in
+a BSPI, traversing a BSPI is comparable to traversing the corresponding BSP
+tree. BSPI performs visibility sorting efficiently and accurately in the 2D
+image space, by warping the reference image triangle-by-triangle, instead of
+pixel-by-pixel.  Multiple BSPIs can be combined to solve `disocclusion',
+when an occluded portion of the scene becomes visible at a novel viewpoint.
+Our method is highly automatic, including the tensor voting preprocessing
+step that generates candidate image partition lines for BSPIs, filters the
+noisy input data by rejecting outliers, and interpolates missing
+information. Our system has been applied to a variety of real data,
+including stereo, motion, and range images. 
+</dl>
+
+
+
+<div ALIGN = JUSTIFY> <h3>Video Presentation</h3>
+<dl><dd><dd> 
+The following presentation animation explains our algorithm with running
+examples and animations.
+</dl>
+
+<center>
+<table border=0 cellpadding=0 cellspacing=0>
+
+<tr><td align=center height=150>
+<table border=3><td width=100>
+<img width=200 src="images/overview.jpg" ALIGN=TOP border=0>
+</td></table>
+<td width=10></td>
+<td width=450>
+<ol ALIGN=TOP>
+<li><a href="animation/bspi-320-240-mpeg1.mpg">
+    Open 320 x 240 movie (MPEG1, 28.1MB)</a>
+<li><a href="animation/bspi-720-480-mpeg2.mpg">
+    Open 720 x 480 movie (MPEG2, 87.3MB) </a>
+</ul>
+</td></tr>
+
+</table>
+</center>
+
+<p>
+
+
+
+
+
+
+<h3>Download Paper</h3>
+<ul>
+<li>Acrobat:
+    <a href="bspi.pdf">
+    bspi.pdf (size: 1.5MB)</a><br>
+</ul>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<h3>Related Publications</h3>
+<ol>
+<li>"<a href="/papers/triorder/triorder.html">
+Triangle-based View Interpolation Without Depth Buffering</a>",<br>
+C. W. Fu, T. T. Wong and P. A. Heng,<br>
+<i>Journal of Graphics Tools</i>,
+Vol. 3, No. 4, 1998, pp. 13-31.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+<li>"<a href="/papers/panowalk/panowalk.html">
+Computing Visibility for Triangulated Panoramas</a>",<br>
+C. W. Fu, T. T. Wong and P. A. Heng,<br>
+in <i>Proceedings of the 10-th Eurographics Workshop on Rendering (Rendering Techniques'99)</i>,
+Granada, Spain, June 1999, pp. 169-182.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+</ol>
+</font>
+
+</blockquote>
+
+</html>

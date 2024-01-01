@@ -1,0 +1,187 @@
+<html>
+<title>
+Triangle-based View Interpolation Without Depth-Buffering
+</title>
+<body background="/icon/desktop.jpg">
+
+
+
+<font face="Times New Roman" font size="3">
+<blockquote>
+
+<center><table border=0>
+<tr><td>
+<img src="torder.gif">
+</td><td width=30></td><td width=600>
+<h2>Triangle-based View Interpolation Without Depth-Buffering</h2>
+<p>
+<a href="http://www.cse.cuhk.edu.hk/~cwfu/">Chi-Wing Fu</a>
+
+<!----------------------------------------------------------------------------------------------------->
+,
+<a href="/myself.html">Tien-Tsin Wong</a>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+and 
+<a href="http://www.cse.cuhk.edu.hk/~pheng/">Pheng-Ann Heng</a>
+
+<!----------------------------------------------------------------------------------------------------->
+,
+<br>
+<i>Journal of Graphics Tools</i>, Vol. 3, No. 4, 1998, pp. 13-31.
+<p>
+</td></tr>
+</table></center>
+
+
+<DIV ALIGN = JUSTIFY>	
+<h3>Abstract</h3>
+<dl><dd>
+In this paper, we propose a triangle-based image warping algorithm
+which can correctly resolve the visibility problem without depth-buffering. 
+The algorithm is especially useful when depth information is not available,
+such as in the case of real-world photographs. By subdividing the reference
+image into variable-sized triangles, image warping can be done efficiently
+using existing graphics hardware. We derive the drawing order between each
+pair of neighboring triangles from the epipolar geometry. Using this drawing
+order,a graph can be built and topological sorting is applied on the graph
+to obtain the complete drawing order of all triangles in linear time.
+<p>
+</dl>
+
+<h3>Download Paper</h3>
+<ul>
+<li> Acrobat: 
+     <a href="triorder.pdf">
+     triorder.pdf</a> (4.92 MB)
+</ul>
+<p>
+
+
+
+
+
+<h3>Some Warping Results</h3>
+
+The following table shows some result and ordering of warping a perspective
+image of Beethoven.
+
+<center>
+<table border=5 cellpadding=0>
+</td><td width=102 align=center> <b>Pixel-based Warping</b>
+</td><td width=102 align=center> <b>Triangle-based Warping</b>
+</td><td width=102 align=center> <b>2D Ordering</b>
+</td><td width=102 align=center> <b>2D Wireframe</b>
+</td></tr><tr>
+<td width=102 height=100>
+    <a href="beethoven.0.pixel.jpg">
+    <img src="ibeethoven.0.pixel.jpg" border=0 align=center valign=center></a></td>
+<td width=102 height=100>
+    <a href="beethoven.0.warp.jpg">
+    <img src="ibeethoven.0.warp.jpg" border=0 align=center valign=center></a></td>
+<td width=102 height=100>
+    <a href="beethoven.0.order.jpg">
+    <img src="ibeethoven.0.order.jpg" border=0 align=center valign=center></a></td>
+<td width=102 height=100>
+    <a href="beethoven.0.wire.gif">
+    <img src="ibeethoven.0.wire.jpg" border=0 align=center valign=center></a>
+</td></tr>
+
+
+</td></tr><tr>
+<td width=102 height=100>
+    <a href="beethoven.1.pixel.jpg">
+    <img src="ibeethoven.1.pixel.jpg" border=0 align=center valign=center></a></td>
+<td width=102 height=100>
+    <a href="beethoven.1.warp.jpg">
+    <img src="ibeethoven.1.warp.jpg" border=0 align=center valign=center></a></td>
+<td width=102 height=100>
+    <a href="beethoven.1.order.jpg">
+    <img src="ibeethoven.1.order.jpg" border=0 align=center valign=center></a></td>
+<td width=102 height=100>
+    <a href="beethoven.1.wire.gif">
+    <img src="ibeethoven.1.wire.jpg" border=0 align=center valign=center></a>
+</td></tr>
+
+</td></tr><tr>
+<td width=102 height=100>
+    <a href="beethoven.2.pixel.jpg">
+    <img src="ibeethoven.2.pixel.jpg" border=0 align=center valign=center></a></td>
+<td width=102 height=100>
+    <a href="beethoven.2.warp.jpg">
+    <img src="ibeethoven.2.warp.jpg" border=0 align=center valign=center></a></td>
+<td width=102 height=100>
+    <a href="beethoven.2.order.jpg">
+    <img src="ibeethoven.2.order.jpg" border=0 align=center valign=center></a></td>
+<td width=102 height=100>
+    <a href="beethoven.2.wire.gif">
+    <img src="ibeethoven.2.wire.jpg" border=0 align=center valign=center></a>
+</td></tr>
+</table>
+</center>
+
+
+
+<h3>Walkthrough the Perspective Images</h3>
+
+Three animations are available for download. All movies show the walkthrough
+of the original 2D perspective images.  They demonstrate the correctness of
+the image-based visibiltiy sorting proposed for warping triangles in the
+paper. <br>
+
+In each movie, the left half shows the warping result while the right half
+shows the ordering of the triangles. The darker the color of the triangle
+is, the earlier the drawing order of the triangle is.
+
+<center><table border=5 cellpadding=0>
+<tr><td align=center><b>Attic</b></td>
+    <td align=center><b>Beethoven</b></td>
+    <td align=center><b>City</b></td></tr>
+<tr><td width=182 height=120>
+    <a href="aorder.mov">
+    <img src="iaorder.jpg" border=0 align=center valign=center></a></td>
+<td width=182 height=120>
+    <a href="border.mov">
+    <img src="iborder.jpg" border=0 align=center valign=center></a></td>
+<td width=182 height=120>
+    <a href="corder.mov">
+    <img src="icorder.jpg" border=0 align=center valign=center></a></td></tr>
+</table></center>
+
+
+
+
+
+
+<h3>Related Publications</h3>
+<ol>
+<li>"<a href="/papers/panowalk/panowalk.html">
+Computing Visibility for Triangulated Panoramas</a>",<br>
+C. W. Fu, T. T. Wong and P. A. Heng,<br>
+in <i>Proceedings of the 10-th Eurographics Workshop on Rendering (Rendering Techniques'99)</i>,
+Granada, Spain, June 1999, pp. 169-182.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+<li>"<a href="/papers/bspi/bspi.html">
+Binary-Space-Partitioned Images for Resolving Image-based Visibility</a>",<br>
+C. W. Fu, T. T. Wong, W. S. Tong, C. K. Tang and A. J. Hanson,<br>
+<i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 10, No. 1, January-February 2004, pp. 58-71.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+</ol>
+
+
+</blockquote>
+
+</html>
+</font>

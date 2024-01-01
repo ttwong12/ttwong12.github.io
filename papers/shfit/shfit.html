@@ -1,0 +1,531 @@
+<html>
+<title>
+Noise-Resistant Fitting for Spherical Harmonics
+</title>
+<body background="/icon/desktop.jpg">
+
+
+
+<font face="Times New Roman" font size="3">
+<blockquote>
+
+<center><table border=0>
+<tr><td>
+<img src="figure/ibigshfit.jpg">
+</td><td width=30></td><td width=600>
+<h2>Noise-Resistant Fitting for Spherical Harmonics</h2>
+
+<p>
+Ping-Man Lam
+
+
+<!----------------------------------------------------------------------------------------------------->
+,
+<a href="http://www.ee.cityu.edu.hk/~csleung/">Chi-Sing Leung</a>
+
+<!----------------------------------------------------------------------------------------------------->
+,
+and 
+<a href="/myself.html">Tien-Tsin Wong</a>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+<br>
+in <i>IEEE Transactions on Visualization and Computer Graphics</i>,
+Vol. 12, No. 2, March-April 2006, pp. 254-265.
+<p>
+</td></tr>
+</table></center>
+
+
+<DIV ALIGN = JUSTIFY>	
+<h3>Abstract</h3>
+<dl><dd>
+
+Spherical harmonic (SH) basis functions have  been widely used for 
+representing spherical functions in modeling  various illumination properties. 
+They can compactly represent low-frequency spherical functions. However, when 
+the unconstrained least square method is used for estimating  the SH 
+coefficients of a hemispherical function, the magnitude of these SH 
+coefficients could be very large. Hence, the rendering result is very 
+sensitive to quantization noise (introduced by modern texture compression like 
+S3TC, IEEE half float data type on GPU, or other lossy compression methods) in 
+these SH coefficients. Our experiments show that as the precision of SH 
+coefficients is reduced, the rendered images may exhibit annoying visual 
+artifacts. To reduce the noise sensitivity of the SH coefficients, this paper 
+first discusses how the magnitude of SH coefficients affects the rendering  
+result when there is quantization noise. Then, two fast fitting methods for 
+estimating the noise-resistant SH coefficients are proposed. They can 
+effectively control the magnitude of the estimated SH coefficients,
+and hence suppress the rendering artifacts.
+Both statistical and visual results confirm our
+theory.
+<p>
+</dl>
+
+<h3>Download Paper</h3>
+<ul>
+<li> Acrobat: 
+     <a href="shfit.pdf">
+     shfit.pdf</a> (5.9 MB)
+
+</ul>
+<p>
+
+
+
+<h3>Experiments</h3>
+
+<blockquote>
+Due to the page limit, we are not able to include all 
+experimental results in the paper. For completeness, all meaningful results are presented 
+in the following tables. There are 3 test data: "ring", "torus", and "dama". 
+</blockquote>
+
+<center><h3>"ring"</h3></center>
+
+<blockquote>
+
+The test data "ring" is an example of image-based relighting. Multiple images 
+of the scene is rendered, from the same viewpoint, but illuminated by a 
+directional light source from different directions. Since only those lighting 
+directions above the table are meaningful, the <i>apparent BRDF</i> at each 
+pixel is reduced to a hemispherical function of radiance values. 
+<p>
+
+Each of these apparent BRDF is converted to SH coefficients using ULS 
+(unconstrained least square method), Sloan ULS (ULS method with the third SH 
+basis function removed before estimation), CLS (the proposed contrained least 
+square method), and CEB (the proposed constrained eigen basis method). The SH 
+coefficients are further compressed to test their noise-resistances. Half 
+float representation (16 bits per coeff.), S3TC-like compression (4.667 bits 
+per coeff.), and wavelet-based compression (1.33 bits and 0.33 bit per coeff.) 
+are used. <p>
+
+In the following table, we show the visual results and the PSNRs. From left to 
+right, we decrease the bits to represent the SH coefficients, or in other 
+words, we increase the quantization noise. As expected, ULS (row 1) cannot 
+effectively resists the noise as the noise increases. Sloan ULS (row 2) is 
+better but still exhibits rendering artifacts. The proposed CLS (row 3) and 
+CEB (row 4) effectively resist the noise and  suppress the rendering artifacts.
+<p>
+
+Click the images to see the full-size images.
+</blockquote>
+
+</blockquote>
+
+<center>
+<TABLE cellPadding=0 border=1><font size="3" face="Times New Roman" font="font">
+      </TD>
+    </font>
+    <TBODY>
+    <TR>
+      <TD align=middle></TD>
+      <TD align=middle><b>32 bits<br>(original) </b></TD>
+      <TD align=middle><b>16 bits<br>(half float)</b> </TD>
+      <TD align=middle><b>4.667 bits<br> (S3TC-like)</b> </TD>
+      <TD align=middle><b>1.33 bits<br> (wavelet)</b> </TD>
+      <TD align=middle><b>0.33 bit<br> (wavelet)</b> </TD>	  
+    </TR>
+
+    <TR>
+      <TD align=middle><B>ULS</B></TD>
+      <TD align=middle valign=top>
+           <a href="rawimage/ringsh49psuedoblk.bmp">
+           <img src="icon/ringsh49psuedoblk.bmp" border=0 align=center valign=center></a><br>
+           &nbsp;
+      </TD>
+      <TD align=middle>
+           <a href="rawimage/ringpsuedohf.bmp">
+           <img src="icon/ringpsuedohf.bmp" border=0 align=center valign=center></a><br>41.1 dB
+      </TD>
+      <TD align=middle>
+	   <a href="rawimage/ringpsuedos3tc.bmp">
+           <img src="icon/ringpsuedos3tc.bmp" border=0 align=center valign=center></a><br>15.4 dB
+      </TD>
+      <TD align=middle>
+	   <a href="rawimage/ringpsuedowav1.33.bmp">
+           <img src="icon/ringpsuedowav1.33.bmp" border=0 align=center valign=center></a><br>9.7 dB
+      </TD>
+      <TD align=middle>
+	    <a href="rawimage/ringpsuedowav0.33.bmp">
+            <img src="icon/ringpsuedowav0.33.bmp" border=0 align=center valign=center></a><br>8.2 dB
+      </TD>
+    </TR>
+
+    <TR>
+      <TD align=middle><B>Sloan<br> ULS</B></TD>
+      <TD align=middle valign=top>
+           <a href="rawimage/ringpssh02cut.bmp">
+           <img src="icon/ringpssh02cut.bmp" border=0 align=center valign=center></a><br>&nbsp;
+      </TD>
+      <TD align=middle>
+           <a href="rawimage/ringpssh02cuthf.bmp">
+           <img src="icon/ringpssh02cuthf.bmp" border=0 align=center valign=center></a><br>44.3 dB
+      </TD>
+      <TD align=middle>
+	   <a href="rawimage/ringpssh02cuts3tc.bmp">
+           <img src="icon/ringpssh02cuts3tc.bmp" border=0 align=center valign=center></a><br>18.1 dB
+      </TD>
+      <TD align=middle>
+	   <a href="rawimage/ringpssh02cutwav1.33.bmp">
+           <img src="icon/ringpssh02cutwav1.33.bmp" border=0 align=center valign=center></a><br>20.6 dB
+      </TD>
+      <TD align=middle>
+	    <a href="rawimage/ringpssh02cutwav0.33.bmp">
+            <img src="icon/ringpssh02cutwav0.33.bmp" border=0 align=center valign=center></a><br>17.1 dB
+      </TD>
+    </TR>
+
+    <TR>
+      <TD align=middle><B>Our<br>  CLS</B></TD>
+      <TD align=middle valign=top>
+           <a href="rawimage/ringcils.bmp">
+           <img src="icon/ringcils.bmp" border=0 align=center valign=center></a><br>&nbsp;
+      </TD>
+      <TD align=middle>
+            <a href="rawimage/ringcilshf.bmp">
+            <img src="icon/ringcilshf.bmp" border=0 align=center valign=center></a><br>62.8 dB
+      </TD>
+      <TD align=middle>
+            <a href="rawimage/ringcilss3tc.bmp">
+            <img src="icon/ringcilss3tc.bmp" border=0 align=center valign=center></a><br>35.6 dB
+      </TD>
+      <TD align=middle>
+            <a href="rawimage/ringcilswav1.33.bmp">
+            <img src="icon/ringcilswav1.33.bmp" border=0 align=center valign=center></a><br>38.5 dB
+      </TD>
+      <TD align=middle>
+            <a href="rawimage/ringcilswav0.33.bmp">
+            <img src="icon/ringcilswav0.33.bmp" border=0 align=center valign=center></a><br>34.8 dB
+      </TD>
+    </TR>
+    <TR>
+      <TD align=middle><B>Our<br>  CEB</B></TD>
+      <TD align=middle valign=top>
+           <a href="rawimage/ringsvd.bmp">
+           <img src="icon/ringsvd.bmp" border=0 align=center valign=center></a><br>&nbsp;
+      </TD>
+      <TD align=middle>
+            <a href="rawimage/ringsvdhf.bmp">
+            <img src="icon/ringsvdhf.bmp" border=0 align=center valign=center></a><br>63.1 dB
+      </TD>
+      <TD align=middle>
+            <a href="rawimage/ringsvds3tc.bmp">
+            <img src="icon/ringsvds3tc.bmp" border=0 align=center valign=center></a><br>37.2 dB
+      </TD>
+      <TD align=middle>
+            <a href="rawimage/ringsvdwav1.33.bmp">
+            <img src="icon/ringsvdwav1.33.bmp" border=0 align=center valign=center></a><br>39.2 dB
+      </TD>
+      <TD align=middle>
+            <a href="rawimage/ringsvdwav0.33.bmp">
+            <img src="icon/ringsvdwav0.33.bmp" border=0 align=center valign=center></a><br>35.3 dB
+      </TD>
+      
+    </TR>
+</TBODY></TABLE></center>
+
+<blockquote>
+  Remark: <br>
+<ul>     
+<li>In computing the PSNR values, the images from the 32-bit SH coefficients 
+estimated by the corresponding methods are referred as the control images. 
+That is, the PSNR of image from 1.33 bits SH by <i>CLS</i> is computed by 
+comparing it with the image from 32 bits SH by <i>CLS</i>, not other 
+estimation methods. Similarly, the PSNR of image from 1.33 bits SH by <i>
+ULS</i> is computed by comparing it with the image from 32 bits SH by <i>
+ULS</i>. Our rationale is to measure the <i>degradation</i> of image quality 
+as the noise is introduced. This setting does not harm the fairness of 
+comparison as all estimation methods produce similar image qualities when the 
+estimated SH coefficients are represented as 32-bit floating point. This is evidenced
+by the similarity of images in the first column of the table. 
+</ul> 
+</blockquote> 
+
+<p>&nbsp;
+<blockquote><blockquote><blockquote><blockquote><blockquote><blockquote>
+<hr>
+</blockquote></blockquote></blockquote></blockquote></blockquote></blockquote>
+<!-------------------------------------------------------------------->
+<p>&nbsp;<p>
+
+
+<center><h3>"torus"</h3></center>
+
+<blockquote>
+
+Example "torus" is an opaque 3D object with diffuse surface and self-shadowing 
+being accounted. Interreflection is ignored. At each vertex, we record the 
+reflectance (collapsed with self-shadow). Again it is a hemispherical 
+function, defined in the local frame. The following table shows the results 
+with two different illuminants, distant environment (columns 1-3) and 
+directional light source (columns 4-6). The SH coefficients are further 
+compressed with uniform quantization (8 bits per coeff.) and wavelet-based 
+compression (4 bits per coeff.). <p>
+
+ULS (row 1) gives the worst result. Sloan ULS (row 2) gives much better 
+result, but visual artifact is still observable, especially when illuminated 
+by a directional light source (columns 4-6). Our CLS (row 3) and CEB (row 4) 
+give no observable visual artifact.
+
+
+</blockquote>
+
+<p>
+
+
+<center>
+<TABLE border=1 cellPadding=0>
+    <font size="3" face="Times New Roman" font="font"> </font>
+    <TBODY>
+      <TR>
+        <TD></TD>
+        <TD align=center><b>32 bits<br> (original)</b> </font></TD>
+        <TD align=center><b>8 bits <br> (uniform quant.)</b></font></TD>
+        <TD align=center><b>4 bits <br> (wavelet) </b></font></TD>
+        <TD></TD>
+        <TD align=center><b>32 bits<br> (original)</b> </font></TD>
+        <TD align=center><b>8 bits <br> (uniform quant.)</b></font></TD>
+        <TD align=center><b>4 bits <br> (wavelet) </b></font></TD>        
+      </TR>
+
+      <TR>
+        <TD align=center><B>ULS</B></TD>
+        <TD align=center><a href="rawimage/prtenvpsuedov1.bmp">
+            <img src="icon/prtenvpsuedov1.bmp" border="0"></a><br> &nbsp;<br>
+        </TD>
+        <TD align=center><a href="rawimage/prtenvpsuedouq8.00v1.bmp">
+            <img src="icon/prtenvpsuedouq8.00v1.bmp" border="0"></a><br> 21.5 dB<br>
+        </TD>
+        <TD align=center><a href="rawimage/prtenvpsuedowav4.00v1.bmp">
+            <img src="icon/prtenvpsuedowav4.00v1.bmp" border="0"></a><br> 23.8 dB<br>
+        </TD>
+        
+        <TD></TD>
+        <TD align=center><a href="rawimage/prtdirpsuedov2.ee.bmp">
+            <img src="icon/prtdirpsuedov2.ee.bmp" border="0"></a><br> &nbsp;<br>
+        </TD>
+        <TD align=center><a href="rawimage/prtdirpsuedouq8.00v2.ee.bmp">
+            <img src="icon/prtdirpsuedouq8.00v2.ee.bmp" border="0"></a><br> 22.1 dB<br>
+        </TD>
+        <TD align=center><a href="rawimage/prtdirpsuedowav4.00v2.ee.bmp">
+            <img src="icon/prtdirpsuedowav4.00v2.ee.bmp" border="0"></a><br> 24.0 dB<br>
+        </TD>
+      </TR>
+
+
+      <TR>
+        <TD align=center><B>Sloan<br> ULS</B></TD>
+        <TD align=center><a href="rawimage/prtenvpssh02cutv1.bmp">
+            <img src="icon/prtenvpssh02cutv1.bmp" border="0"></a><br> &nbsp;<br>
+        </TD>
+        <TD align=center><a href="rawimage/prtenvpssh02cutuq8.00v1.bmp">
+            <img src="icon/prtenvpssh02cutuq8.00v1.bmp" border="0"></a><br> 44.6 dB<br>
+        </TD>
+        <TD align=center><a href="rawimage/prtenvpssh02cutwav4.00v1.bmp">
+            <img src="icon/prtenvpssh02cutwav4.00v1.bmp" border="0"></a><br> 43.9 dB<br>
+        </TD>
+        
+        <TD></TD>
+        <TD align=center><a href="rawimage/prtdirpssh02cutv2.ee.bmp">
+            <img src="icon/prtdirpssh02cutv2.ee.bmp" border="0"></a><br> &nbsp;<br>
+        </TD>
+        <TD align=center><a href="rawimage/prtdirpssh02cutuq8.00v2.ee.bmp">
+            <img src="icon/prtdirpssh02cutuq8.00v2.ee.bmp" border="0"></a><br> 36.2 dB<br>
+        </TD>
+        <TD align=center><a href="rawimage/prtdirpssh02cutwav4.00v2.ee.bmp">
+            <img src="icon/prtdirpssh02cutwav4.00v2.ee.bmp" border="0"></a><br> 36.6 dB<br>
+        </TD>
+      </TR>
+
+
+
+
+      <TR>
+        <TD align=center><B>Our <br> CLS</B></TD>
+        <TD align=center><a href="rawimage/prtenvcilsv1.bmp">
+            <img src="icon/prtenvcilsv1.bmp" border="0"></a><br> &nbsp;<br>
+        </TD>
+        <TD align=center><a href="rawimage/prtenvcilsuq8.00v1.bmp">
+            <img src="icon/prtenvcilsuq8.00v1.bmp" border="0"></a><br> 55.0 dB<br>
+        </TD>
+        <TD align=center><a href="rawimage/prtenvcilswav4.00v1.bmp">
+            <img src="icon/prtenvcilswav4.00v1.bmp" border="0"></a><br> 52.5 dB<br>
+        </TD>
+        
+        <TD></TD>
+        <TD align=center><a href="rawimage/prtdircilsv2.ee.bmp">
+            <img src="icon/prtdircilsv2.ee.bmp" border="0"></a><br> &nbsp;<br>
+        </TD>
+        <TD align=center><a href="rawimage/prtdircilsuq8.00v2.ee.bmp">
+            <img src="icon/prtdircilsuq8.00v2.ee.bmp" border="0"></a><br> 46.0 dB<br>
+        </TD>
+        <TD align=center><a href="rawimage/prtdircilswav4.00v2.ee.bmp">
+            <img src="icon/prtdircilswav4.00v2.ee.bmp" border="0"></a><br> 45.3 dB<br>
+        </TD>
+       </TR>
+       
+
+      <TR>
+        <TD align=center><B>Our <br> CEB</B></TD>
+        <TD align=center><a href="rawimage/prtenvsvdv1.bmp">
+            <img src="icon/prtenvsvdv1.bmp" border="0"></a><br> &nbsp;<br>
+        </TD>
+        <TD align=center><a href="rawimage/prtenvsvduq8.00v1.bmp">
+            <img src="icon/prtenvsvduq8.00v1.bmp" border="0"></a><br> 56.6 dB<br>
+        </TD>
+        <TD align=center><a href="rawimage/prtenvsvdwav4.00v1.bmp">
+            <img src="icon/prtenvsvdwav4.00v1.bmp" border="0"></a><br> 53.6 dB<br>
+        </TD>
+        <TD></TD>
+        <TD align=center><a href="rawimage/prtdirsvdv2.ee.bmp">
+            <img src="icon/prtdirsvdv2.ee.bmp" border="0"></a><br> &nbsp;<br>
+        </TD>
+        <TD align=center><a href="rawimage/prtdirsvduq8.00v2.ee.bmp">
+            <img src="icon/prtdirsvduq8.00v2.ee.bmp" border="0"></a><br> 45.3 dB<br>
+        </TD>
+        <TD align=center><a href="rawimage/prtdirsvdwav4.00v2.ee.bmp">
+            <img src="icon/prtdirsvdwav4.00v2.ee.bmp" border="0"></a><br> 46.1 dB<br>
+        </TD>
+       </TR>
+
+     </TBODY>
+</TABLE></center>
+
+<blockquote>
+  Remark: <br>
+<ul>     
+
+<li>All PSNR values in the above table only account for pixels occupied by the 
+foreground torus. All background pixels are excluded as they must be always 
+the same.
+
+<li>In computing the PSNR values, the images from the 32-bit SH coefficients 
+estimated by the corresponding methods are referred as the control images. 
+That is, the PSNR of image from 1.33 bits SH by <i>CLS</i> is computed by 
+comparing it with the image from 32 bits SH by <i>CLS</i>, not other 
+estimation methods. Similarly, the PSNR of image from 1.33 bits SH by <i> 
+ULS</i> is computed by comparing it with the image from 32 bits SH by <i> 
+ULS</i>. Our rationale is to measure the <i>degradation</i> of image quality 
+as the noise is introduced. This setting does not harm the fairness of 
+comparison as all estimation methods produce similar image qualities when the 
+estimated SH coefficients are represented as 32-bit floating point. This is 
+evidenced by the similarity of images in the 1st and 4th columns of the table. 
+</ul> 
+</blockquote>
+
+
+<p>&nbsp;
+<blockquote><blockquote><blockquote><blockquote><blockquote><blockquote>
+<hr>
+</blockquote></blockquote></blockquote></blockquote></blockquote></blockquote>
+<!-------------------------------------------------------------------->
+<p>&nbsp;<p>
+
+
+
+<center><h3>"dama"</h3></center>
+
+<blockquote> 
+
+Example "dama" is a 3D object with specular surface and self-shadowing. 
+Interreflection is again ignored. The lighting configuration is fixed. At each 
+vertex, we recorded the reflected radiances as viewed from various viewing 
+directions. Only the upper hemisphere is meaningful. The reflected radiances form
+a hemispherical function defined in a local frame. Again the proposed CLS and CEB 
+effectively resist the quantization noise, as evidenced by the high PSNR values.
+<p>
+
+</blockquote>
+
+
+<center>
+<TABLE border=1 cellPadding=0>
+    <font size="3" face="Times New Roman" font="font"> </font>
+    <TBODY>
+      <TR>
+        <TD></TD>
+        <TD align=center><b>32 bits<br> (original)</b> </font></TD>
+        <TD align=center><b>16 bits<br> (half float)</b></font></TD>
+        <TD align=center><b>8 bits <br> (uniform quant.)</b></font></TD>
+      </TR>
+      <TR>
+        <TD align=center><B>ULS</B></TD>
+        <TD align=center><a href="rawimage/dpseudov1.bmp">
+            <img src="icon/dpseudov1.bmp" border="0"></a><br> &nbsp;<br>
+        </TD>
+        <TD align=center><a href="rawimage/dpseudohalfv1.bmp">
+            <img src="icon/dpseudohalfv1.bmp" border="0"></a><br> 41.0 dB<br>
+        </TD>
+        <TD align=center><a href="rawimage/dpseudouq8v1.bmp">
+            <img src="icon/dpseudouq8v1.bmp" border="0"></a><br> 18.3 dB<br>
+        </TD>
+       </TR>
+
+      <TR>
+        <TD align=center><B>Our<br>  CLS</B></TD>
+        <TD align=center><a href="rawimage/dclsv1.bmp">
+            <img src="icon/dclsv1.bmp" border="0"></a><br> &nbsp;<br>
+        </TD>
+        <TD align=center><a href="rawimage/dclshalfv1.bmp">
+            <img src="icon/dclshalfv1.bmp" border="0"></a><br> 66.7 dB<br>
+        </TD>
+        <TD align=center><a href="rawimage/dclsuq8v1.bmp">
+            <img src="icon/dclsuq8v1.bmp" border="0"></a><br> 55.2 dB<br>
+        </TD>
+       </TR>
+
+      <TR>
+        <TD align=center><B>Our<br>  CEB</B></TD>
+        <TD align=center><a href="rawimage/dsvdv1.bmp">
+            <img src="icon/dsvdv1.bmp" border="0"></a><br> &nbsp;<br>
+        </TD>
+        <TD align=center><a href="rawimage/dsvdhalfv1.bmp">
+            <img src="icon/dsvdhalfv1.bmp" border="0"></a><br> 68.4 dB<br>
+        </TD>
+        <TD align=center><a href="rawimage/dsvduq8v1.bmp">
+            <img src="icon/dsvduq8v1.bmp" border="0"></a><br> 56.6 dB<br>
+        </TD>
+       </TR>
+
+     </TBODY>
+</TABLE>      
+</center>
+
+
+<blockquote>
+  Remark: <br>
+<ul>     
+
+<li>All PSNR values in the above table only account for pixels occupied by the 
+foreground dama. All background pixels are excluded as they must be always 
+the same.
+
+<li>In computing the PSNR values, the images from the 32-bit SH coefficients 
+estimated by the corresponding methods are referred as the control images. 
+That is, the PSNR of image from 1.33 bits SH by <i>CLS</i> is computed by 
+comparing it with the image from 32 bits SH by <i>CLS</i>, not other 
+estimation methods. Similarly, the PSNR of image from 1.33 bits SH by <i> 
+ULS</i> is computed by comparing it with the image from 32 bits SH by <i> 
+ULS</i>. Our rationale is to measure the <i>degradation</i> of image quality 
+as the noise is introduced. This setting does not harm the fairness of 
+comparison as all estimation methods produce similar image qualities when the 
+estimated SH coefficients are represented as 32-bit floating point. This is 
+evidenced by the similarity of images in the first column of the table. 
+</ul> 
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+</BODY></HTML>

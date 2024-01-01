@@ -1874,23 +1874,358 @@ the original grayscale input. <br>
 </a>
 <hr>
 
-<!--#include virtual="./papers/btftile/leung-2007-tileable-desc.html"-->
 
-<!--#include virtual="./papers/shfit/lam-2006-noise-desc.html"-->
+<table border=0><tr>
 
-<!--#include virtual="./papers/stereobp2/wu-2006-dense-desc.html"-->
+<td width=80 height=80 align=right valign=top>
 
-<!--#include virtual="./papers/pca/ho-2005-compressing-desc.html"-->
+   <a href="./papers/btftile/btftile.html">
+   <img src="papers/btftile/libtftile.jpg" border=0>
+   </a>
 
-<!--#include virtual="./papers/plenwave/wong-2003-compression-desc.html"-->
+</td>
 
-<!--#include virtual="./papers/panoshad/wong-2003-real-desc.html"-->
+<td width=20>
 
-<!--#include virtual="./papers/illusam2/lin-2002-relighting-desc.html"-->
+</td><td align=left valign=top width=600><font face="Verdana" size="2">
 
-<!--#include virtual="./papers/plenill2/wong-2002-plenoptic-desc.html"-->
+  <font size=+0 face=Helvetica,Ariel><b>
+  Tileable BTF
+  </b> <i><b>(IEEE TVCG 2007)</b></i></font><br>
+  <p>
 
-<!--#include virtual="./papers/lightfld/wong-1997-image-desc.html"-->
+  Dressing an object with BTF normally involves a geometry-dependent
+  synthesis. The synthesized BTF cannot be reused on another object. Since
+  the synthesis of high-dimensional BTF is very time-consuming, this hinders
+  the application of BTF. We proposed the tileable BTF to decouple the BTF
+  synthesis and the geometry. Hence, once a set of BTF tiles is synthesized, 
+  it can be repeatedly applied on various objects without the lengthy
+  synthesis. The dressing is instantaneous. <br>
+
+<b>
+[<a href="./papers/btftile/btftile.html">more</a>]
+[<a href="./papers/btftile/btftile.pdf">paper</a>]
+[<a href="./papers/btftile/btftile.avi">video</a>]
+</b>
+
+
+</td>
+
+</tr></table>
+<p><br>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+
+
+<table border=0><tr>
+
+<td width=80 height=80 align=right valign=top>
+
+   <a href="./papers/shfit/shfit.html">
+   <img src="papers/shfit/lishfit.jpg" border=0>
+   </a>
+
+</td>
+
+<td width=20>
+
+</td><td align=left valign=top width=600><font face="Verdana" size="2">
+
+  <font size=+0 face=Helvetica,Ariel><b>
+  Noise-Proofed SH
+  </b> <i><b>(IEEE TVCG 2006)</b></i></font><br>
+  <p>
+
+  Storing precomputed lighting information (such as relighting, BTF, and
+  PRT) with spherical harmonics (SH) can drastically reduce the data size.
+  However, that is still far away from practical use as each vertex or pixel
+  has its own SH coefficient vector (of, say, 25 x 25 elements). Further
+  compression on these SH coefficients may carelessly introduce severe
+  visual artifacts.  We digged up the underlying reason and introduced a way
+  to <i>noise-proof</i> the SH coefficients, hence practical applications
+  become feasible.<br>
+
+<b>
+[<a href="./papers/shfit/shfit.html">more</a>]
+[<a href="./papers/shfit/shfit.pdf">paper</a>]
+</b>
+
+
+</td>
+
+</tr></table>
+<p><br>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+
+
+<table border=0><tr>
+
+<td width=80 height=80 align=right valign=top>
+
+   <!a href="./papers/stereobp2/stereobp2.html">
+   <img src="papers/stereobp2/listereobp2.jpg" border=0>
+   <!/a>
+
+</td>
+
+<td width=20>
+
+</td><td align=left valign=top width=600><font face="Verdana" size="2">
+
+  <font size=+0 face=Helvetica,Ariel><b>
+  Dense Photometric Stereo
+  </b> <i><b>(IEEE TPAMI)</b></i></font><br>
+  <p>
+
+Given the massive number of images captured for relighting, we can
+accurately recover the normal and depth maps using <i>dense photometric
+stereo</i>. Recovery is accurate even the lighting direction is not
+precisely measured and there are substantial amount of shadow and specular
+highlight (which causes much troubles to traditional shape recovery
+algorithms).  Note that the <i>same</i> set of images is used for depth
+recovery and relighting. No range scanner is required. <br>
+
+<b>
+[<a href="./papers/stereobp2/stereobp2.pdf">paper</a>]
+[<a href="./papers/stereobp2/stereobp2.avi">video</a>]
+</b>
+
+
+</td>
+
+</tr></table>
+<p><br>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+
+<p>
+<table border=0><tr><td width=80 height=80 align=right valign=top>
+
+   <a href="./papers/pca/pca.html">
+   <img src="papers/pca/lipca.jpg" border=0>
+   </a>
+
+</td><td width=20>
+</td><td align=left valign=top  width=600><font face="Verdana" size="2">
+
+  <font size=+0 face="Arial,Helvetica"><b>
+  PCA Compression for Relighting
+  </b> <i><b> (IEEE CSVT 2005)</b></i></font><br>
+  <p>
+
+Previous methods in compression relighting data mostly rely on SH which may
+smooth out high-frequency details. Here, we propose a block-based PCA
+compression scheme. It essentially separates the data into basis images and
+relighting coefficients, which can be further effectively compressed using
+transform coding and quantization. The nice feature of PCA is its ability in
+preserving high-quality shadow and highlights, while maintaining high
+compression ratio and fast rendering.
+
+<br>
+
+<b>
+[<a href="./papers/pca/pca.html">more</a>]
+[<a href="./papers/pca/pca.pdf">paper</a>]
+</b>
+
+</td></tr></table>
+<p><br>
+
+<!----------------------------------------------------------------------------------------------------->
+
+
+<p>
+<table border=0><tr><td width=80 height=80 align=right valign=top>
+
+   <a href="./papers/plenwave/plenwave.html">
+   <img src="papers/plenwave/liplenwave.jpg" border=0>
+   </a>
+
+</td><td width=20>
+</td><td align=left valign=top  width=600><font face="Verdana" size="2">
+
+  <font size=+0 face="Arial,Helvetica"><b>
+  Compression for Relighting
+  </b> <i><b> (IEEE CSVT 2003)</b></i></font><br>
+  <p>
+
+Relighting or precomputed lighting is actually a compression problem of
+tons of images. One may straightforwardly compress them with image or
+video compression standards such as JPEG, JPEG2000 and MPEG. However, they
+do not work well nor fully exploit the data correlation. Unlike the
+frame-by-frame playback of video, relighting may <i>randomly access</i> the
+pixel values during image synthesis. This paper presents a
+divide-and-conquer compression approach which substantially outperforms
+existing image and video coding methods. <br>
+
+<b>
+[<a href="./papers/plenwave/plenwave.html">more</a>]
+[<a href="./papers/plenwave/plenwave.pdf">paper</a>]
+</b>
+
+</td></tr></table>
+<p><br>
+
+<!----------------------------------------------------------------------------------------------------->
+
+
+<p>
+<table border=0><tr><td width=80 height=80 align=right valign=top>
+
+   <a href="./papers/panoshad/panoshad.html">
+   <img src="papers/panoshad/lipanoshad.jpg" border=0>
+   </a>
+
+</td><td width=20>
+</td><td align=left valign=top  width=600><font face="Verdana" size="2">
+
+  <font size=+0 face="Arial,Helvetica"><b>
+  Real-Time Relighting
+  </b> <i><b> (Graphics Programming Method 2003)</b></i></font><br>
+  <p>
+
+Relighting in local illumination (directional and point light sources) is
+basically a linear combination of basis functions, either image-wise or
+pixel-wise. The grid nature of image-based relighting fits nicely into the
+current SIMD-based GPUs and facilitates its <i>real-time</i> rendering.
+However, SH imposes difficulties due to its recursive definition. To solve
+it, we utilize hardware cubemaps.
+<br>
+
+<b>
+[<a href="./papers/panoshad/panoshad.html">more</a>] 
+[<a href="./papers/panoshad/panoshad.pdf">paper</a>]
+[<a href="./software/panoshader/panoshader.html">software</a>] 
+
+</b>
+
+</td></tr></table>
+<p><br>
+
+<!----------------------------------------------------------------------------------------------------->
+
+
+<p>
+<table border=0><tr><td width=80 height=80 align=right valign=top>
+
+  <a href="./papers/illusam2/illusam2.html">
+  <img src="papers/illusam2/liillusam2.jpg" border=0>
+  </a>
+
+</td><td width=20>
+</td><td align=left valign=top width=600><font face="Verdana" size="2">
+
+  <font size=+0 face="Arial,Helvetica"><b>
+  Sampling Bound of Relighting
+  </b> <i><b> (CVPR 2001) (IJCV 2002)</b></i></font><br>
+  <p>
+
+  How many samples we should take along the lighting dimension in order to
+  synthesize realistic images? If we know the answer, we can avoid wasteful
+  oversampling and undesirable undersampling, during the relighting and
+  precomputed lighting. This is exactly what this paper trying to answer. We
+  went through an indepth analysis and obtained the theoretical sampling
+  bound for relighting and precomputed lighting. To verify our bound, we
+  even build a machine to precisely position the point light source.<br>
+  
+<b>
+[<a href="./papers/illusam2/illusam2.html">more</a>]
+[<a href="./papers/illusam2/illusam2.pdf">paper</a>]
+[<a href="./software/irrad/irrad.html">software</a>]
+</b>
+
+
+</td></tr></table>
+<p><br>
+
+<!----------------------------------------------------------------------------------------------------->
+
+
+<p>
+<table border=0><tr><td width=80 height=80 align=right valign=top>
+
+   <a href="./papers/plenill2/plenill2.html">
+   <img src="papers/plenill2/liplenill2.jpg" border=0>
+   </a>
+
+</td><td width=20>
+</td><td align=left valign=top  width=600><font face="Verdana" size="2">
+
+  <font size=+0 face="Arial,Helvetica"><b>
+  The Plenoptic Illumination Function
+  </b> <i><b> (IEEE TMM 2002)</b></i></font><br>
+  <p>
+
+The original formulation of the plenoptic function does not include
+illumination. Previous image-based virtual reality applications simply
+assume that the illumination is fixed. In this paper, we proposed a new
+formulation of the plenoptic function, called the <i>plenoptic illumination
+function</i>, which explicitly specifies the illumination component.
+Techniques based on this new formulation can be extended to support
+relighting as well as view interpolation. This paper received the <i> <a
+href="http://www.ieee.org/organizations/society/sp/tmmaward.html">IEEE
+Transactions on Multimedia Prize Paper Award 2005</a></i>.<br>
+
+<b>
+[<a href="./papers/plenill2/plenill2.html">more</a>] 
+[<a href="./papers/plenill2/plenill2.pdf">paper</a>]
+[<a href="./software/panoview/panoview.html">software</a>]
+[<a href="./press/press.html#press-ibr">press</a>]
+</b>
+
+</td></tr></table>
+<p><br>
+
+<!----------------------------------------------------------------------------------------------------->
+
+
+<p>
+<table border=0><tr><td width=80 height=80 align=right valign=top>
+
+   <a href="./papers/lightfld/lightfld.html">
+   <img src="papers/lightfld/lilightfld.jpg" border=0>
+   </a>
+
+</td><td width=20>
+</td><td align=left valign=top  width=600><font face="Verdana" size="2">
+
+  <font size=+0 face="Arial,Helvetica"><b>
+  ABRDF and Image-based Relighting 
+  </b> <i><b> (EGWR 1997)</b></i></font><br>
+  <p>
+ 
+  The earliest paper on image-based relighting from our group in 1997. We
+  attempted to include the lighting into the image-based rendering framework. 
+  So that we are able to change the viewpoint as well as the lighting.
+  Our work is later commonly referred as <i>image-based
+  relighting</i>.  In this paper, we introduced the concept of
+  <i>apparent BRDF (ABRDF)</i>  of pixel, which is the aggregate function 
+  of surface reflectance, shadowing, and other indirect illumination
+  contribution.
+  <br>
+
+
+<b>
+[<a href="./papers/lightfld/lightfld.html">more</a>]
+[<a href="./papers/lightfld/illumin.pdf">paper</a>]
+[<a href="./papers/lightfld/ptsrc.mpg">video</a>]
+</b>
+
+</td></tr></table>
+<p><br>
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 
 
@@ -1902,9 +2237,75 @@ the original grayscale input. <br>
 </a>
 <hr>
 
-<!--#include virtual="./papers/bspi/fu-2004-binary-desc.html"-->
+<p>
+<table border=0><tr><td width=80 height=80 align=right valign=top>
 
-<!--#include virtual="./papers/triorder/fu-1998-triangle-desc.html"-->
+   <a href="./papers/bspi/bspi.html">
+   <img src="papers/bspi/libspi.jpg" border=0>
+   </a>
+
+</td><td width=20>
+</td><td align=left valign=top  width=600><font face="Verdana" size="2">
+
+  <font size=+0 face=Helvetica,Ariel><b>
+  Binary-Space-Partitioned Images</b> <i><b>(IEEE TVCG 2004)</b></i></font><br>
+  <p>
+
+
+<font face="Verdana" size="2"> Can we resolve the visibility without
+referring to 3D? This paper tries to answer this question. By binary-space
+partitioning the input 2D image and projecting the novel viewpoint onto the
+view plane of the input image, novel views can be generated. The 3D
+visibility can be correctly and completely resolved in 2D. All we need is a
+2D BSP visibility sorting. <br>
+
+<b>
+[<a href="./papers/bspi/bspi.html">more</a>]
+[<a href="./papers/bspi/bspi.pdf">paper</a>]
+[<a href="./papers/bspi/animation/bspi-720-480-mpeg2.mpg">video</a>]
+</b>
+
+</td></tr></table>
+<p><br>
+
+<!----------------------------------------------------------------------------------------------------->
+
+
+<p>
+<table border=0><tr><td width=80 height=80 align=right valign=top>
+
+   <a href="/~ttwong/papers/triorder/triorder.html">
+   <img src="papers/triorder/litriorder.jpg" border=0>
+   </a>
+
+</td><td width=20>
+</td><td align=left valign=top  width=600><font face="Verdana" size="2">
+
+  <font size=+0 face="Arial,Helvetica"><b>
+  View Interpolation Without Depth-Buffering
+  </b> <i><b> (JGT 1998)</b></i></font><br>
+  <p>
+
+
+Using epipolar geometry, a visibility-correct drawing order of <i>pixels</i>
+can be derived without depth-buffering. The drawback is to do it
+pixel-by-pixel. Again, using epipolar geometry, we derive a
+visibility-correct drawing order for <i>2D triangles</i>. The order between
+each pair of neighboring triangles is first obtained. Then a graph can be
+built and topological sorting is applied on the graph to obtain the complete
+drawing order of all triangles in linear time.
+<br> 
+
+<b>
+[<a href="/~ttwong/papers/triorder/triorder.html">more</a>]
+[<a href="http://appsrv.cse.cuhk.edu.hk/~ttwong/cgi-bin/paper-download/download.cgi?path=triorder&dl=triorder.pdf">paper</a>]
+</b>
+
+</td></tr></table>
+<p><br>
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 
 
@@ -1922,9 +2323,85 @@ the original grayscale input. <br>
 </a>
 <hr>
 
-<!--#include virtual="./papers/dwtgpu/wong-2007-discrete-desc.html"-->
 
-<!--#include virtual="./papers/ecgpu/fok-2005-evolutionary-desc.html"-->
+<table border=0><tr>
+
+<td width=80 height=80 align=right valign=top>
+
+   <a href="./papers/dwtgpu/dwtgpu.html">
+   <img src="papers/dwtgpu/icon/lidwtgpu.jpg" border=0>
+   </a>
+
+</td>
+
+<td width=20>
+
+</td><td align=left valign=top width=600><font face="Verdana" size="2">
+
+  <font size=+0 face=Helvetica,Ariel><b>
+  DWT on GPU
+  </b> <i><b>(IEEE TMM 2007)</b></i></font><br>
+  <p>
+
+  Discrete wavelet transform (DWT) has been widely used in recent years,
+  e.g. JPEG2000 image coding standard.  But DWT is rather computational
+  intensive when the data size is large.  Since most PCs come with a GPU, why
+  don't we turn it into a powerful DWT engine? As there are many DWTs, we
+  proposed a method to support various separable DWTs with various boundary
+  extension schemes. This project started in 2003 and its source
+  code has been released since 2004.  <br>
+
+<b>
+[<a href="./papers/dwtgpu/dwtgpu.html">more</a>]
+[<a href="./papers/dwtgpu/dwtgpu.pdf">paper</a>]
+[<a href="./software/dwtgpu/dwtgpu.html">software</a>]
+</b>
+
+
+</td>
+
+</tr></table>
+<p><br>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+
+<p>
+<table border=0><tr><td width=80 height=80 align=right valign=top>
+
+   <a href="./papers/ecgpu/ecgpu.html">
+   <img src="papers/ecgpu/liecgpu.jpg" border=0>
+   </a>
+
+</td><td width=20>
+</td><td align=left valign=top  width=600><font face="Verdana" size="2">
+
+  <font size=+0 face="Arial,Helvetica"><b>
+  Evolutionary Computing on GPU
+  </b> <i><b> (IEEE IS)</b></i></font><br>
+  <p>
+
+
+Genetic algorithm is a kind of evolutionary algorithms. Evolutionary
+algorithms are effective and robust methods for solving many practical
+problems such as feature selection, electrical circuits synthesis, and data
+mining. However, they may execute for a long time, because enormous fitness
+evaluations must be performed. In this paper, we proposed the first
+evolutionary algorithm on GPU, affordable by most people.<br>
+
+<b>
+[<a href="./papers/ecgpu/ecgpu.html">more</a>]
+[<a href="./papers/ecgpu/ecgpu.pdf">paper</a>]
+[<a href="./software/ecgpu/ecgpu.html">software</a>]
+</b>
+
+</td></tr></table>
+<p><br>
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 
 
@@ -1945,9 +2422,73 @@ the original grayscale input. <br>
 </a>
 <hr>
 
-<!--#include virtual="./papers/asc/poston-1998-multiresolution-desc.html"-->
+<p>
+<table border=0><tr><td width=80 height=80 align=right valign=top>
 
-<!--#include virtual="./papers/arthro/pheng-2004-virtual-desc.html"-->
+   <a href="./papers/asc/asc.html">
+   <img src="papers/asc/liasc.jpg" border=0>
+   </a>
+
+</td><td width=20>
+</td><td align=left valign=top  width=600><font face="Verdana" size="2">
+
+  <font size=+0 face="Arial,Helvetica"><b>
+  Adaptive Skeleton Climbing
+  </b> <i><b> (Eurographics 1998)</b></i></font><br>
+  <p>
+
+
+<font face="Verdana" size="2"> Generating isosurfaces from volume data
+normally results in large amount of triangles. One can use post-processing
+mesh decimation technique to reduce the triangle count, but with the
+trade-off of long processing time. To address this problem, we proposed an
+isosurface extraction algorithm that generates decimated mesh
+<i>directly</i> from the volume in a <i>short</i> period of running time.
+<br>
+
+<b>
+[<a href="./papers/asc/asc.html">more</a>]
+[<a href="./papers/asc/asc.pdf">paper</a>]
+[<a href="./software/asc/asc-intro.html">software</a>]
+</b>
+
+</td></tr></table>
+<p><br>
+
+<!----------------------------------------------------------------------------------------------------->
+
+
+<p>
+<table border=0><tr><td width=80 height=80 align=right valign=top>
+
+   <!a href="./papers/arthro/arthro.html">
+   <img src="papers/arthro/liarthro2.jpg" border=0>
+   <!/a>
+
+</td><td width=20>
+</td><td align=left valign=top  width=600><font face="Verdana" size="2">
+
+  <font size=+0 face="Arial,Helvetica"><b>
+  Virtual Arthroscopic Surgery
+  </b> <i><b> (IEEE TITB 2004)</b></i></font><br>
+  <p>
+
+
+Minimally invasive surgery requires excellent skill of hand-eye coordination
+and instrument manipulation. However, surgery training with cadavers is more
+and more difficult. Here, we built a hardware knee arthroscopy surgery
+simulator, not just simulate the operational instruments but also the
+haptics feedback.<br>
+
+<b>
+[<a href="./papers/arthro/arthro2.pdf">paper</a>]
+</b>
+
+</td></tr></table>
+<p><br>
+
+<!----------------------------------------------------------------------------------------------------->
+
 
 
 
