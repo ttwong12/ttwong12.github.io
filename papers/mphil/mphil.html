@@ -1,0 +1,119 @@
+<html>
+<title>
+The Modelling of Natural Imperfections and An Improved Space Filling 
+Curve Halftoning Technique
+</title>
+<body background="/icon/desktop.jpg">
+
+<font face="Times New Roman" font size="3">
+<blockquote>
+<center><table border=0>
+<tr><td>
+<img src="tteapot.jpg">
+</td><td width=30></td><td width=600>
+<h2>The Modelling of Natural Imperfections and An Improved Space Filling Curve
+    Halftoning Technique</h2>
+<p>
+<a href="/myself.html">Tien-Tsin Wong</a>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+,<br>
+Master thesis, The Chinese University of Hong Kong, 1994.
+</td></tr>
+</table></center>
+
+
+<DIV ALIGN = JUSTIFY>	
+<h3>Abstract</h3>
+<dl><dd>
+<dd>In this thesis, we tackle two computer graphics problems: 1) The modelling of
+natural imperfections and, 2) Improvement on the clustered-dot space filling
+curve halftoning method. 
+
+<dd>The modelling of natural imperfections
+is a technique to introduce blemishes onto the object surfaces
+in order to achieve the goal of
+realism. In this project, we present a new framework of modelling of
+such surface imperfections. The framework consists of two phases:
+Firstly, a tendency value, which represents the potential of 
+a surface point of interest being imperfect (e.g. with scratches, rusted,
+etc.), is calculated based on the
+object orientation to all <i> abstract imperfection sources</i>.
+It is then adjusted by
+the external factors, like surface exposure, scraping and surface curvature,
+etc. Secondly, a chaotic imperfection pattern is generated according to this
+calculated tendency. We have applied this framework to model
+two very common kinds of imperfections: dust accumulation and scratching. Some
+promising images are resulted.
+
+<dd>Two common problems exist in most of the existing digital halftoning
+techniques. They are the presence of annoying visual artifacts and
+ink smudging which introduces intensity error to the final appearance 
+of the halftone. In 1991, a clustered-dot space filling curve halftoning
+technique was proposed. It reduces both problems effectively. However,
+a new problem arises. It suffers from excessive blurring when the cluster
+size increases. In this thesis, we propose two improvements, <i>selective
+precipitation</i> and <i>adaptive clustering</i>, on the
+former method to minimize these blurring effects.
+Selective precipitation outputs the sequence of black dots at
+the position where the sum of the gray values of the corresponding pixels on
+the original image is the highest. Adaptive clustering uses
+a 1D edge detection filter to find the sharp edges and adaptively adjust 
+the size of the clusters so that they would not cross over the sharp
+edges. Hence, the sharpness of fine details is retained without the need of 
+image pre-filtering. By calculating a Gibbs measure and the length of the 
+perimeter of the resulting black pixels as objective image quality 
+measures, we have shown that images dithered by our methods
+do have better quality than the one produced by the original 
+clustered-dot space filling curve halftoning technique.
+</dl>
+
+<h3>Download Thesis</h3>
+<ul>
+<li> Acrobat (without color images): 
+     <a href="thesis.pdf">
+     thesis.pdf</a> (3.2MB)
+</ul>
+<p>
+
+
+
+
+<h3>Related Publications</h3>
+<ol>
+<li>"<a href="/papers/halftone/sfc.html">
+Halftoning with Selective Precipitation and Adaptive Clustering</a>",<br>
+T. T. Wong and S. C. Hsu,<br>
+<i>Graphics Gems V</i>,
+Edited by A. Paeth, AP Professional, 1995, pp. 302-313.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+<li>"<a href="/papers/dust/dust.html">
+Simulating Dust Accumulation</a>",<br>
+S. C. Hsu and T. T. Wong,<br>
+<i>IEEE Computer Graphics & Applications</i>,
+Vol. 15, No. 1, January 1995, pp. 18-22.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+<li>"<a href="/papers/imperfct/imperfct.html">
+A Geometry Dependent Texture Generation Framework for Simulating Surface Imperfections</a>",<br>
+T. T. Wong, W. Y. Ng and P. A. Heng,<br>
+in <i>Proceedings of the 8-th Eurographics Workshop on Rendering (Rendering Techniques'97)</i>,
+St. Etienne, France, June 1997, pp. 139-150.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+</ol>
+
+</blockquote>
+</font>

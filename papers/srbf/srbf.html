@@ -1,0 +1,225 @@
+<html>
+<title>
+Is There Anything Comparable to Spherical Harmonics But Simpler?
+</title>
+<body background="/icon/desktop.jpg">
+
+<font face="Times New Roman" font size="3">
+
+<blockquote>
+<center><table border=0>
+<tr><td>
+
+    <TABLE cellSpacing=0 cellPadding=0 border=0 walign="center">
+          <TBODY>
+          <TR>
+            <TD><IMG 
+              src="isrbf.jpg"></TD>
+            <TD><IMG 
+              src="shadowleft.jpg"></TD>
+          <TR>
+            <TD><IMG 
+              src="shadowbottom.jpg"></TD>
+            <TD><IMG 
+              src="shadowbottomleft.jpg"></TD></TR></TBODY></TABLE>
+</td><td width=30></td><td width=600>
+<h2>Is There Anything Comparable to Spherical Harmonics But Simpler?
+</h2>
+<p>
+<a href="/myself.html">Tien-Tsin Wong</a>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+and 
+<a href="http://www.ee.cityu.edu.hk/~csleung/">Chi-Sing Leung</a>
+
+<!----------------------------------------------------------------------------------------------------->
+,<br>
+<i>Game Developers Conference (GDC2007)</i>, March 2007.
+</td></tr>
+</table></center>
+
+
+<DIV ALIGN = JUSTIFY>	
+<h3>Abstract</h3> 
+<dl><dd>
+<dd> 
+This lecture introduces a computationally more efficient, mathematically
+simpler, and visually identical substitute to spherical harmonics (SH). It
+is spherical radial basis function (SRBF). It represents lighting including
+soft shadow, caustics, interreflection, HDR environment map, and other
+global illumination like effects. It naturally supports both local
+illumination (point and directional sources) as well as lighting under
+distant environment (integration of lighting contributions over a spherical
+environment). The lecture covers the underlying mathematics (which shows
+simplicity), describes its implementation (which exhibits its computational
+efficiency), and demonstrates the visual results (which shows its
+comparability). We also present the mathematics for obtaining the
+noise-proof SRBF coefficients, so that compression (that introduces
+quantization noises) can be applied on them to achieve a compact solution
+for sophisticated lighting effects. A set of tools and hacks is provided and
+explained to achieve various lighting effects and real-time performance. It
+can be shown that all lighting effects by SH are achievable with SRBF,
+including the tricky rotation. 
+</dl>
+
+
+
+<h3>Download Presentation</h3>
+<ul>
+<li>Acrobat:
+    <a href="srbf.pps">
+    srbf.pps</a> (size: 30MB) (Version 1.2, released on 12 March 2007) <br>
+</ul>
+<p>
+
+
+
+
+</table>
+</center>
+
+
+
+<h3>Download Source Code</h3>
+<ul>
+<li> <a href="/software/srbf/srbf.html">Demo homepage</a>
+<br>
+</ul>
+<p>
+
+
+
+<h3>Some Results</h3>
+<p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center'><span
+lang=EN-US><!--[if gte vml 1]><v:shape id="_x0000_i1025" type="#_x0000_t75"
+ style='width:211.5pt;height:158.25pt'>
+ <v:imagedata src="rbfgdc_files/image005.png" o:title="house-pt06r"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=282 height=211
+src="rbfgdc_files/image006.jpg" v:shapes="_x0000_i1025"><![endif]></span><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><!--[if gte vml 1]><v:shape id="_x0000_i1026"
+ type="#_x0000_t75" style='width:210.75pt;height:158.25pt'>
+ <v:imagedata src="rbfgdc_files/image007.png" o:title="07b-house-dir02"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=281 height=211
+src="rbfgdc_files/image008.jpg" v:shapes="_x0000_i1026"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:207.0pt 315.0pt'><span
+lang=EN-US>Figure 1. House.</span><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center'><span
+lang=EN-US><!--[if gte vml 1]><v:shape id="_x0000_i1027" type="#_x0000_t75"
+ style='width:211.5pt;height:211.5pt'>
+ <v:imagedata src="rbfgdc_files/image009.png" o:title="caustics-pt04r"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=282 height=282
+src="rbfgdc_files/image010.jpg" v:shapes="_x0000_i1027"><![endif]><span
+style='mso-spacerun:yes'>&nbsp; </span><!--[if gte vml 1]><v:shape id="_x0000_i1028"
+ type="#_x0000_t75" style='width:210.75pt;height:210.75pt'>
+ <v:imagedata src="rbfgdc_files/image011.png" o:title="07d-caustics-dir01"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=281 height=281
+src="rbfgdc_files/image012.jpg" v:shapes="_x0000_i1028"><![endif]></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:99.0pt 315.0pt'><span
+lang=EN-US>Figure 2. Ring.</span></p>
+
+<p class=MsoBodyText align=center style='margin-top:6.0pt;text-align:center;
+tab-stops:27.0pt 171.0pt 288.0pt'><span lang=EN-US style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'><!--[if gte vml 1]><v:shape id="_x0000_i1029"
+ type="#_x0000_t75" style='width:132.75pt;height:117pt'>
+ <v:imagedata src="rbfgdc_files/image013.png" o:title="12c-screenshot1"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=177 height=156
+src="rbfgdc_files/image014.jpg" v:shapes="_x0000_i1029"><![endif]><span
+style='mso-spacerun:yes'>&nbsp; </span><!--[if gte vml 1]><v:shape id="_x0000_i1030"
+ type="#_x0000_t75" style='width:132.75pt;height:117pt'>
+ <v:imagedata src="rbfgdc_files/image015.png" o:title="12d-screenshot6"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=177 height=156
+src="rbfgdc_files/image016.jpg" v:shapes="_x0000_i1030"><![endif]><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span><!--[if gte vml 1]><v:shape id="_x0000_i1031"
+ type="#_x0000_t75" style='width:132.75pt;height:117pt'>
+ <v:imagedata src="rbfgdc_files/image017.png" o:title="12e-screenshot7"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=177 height=156
+src="rbfgdc_files/image018.jpg" v:shapes="_x0000_i1031"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText align=center style='margin-top:6.0pt;text-align:center'><span
+lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Figure 3.
+Caustics cast by the crystal angel.<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoBodyText align=center style='text-align:center'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><a
+href="screen0036.bmp"><span
+style='color:windowtext;text-decoration:none;text-underline:none'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1032" type="#_x0000_t75" style='width:184.5pt;height:184.5pt'
+ filled="t" fillcolor="yellow">
+ <v:imagedata src="rbfgdc_files/image019.png" o:title="screen0036"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=246 height=246
+src="rbfgdc_files/image020.jpg" v:shapes="_x0000_i1032"><![endif]></span></a><span
+style='mso-spacerun:yes'>&nbsp;</span><a
+href="screen0002.bmp"><span
+style='color:windowtext;text-decoration:none;text-underline:none'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1033" type="#_x0000_t75" style='width:184.5pt;height:184.5pt'>
+ <v:imagedata src="rbfgdc_files/image021.png" o:title="screen0002"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=246 height=246
+src="rbfgdc_files/image022.jpg" v:shapes="_x0000_i1033"><![endif]></span></a><o:p></o:p></span></p>
+
+<p class=MsoBodyText align=center style='text-align:center'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Figure 4. Diffuse teapot
+illuminated in a HDR environment (Grace).<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoBodyText align=center style='text-align:center'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><a
+href="snapshot1.bmp"><span
+style='color:windowtext;text-decoration:none;text-underline:none'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1034" type="#_x0000_t75" style='width:184.5pt;height:184.5pt'>
+ <v:imagedata src="rbfgdc_files/image023.png" o:title="snapshot1"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=246 height=246
+src="rbfgdc_files/image024.jpg" v:shapes="_x0000_i1034"><![endif]></span></a><span
+style='mso-spacerun:yes'>&nbsp;</span><a
+href="snapshot4.bmp"><span
+style='color:windowtext;text-decoration:none;text-underline:none'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1035" type="#_x0000_t75" style='width:186pt;height:184.5pt'>
+ <v:imagedata src="rbfgdc_files/image025.png" o:title="snapshot4"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=248 height=246
+src="rbfgdc_files/image026.jpg" v:shapes="_x0000_i1035"><![endif]></span></a><o:p></o:p></span></p>
+
+<p class=MsoBodyText align=center style='text-align:center'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Figure 5. An anisotropic
+teapot illuminated in a HDR environment (Grace).<o:p></o:p></span></p>
+
+
+
+<h3>Related Publications</h3>
+<ol>
+<li>"<u>An RBF-based Image Compression Method for Image-based Rendering</u>",<br>
+C. S. Leung, T. T. Wong, P. M. Lam and K. H. Choy,<br>
+<i>IEEE Transactions on Image Processing</i>,
+Vol. 15, No. 4, April 2006, pp. 1031-1041.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+<li>"<u>Lighting Precomputation Using the Relighting Map</u>",<br>
+T. T. Wong, C. S. Leung and K. H. Choy,<br>
+<i>Shader X3: Advanced Rendering with Direct X and OpenGL</i>,
+Edited by W. Engel, Charles River Media, 2005, pp. 379-392.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+</ol>
+
+
+
+
+</blockquote>
+</font>

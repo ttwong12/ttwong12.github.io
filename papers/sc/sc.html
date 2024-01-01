@@ -1,0 +1,165 @@
+<html>
+<title>
+'Skeleton Climbing': fast isosurfaces with fewer triangles
+</title>
+<body background="/icon/desktop.jpg">
+
+
+<font face="Times New Roman" font size="3">
+<blockquote>
+<center><table border=0>
+<tr><td>
+<img src="tctasc4.gif">
+</td><td width=30></td><td width=600>
+<h2>'Skeleton Climbing': fast isosurfaces with fewer triangles</h2>
+<p>
+Tim Poston
+
+
+<!----------------------------------------------------------------------------------------------------->
+,
+H.T. Nguyen
+
+
+<!----------------------------------------------------------------------------------------------------->
+,
+<a href="http://www.cse.cuhk.edu.hk/~pheng/">Pheng-Ann Heng</a>
+
+<!----------------------------------------------------------------------------------------------------->
+
+and
+<a href="/myself.html">Tien-Tsin Wong</a>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+,
+<br>
+in <i>Proceedings of Pacific Graphics'97</i>, 
+Seoul, Korea, October 1997, pp 117-126.
+<p>
+</td></tr>
+</table></center>
+
+
+<DIV ALIGN = JUSTIFY>	
+<h3>Abstract</h3> 
+<dl><dd>
+<dd>Skeleton Climbing is an algorithm that builds triangulated isosurfaces 
+in 3D grid data, more economically than Marching Cubes, and without the
+time penalty of current mesh decimation algorithms. Building the surface
+from its intersections with grid edges (1-skeleton), then 
+faces (2-skeleton), then cubes (3-skeleton), treats the data in a 
+uniform way; this allows a 25% reduction in the number of triangles 
+produced, while still creating a true separating surface at similar speed.
+</dl>
+
+
+<h3>Download Paper</h3>
+<ul>
+<li>Acrobat:
+    <a href="sc.pdf">
+    sc.pdf</a> (size: 2.64 MB)<br>
+</ul>
+<p>
+
+
+
+<h3>Visual Comparison</h3>
+
+The following table compares the statistical and visual results of the
+generated meshes.
+
+<center>
+<table border=5 cellpadding=0>
+<tr><td width=102 valign=center align=center><b>Data Set</b>
+</td><td width=102 align=center> <b>Marching Cubes</b>
+</td><td width=102 align=center> <b>Skeleton Climbing w/o step 4</b>
+</td><td width=102 align=center> <b>Skeleton Climbing with step 4</b>
+
+</td></tr><tr><td align=center><b>Knot</b>
+</td><td width=102 height=100>
+    <a href="image/knotmc.jpg">
+    <img src="iknotmc.jpg" border=0 align=center valign=center></a>
+</td><td width=102 height=100>
+    <a href="image/knotsc3.jpg">
+    <img src="iknotsc3.jpg" border=0 align=center valign=center></a>
+</td><td width=102 height=100>
+    <a href="image/knotsc4.jpg">
+    <img src="iknotsc4.jpg" border=0 align=center valign=center></a>
+</td></tr><tr><td align=center> No of Triangles
+</td><td align=center> 13,968 
+</td><td align=center> 13,968
+</td><td align=center> 10,464
+</td></tr><tr><td align=center> Timing
+</td><td align=center> 1.81 sec
+</td><td align=center> 1.55 sec
+</td><td align=center> 1.61 sec
+
+
+</td></tr><tr><td align=center><b>CT skull</b>
+</td><td width=102 height=100>
+    <a href="image/ctheadmc.jpg">
+    <img src="ictheadmc.jpg" border=0 align=center valign=center></a>
+</td><td width=102 height=100>
+    <a href="image/ctheadsc3.jpg">
+    <img src="ictheadsc3.jpg" border=0 align=center valign=center></a>
+</td><td width=102 height=100>
+    <a href="image/ctheadsc4.jpg">
+    <img src="ictheadsc4.jpg" border=0 align=center valign=center></a>
+</td></tr><tr><td align=center> No of Triangles
+</td><td align=center> 592,368
+</td><td align=center> 595,802
+</td><td align=center> 446,990
+</td></tr><tr><td align=center> Timing
+</td><td align=center> 62.02 sec
+</td><td align=center> 63.38 sec
+</td><td align=center> 60.60 sec
+
+
+</td></tr><tr><td align=center><b>Arteries</b>
+</td><td width=102 height=100>
+    <a href="image/ctamc.jpg">
+    <img src="ictamc.jpg" border=0 align=center valign=center></a>
+</td><td width=102 height=100>
+    <a href="image/ctasc3.jpg">
+    <img src="ictasc3.jpg" border=0 align=center valign=center></a>
+</td><td width=102 height=100>
+    <a href="image/ctasc4.jpg">
+    <img src="ictasc4.jpg" border=0 align=center valign=center></a>
+</td></tr><tr><td align=center> No of Triangles
+</td><td align=center> 263,438
+</td><td align=center> 265,536
+</td><td align=center> 195,588
+</td></tr><tr><td align=center> Timing
+</td><td align=center> 55.82 sec
+</td><td align=center> 59.80 sec
+</td><td align=center> 63.15 sec
+
+
+</td></tr><tr><td align=center><b>Mt. St Antonio</b>
+</td><td width=102 height=100>
+    <a href="image/mshamc.jpg">
+    <img src="imshamc.jpg" border=0 align=center valign=center></a>
+</td><td width=102 height=100>
+    <a href="image/mshasc3.jpg">
+    <img src="imshasc3.jpg" border=0 align=center valign=center></a>
+</td><td width=102 height=100>
+    <a href="image/mshasc4.jpg">
+    <img src="imshasc4.jpg" border=0 align=center valign=center></a>
+</td></tr><tr><td align=center> No of Triangles
+</td><td align=center> 268,252
+</td><td align=center> 268,368
+</td><td align=center> 201,686
+</td></tr><tr><td align=center> Timing
+</td><td align=center> 113.77 sec
+</td><td align=center> 92.91 sec
+</td><td align=center> 96.33 sec
+
+</td></tr>
+</table>
+</center>
+
+</blockquote>
+</font>
+</html>

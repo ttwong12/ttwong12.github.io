@@ -1,0 +1,141 @@
+<html>
+<title>
+Computing Visibility for Triangulated Panoramas
+</title>
+<body background="/icon/desktop.jpg">
+
+<font face="Times New Roman" font size="3">
+<blockquote>
+<center><table border=0>
+<tr><td>
+<img src="panowalk.gif">
+</td><td width=30></td><td width=600>
+<h2>Computing Visibility for Triangulated Panoramas</h2>
+<p>
+<!--#include virtual="./papers/_author/cwfu.html"-->,
+<!--#include virtual="./papers/_author/ttwong.html"-->
+and 
+<!--#include virtual="./papers/_author/pheng.html"-->,
+<br>
+in <i>Proceedings of the 10-th Eurographics Workshop on Rendering</i>,
+Granada, Spain, June 1999, pp 169-182.
+<p>
+</td></tr>
+</table></center>
+
+
+
+<DIV ALIGN = JUSTIFY>	
+<h3>Abstract</h3>
+<dl><dd>
+<dd>
+A visibility algorithm for triangulated panoramas is proposed. The algorithm
+can correctly resolve the visibility without making use of any depth
+information. It is especially useful when depth information is not
+available, such as in the case of real-world photographs. Based on the
+optical flow information and the image intensity, the panorama is subdivided
+into variable-sized triangles, image warping is then efficiently applied on
+these triangles using existing graphics hardware. The visibility problem is
+resolved by drawing the warped triangles in a specific order. This drawing
+order is derived from epipolar geometry. Using this partial drawing order, a
+graph can be built and topological sorting is applied on the graph to obtain
+the complete drawing order of all triangles. We will show that the time
+complexity of graph construction and topological sorting are both linear to
+the total number of triangles.
+<p>
+</dl>
+
+<h3>Download Paper</h3>
+<ul>
+<li> Acrobat:
+     <a href="panowalk.pdf">
+     panowalk.pdf</a> (4.29 MB)
+</ul>
+<p>
+
+
+
+
+
+<h3>Blending of Two Warped Panoramas</h3>
+
+<center>
+<table>
+<tr><td align=center width=400>
+<table border=3><tr><td>
+<a href="node0.jpg">
+<img src="inode0.jpg" border=0></a></td></tr></table>
+</td><td width=200>
+Image warped from the first node alone (holes are highlighted in green)
+
+</td></tr><tr><td align=center width=400>
+<table border=3><tr><td>
+<a href="order0.jpg">
+<img src="iorder0.jpg" border=0></a></td></tr></table>
+</td><td width=200>
+Drawing order of triangles in the first warped panorama
+
+</td></tr><tr><td  align=center width=400>
+<table border=3><tr><td>
+<a href="node1.jpg">
+<img src="inode1.jpg" border=0></a></td></tr></table>
+</td><td width=200>
+Image warped from the second panoramic node 
+
+</td></tr><tr><td align=center width=400>
+<table border=3><tr><td>
+<a href="order1.jpg">
+<img src="iorder1.jpg" border=0></a></td></tr></table>
+</td><td width=200>
+Drawing order of triangles in the second warped panorama
+
+</td></tr><tr><td align=center width=400>
+<table border=3><tr><td>
+<a href="blend.jpg">
+<img src="iblend.jpg" border=0></a></td></tr></table>
+</td><td width=200>
+Blending two warped panoramas together
+</td></tr><tr><td>
+</table>
+</center>
+
+
+<h3>Animation</h3>
+
+The following animations demonstrate the warping and blending result of
+combining two panoramas. Both animations are in QuickTime movie format.
+
+<center>
+<table>
+<tr><td align=center>
+<b><i>Attic</i></b><br>(4Mb)
+</td><td>
+<table border=3><tr><td>
+<a href="atticpano.mov">
+<img src="iattic.jpg" border=0></a></td></tr></table>
+</td></tr><tr>
+
+<td align=center>
+<b><i>City</i></b><br>(6Mb)
+</td><td>
+<table border=3><tr><td>
+<a href="citypano.mov">
+<img src="icity.jpg" border=0></a></td></tr></table>
+</td></tr>
+</table>
+</center>
+
+
+
+
+<h3>Related Publications</h3>
+<ol>
+<li><!--#include virtual="./papers/_reference/fu-1998-triangle.html"-->
+<li><!--#include virtual="./papers/_reference/fu-2004-binary.html"-->
+</ol>
+
+
+</blockquote>
+</font>
+
+</html>

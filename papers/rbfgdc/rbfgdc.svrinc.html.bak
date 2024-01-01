@@ -1,0 +1,750 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=big5">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="rbfgdc_files/filelist.xml">
+<link rel=Edit-Time-Data href="rbfgdc_files/editdata.mso">
+<link rel=OLE-Object-Data href="rbfgdc_files/oledata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Is There Anything Comparable to Spherical Harmonics But Simpler?</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Tien-Tsin Wong</o:Author>
+  <o:LastAuthor>ttwong</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>1239</o:TotalTime>
+  <o:LastPrinted>2004-05-07T12:21:00Z</o:LastPrinted>
+  <o:Created>2006-07-26T09:37:00Z</o:Created>
+  <o:LastSaved>2006-07-26T09:37:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>886</o:Words>
+  <o:Characters>5056</o:Characters>
+  <o:Company>CUHK</o:Company>
+  <o:Lines>42</o:Lines>
+  <o:Paragraphs>11</o:Paragraphs>
+  <o:CharactersWithSpaces>5931</o:CharactersWithSpaces>
+  <o:Version>10.6714</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Compatibility>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:新細明體;
+	panose-1:2 2 3 0 0 0 0 0 0 0;
+	mso-font-alt:PMingLiU;
+	mso-font-charset:136;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:3 137232384 22 0 1048577 0;}
+@font-face
+	{font-family:"\@新細明體";
+	panose-1:2 2 3 0 0 0 0 0 0 0;
+	mso-font-charset:136;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:3 137232384 22 0 1048577 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:新細明體;
+	mso-fareast-language:EN-US;}
+h1
+	{mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:18.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	mso-fareast-language:EN-US;}
+h2
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:16.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-language:EN-US;}
+h3
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	font-weight:normal;
+	font-style:italic;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:新細明體;
+	mso-fareast-language:EN-US;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-indent:36.0pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:新細明體;
+	mso-fareast-language:EN-US;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:新細明體;
+	mso-fareast-language:EN-US;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.mediumb-text1
+	{mso-style-name:mediumb-text1;
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:black;
+	font-weight:bold;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:62.9pt 90.0pt 44.95pt 90.0pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:175466173;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1576563724 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:24.0pt;
+	mso-level-number-position:left;
+	margin-left:24.0pt;
+	text-indent:-24.0pt;}
+@list l1
+	{mso-list-id:425465418;
+	mso-list-template-ids:-1871046308;}
+@list l1:level1
+	{mso-level-start-at:3;
+	mso-level-text:%1;
+	mso-level-tab-stop:19.5pt;
+	mso-level-number-position:left;
+	margin-left:19.5pt;
+	text-indent:-19.5pt;}
+@list l1:level2
+	{mso-level-start-at:3;
+	mso-level-text:"%1\.%2";
+	mso-level-tab-stop:19.5pt;
+	mso-level-number-position:left;
+	margin-left:19.5pt;
+	text-indent:-19.5pt;}
+@list l1:level3
+	{mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	margin-left:36.0pt;
+	text-indent:-36.0pt;}
+@list l1:level4
+	{mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	margin-left:36.0pt;
+	text-indent:-36.0pt;}
+@list l1:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-54.0pt;}
+@list l1:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-54.0pt;}
+@list l1:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-72.0pt;}
+@list l1:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-72.0pt;}
+@list l1:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-72.0pt;}
+@list l2
+	{mso-list-id:670840154;
+	mso-list-template-ids:-160919888;}
+@list l2:level1
+	{mso-level-text:"%1\.0";
+	mso-level-tab-stop:25.5pt;
+	mso-level-number-position:left;
+	margin-left:25.5pt;
+	text-indent:-25.5pt;}
+@list l2:level2
+	{mso-level-text:"%1\.%2";
+	mso-level-tab-stop:61.5pt;
+	mso-level-number-position:left;
+	margin-left:61.5pt;
+	text-indent:-25.5pt;}
+@list l2:level3
+	{mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-36.0pt;}
+@list l2:level4
+	{mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:162.0pt;
+	mso-level-number-position:left;
+	margin-left:162.0pt;
+	text-indent:-54.0pt;}
+@list l2:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:198.0pt;
+	mso-level-number-position:left;
+	margin-left:198.0pt;
+	text-indent:-54.0pt;}
+@list l2:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	margin-left:252.0pt;
+	text-indent:-72.0pt;}
+@list l2:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	margin-left:288.0pt;
+	text-indent:-72.0pt;}
+@list l2:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:342.0pt;
+	mso-level-number-position:left;
+	margin-left:342.0pt;
+	text-indent:-90.0pt;}
+@list l2:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:396.0pt;
+	mso-level-number-position:left;
+	margin-left:396.0pt;
+	text-indent:-108.0pt;}
+@list l3
+	{mso-list-id:1365448213;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-552202374 2070455048 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l3:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:156.0pt;
+	mso-level-number-position:left;
+	margin-left:156.0pt;
+	text-indent:-18.0pt;}
+@list l4
+	{mso-list-id:1876695722;
+	mso-list-template-ids:722506042;}
+@list l4:level1
+	{mso-level-start-at:4;
+	mso-level-text:%1;
+	mso-level-tab-stop:19.5pt;
+	mso-level-number-position:left;
+	margin-left:19.5pt;
+	text-indent:-19.5pt;}
+@list l4:level2
+	{mso-level-start-at:2;
+	mso-level-text:"%1\.%2";
+	mso-level-tab-stop:19.5pt;
+	mso-level-number-position:left;
+	margin-left:19.5pt;
+	text-indent:-19.5pt;}
+@list l4:level3
+	{mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	margin-left:36.0pt;
+	text-indent:-36.0pt;}
+@list l4:level4
+	{mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	margin-left:36.0pt;
+	text-indent:-36.0pt;}
+@list l4:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-54.0pt;}
+@list l4:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-54.0pt;}
+@list l4:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-72.0pt;}
+@list l4:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-72.0pt;}
+@list l4:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	margin-left:72.0pt;
+	text-indent:-72.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=ZH-TW link=blue vlink=purple style='tab-interval:36.0pt'>
+
+<div class=Section1>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:18.0pt'>GDC2007 Submission <o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:18.0pt'>Is There Anything Comparable
+to Spherical Harmonics But Simpler?<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><span lang=EN-US
+style='font-size:12.0pt'>Besides this supplementary document, a webpage linking
+with results, demo, and papers can be found at <o:p></o:p></span></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><span lang=EN-US><a
+href="./papers/rbfgdc/rbfgdc.html">./papers/rbfgdc/rbfgdc.html</a></span><span
+lang=EN-US style='font-size:12.0pt'><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><span lang=EN-US
+style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><b style='mso-bidi-font-weight:
+normal'><u><span lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>PROPERTIES
+OF SRBF<o:p></o:p></span></u></b></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><b style='mso-bidi-font-weight:
+normal'><i style='mso-bidi-font-style:normal'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Local Support<o:p></o:p></span></i></b></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Unlike the global support
+nature of SH, SRBF is local support. This is useful because most lighting
+information is only available on the upper hemisphere. We can think of each
+radial basis function spans a region on the sphere (Figure 1). Therefore we need
+to lay SRBF centers only on the upper hemisphere. If we know the trajectory of
+our light sources (a path on the sphere), we can even drop those radial basis
+functions that do not overlap with the light trajectory to significantly speed
+up the rendering. This provides scalability.<o:p></o:p></span></p>
+
+<p class=MsoBodyText align=center style='margin-top:6.0pt;text-align:center'><span
+lang=EN-US><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1036" type="#_x0000_t75" style='width:290.25pt;
+ height:195.75pt' o:ole="">
+ <v:imagedata src="rbfgdc_files/image001.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=387 height=261
+src="rbfgdc_files/image002.gif" v:shapes="_x0000_i1036"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="CDraw5" ShapeID="_x0000_i1036"
+  DrawAspect="Content" ObjectID="_1215440632">
+ </o:OLEObject>
+</xml><![endif]--></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt'><span lang=EN-US>Figure 1. The
+spherical function is approximated by the linear combination of differently
+oriented spherical radial basis function.</span></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt;text-align:justify;text-justify:
+inter-ideograph'><span lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><b style='mso-bidi-font-weight:
+normal'><i style='mso-bidi-font-style:normal'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Rendering Efficiency<o:p></o:p></span></i></b></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Another major advantage of
+SRBF is that all radial basis functions are in the <b style='mso-bidi-font-weight:
+normal'><i style='mso-bidi-font-style:normal'>same</i></b> form of a Gaussian
+function. Therefore, the evaluation of radial basis function is just a lookup
+to a single <b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'>1D</i></b> table (the Gaussian curve as the SRBF is isotropic, Figure 2).
+Note that fast evaluation of basis function is crucial to the efficient
+rendering of local illumination like directional and point sources. While in
+the case of SH, a fast evaluation of SH can be done by looking up multiple
+tables stored in cubemaps (each cubemap stores the pre-evaluated values of one
+basis function, SH basis are all distinct).<o:p></o:p></span></p>
+
+<p class=MsoBodyText align=center style='margin-top:6.0pt;text-align:center'><span
+lang=EN-US><!--[if gte vml 1]><v:shape id="_x0000_i1037" type="#_x0000_t75"
+ style='width:310.5pt;height:116.25pt' o:ole="">
+ <v:imagedata src="rbfgdc_files/image003.wmz" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=414 height=155
+src="rbfgdc_files/image004.gif" v:shapes="_x0000_i1037"><![endif]><!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="CDraw5" ShapeID="_x0000_i1037"
+  DrawAspect="Content" ObjectID="_1215440633">
+ </o:OLEObject>
+</xml><![endif]--></span></p>
+
+<p class=MsoBodyText><span lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'>Figure 2. The evaluation of <i>SRBF </i>can be done by a dot product
+and a lookup of this 1D table.<o:p></o:p></span></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><b style='mso-bidi-font-weight:
+normal'><i style='mso-bidi-font-style:normal'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Environment Lighting<o:p></o:p></span></i></b></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Like the orthonormal SH, the
+rendering under distant environment in SRBF can also be performed by computing
+a dot product of BRDF and environment light. To do so in the non-orthonormal
+SRBF, we make use of the dual space concept. That is, we use SRBF to represent
+the environment (or BRDF) and the dual space of SRBF to represent the BRDF (or
+environment). During the rendering, the distant environment lighting can still
+be obtained by simple dot product of 2 coefficient vectors.<o:p></o:p></span></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><b style='mso-bidi-font-weight:
+normal'><i style='mso-bidi-font-style:normal'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Rotation<o:p></o:p></span></i></b></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>In SH, the rotation of a
+k-dimensional SH vector can be computed by a recursively defined analytical
+equation (function of Euler angles). It can be also written in a form of
+multiplying a k x k matrix to the SH vector. Each element in this k x k matrix
+can be computed analytical, but different elements have different equations.
+They are inhomogeneous. <o:p></o:p></span></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt;text-indent:36.0pt'><span
+lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>For SRBF,
+rotation of a k-dimensional SRBF vector is also computed by multiplying a k x k
+matrix. The difference is that each element of this k x k matrix can be easily
+obtained by looking up a 1D table. In fact, the value of element(i,j) is the
+spherical integration of two SRBFs, R_i and R_j. As SRBF is isotropic, this
+spherical integration is only dependent on the angle (theta) in between the two
+corresponding SRBF centers (theta is in between [0, pi]).<span
+style='mso-spacerun:yes'>&nbsp; </span>And there is close form solution (direct
+solution, no iteration). For speed up, we can keep a <b style='mso-bidi-font-weight:
+normal'><i style='mso-bidi-font-style:normal'>1D table</i></b> of
+pre-integrated values indexed by theta.<o:p></o:p></span></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt;text-indent:36.0pt'><span
+lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>For the
+application of rotating the distant environment, it is always beneficial to
+store the BRDF coefficient vectors (SH or SRBF) in global frame (sharing the
+same coordinate system). Therefore, only one rotation (of the environment) is
+needed. If the BRDF coefficient vectors (SH or SRBF) are defined in the local frame,
+the environment coefficient vectors (SH or SBRF) has to be rotated for each
+vertex. No matter it is SH- or SRBF- encoded, such rendering is not efficient.<o:p></o:p></span></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt;text-indent:36.0pt'><span
+lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Here we want to
+point out that, the rotation complexity of SRBF is not inferior to SH. But the
+construction of k x k matrix is simpler (just looking up 1D table).<o:p></o:p></span></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><b style='mso-bidi-font-weight:
+normal'><i style='mso-bidi-font-style:normal'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Squeezing SRBF Coefficients<o:p></o:p></span></i></b></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Since there is a need to
+store the SRBF coefficient vectors along with the vertices in memory for
+rendering purpose, further compression on SRBF coefficients is needed. We will
+show that the estimated SRBF coefficients obtained by our methods are <b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'>noise-proof</i></b>,
+i.e. they can be lossy compressed to a very small size, without much visual
+artifact. Such compact solution is important when squeezing many data into the limited
+GPU memory.<o:p></o:p></span></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><b style='mso-bidi-font-weight:
+normal'><u><span lang=EN-US style='font-size:16.0pt'>Some Results</span></u></b><span
+lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>The following images show
+some screen shots of our realistic rendering with complex lighting effects
+including caustics, and shadowing.<span style='mso-spacerun:yes'>&nbsp;
+</span>All examples below are rendered in real-time. The real-time demo program
+of Figure 5 can be found at<o:p></o:p></span></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><a
+href="/software/rbfgdc/rbfgdc/demolightmap-1.0b.zip">/software/rbfgdc/rbfgdc/demolightmap-1.0b.zip</a><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center'><span
+lang=EN-US><!--[if gte vml 1]><v:shape id="_x0000_i1025" type="#_x0000_t75"
+ style='width:211.5pt;height:158.25pt'>
+ <v:imagedata src="rbfgdc_files/image005.png" o:title="house-pt06r"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=282 height=211
+src="rbfgdc_files/image006.jpg" v:shapes="_x0000_i1025"><![endif]></span><span
+lang=EN-US style='font-size:11.0pt;mso-bidi-font-size:12.0pt'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><!--[if gte vml 1]><v:shape id="_x0000_i1026"
+ type="#_x0000_t75" style='width:210.75pt;height:158.25pt'>
+ <v:imagedata src="rbfgdc_files/image007.png" o:title="07b-house-dir02"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=281 height=211
+src="rbfgdc_files/image008.jpg" v:shapes="_x0000_i1026"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:207.0pt 315.0pt'><span
+lang=EN-US>Figure 3. House.</span><span lang=EN-US style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-top:6.0pt;text-align:center'><span
+lang=EN-US><!--[if gte vml 1]><v:shape id="_x0000_i1027" type="#_x0000_t75"
+ style='width:211.5pt;height:211.5pt'>
+ <v:imagedata src="rbfgdc_files/image009.png" o:title="caustics-pt04r"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=282 height=282
+src="rbfgdc_files/image010.jpg" v:shapes="_x0000_i1027"><![endif]><span
+style='mso-spacerun:yes'>&nbsp; </span><!--[if gte vml 1]><v:shape id="_x0000_i1028"
+ type="#_x0000_t75" style='width:210.75pt;height:210.75pt'>
+ <v:imagedata src="rbfgdc_files/image011.png" o:title="07d-caustics-dir01"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=281 height=281
+src="rbfgdc_files/image012.jpg" v:shapes="_x0000_i1028"><![endif]></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:99.0pt 315.0pt'><span
+lang=EN-US>Figure 4. Ring.</span></p>
+
+<p class=MsoBodyText align=center style='margin-top:6.0pt;text-align:center;
+tab-stops:27.0pt 171.0pt 288.0pt'><span lang=EN-US style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt'><!--[if gte vml 1]><v:shape id="_x0000_i1029"
+ type="#_x0000_t75" style='width:132.75pt;height:117pt'>
+ <v:imagedata src="rbfgdc_files/image013.png" o:title="12c-screenshot1"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=177 height=156
+src="rbfgdc_files/image014.jpg" v:shapes="_x0000_i1029"><![endif]><span
+style='mso-spacerun:yes'>&nbsp; </span><!--[if gte vml 1]><v:shape id="_x0000_i1030"
+ type="#_x0000_t75" style='width:132.75pt;height:117pt'>
+ <v:imagedata src="rbfgdc_files/image015.png" o:title="12d-screenshot6"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=177 height=156
+src="rbfgdc_files/image016.jpg" v:shapes="_x0000_i1030"><![endif]><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span><!--[if gte vml 1]><v:shape id="_x0000_i1031"
+ type="#_x0000_t75" style='width:132.75pt;height:117pt'>
+ <v:imagedata src="rbfgdc_files/image017.png" o:title="12e-screenshot7"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=177 height=156
+src="rbfgdc_files/image018.jpg" v:shapes="_x0000_i1031"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText align=center style='margin-top:6.0pt;text-align:center'><span
+lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Figure 5.
+Caustics cast by the crystal angel.<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoBodyText align=center style='text-align:center'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><a
+href="http://www.cse.cuhk.edu.hk./papers/rbfgdc/screen0036.bmp"><span
+style='color:windowtext;text-decoration:none;text-underline:none'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1032" type="#_x0000_t75" style='width:184.5pt;height:184.5pt'
+ filled="t" fillcolor="yellow">
+ <v:imagedata src="rbfgdc_files/image019.png" o:title="screen0036"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=246 height=246
+src="rbfgdc_files/image020.jpg" v:shapes="_x0000_i1032"><![endif]></span></a><span
+style='mso-spacerun:yes'>&nbsp;</span><a
+href="http://www.cse.cuhk.edu.hk./papers/rbfgdc/screen0002.bmp"><span
+style='color:windowtext;text-decoration:none;text-underline:none'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1033" type="#_x0000_t75" style='width:184.5pt;height:184.5pt'>
+ <v:imagedata src="rbfgdc_files/image021.png" o:title="screen0002"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=246 height=246
+src="rbfgdc_files/image022.jpg" v:shapes="_x0000_i1033"><![endif]></span></a><o:p></o:p></span></p>
+
+<p class=MsoBodyText align=center style='text-align:center'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Figure 6. Diffuse teapot
+illuminated in a HDR environment (Grace).<o:p></o:p></span></p>
+
+<p class=MsoBodyText><span lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:
+10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoBodyText align=center style='text-align:center'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><a
+href="http://www.cse.cuhk.edu.hk./papers/rbfgdc/snapshot1.bmp"><span
+style='color:windowtext;text-decoration:none;text-underline:none'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1034" type="#_x0000_t75" style='width:184.5pt;height:184.5pt'>
+ <v:imagedata src="rbfgdc_files/image023.png" o:title="snapshot1"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=246 height=246
+src="rbfgdc_files/image024.jpg" v:shapes="_x0000_i1034"><![endif]></span></a><span
+style='mso-spacerun:yes'>&nbsp;</span><a
+href="http://www.cse.cuhk.edu.hk./papers/rbfgdc/snapshot4.bmp"><span
+style='color:windowtext;text-decoration:none;text-underline:none'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1035" type="#_x0000_t75" style='width:186pt;height:184.5pt'>
+ <v:imagedata src="rbfgdc_files/image025.png" o:title="snapshot4"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=248 height=246
+src="rbfgdc_files/image026.jpg" v:shapes="_x0000_i1035"><![endif]></span></a><o:p></o:p></span></p>
+
+<p class=MsoBodyText align=center style='text-align:center'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'>Figure 7. An anisotropic
+teapot illuminated in a HDR environment (Grace).<o:p></o:p></span></p>
+
+<p class=MsoBodyText align=center style='text-align:center'><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoBodyText><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:16.0pt'>References<o:p></o:p></span></b></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:24.1pt;margin-bottom:.0001pt;mso-para-margin-top:.5gd;
+mso-para-margin-right:0cm;mso-para-margin-bottom:0cm;mso-para-margin-left:24.1pt;
+mso-para-margin-bottom:.0001pt;text-indent:-24.1pt;mso-list:l0 level1 lfo5;
+tab-stops:list 24.0pt'><![if !supportLists]><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><span lang=EN-US style='font-size:12.0pt'>T.
+T. Wong, C. S. Leung and K. H. Choy, &quot;<u>Lighting Precomputation Using the
+Relighting Map</u>&quot;, <i>Shader X3: Advanced Rendering with Direct X and
+OpenGL</i>, Edited by </span><st1:place><span lang=EN-US style='font-size:12.0pt'>W.
+ Engel</span></st1:place><span lang=EN-US style='font-size:12.0pt'>, </span><st1:place><span
+ lang=EN-US style='font-size:12.0pt'>Charles River</span></st1:place><span
+lang=EN-US style='font-size:12.0pt'> Media, 2005, pp. 379-392. [<a
+href="http://www.cse.cuhk.edu.hk./papers/rbfgdc/srbf_shaderx3.pdf">PDF</a>]<b
+style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+
+<p class=MsoBodyText style='margin-top:6.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:24.1pt;margin-bottom:.0001pt;mso-para-margin-top:.5gd;
+mso-para-margin-right:0cm;mso-para-margin-bottom:0cm;mso-para-margin-left:24.1pt;
+mso-para-margin-bottom:.0001pt;text-indent:-24.1pt;mso-list:l0 level1 lfo5;
+tab-stops:list 24.0pt'><![if !supportLists]><b style='mso-bidi-font-weight:
+normal'><span lang=EN-US style='font-size:12.0pt;mso-fareast-font-family:"Times New Roman"'><span
+style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></b><![endif]><span lang=EN-US style='font-size:12.0pt'>C.
+S. Leung, T. T. Wong, P. M. Lam and K. H. Choy, &quot;<u>An RBF-based Image
+Compression Method for Image-based Rendering</u>&quot;, <i><span
+style='mso-spacerun:yes'>&nbsp;</span>IEEE Transactions on Image Processing</i>,
+Vol. 15, No. 4, April 2006, pp. 1031-1041. [<a
+href="http://www.cse.cuhk.edu.hk./papers/rbfgdc/srbf_tip.pdf">PDF</a>]<b
+style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-US><o:p>&nbsp;</o:p></span></b></p>
+
+</div>
+
+</body>
+
+</html>

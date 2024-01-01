@@ -1,0 +1,90 @@
+<html>
+<title>
+Sphere Maps with the Near-Equal Solid-Angle Property
+</title>
+<body background="/icon/desktop.jpg">
+
+<font face="Times New Roman" font size="3">
+
+<blockquote>
+<center><table border=0>
+<tr><td>
+
+    <TABLE cellSpacing=0 cellPadding=0 border=0 walign="center">
+          <TBODY>
+          <TR>
+            <TD><IMG 
+              src="iisocube.jpg"></TD>
+            <TD><IMG 
+              src="shadowleft.jpg"></TD>
+          <TR>
+            <TD><IMG 
+              src="shadowbottom.jpg"></TD>
+            <TD><IMG 
+              src="shadowbottomleft.jpg"></TD></TR></TBODY></TABLE>
+</td><td width=30></td><td width=600>
+<h2>Sphere Maps with the Near-Equal Solid-Angle Property
+</h2>
+<p>
+<!--#include virtual="./papers/_author/lwan.html"-->
+and 
+<!--#include virtual="./papers/_author/ttwong.html"-->,<br>
+<i>Game Developers Conference (GDC2007)</i>, March 2007.
+</td></tr>
+</table></center>
+
+
+<DIV ALIGN = JUSTIFY>	
+<h3>Abstract</h3> <dl><dd> <dd> 
+
+Unlike the common spherical maps that sample the sphere unevenly, three sphere 
+maps that own the near-equal solid-angle property are introduced. The first is 
+HEALPix, adopted from astrophysics, which partitions the sphere into 
+equal-area quadrilateral elements. It allows fast integration over the sphere 
+and is especially useful in environment sampling. The second is one of our 
+newly designed maps. It subdivides the sphere with a set of simple equations. 
+Unlike HEALPix, it fits naturally into the six-face cube structure and can 
+fully utilize the hardware operators tailored for traditional cubemap. It 
+samples the sphere in a more balanced fashion than cubemap. The third one uses 
+a family of skew great circles as the subdivision strategy. All texels are 
+distorted similarly. Besides the mathematics, we present the real-time demos 
+to demonstrate their applicabilities to real-time application. 
+
+</dl>
+
+
+
+<h3>Download Presentation</h3>
+<ul>
+<li>Acrobat:
+    <a href="spheremap.pps">
+    spheremap.pps</a> (size: 13.5MB) (Version 1.1, released on 12 March 2007) <br>
+</ul>
+<p>
+
+
+
+<h3>Download Source Code</h3>
+<DIV ALIGN = JUSTIFY>	
+<ul>
+<a href="/software/spheremap/spheremap.html">spheremap 1.0</a>
+</ul>
+<p>
+
+
+
+<h3>Related Publications</h3>
+<b>isocube:</b>
+<ul>
+<li><!--#include virtual="./papers/_reference/wan-2007-isocube.html"-->
+</ul>
+<b>HEALPix:</b>
+<ul>
+<li><!--#include virtual="./papers/_reference/wong-2006-real.html"-->
+</ul>
+
+
+
+
+</blockquote>
+</font>
