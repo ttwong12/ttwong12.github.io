@@ -1,0 +1,28 @@
+<HTML>
+<TITLE>Japan</TITLE>
+<body background="/~ttwong/icon/desktop.jpg">
+
+<center>
+<applet archive=panoapplet.jar code=panoapplet width=500 height=400>
+        <param name=file value=jap420.ivr>
+        <param name=initialView value="0.000000, 180.000005, 50.000001">
+</applet>
+<p>
+&#23500;&#30000;&#36786;&#22580;, &#20013;&#23500;&#33391;&#37326;, &#21271;&#28023;&#36947;, &#26085;&#26412;<br>
+Farm Tomita, Naka-Furano, Hokaido, Japan<br>
+
+<p>
+
+<table border=0>
+<tr><td align=top>
+<a href="jap420.jpg"><img src="ijap420.jpg" border=0 align=center></a></td></tr>
+<tr><td align=center>Click to see the panorama</td></tr>
+</table>
+</center>
+
+
+<!--#include virtual="/~ttwong/footer1.html"-->
+</html>
+
+
+

@@ -8,6 +8,7 @@
 
 
 import glob
+import sys
 
 from   parse            import *
 from   pprint           import pprint
@@ -32,8 +33,18 @@ def replace_string(htmlfile, src, dest):
     
 if __name__ == "__main__":    
 
+    n = len(sys.argv)    
+    if n == 3:
+        src = sys.argv[1]
+        des = sys.argv[2]
+    else:
+        src = '<a href="./papers/'
+        des = '<a href="/papers/'
+        
+    print ('Replacing [%s] ---> [%s]' % (src, des))
     filelist = glob.glob('*.html')
     pprint (filelist)    
     for html in filelist:
-        replace_string(html, '<a href="./papers/', '<a href="/papers/')
+        replace_string(html, src, des)
+    print ('Completed')
     

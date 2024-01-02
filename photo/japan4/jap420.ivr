@@ -1,0 +1,34 @@
+#VRML V2.0 utf8
+
+EXTERNPROTO Vista [
+	exposedField	SFString	type
+	exposedField	MFNode		texture
+	exposedField	MFVec2f		vFov
+	exposedField	MFVec2f		hFov
+	exposedField	SFVec2f		pitchRange
+	exposedField	SFVec2f		yawRange
+	exposedField	SFVec2f		zoomRange
+	exposedField	MFColor		groundColor
+	exposedField	MFFloat		groundRange
+	exposedField	MFColor		skyColor
+	exposedField	MFFloat		skyRange
+
+	eventOut	SFVec2f	clickPt
+	eventOut	SFVec2f	overPt
+	eventOut	SFBool	isBound
+	eventIn		SFBool	set_bind
+] ""
+
+NavigationInfo {
+	type "VISTA"
+	headlight FALSE
+}
+
+Vista {
+	texture ImageTexture { url "jap420.jpg" }
+	type "SPHERE"
+	vFov -0.236 0.236
+	pitchRange -0.236 0.236
+	hFov 0 1.853
+	yawRange 0.1 1.753
+}
