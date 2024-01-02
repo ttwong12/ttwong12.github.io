@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+<title>on.cc - 新聞搜尋</title>
+<style type="text/css">
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+#searchBox {
+	border:solid 1px #a5a5a5;
+	float:right;
+	height:18px;
+	*overflow:hidden;
+}
+#searchBox input {
+	vertical-align:middle;
+}
+#searchBox-keyword {
+	height:17px;
+	padding-left:3px;
+	padding-right:3px;
+	border:none;
+	color:#919191;
+	background-repeat:no-repeat;
+	background-position:0 3px;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#searchBox-keyword.focus {
+	background-image:none;
+}
+</style>
+<script type="text/javascript">
+function onKeywordFocus(elem) {
+	elem.className = 'focus';
+}
+function onKeywordBlur(elem) {
+	if (elem.value === '') {
+		elem.className = '';
+	}
+}
+var w1 = '318px';
+var w2 = '293px';
+var bg = 'tf_yahoo.png';
+
+if (location.search != "") {
+	w1 = '149px';
+	w2 = '119px';
+	bg = 'tf_yahoo_1.png';
+}
+
+if ( location.href.indexOf('tsn_search') != -1 ) {
+	w1 = '278px';
+	w2 = '248px';
+	bg = 'tf_yahoo_1.png';
+}
+
+var styleContent = '#searchBox { width:'+w1+'} #searchBox-keyword { width:'+w2+'; background-image:url(../img/'+bg+')}';
+document.write('<style type="text/css">'+styleContent+'</style>');
+
+</script><style type="text/css">#searchBox { width:149px} #searchBox-keyword { width:119px; background-image:url(../img/tf_yahoo_1.png)}</style>
+</head>
+<body>
+<div id="searchBox">
+<form action="http://home.on.cc/search/index.html" method="get" target="_top">
+<script type="text/javascript">
+document.write('<input type="hidden" name="o" value="'+((window.location.href.indexOf('the-sun.on.cc') != -1) ? 1 : 0)+'">');
+</script><input name="o" value="0" type="hidden">
+<input style="border:0" id="searchBox-keyword" onfocus="onKeywordFocus(this)" onblur="onKeywordBlur(this)" name="sk" type="text"><input src="00176_115_data_002/btn_search.png" alt="搜尋" title="搜尋" height="18" type="image" width="18">
+</form>
+</div>
+
+</body></html>

@@ -1,0 +1,5 @@
+var phpadsbanner = '';
+
+phpadsbanner += '<'+'script>\nfunction housead728x90(val, val2, val3, val4, val5){\ndocument.write(\'<'+'script type=text\\/javascript>AC_FL_RunContent_2( \\\'codebase\\\',\\\'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0\\\',\\\'width\\\',\\\'\'+ val2 +\'\\\',\\\'height\\\',\\\'\'+ val3 +\'\\\',\\\'src\\\',\\\'\'+ val +\'\\\',\\\'quality\\\',\\\'high\\\',\\\'pluginspage\\\',\\\'http://www.macromedia.com/go/getflashplayer\\\',\\\'WMODE\\\',\\\'TRANSPARENT\\\',\\\'movie\\\',\\\'\'+ val +\'\\\' );<'+'\\/script>\');\n}\nhousead728x90(\'http://ad2.on.cc/html/housead/housead_728x90_b.swf?clickTAG=http://ad1.on.cc/phpAdsNew/adclick.php?bannerid=18481\',\'728\',\'90\');\n<'+'/script><'+'div id="beacon_18481" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><'+'img src=\'http://ad1.on.cc/phpAdsNew/adlog.php?bannerid=18481&amp;clientid=10422&amp;zoneid=771&amp;source=&amp;block=0&amp;capping=0&amp;cb=3c8abd634a60557195d22b12d6c99655\' width=\'0\' height=\'0\' alt=\'\' style=\'width: 0px; height: 0px;\'><'+'/div>';
+
+document.write(phpadsbanner);

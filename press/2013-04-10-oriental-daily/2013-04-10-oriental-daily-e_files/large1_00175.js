@@ -1,0 +1,1 @@
+if (adsCombo=="abc"){document.write('<script src=http://ad1.on.cc/phpAdsNew/adjs.php?what=zone:969></script>');}else{document.write('<script src=http://ad1.on.cc/phpAdsNew/adjs.php?what=zone:937></script>');}

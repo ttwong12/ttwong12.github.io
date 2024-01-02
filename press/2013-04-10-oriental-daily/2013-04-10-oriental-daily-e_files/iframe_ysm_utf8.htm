@@ -1,0 +1,151 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+<!--
+html, body{
+	font-size: 12px;
+	font-family: Arial;
+}
+
+
+#adv_ul  {
+	color:#2869CB;
+	list-style: square;
+	margin-left: -5px;
+}
+
+li#adv_li{
+	color:#2869CB;
+	list-style: square;
+}
+
+#adv_ul_box {
+	background-color: white;
+	//width: 580px;
+	border: 1px #e5e5e3 solid;
+	padding: 5px;
+	padding-bottom: 3px;
+}
+#adv_ul_left {
+	//width: 100%;
+	color: #2869CB;
+	//font-weight: bold;
+	border-style: none;
+	text-align: right;
+}
+
+body {
+	margin: 0 0 0 0;
+}
+-->
+</style>
+<!--
+<script src='http://cmh.hk.overture.com/js_flat_1_0/?config=3269468278&source=orisun_hk_ctxt&ctxtId=news&cb=1283763539937&ctxtUrl=http%3A%2F%2Forientaldaily.on.cc%2Fcnt%2Fnews%2F20100826%2F00174_001.html&ctxtCat=hk_t1_default_business&maxCount=3&type=news&keywordCharEnc=big5&outputCharEnc=big5' ></script>
+-->
+
+<script>
+
+
+	var size = '';
+	var key = '';
+	//var key_orginal ='';
+	var url = '';
+	
+	var otBaseURL = 'http://cmh.hk.overture.com/js_flat_1_0/';
+	var otParam = [];	
+	var split_arr = window.location.href.substr(window.location.href.indexOf('?')+1, window.location.href.length).split('&');
+			if ( split_arr.length >= 3 ) {
+				if ( split_arr[0].indexOf("size") != -1 ) {
+					size  = split_arr[0].split("=")[1];
+				}
+				if ( split_arr[1].indexOf("key") != -1 ) {
+					//key_orginal = split_arr[1].split("=")[1];
+					key = split_arr[1].split("=")[1] ;
+				}		
+				if ( split_arr[2].indexOf("url") != -1 ) {
+					url = split_arr[2].split("=")[1];
+				}		
+							
+				if ( key == "main" ) {
+					key = "news";
+				} 	else if ( key == "china_world")  {
+					key ="biz_service";
+				} 	else if ( key == "finance")  {
+					key = "bank_finance_property_invest";
+				} 	else if ( key == "entertainment")  {
+					key ="artist";
+				} 	else if ( key == "lifestyle")  {
+					key = "arts";
+				} 	else if ( key == "sport")  {
+					key = "sports";
+				} 	else if ( key == "chartity")  {
+					key = "health";
+				}	else {
+					key = "news";
+				}	
+
+				otParam.push('?config=3269468278');
+				otParam.push('&source=orisun_hk_ctxt');
+				otParam.push('&ctxtId=' + key);
+				otParam.push('&cb='+ getTimeStamp());
+				otParam.push('&ctxtUrl='+encodeURIComponent(url));
+				otParam.push('&ctxtCat=hk_t1_default_business');
+				otParam.push('&maxCount=3');
+				otParam.push('&type=' + key);
+				otParam.push('&keywordCharEnc=utf8');
+				otParam.push('&outputCharEnc=utf8');
+				otParam.push('&mkt=hk');
+				writeScript(otBaseURL+otParam.join(''));				
+			} else {
+				// parms less than 3
+			}
+
+
+	function	writeScript (url) {
+		document.write(unescape("%3Cscript src='"+url+"' type='text/javascript'%3E%3C/script%3E"));
+	}
+	
+	function getTimeStamp (daily) {
+		var today = new Date();
+		if (daily) return today.getFullYear().toString() + today.getMonth().toString() + today.getDate().toString();
+		var tString =  today.getTime().toString();
+		return tString.substring(0,tString.length-3)+'9'+tString.substring(tString.length-2,tString.length);
+	}	
+	
+	function onLoadDone() {
+
+		
+		var htmlStr = [];
+		var i=6;
+		if ( zSr != null) {
+
+			while(i < zSr.length) {
+				var descr = zSr[i++]; // listing description
+				var unused1 = zSr[i++]; // (ignore)
+				var clickURL = zSr[i++]; // listing link
+				var title = zSr[i++]; // listing title
+				var sitehost = zSr[i++]; // advertiser’s domain name
+				var unused2 = zSr[i++]; // (ignore)
+
+				htmlStr.push("<li id='adv_li'  style='margin-bottom: 5px;'><a href='" +clickURL + "' target='_blank' style='text-decoration:none;background-color:transparent;'><span style='color: #2869CB;font-size:16px;text-decoration:underline;letter-spacing:2px;'>" + title + "</span><br><span style='color: #999999;letter-spacing:2px;'>" +  descr + "</span><br><span style='color: #6BAE07;letter-spacing:1px;'>(" +  sitehost + ")</span><br></a></li>");
+			}
+			var divBoxStr= "<div style='height:10px;width:100px;'></div>" + 
+						"<div id='adv_ul_box' ><div id='adv_ul_left'  ><a href='http://hk.searchmarketing.yahoo.com/?o=HK0021' style='text-decoration:none;background-color:transparent;color: #2869CB;' target='_blank'>&#x96C5;&#x864E;&#x8D0A;&#x52A9;&#x7DB2;&#x7AD9;</a></div><ul  id='adv_ul' style='padding-left: 30px;' >" + htmlStr.join('') + "</ul></div>" +
+						"<div style='height:10px;width:100px;'></div>";
+			//$("#pageCTN-right").append(divBoxStr);
+			document.getElementById("pageCTN-right").innerHTML=divBoxStr;
+
+			if ( size == "wider") {
+				document.getElementById("adv_ul_box").style.width= "628px";
+			} else {
+				document.getElementById("adv_ul_box").style.width= "287px";
+			}
+		}
+	}
+</script><script src="iframe_ysm_utf8_data/a" type="text/javascript"></script>
+
+</head><body onload="onLoadDone();">
+	<div id="pageCTN-right"><div style="height:10px;width:100px;"></div><div style="width: 628px;" id="adv_ul_box"><div id="adv_ul_left"><a href="http://hk.searchmarketing.yahoo.com/?o=HK0021" style="text-decoration:none;background-color:transparent;color: #2869CB;" target="_blank">雅虎贊助網站</a></div><ul id="adv_ul" style="padding-left: 30px;"><li id="adv_li" style="margin-bottom: 5px;"><a href="http://rc.us-west.srv.overture.com/d/sr/?xargs=20AVBDkG_7tyV4JXMhzo-wUvMsz0C2b3phFck0-TJwRMLZqy5TwyPaYc7iPZ242nuEgmih5V4T5dBNPf6P0EVeQy_dPjRj4VuNKLvIAtf1H3pzkR9gMB3jS0EG6lwQl7f94qfqo4lacLGhDFqaP3w3UOpykTcqX_Y-twELMb0Ma9WKqvTaSsQYdCOqhjNNkIdtcyyWS5xXWYniUAUm1dSM-cvoDfqxZV5xQZw83S7BoIYf.00000000c2e02076" target="_blank" style="text-decoration:none;background-color:transparent;"><span style="color: #2869CB;font-size:16px;text-decoration:underline;letter-spacing:2px;">現代海外升學</span><br><span style="color: #999999;letter-spacing:2px;">為您留學英、澳、美、加、紐等多個國家作好準備，是您到外國升學的首選。</span><br><span style="color: #6BAE07;letter-spacing:1px;">(www.modern.edu.hk/overseas)</span><br></a></li><li id="adv_li" style="margin-bottom: 5px;"><a href="http://rc.us-west.srv.overture.com/d/sr/?xargs=20AQULPL4b3EQ9-sOs0U9pUBJdfDYhhQLpng4G0lgzDqlGeD5-CZDg1QnIg1y4lJj7DU5wSDkwgkQvv281Xjy1FkeNAzI8gbRwMKytl4hmH1vNwM6bI0rT2XdaPiT5wYITawvXsuNBSElYMskFkEqlxjJibbkqPBVXNq40jIM7gMXbT8dvQ4V5yyvBBmEk-T3hJGeWbVCC1279NYSw_MK0DdWuALDCd_EI7tN6K_c0Xr1IfXyW9QPRCiyx-e2Md8CF_jzL_vn74UCb.00000000c2e02076" target="_blank" style="text-decoration:none;background-color:transparent;"><span style="color: #2869CB;font-size:16px;text-decoration:underline;letter-spacing:2px;">史雲生方便裝教你煮-西施豆腐</span><br><span style="color: #999999;letter-spacing:2px;">上o黎史雲生食譜網站搜尋更多「一盒煮一餸」o既簡易食譜啦！</span><br><span style="color: #6BAE07;letter-spacing:1px;">(www.swansoncooking.com.hk)</span><br></a></li><li id="adv_li" style="margin-bottom: 5px;"><a href="http://rc.us-west.srv.overture.com/d/sr/?xargs=20Af7vvZWa_hE_JXMhzo-wUvMNOPEO4aH1j92LDyui9LGvE-muGT1oh0kVhk3nCbgCgJcOphv12pwa8A3pBwySLIeeS_q7GDVQt6oGSe_lp6WDQvAhEFBEKIBR86wELOffOS-BKPPAXIRzjIKa6SoyAt7RqmkcLPgYRdFDMDDC_gML4Zdvdtg-p3nozdU5ZRW0UU23RnvKdbghV4_LW3laGGYtDI_5L3_oqROvv-0cnI3u.00000000c2e02076" target="_blank" style="text-decoration:none;background-color:transparent;"><span style="color: #2869CB;font-size:16px;text-decoration:underline;letter-spacing:2px;">『香港二樓書店』網上訂書85折</span><br><span style="color: #999999;letter-spacing:2px;">『香港二樓書店』是香港最具規模的網上書店之一， 包羅所有香港及台灣書籍。</span><br><span style="color: #6BAE07;letter-spacing:1px;">(2-floor.com)</span><br></a></li></ul></div><div style="height:10px;width:100px;"></div></div>
+
+
+</body></html>

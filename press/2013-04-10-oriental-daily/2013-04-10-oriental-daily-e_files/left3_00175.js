@@ -1,0 +1,1 @@
+document.write('<script type="text/javascript" src="http://ad1.on.cc/phpAdsNew/adjs.php?what=zone:237"></script>');

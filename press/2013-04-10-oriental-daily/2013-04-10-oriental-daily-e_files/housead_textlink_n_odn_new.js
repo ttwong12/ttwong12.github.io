@@ -1,0 +1,1 @@
+$AD('&#x60F3;&#x77E5;&#x8FD1;&#x4F86;&#x8208;&#x0044;&#x54A9;&#x003F;&#x8CBC;&#x5BE6;Fashion&#x98A8;&#x6F6E;&#x0021;','http://ad2.on.cc/html/housead/housead_textlink_n.html').write();

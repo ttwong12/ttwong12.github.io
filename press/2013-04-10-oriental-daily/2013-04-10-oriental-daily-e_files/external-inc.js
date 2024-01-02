@@ -1,0 +1,10 @@
+document.write(unescape("%3Cscript src='http://orientaldaily.on.cc/js/tsn/sdate.js' type='text/javascript'%3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='http://ad1.on.cc/phpAdsNew/adx.js' type='text/javascript'%3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='http://home.on.cc/adv/web/corp/js/unicorp.js' type='text/javascript'%3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='http://home.on.cc/adv/web/corp/js/swfobject.js' type='text/javascript'%3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='/js/v2/jquery-1.4.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='/js/oncc-ad.js' type='text/javascript'%3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='/js/swfobject.js' type='text/javascript'%3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='/js/urchin.js' type='text/javascript'%3E%3C/script%3E"));
+document.write(unescape("%3Cscript src='/js/urchin-lib.js' type='text/javascript'%3E%3C/script%3E"));
+document.write("<script language='javascript' src='http://home.on.cc/adv/web/corp/js/yahoo_keywords.js'><\/script>");
