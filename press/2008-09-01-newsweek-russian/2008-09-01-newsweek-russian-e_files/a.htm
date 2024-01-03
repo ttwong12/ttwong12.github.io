@@ -1,0 +1,70 @@
+var addListener=function(){
+if(window.addEventListener){
+return function(o,t,fn){
+o.addEventListener(t,fn,false);
+};
+}else if(window.attachEvent){
+return function(o,t,fn){
+var f=function(){
+fn.call(o,window.event);
+};
+o.attachEvent('on'+t,f);
+};
+}else{
+return function(o,t,fn){
+o['on'+t]=fn;
+}
+}
+}();
+
+addListener(window, "load", function() {
+	var t = document.getElementById("qwIncubator_884_mini_swf");
+	var c = document.getElementById("qwContainer_884_mini_swf");
+
+	var el = null;
+
+	t.style.display = "block";	// This line is necessary for IE7
+
+	for (var i = t.childNodes.length; i >= 0; i--) {
+		if (!(el = t.childNodes[i])) continue;
+
+		if (el.nodeType != 1) continue;
+		c.parentNode.insertBefore(el, c);
+	}
+	c.parentNode.removeChild(c);
+	t.parentNode.removeChild(t);
+});
+
+// Old version passed all query params
+//document.write("<sc" + "ript type=\"text/javascript\" src=\"http://affiliates.quintura.com/embed/index_caching.js.php?topic_id=884&view_type=mini&view_id=70&code_type=swf&loadTo=qwContainer_884_mini_swf&query_string=" + encodeURIComponent(location.search.replace(/^\?/, "")) + "\"><" + "/s" + "cript>");
+
+// Query params to pass from the including page to inner JS (via 'pq' array).
+
+var paramsToPass = ["tabid", "enc", "request", "prerequest", "focused_url", "from", "qdbg", "anno_wrate"];
+
+
+var pairs = location.search.replace(/^\?/, "").split(/&/);
+var getVars = {};	// GET-vars associative array.
+
+// Filling GET-vars associative array
+for (var i = 0, len = pairs.length; i < len; i++) {
+	var paramVal = pairs[i].split(/=/);
+	getVars[paramVal[0]] = paramVal[1];
+}
+
+
+
+
+var str = "";	// Query string to be appended to the existing one.
+for (var i=0, len=paramsToPass.length; i < len; i++) {
+	if (getVars[paramsToPass[i]]) {
+		str += "&pq[" + paramsToPass[i] + "]=" + getVars[paramsToPass[i]];
+//		str += "&pq" + encodeURIComponent("[") + paramsToPass[i] + encodeURIComponent("]") + "=" + getVars[paramsToPass[i]];
+	}
+}
+
+if (!getVars["focused_url"]) { 
+	str += "&focused_url=" + encodeURIComponent(location.href);
+}
+
+document.write("<sc" + "ript type=\"text/javascript\" charset=\"utf-8\" src=\"http://affiliates.quintura.com/embed/index_caching.js.php?topic_id=884&view_type=mini&view_id=70&code_type=swf&loadTo=qwContainer_884_mini_swf" + str + "\"><" + "/s" + "cript>");

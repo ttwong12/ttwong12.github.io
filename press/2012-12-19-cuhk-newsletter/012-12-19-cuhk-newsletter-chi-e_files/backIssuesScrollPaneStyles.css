@@ -1,0 +1,45 @@
+	/* Stylesheet for my demo pages for jScrollPane - these styles aren't necessary for using jScrollPane and aren't specific to any particular example */
+
+a.jScrollArrowUp {
+	background: url(/chinese/images/jsScrollPane/scoll_up.gif) repeat-x 0 0;
+}
+a.jScrollArrowUp:hover {
+	/*background-position: 0 -15px;*/
+}
+a.jScrollArrowDown {
+	background: url(/chinese/images/jsScrollPane/scoll_down.gif) repeat-x 0 0;
+}
+a.jScrollArrowDown:hover {
+	/*background-position: 0 -15px;*/
+}
+a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
+	/*background-position: 0 -30px;*/
+}
+.backIssues-scroll-pane .jScrollPaneTrack {
+	background: url(/chinese/images/jsScrollPane/scoll_bg.gif);
+}
+.backIssues-scroll-pane .jScrollPaneDrag {
+	background: url(/chinese/images/jsScrollPane/scoll_slider.gif);
+}
+
+			
+.holder {
+	float: left;
+	margin: 10px;
+}
+
+.scroll-pane-content {
+	/*width: 200px;*/
+	/*height: 200px;*/
+	overflow: auto;
+	/*background: #ccc;*/
+	/*float: left;*/
+}
+
+div#backIssues
+{
+	height: 300px;
+	width: 162px;
+	overflow:hidden;
+}
+

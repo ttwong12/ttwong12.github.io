@@ -1,0 +1,135 @@
+﻿/* Generel
+------------------------------------ */
+
+html,body{
+	font-size: 12px;
+}
+
+
+/* newsletter field
+------------------------------------ */
+
+#news_main_lower h3{
+	font-size: 16px;
+}
+
+#photo_col h5 {
+	font-size: 11px;
+}
+
+
+
+
+
+#menu ul li a {font-size:12px; line-height:23px;}
+
+#rightCol h4 {}
+h5 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 1.1;
+	font-weight: normal;
+}
+div.controls a {line-height:1.5; font-size:11px;}
+div.narBox ul li a {
+	line-height:1.3;
+	font-size:12px;
+	background-image: url(/chinese/images/newsletter/inner_images/bullet.gif);
+	background-repeat: no-repeat;
+	background-position: 7px 3px;
+}
+#side_menu {line-height:1; font-size:13px;}
+#sub_side_menu {line-height:1; font-size:12px;}
+
+
+
+.para_big_hd {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	line-height: 1;
+	color: #73216d;
+	letter-spacing: normal;
+}
+
+/* Adv. Publication Search 
+----------------------------------------------------------*/
+div.narBox h4 a.adv-search {
+    padding: 0 15px 0 0;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+div.narBox h3 {
+    font-size: 12px;
+	line-height:1.2;
+}
+
+/*	backIssues (Right Navigation)
+----------------------------------------------------------*/
+
+div#backIssues ul li a {line-height:1.1; font-size:12px; background:url(/chinese/images/publications/publications/toc/bullet_on_s.gif) no-repeat 11px 5px;}
+div#backIssues ul li a.on {background:url(/chinese/images/publications/publications/toc/bullet_on_s.gif) no-repeat 11px 5px;}
+div#backIssues ul li a.drop {background:url(/chinese/images/publications/publications/toc/bullet_drop_s.gif) no-repeat 11px 9px;}
+
+div#backIssues ul li ul li a {line-height:1.1; font-size:11px; background:url(/chinese/images/publications/publications/toc/bullet_xs.gif) no-repeat 28px 6px;}
+
+
+/*	toc
+----------------------------------------------------------*/
+
+div.tocTop span {font-size:16px;}
+
+div.toc ul li, div.toc ul li {background:url(/chinese/images/publications/publications/toc/bullet_off.gif) no-repeat left 4px;}
+div.toc ul li.on, div.toc ul li.on {background:url(/chinese/images/publications/publications/toc/bullet_on.gif) no-repeat left 4px;}
+div.toc ul li.drop, div.toc ul li.drop {background:url(/chinese/images/publications/publications/toc/bullet_drop.gif) no-repeat left 8px;}
+div.toc ul li a, div.toc ul li span {line-height:1.1;}
+
+div.toc ul li ul li, div.toc ul li ul li {background:url(/chinese/images/publications/publications/toc/bullet_off_s.gif) no-repeat left 3px;}
+div.toc ul li ul li.on, div.toc ul li ul li.on {background:url(/chinese/images/publications/publications/toc/bullet_on_s.gif) no-repeat left 3px;}
+div.toc ul li ul li.drop, div.toc ul li ul li.drop {background:url(/chinese/images/publications/publications/toc/bullet_drop_s.gif) no-repeat left 7px;}
+div.toc ul li ul li a, div.toc ul li ul li span {line-height:1.1; font-size:13px;}
+
+div.toc ul li ul li ul li, div.toc ul li ul li ul li {background:url(/chinese/images/publications/publications/toc/bullet_xs.gif) no-repeat left 6px;}
+div.toc ul li ul li ul li a, div.toc ul li ul li ul li span {line-height:1.1; font-size:11px;}
+
+
+/*	sub-articles, prev article, next article
+----------------------------------------------------------*/
+
+div#subArticle ul li a, div#subArticle ul li span {line-height:1.1; background:url(/chinese/images/publications/publications/toc/bullet_off_s.gif) no-repeat left 3px;}
+div#subArticle ul#subArticleList li a, div#subArticle ul#subArticleList  li span {background:none;}
+
+
+/*	article page
+----------------------------------------------------------*/
+
+#article {font-size: 12px;}
+
+/*span.breadcrumb {font-size: 16px; font-weight: bold;}*/
+span.breadcrumb {font-size: 12px; font-weight: normal;}
+
+#article h1 {font-size: 28px;}
+
+#article h2, #article p.sectionhead {font-size: 19px;}
+
+#article h3, #article p.subhead {font-size: 18px;}
+#article p.subhead2 {font-size: 15px;}
+#article p.subhead3 {font-size: 14px;}
+#article p.subhead4 {font-size: 13px;}
+
+#article h4, #article p.introduction {font-size: 17px;}
+
+#article h6, #article p.notes, #article p.signature {font-size: 10px;}
+
+#article p.quote {font-size: 12px;}
+#article p.caption {font-size: 12px;}
+#article p.highlight {font-size: 14px;}
+
+#article p {font-size: 12px;}
+
+#article table td {font-size: 12px;}
+
+div.ui_pic h5{font-size: 11px; font-style: italic; line-height: 1.1;}
+
+div.bullet ul li, #article-content ul li {background:url(/chinese/images/publications/publications/bullet.gif) no-repeat left 6px;}
+

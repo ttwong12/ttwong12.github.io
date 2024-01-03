@@ -1,0 +1,636 @@
+/*
+
+comment style by TomieZhang#tencent.com 2009-8-31
+
+version number 1.0.0
+
+*/
+
+/*Reset Css by YUI*/
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0; padding:0; }
+
+table { border-collapse:collapse; border-spacing:0; }
+
+fieldset,img { border:0; }
+
+address,caption,cite,code,dfn,em,strong,th,var { font-style:normal; font-weight:normal; }
+
+ol,ul { list-style:none; }
+
+caption,th { text-align:left; }
+
+h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal; }
+
+q:before,q:after { content:''; }
+
+abbr,acronym { border:0; }
+
+body{font:12px/1.75 "宋体",arial,sans-serif;}
+
+fieldset{display:inline;}
+
+button{line-height:1.2;vertical-align:middle;cursor:pointer;}
+
+strong{font-weight:500;}
+
+
+
+/* Layout Rules */
+
+.wrapper{width:610px;margin:0 auto;}
+
+#hd,#hd_foot,#bd,#ft{width:580px;overflow:hidden;margin:0 auto;}
+#comment-list #bd {width:600px;}
+
+.main{width:598px;border:1px solid #C3CBD5;}
+
+.side{float:right;width:298px;}
+
+#ft{line-height:2;text-align:center;}
+
+
+
+/* Common Rules */
+
+.wrapper {color:#333}
+
+a{color:#3d8572;text-decoration:none;}
+
+a:hover{color:#BC2D09;text-decoration:underline;}
+
+.main .hd {background:#ffffff;overflow:hidden;zoom:1;}
+
+.main .hd-foot {background:#ffffff;overflow:hidden;zoom:1;}
+
+.clear {}
+
+.mod {margin-bottom:8px;*zoom:1;border:1px solid #DDE3EA; background:#F3F8FE;}
+
+.mod .hd {width:296px;height:28px;background:url(http://image.wenweipo.com/comment/img/24780138.gif) -191px -152px;}
+
+.mod .hd .lefttitle {float:left;line-height:28px;font-size:14px;padding-left:11px;} 
+
+.mod .bd { padding-top:2px;}
+
+.mod .ft {text-align:right;padding-right:18px;line-height:45px;}
+
+
+
+/*common header*/
+
+.header-common {width:580px;height:42px;line-height:42px;}
+
+.header-common .logo {float:left;}
+
+.header-common .comment-nav {float:left;padding-left:14px; padding-top:7px}
+
+.header-common .comment-info {float:right; padding-top:7px}
+
+.header-common .comment-info a,.header-common .comment-info span {padding-left:10px;}
+
+
+
+/*comment-title*/
+
+.comment-title {padding:17px 0;text-align:center;}
+
+.comment-title h1 {-x-system-font:none;font-size:26px; font-weight:normal;line-height:40px;font-family:"宋体","microsoft yahei","黑体","Arial","Tahoma";font-size-adjust:none;font-stretch:normal;font-style:normal;font-variant:normal;/*float:left;*/
+
+display:inline;color:#000; font-weight:bold;}
+
+.comment-title a {/*float:left;*/margin-top:16px;margin-left:8px;display:inline;color:#000;}
+
+.comment-title a:hover {/* text-decoration:none;*/ color:#cc0000;}
+
+/*#title { }*/
+
+
+
+/*list-main-title*/
+
+/*#comment-list .main-title{overflow:hidden;zoom:1;float:left;width:217px;height:33px;padding:5px 0px 0px 10px;background:#FFFFFF;}*/
+#comment-list .main-title{margin:5px 5px 5px 10px;background:#FFFFFF;}
+
+#comment-list .main-title a,#comment-list .main-title span{float:left;}
+
+#comment-list .main-title span {margin:0 5px;line-height:30px;}
+
+#comment-list .main-title strong{color:#CC0000; font-weight:normal;}
+
+
+
+/*common-pagination*/
+
+.common-pagination {width:auto;float:right;padding-top:8px;margin-right:10px;display:inline}
+
+.common-pagination a{float:right;height:21px;background:url(http://image.wenweipo.com/comment/img/25404174.png) left top no-repeat; padding-left:6px; color:#000;line-height:21px;margin-left:3px;display:inline;font-family:"Arial"; text-align:center}
+
+.common-pagination a span {display:inline-block; height:21px; line-height:21px; background:url(http://image.wenweipo.com/comment/img/25404174.png) right top no-repeat; padding-right:6px;font-family:"Arial";}
+
+.common-pagination a.sm { padding-left:4px; margin-left:2px}
+
+.common-pagination a span.sm {padding:0 4px 0 0;}
+
+.common-pagination a.disable {cursor:auto;font-family:"宋体";color:#C4C4C4;}
+
+.common-pagination a.enable {font-family:"宋体";}
+
+.common-pagination a:hover,.common-pagination a.this {background:url(http://image.wenweipo.com/comment/img/25404174.png) left bottom no-repeat;color:#fff;text-decoration:none;cursor:pointer}
+
+.common-pagination a:hover span,.common-pagination a.this span {background:url(http://image.wenweipo.com/comment/img/25404174.png) right bottom no-repeat;}
+
+.common-pagination a.disable:hover {background:url(http://image.wenweipo.com/comment/img/25404174.png) left top no-repeat;color:#C4C4C4;}
+
+.common-pagination a.disable:hover span { background:url(http://image.wenweipo.com/comment/img/25404174.png) right top no-repeat;}
+
+.common-pagination span.points {float:right;line-height:11px;padding:5px 6px;margin-left:3px;display:inline;font-family:"Arial"; text-align:center;border:0px;color:#000;} 
+
+.common-pagination span.sm {padding:4px 4px; margin-left:2px}
+
+
+
+/*list_title*/
+
+.main .bd { border-top:1px solid #C3CBD5;}
+
+.list_title {height:33px; line-height:33px; padding:0 14px; background: #fafcff; overflow:visible;}
+
+.list_title span { font-family:"黑体"; font-size:18px; color:#000; margin-top:2px; padding-left:11px; border-bottom:1px solid #C3CBD5; display:block; height:30px;}
+
+
+
+/*list_container*/
+
+.list_container {background:#FAFCFF;clear:both;overflow:hidden;zoom:1;padding-top:5px;/*border-top:1px solid #C3CBD5;*/color:#000; /*border-bottom:1px solid #C3CBD5;*/}
+
+.list_container dl {margin:0 auto; padding:0 15px;}
+
+.list_container dt {line-height:18px;margin:0 auto;}
+
+.list_container dt span.user-info {float:left;color:#8D8D8D; margin-left:11px;}
+
+.list_container dt span.user-info em {color:#CC0000}
+
+.list_container dt span.post-time {float:right;color:#8D8D8D}
+
+.list_container dd {border-bottom:1px dashed #C2C3BA;clear:both;text-align:left;text-indent:0px;padding-left:0px;}
+
+.list_container dd p {line-height:20px;text-align:left;clear:both; margin-left:11px;font-size:120%; word-break:break-all; white-space:normal; overflow:hidden;}
+
+.list_container dd .bar {width:100%;overflow:hidden;zoom:1;padding:3px 0px;}
+
+.list_container dd .bar a.noclick {float:right;line-height:22px;padding-left:15px;padding-right:10px;margin-right:0px;margin-left:0px;}
+
+.list_container dd .bar a.noclick:hover {text-decoration:none;}
+
+.list_container dd .bar a.click {float:right;line-height:22px;padding-left:15px;padding-right:10px;margin-right:0px;margin-left:0px;background:#efefef;text-align:center;border:1px solid #D3D8E7;border-bottom:0px;}
+
+.list_container dd .bar a.lastclick {padding-right:9px;margin-right:0px;}
+
+.list_container dd .bar a.zc,.list_container dd .bar a.fd {width:76px;text-align:left;}
+
+
+
+/* citation */
+
+.list_container dd.citation-wrapper {padding-bottom:0px;padding-top:2px;border-bottom:0px;margin-bottom:0px;}
+
+.citation {background:#FFFEF5;border:1px solid #D1D5DB;padding:3px;padding-bottom:10px;}
+
+.citation  p {padding-left:11px;padding-right:11px;}
+
+.citation-title {overflow:hidden;zoom:1;line-height:32px;padding-left:11px;padding-right:11px;}
+
+.citation-title .user-name {float:left;color:#8D8D8D}
+
+.citation-title .citation-number {float:right;color:#8D8D8D}
+
+.nocheck {border:1px solid #DAE0F0;border-top:0px;background:#fff;color:#8D8D8D;padding-bottom:10px;padding-top:10px;}
+
+.nocheckTit {width:604px;height:18px;background:url(http://image.wenweipo.com/comment/img/24780138.gif) 0px -278px no-repeat;margin:0 auto;padding:0px;text-align:left;font-size:12px;text-indent:17px;}
+
+.list_container dd.noclick-Warpper {border-bottom:1px dashed #C2C3BA;padding-bottom:12px;}
+
+.wating {color:#8D8D8D;padding-top:10px;}
+
+
+
+.post-area-title {width:502px;line-height:43px;text-align:left;margin:0 auto;}
+
+.post-area-title strong {font-size:14px;color:#1C2C58;}
+
+.post-area-title em {color:#CC0000;font-weight:normal;}
+
+.post-area textarea{width:95%;padding-left:20px; height:100px; padding:6px;border:#a3b6d3 1px solid;font-size:12px;margin:5px 5px;float:left;}
+
+.post-area-foot textarea{width:560px;padding-left:80px; height:100px; padding:6px;border:#a3b6d3 1px solid;font-size:12px;}
+
+
+
+.notic {text-align:left;line-height:45px; display:none;}
+
+.post-area-action .left .select {float:left;line-height:27px;margin-top:0px;padding-left:10px;padding-right:10px;border:1px solid #D4D7E6;border-bottom:0px;background:#FBFCFE}
+
+
+
+.user-pk-show {width:278px;margin:0 auto;text-align:center;line-height:57px;}
+
+.user-pk-show .title {font-size:14px;}
+
+.pk-button-bar {width:240px;background:url(../images/22495168.gif) no-repeat center top;overflow:hidden;zoom:1;line-height:21px;margin:0 auto;}
+
+.pk-button-bar p span{display:block;text-align:left;}
+
+.pk-button-bar .left {float:left;width:100px;height:100px;}
+
+.pk-button-bar .right {float:right;width:100px;height:100px;}
+
+.pk-button-bar .button_z {width:66px;height:21px;display:block;background:url(http://image.wenweipo.com/comment/img/24780138.gif) no-repeat 0px -186px;text-align:center;padding-top:35px;color:#333;margin:0 auto;margin-top:6px;}
+
+.pk-button-bar .button_f {background:url(http://image.wenweipo.com/comment/img/24780138.gif) no-repeat -71px -186px;}
+
+.pk-button-bar .button_z:hover {text-decoration:none}
+
+.pk-data-bar {width:275px;margin:0 auto;overflow:hidden;zoom:1;line-height:21px;padding-bottom:0px;padding-left:3px;}
+
+.pk-data-bar span,.pk-data-bar div {float:left;}
+
+.pk-data-bar span {font-size:11px;font-family:"microsoft yahei","Arial";font-weight:bold;margin-top:5px;color:#36507B;text-align:right;width:26px;}
+
+.bar-show {width:208px;height:11px;background:url(http://image.wenweipo.com/comment/img/24780138.gif) 0 -101px;margin-top:10px;margin-left:5px;margin-right:7px;}
+
+.bar-percent {height:11px;background:url(http://image.wenweipo.com/comment/img/24780138.gif) no-repeat 0 -123px;float:left;}
+
+
+
+/*side-tab*/
+
+.side-tab-title {float:right;width:150px;overflow:hidden;zoom:1;}
+
+.side-tab-title span {float:left;height:28px;width:49px;line-height:28px;text-align:center;border:1px solid #DDE3EA;border-top:0px;border-bottom:0px;border-right:0px;cursor:pointer}
+
+.side-tab-title span.select {background:url(../images/split_v1.png) no-repeat -177px -61px;font-weight: bold}
+
+
+
+/*common-side-top*/
+
+.side-common-top {width:280px;margin:0 auto;}
+
+.side-common-top li {border-bottom:1px dotted #c2c3ba;color:#0B3B8C;text-align:left;overflow:hidden;zoom:1;width:277px;padding-top:4px;padding-bottom:6px;}
+
+.side-common-top li em{float:left;width:33px;line-height:40px;font-size:18px;color:#C8D1DD;font-family:"microsoft yahei","Arial"; text-align:center;}
+
+.side-common-top li .r_txt {float:left;width:233px;}
+
+.side-common-top li .r_txt span {color:#0b3b8c}
+
+.side-common-top li.noline {border:none}
+
+
+
+/*ft-back-up*/
+
+.back-up {width:100%;overflow:hidden;zoom:1;line-height:39px;border-bottom:1px solid #D4D9E0;margin:0 auto;}
+
+.back-up a,.back-up span {float:right;}
+
+.back-up span  {padding-left:8px;padding-right:8px;}
+
+.back-up a.up {background:url(../images/22494421.gif) no-repeat right center;padding-right:19px;margin-right:3px;display:inline}
+
+
+
+/*copyrights*/
+
+.copyrights {width:100%;text-align:center;height:100px;line-height:21px;margin:10px auto;}
+
+
+
+/*others*/
+
+.main .hd .post-area {margin-left:10px;padding-top:0px;clear:both;/*background:#EBEFF8;*/width:588px;text-align:center;overflow:hidden;zoom:1;border:1px solid #D4D7E6;margin-bottom:11px;*margin-bottom:15px;float:left;_margin-left:10px!important; _margin-left:10px;}
+
+.main .hd-foot .post-area-foot {margin-left:100px;padding-top:0px;clear:both;/*background:#EBEFF8;*/width:588px;text-align:center;overflow:hidden;zoom:1;border:1px solid #D4D7E6;margin-bottom:11px;float:left;_margin-left:10px!important; _margin-left:10px;}
+
+
+
+.post-area-foot {margin-top:10px;margin-left:10px;*margin-left:4px;padding-top:0px;clear:both;/*background:#EBEFF8;*/width:588px;text-align:center;overflow:hidden;zoom:1;border:0px solid #D4D7E6;margin-bottom:11px;float:left;_margin-left:4px!important; _margin-left:4px;}
+
+
+.main .hd .post-area-action {margin-left:20px;line-height:22px;border-bottom:0px;margin:0 auto;width:560px;overflow:hidden;zoom:1;padding-bottom:5px;text-align:left;/*border-bottom:1px dashed #D4D7D3;*/padding-top:7px;}
+
+
+.main .hd .post-area-action .left {float:left; padding-top:4px; color:#000; width:250px; text-align:left;}
+
+.main .hd .post-area-action .left a {float:left;line-height:27px;margin-top:0px;/*padding-left:10px;padding-right:10px;*/}
+
+.main .hd .post-area-action .left em {float:left;padding-left:2px;margin-top:3px;color:#76829A;}
+
+.main .hd .post-area-action .left em a {float:none; line-height:1; padding:0;}
+
+.mb7 {margin-bottom:7px;}
+.main .hd .post-area span.close {float:right;width:7px;height:7px;background:url(http://image.wenweipo.com/comment/img/24780138.gif) no-repeat 0 -265px;cursor:pointer;margin:4px;font-size:1px;line-height:1px;}
+
+.main .hd  .post-area-action .left {float:left; padding-top:4px; color:#000; width:350px; text-align:left;}
+
+.main .hd  .post-area-action .left a {float:left;line-height:27px;margin-top:0px;}
+
+.main .hd  .post-area-action .left em {float:left;padding-left:2px;margin-top:3px;color:#76829A;}
+
+.main .hd  .post-area-action .left em a {float:none; line-height:1; padding:0;}
+
+.main .hd  .post-area-action .left .select {background:#EBEFF8;padding-left:10px;padding-right:10px}
+
+.main .hd  .post-area-action .right {width:100px;padding-left:10px;float:right;height:23px;margin-top:5px;}
+
+
+
+
+/*add_reply*/
+
+.list_container dd .add_reply {width:576px;margin:0 auto;/*background:#EBEFF7;*/overflow:hidden;zoom:1;border:1px solid #D3D8E7;text-align:left;border-top:0px;padding-top:10px; background-color:#ebeff7;}
+
+.list_container dd .add_reply textarea {height:100px;margin:10px 0 5px 0;}
+
+.list_container dd .add_reply .post-area-wapper {width:547px;/*background:#EBEFF7;*/margin-left:10px;}
+
+.list_container dd .add_reply .post-area {padding-top:5px;overflow:hidden;zoom:1;margin-left:1px; clear:right;}
+
+.list_container dd .add_reply .post-area-action {border-bottom:0px;height:30px;line-height:30px;margin:5px 0;}
+.list_container dd .add_reply .post-area-action .left{ width:250px;}
+
+.list_container dd .add_reply .post-area-action .right {float:right;padding-top:0px;height:23px;margin-top:5px;}
+
+.parentClass {background:url(http://image.wenweipo.com/comment/img/22495199.gif) repeat-x 0px 27px;}
+
+.add_reply .post-area-action .left .select {background:#EBEFF7}
+
+.add_reply .post-area-wapper span.close {float:right;width:7px;height:7px;background:url(http://image.wenweipo.com/comment/img/24780138.gif) no-repeat 0 -265px;cursor:pointer;margin:3px 0px 0px 0px;font-size:1px;line-height:1px;}
+
+
+
+/*comment-list-reply*/
+
+#comment-list-reply .main-title {overflow:hidden;zoom:1;float:left;width:233px;height:33px;padding:5px 11px 0px 6px;background:#FFFFFF;font-size:14px;}
+
+#comment-list-reply .main-title strong {color:#0B3B8C;padding-left:17px;float:left;margin-top:3px;}
+
+#comment-list-reply .page-area {border-bottom:0px;}
+
+
+
+/*user-center-other*/
+
+#user-center-other .comment-title h1 {width:100%;-x-system-font:none;font-size:26px; font-weight:normal;line-height:40px;font-family:"宋体","microsoft yahei","黑体","Arial","Tahoma";font-size-adjust:none;font-stretch:normal;font-style:normal;font-variant:normal;color:#000;text-align:center;padding-left:0px; font-weight:bold;}
+
+#user-center-other .main-title {overflow:visible;zoom:1;float:left;width:233px;height:33px;padding:5px 11px 0px 6px;background:#FFFFFF;font-size:14px;}
+
+#user-center-other .main-title strong {color:#0B3B8C;padding-left:17px;float:left;margin-top:3px;}
+
+#user-center-other .page-area {border-bottom:0px;}
+
+#user-center-other .main-title span {float:left;font-size:12px;margin-top:5px;width:60px;overflow:visible}
+
+#user-center-other .main-title em {color:#CC0000;}
+
+
+
+/*user-center-info*/
+
+.user-center-info {width:273px;margin:0 auto;overflow:hidden;zoom:1;}
+
+.user-center-info p {padding:13px 0px;overflow:hidden;zoom:1;width:273px;}
+
+.user-center-info p .head,.user-center-info p span {float:left;}
+
+.user-center-info p .head {padding:3px;background:#fff;border:1px solid #DDE3EA;margin-left:16px;display:inline}
+
+.user-center-info p span {padding-left:16px;line-height:25px;}
+
+.user-center-info strong {font-size:14px;font-weight:bold;display:inline}
+
+.user-center-info p.xian {padding:13px 0px;border-bottom:1px dashed #C2C3BA;}
+
+
+
+/*user-center-self*/
+
+#user-center-self .main-title {overflow:hidden;zoom:1;float:left;width:233px;height:33px;padding:5px 11px 0px 6px;background:#FFFFFF;font-size:14px;}
+
+#user-center-self .main-title strong {color:#0B3B8C;padding-left:17px;float:left;margin-top:3px;}
+
+#user-center-self .page-area {border-bottom:0px;}
+
+#user-center-self .main-title span {float:left;font-size:12px;margin-top:5px;}
+
+#user-center-self .main-title em {color:#CC0000;}
+
+#user-center-self .main {border:0px;}
+
+#user-center-self .main .main {border:1px solid #C3CBD6;}
+
+
+
+/*user-center-myshow*/
+
+.user-center-myshow {width:621px;background:#FAFCFF;padding:14px 0px 14px 27px;border-top:1px solid #D9E0E8}
+
+.user-center-myshow li {line-height:30px;color:#8D8D8F;}
+
+.user-center-myshow .message {background:url(http://image.wenweipo.com/comment/img/24780138.gif) no-repeat -459px -50px;text-indent:24px;}
+
+.user-center-myshow .sys {background:url(http://image.wenweipo.com/comment/img/24780138.gif) no-repeat -460px -104px;text-indent:24px;}
+
+
+
+/*logArea*/
+
+#closeLogin {float:right;width:7px;height:7px;background:url(http://image.wenweipo.com/comment/img/24780138.gif) no-repeat 0 -265px;cursor:pointer;margin:4px 10px 0px 0px;font-size:1px;line-height:1px;}
+
+.logArea {width:593px;border:1px solid #D2D8E8;overflow:hidden;zoom:1;padding:0px 0px;margin-bottom:19px;border-top:0px;}
+
+.parentparentClass {background:url(http://image.wenweipo.com/comment/img/22495199.gif) repeat-x 0px 38px;}
+
+#login_list {margin-left:10px;_margin-left:5px;margin-top:20px;}
+
+#tab_head {width:310px;float:left}
+
+#tab_head div {float:left;cursor:pointer}
+
+#tab_1 {margin-left:6px;display:inline}
+
+#tab_head .click{width:151px;height:32px;background:url(../images/22494987.png) no-repeat;_background:none;text-align:center;line-height:32px;color:#1B2C58;font-weight:bold;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img1.gtimg.com/comment1/pics/22494/22494987.png',sizingMethod='crop');}
+
+#tab_head .normal{width:151px;height:32px;background:url(http://mat1.gtimg.com/comment1/comment_imgs/login_nos.png) repeat-x top;text-align:center;line-height:32px;color:#1B2C58;font-weight:bold;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://mat1.gtimg.com/comment1/comment_imgs/login_nos.png',sizingMethod='crop');}
+
+
+
+/*comment-pk*/
+
+#comment-pk .comment-title {height:auto;}
+
+#comment-pk .comment-title h1 {width:100%;-x-system-font:none;font-size:26px; font-weight:normal;line-height:40px;font-family:"宋体","microsoft yahei","黑体","Arial","Tahoma";font-size-adjust:none;font-stretch:normal;font-style:normal;font-variant:normal;color:#000;text-align:center;padding-left:0px;text-indent:175px;text-align:left; font-weight:bold;}
+
+#comment-pk .comment-title p {width:650px;padding-top:18px;padding-bottom:18px;margin:0 auto;line-height:25px;font-size:14px;overflow:hidden;zoom:1;padding-left:40px;text-align:left}
+
+#comment-pk .comment-title p strong {color:#00287B}
+
+#comment-pk .comment-title a {float:none}
+
+#comment-pk #bd {border:1px solid #DCE3EA;border-top:0px;background:url(http://image.wenweipo.com/comment/img/22495199.gif) repeat-x top;}
+
+.pk-bar-show {width:258px;height:38px;background:url(http://image.wenweipo.com/comment/img/24780138.gif) no-repeat 0 0;margin:0 auto;text-align:center;}
+
+#comment-pk .post-area-wapper {overflow:hidden;zoom:1;width:910px;margin:0 auto;background:none;border-top:1px solid #DAE1E9;}
+
+#comment-pk  .post-area {float:left;width:910px;}
+
+#comment-pk  .post-area .post-area-title {width:910px;}
+
+#comment-pk  .post-area .post-area-title label {font-size:14px;font-weight:bold;padding-left:31px;cursor:pointer}
+
+#comment-pk  .post-area .post-area-title label.red {color:#B12F00}
+
+#comment-pk  .post-area .post-area-title label.green {color:#316300}
+
+#comment-pk  .post-area .post-area-title label input {margin-right:10px;}
+
+#comment-pk  .post-area textarea {width:895px;}
+
+#comment-pk .post-area-action {width:900px;}
+
+#comment-pk .logArea {width:898px;}
+
+#comment-pk .pk-data-bar {width:204px;margin:0 auto;margin-left:30px;}
+
+#comment-pk .bar-show {width:130px;height:17px;background:url(http://image.wenweipo.com/comment/img/24780138.gif) 0 -51px;margin-top:6px;}
+
+#comment-pk .bar-percent {height:17px;background:url(http://image.wenweipo.com/comment/img/24780138.gif) 0 -76px;}
+
+
+
+/*pk-item*/
+
+.pk-item {width:910px;margin:0 auto;background:url(http://image.wenweipo.com/comment/img/24780138.gif) no-repeat 400px -300px;overflow:hidden;zoom:1;}
+
+.pk-item-txt {float:left;width:360px;text-align:center;margin-top:5px;word-wrap:break-word;word-break:break-all;overflow:hidden}
+
+.pk-fan {float:right}
+
+.pk-item-txt .title {font-size:18px;font-family:"黑体";color:#0B3B8C}
+
+.pk-item-txt p {line-height:21px;text-align:left;}
+
+.pk-item-txt .zheng {width:108px;height:23px;display:block;background:url(http://image.wenweipo.com/comment/img/24780138.gif) no-repeat -151px -188px;font-size:14px;color:#0B3B8C;font-weight:bold;padding-top:39px;margin:20px auto 29px auto;}
+
+.pk-item-txt .fan {width:108px;height:23px;display:block;background:url(http://image.wenweipo.com/comment/img/24780138.gif) no-repeat -264px -187px;font-size:14px;color:#0B3B8C;font-weight:bold;padding-top:39px;margin:20px auto 29px auto;}
+
+.pk-item-txt .zheng:hover,.pk-item-txt .fan:hover {text-decoration:none}
+
+
+
+/*pk-list*/
+
+.zhengfan-title {width:910px;margin:0 auto;height:35px;border-top:1px solid #DAE1E9;border-bottom:1px solid #DAE1E9;line-height:35px;}
+
+.zhengfan-title .left {float:left;font-size:14px;font-weight:bold;color:#B12F00;padding-left:7px;}
+
+.zhengfan-title .right {float:right;font-size:14px;font-weight:bold;color:#457704;padding-right:7px;}
+
+.point-list {width:910px;margin:0 auto;background:url(http://mat1.gtimg.com/comment1/comment_imgs/pk-list.gif) repeat-y right;overflow:hidden;zoom:1;}
+
+.point-list .left {float:left;padding-left:14px; padding-bottom:5px;}
+
+.point-list .right {float:right;padding-right:14px; padding-bottom:5px;}
+
+.point-list .list_container,.point-list .list_container dl {width:420px;background:none;border-top:0px;}
+
+.point-list .list_container dt {width:410px;}
+
+.point-list .list_container dd {width:420px;}
+
+.point-list .list_container dd.citation-wrapper  {width:93%;}
+
+.point-list .common-pagination {padding-bottom:5px;}
+
+
+
+/*i-talk*/
+
+.italk-tp {width:94px;height:28px;display:block;background:url(http://image.wenweipo.com/comment/img/24780327.gif); float:left;}
+
+.italk-tp-show {width:94px;height:34px;display:block; background:url(http://image.wenweipo.com/comment/img/24780339.gif); position:relative; z-index:99;}
+
+.italk-bt {width:82px;height:23px;display:inline-block;background:url(http://image.wenweipo.com/comment/img/24780138.gif) -99px -152px;border:0px; color:#FFF; cursor:pointer;margin-top:0px;}/*  |xGv00|038cdd606a12090da9d5599298ab158c */
+
+
+/* Jerry*/
+
+.top_smile {
+    text-align:left;margin-left:10px;
+}
+.post-area-login{
+    text-align:left;
+	vertical-align:middle;
+	line-height:22px;
+}
+
+.post-area-login-foot{
+	margin-left:10px;
+    text-align:left;
+	vertical-align:middle;
+	line-height:22px;
+}
+
+/*
+.post-area-login-top{
+	margin-left:200px;
+	width:560px;
+	text-align:left;
+	float:right;
+}
+*/
+#postf{
+    padding-left:10px; BACKGROUND: #fafcff;
+}
+
+
+/*yudesign.cn*/
+#bd_main_hd,#bd_main_hd_foot,#top_replyarea,dd .add_reply {position:relative;}
+#bd_main_hd_foot{BACKGROUND: #fafcff; width:100%;}
+.post-area-wapper #quickrebottom_login{
+    float:left;
+    line-height:22px;
+    margin-left:25px;
+    margin-top:3px;
+    /*position:relative;*/
+}
+.add_reply  #quickrebottom_login{padding-left:5px; padding-top:10px; padding-bottom:5px;width:100%;}
+
+#top_replyarea .post-area-action  span.right {position: relative;width:200px;margin-top:5px;}
+.main .hd #top_replyarea {width:586px; margin:0 auto 10px; float:none;} 
+#top_smile {margin-left:10px;width:560px; margin:0 auto;}
+.class_ip  {float:left;}
+
+#paper2_login {
+    margin: -15px 0
+}
+.post-area-wapper #paper2_login #quickrebottom_login {
+    float:left;
+    line-height:22px;
+    margin-left:10px;
+    margin-top:3px;
+}
+ .ipt {
+    border:1px solid #D4D0C8;
+    height:22px;
+}
+.codestr_147{
+    height:20px;
+	line-height:20px;
+}
+.btnA {
+    width:50px;border:1px solid #3d8572;height:22px;
+}

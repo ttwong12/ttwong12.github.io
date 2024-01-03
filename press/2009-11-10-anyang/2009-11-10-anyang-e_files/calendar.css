@@ -1,0 +1,18 @@
+.px12 {
+	FONT-SIZE: 12px
+}
+.whitenav {
+	FONT-SIZE: 12px; COLOR: #ffffff
+}
+.whitenav A {
+	FONT-SIZE: 12px; COLOR: #ffffff
+}
+A {
+	TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+.default {
+	FONT-SIZE: 12px; LINE-HEIGHT: 21px
+}

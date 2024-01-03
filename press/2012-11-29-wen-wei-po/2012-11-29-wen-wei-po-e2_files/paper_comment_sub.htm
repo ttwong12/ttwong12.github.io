@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>中大工程院17教授膺HKIE資深會員</title>
+<link media="screen" type="text/css" rel="stylesheet" href="paper_comment_sub_data/css2.css">
+
+<script language="javascript" src="paper_comment_sub_data/ajax.js"></script>
+<script>
+var pl_aaa09="文明上網，理性發言1";
+var pl_aaa10="文明上網，理性發言2";
+var pl_aaa11="文明上網，理性發言3";
+aad02="ED1211290008";
+aad03="5";
+aad04="1";
+aad05="0";
+aad06="文匯網友";
+aad10="中大工程院17教授膺HKIE資深會員";
+aad23="";
+gcur_login_home="";
+
+
+
+function check_content(fid,content){
+	if (!content) 
+	{
+		alert("評論內容不能為空!");
+		fid.content.focus();
+		return false;
+	}
+}
+
+function login_check_form(fid,type,id){
+	var fobj=document.getElementById(fid);
+	if (!encodeURIComponent(fobj.username.value)) 
+	{
+		alert("用戶名不能為空");
+		fobj.username.focus();
+		return false;
+	}
+
+	if (!encodeURIComponent(fobj.password.value)) 
+	{
+		alert("密碼不能為空");
+		fobj.password.focus();
+		return false;
+	}
+
+	var robj_orgin_reply=document.getElementById("login_foot_tform_"+id);
+	if(type == 'login_foot'){
+		document.getElementById("login_foot_tform").submit(); 
+	}else if(type == 'login_top'){
+		document.getElementById("login_top_tform").submit(); 
+	}else{
+		robj_orgin_reply.submit();
+	}	
+	return true;	
+}
+
+function re_form(fid,rid){
+	var fobj = document.getElementById(fid);
+	var robj_qsr_ccontent=document.getElementById("quickrebottom_ccontent_"+rid);
+	var qsr_top_errorobj = document.getElementById("qsr_top_error_"+rid);
+		if (!robj_qsr_ccontent.value) 
+	{
+		alert("評論內容不能為空!");
+		fobj.robj_qsr_ccontent.focus();
+		return false;
+	}
+	//	if(fobj.aad18.checked){
+	//	aad18 = 1;
+//	}else{
+		aad18 = 0;
+//	}
+
+	if(robj_qsr_ccontent.value != ""){
+ 		var fajax= new LabelAjax;
+		var furl="include/ajax_readd.php";
+						var fdata="action=readd&topid="+rid+"&aad02=ED1211290008&aad03=5&aad04=1&aad05=0&aad06="+aad06+"&aad10="+aad10+"&aad11="+encodeURIComponent(robj_qsr_ccontent.value)+"&aad18="+aad18+"&fcode=&aad23="+aad23;	
+						fajax.open("post",furl,true);
+		fajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		fajax.onreadystatechange=function(){
+			if(fajax.readyState==1||fajax.readyState==2||fajax.readyState==3){
+				qsr_top_errorobj.innerHTML = "<font color='red'>提交信息中</font>";
+			}else if(fajax.readyState==4){
+ 				if(fajax.status==200){
+					if(fajax.responseText==1){						
+						setTimeout(function(){self.location.reload();},1000);
+						return false;
+					}else if(fajax.responseText==2){
+						//qsr_top_errorobj.innerHTML = "<font color='red'></font>";
+						alert('對不起，你發表的評論含有非法關鍵字...');
+						setTimeout(function(){self.location.reload();},1000);
+						return false;
+					}else if(fajax.responseText==3){
+						//qsr_top_errorobj.innerHTML = "<font color='red'></font>";
+						alert('發布成功，需審核...');
+						setTimeout(function(){self.location.reload();},1000);
+						return false;
+					}else{
+					//	qsr_top_errorobj.innerHTML = "<font color='red'>"+fajax.responseText+"</font>";
+						alert("發布失敗"+fajax.responseText+"");
+						return false;
+					};
+				}else{
+					//qsr_top_errorobj.innerHTML = "";
+					alert("發布失敗");
+					return false;
+				};
+			};
+		}
+		fajax.send(fdata);
+	}
+	return true;	
+}
+
+function check_form(fid,type){
+  	var fobj=document.getElementById(fid);
+	if(type == 'top'){
+		var qsr_top_errorobj = document.getElementById("qsr_top_error");
+				fcodedata = "";
+				qsr_ccontent=encodeURIComponent(fobj.qsr_ccontent.value);
+				var robj_codestr = "";
+				
+	}else{
+		var qsr_top_errorobj = document.getElementById("qsr_foot_error");
+				fcodedata = "";
+				
+		qsr_ccontent=encodeURIComponent(fobj.quickrebottom_ccontent.value);
+		
+				var robj_codestr = "";
+				
+	}
+//	if(fobj.aad18.checked){
+	//	aad18 = 1;
+//	}else{
+		aad18 = 0;
+//	}
+ 	check_content(fid,qsr_ccontent);
+		if(qsr_ccontent!=""){
+ 		var fajax= new LabelAjax;
+		var furl="include/ajax_top.php";
+ 		var fdata="action=add&aad02=ED1211290008&aad03=5&aad04=1&aad05=0&aad06="+aad06+"&aad10="+aad10+"&aad11="+qsr_ccontent+"&aad18="+aad18+"&fcode="+fcodedata+"&aad23="+aad23;
+		fajax.open("post",furl,true);
+		fajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		fajax.onreadystatechange=function(){
+			if(fajax.readyState==1||fajax.readyState==2||fajax.readyState==3){
+				qsr_top_errorobj.innerHTML = "<font color='red'>提交信息中</font>";
+			}else if(fajax.readyState==4){
+ 				if(fajax.status==200){
+					if(fajax.responseText==1){				
+						setTimeout(function(){self.location.reload();},1000);						
+						return false;
+					}else if(fajax.responseText==2){
+					//	qsr_top_errorobj.innerHTML = "<font color='red'>對不起，你發表的評論含有非法關鍵字</font>";
+						alert('對不起，你發表的評論含有非法關鍵字...');
+						setTimeout(function(){self.location.reload();},1000);
+						return false;
+					}else if(fajax.responseText==3){
+					//	qsr_top_errorobj.innerHTML = "<font color='red'>發布成功，需審核</font>";
+						alert('發布成功，需審核...');
+						setTimeout(function(){self.location.reload();},1000);
+						return false;
+					}else{
+					//	qsr_top_errorobj.innerHTML = "<font color='red'>發布失敗"+fajax.responseText+"</font>";
+						alert("發布失敗"+fajax.responseText+"");
+						return false;
+					};
+				}else{
+				//	qsr_top_errorobj.innerHTML = "<font color='red'>發布失敗</font>";
+					alert("發布失敗");
+					return false;
+				};
+			};
+		}
+		fajax.send(fdata);
+	}
+	return true;
+}
+
+function refrom_a(rid){
+
+	gg_click(rid);
+ 	var obj=document.getElementById("orgin_content_left_"+rid);
+	var cheight=obj.scrollHeight;
+	var cwidth=obj.scrollWidth;
+ 	var robj=document.getElementById("re_id_"+rid);
+	robj.innerHTML="<div class=\"post-area-wapper\">"+
+				"<div id='paper2_login'><div id=\"quickrebottom_login\" class=\"post-area-login\" style=\"float:left\">"+
+		"<form action=\"formlogin.php\" method=\"post\" name=\"login_foot_tform_"+rid+"\" id=\"login_foot_tform_"+rid+"\">"+
+		"<label for=\"email\">用户名：</label>"+
+		"<input type=\"text\" class=\"ipt\" name=\"username\" autocomplete=\"off\" disableautocomplete=\"\" id=\"username\" style='width:80px;'>"+
+		"&nbsp;"+
+		"<label for=\"password\">密碼：</label>"+
+		"<input type=\"password\" class=\"ipt\" name=\"password\" autocomplete=\"off\" disableautocomplete=\"\" id=\"password\" style='width:80px;'>"+
+		"&nbsp;&nbsp;"+
+		" <input type=\"button\" class=\"btnA\" value=\"登錄\" onclick=\"login_check_form('login_foot_tform_"+rid+"','login_foot_"+rid+"','"+rid+"');\">"+
+		"&nbsp;<a href=\"http://user.wenweipo.com/do.php?ac=e249f8a69193749f2b4b91d9ab20acf0\" target=\"_blank\">註冊</a>"+
+		"<input type=\"checkbox\" name=\"cookie\" checked=\"checked\" style=\"display: none;\">"+
+		"</form>"+
+ 		"</div><div style='clear:both;'></div></div>"+
+				"<div class=\"post-area-wapper\" id=\"quickrebottom\">"+
+		"<form id=\"reform_"+rid+"\" name=\"reform_"+rid+"\" "+
+		" onKeyDown=\"if(event.ctrlKey&&event.keyCode==13){re_form('reform_"+rid+"','"+rid+"');}\">"+
+		"<input value=\""+aad23+"\" name=\"email\" id=\"email_"+rid+"\" type=\"hidden\" \/>"+
+		"<input value=\""+aad06+"\" name=\"username\" id=\"username_"+rid+"\" type=\"hidden\" />"+
+		"<div class=\"post-area\">"+
+		"<textarea onKeyUp=\"caculate_length_rid('"+rid+"');\" "+
+		" style=\"font-size:12px;color: rgb(153, 153, 151);background:url(images/logo2.jpg) no-repeat center  #ffffff  \"  "+
+		" name=\"comment.content\"  "+
+		" id=\"quickrebottom_ccontent_"+rid+"\" "+
+		" class=\"ta\" rows=\"10\"></textarea> "+	
+						"<span class=\"class_ip\" style=\"display:none;\">"+
+		"<input type=\"checkbox\" id=\"aad18\" name=\"aad18\" class=\"checkbox\">&nbsp;隱藏IP</span><div style='clear:both;'></div>"+
+				"<div class=\"post-area-action clear\" style='float:left;'>"+
+		"<span class=\"left\" style='float:left;text-align:left;width: 450px;'>"+
+				"<div id=\"bottom_login_btn\" class=\"\">"+
+		"<span class=\"msg\" id=\"qsr_top_error_"+rid+"\">"+
+		"<em id=\"pop_login_tips\" style=\"display: block;\">(歡迎發言)</em>"+
+		"</span>"+
+		"</div> "+
+		 		"</span> "+
+		"<span class=\"right\">"+
+		"<input type=\"button\" onClick=\"re_form('reform_"+rid+"','"+rid+"');\" "+
+		" value=\"發表回复\" id=\"bottom_post_btn\" class=\"italk-bt\">"+
+		"</span>"+
+		"</div>"+		
+		"</div>"+		
+		"</form>"+
+		"</div>"+		
+		"</div>";
+	var robj_bar_reply=document.getElementById("bar_reply_"+rid);
+	robj_bar_reply.className="bar parentClass";
+	var robj_orgin_reply=document.getElementById("orgin_reply_"+rid);
+	robj_orgin_reply.className="click";
+	if(robj.className == "add_reply"){
+		robj.className = "";
+		robj.innerHTML = "";
+		robj_bar_reply.className="bar";
+		robj_orgin_reply.className="noclick";
+		return false;
+	}else{
+		robj.className="add_reply";
+	}
+}	
+
+function countStringLength(str){
+	var str_length = 0;
+	for (var i=0;i<str.length;i++){
+		if (str.charCodeAt(i)<=256){
+			str_length +=1;
+		}else{
+			str_length +=2;
+		}
+	}
+	return str_length;
+}
+function cutStringToLength(str,length){
+	var tmp_str = str;
+	for (var i=0;i<str.length ;i++ ) {
+		if (countStringLength(tmp_str) > length){
+			tmp_str = tmp_str.substring(0,tmp_str.length-1);
+		}else{
+			break;
+		}
+	}
+	return tmp_str;
+}
+
+function caculate_length(check_area) 
+{
+	var text_length = 0;
+	var text_max_length = 200;
+	if (check_area == 'qsr_ccontent') {
+		if (countStringLength($("qsr_ccontent").value) > text_max_length)
+		$("qsr_ccontent").value = cutStringToLength($("qsr_ccontent").value,text_max_length);
+		text_length = countStringLength($("qsr_ccontent").value);
+		var target_div = $("qsr_top_error");
+		var text_remain = text_max_length - text_length;
+		target_div.innerHTML = '<p><span class="fred">已輸入字符：'+(text_length/2)+'，剩餘字符數：'+(text_remain/2)+'</span></p>';
+	}else if (check_area == 'body') {
+		if (countStringLength($("quickrebottom_ccontent").value) > text_max_length)
+		$("quickrebottom_ccontent").value = cutStringToLength($("quickrebottom_ccontent").value,text_max_length);
+		text_length = countStringLength($("quickrebottom_ccontent").value);
+		var target_div = $("qsr_foot_error");
+		var text_remain = text_max_length - text_length;
+		target_div.innerHTML = '<p><span class="fred">已輸入字符：'+(text_length/2)+'，剩餘字符數：'+(text_remain/2)+'</span></p>';
+	}
+}
+
+function caculate_length_rid(rid){
+	var text_length = 0;
+	var text_max_length = 200;
+	if (countStringLength($("quickrebottom_ccontent_"+rid+"").value) > text_max_length)
+		$("quickrebottom_ccontent_"+rid+"").value = cutStringToLength($("quickrebottom_ccontent_"+rid+"").value,text_max_length);
+		text_length = countStringLength($("quickrebottom_ccontent_"+rid+"").value);
+	var target_div = $("qsr_top_error_"+rid+"");
+	var text_remain = text_max_length - text_length;
+	target_div.innerHTML = '<p><span class="fred">已輸入字符：'+(text_length/2)+'，剩餘字符數：'+(text_remain/2)+'</span></p>';
+}
+function ding(did){
+ 	var rpdata="action=ding&id="+did;	
+ 	var rpurl="include/ding.php";	
+	var rpajax=new LabelAjax;
+	var dobj=document.getElementById("ding_"+did);
+	var dobjfont=document.getElementById("dingfont_"+did);
+	var dnum=dobj.innerHTML;	
+	rpajax.open("post",rpurl,true);	
+	rpajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");	
+	rpajax.onreadystatechange=function(){
+		if(rpajax.readyState==4){
+			if(rpajax.status==200){
+				if(rpajax.responseText==1){
+					dobj.innerHTML=parseInt(dnum)+1;
+				}else if(rpajax.responseText==4){
+					dobjfont.innerHTML='已支持';
+				}else{
+					alert('失敗');					
+				}
+			}else{
+				alert('失敗');
+			}
+		}
+	}
+	rpajax.send(rpdata);
+}
+</script><script language="JavaScript">
+function killErrors() {
+return true;
+}
+
+function clearDefault(el) {
+	if (el.defaultValue==el.value) {
+		el.value = "";
+	}
+	else if (el.value=="") {
+		el.value = "請理性評論";
+	}
+}
+
+window.onerror = killErrors;
+document.domain = 'wenweipo.com';
+</script>
+</head>
+<body id="comment-list">
+<div class="wrapper" style="width:610px;">
+  <div id="bd" style="width:610px;">
+    <div class="main" style="width:608px;height:99%">
+      <div class="hd" id="bd_main_hd">
+            
+          </div>
+        </div>
+      </div>
+      <div id="postf"> <span class="post-area-title">發表評論<script type="text/javascript">
+document.write ('<a target="_blank" href="ht'+'tp://comment.wenweipo.com/paper_comment_list.php?aad02=ED1211290008&aad03=5&aad04=1&aad10=%E4%B8%AD%E5%A4%A7%E5%B7%A5%E7%A8%8B%E9%99%A217%E6%95%99%E6%8E%88%E8%86%BAHKIE%E8%B3%87%E6%B7%B1%E6%9C%83%E5%93%A1&cat=paper">');
+</script><a target="_blank" href="http://comment.wenweipo.com/paper_comment_list.php?aad02=ED1211290008&amp;aad03=5&amp;aad04=1&amp;aad10=%E4%B8%AD%E5%A4%A7%E5%B7%A5%E7%A8%8B%E9%99%A217%E6%95%99%E6%8E%88%E8%86%BAHKIE%E8%B3%87%E6%B7%B1%E6%9C%83%E5%93%A1&amp;cat=paper">(已有<em id="bottom_orgin_count">0</em>條評論)</a></span> </div>
+      <div class="hd_foot" id="bd_main_hd_foot">
+	  <!--<div class="post-area-wapper-foot" style="padding-top: 0px; background: none repeat scroll 0% 0% rgb(255, 255, 255);" id="post_area_wapper_foot">-->
+                  <div class="post-area-login-foot" id="quickrebottom_login_foot">
+            <form id="login_foot_tform" name="login_foot_tform" method="post" action="formlogin.php">
+              <label for="email">用户名：</label>
+              <input id="username" disableautocomplete="" autocomplete="off" name="username" class="ipt" style="width: 80px;" type="text">
+              <label for="password">密碼：</label>
+              <input id="password" disableautocomplete="" autocomplete="off" name="password" class="ipt" style="width: 80px;" type="password">
+              <input onclick="login_check_form('login_foot_tform','login_foot',0);" value="登錄" class="btnA" type="button">
+              <a target="_blank" href="http://user.wenweipo.com/do.php?ac=e249f8a69193749f2b4b91d9ab20acf0">註冊</a>
+              <input style="display: none;" checked="checked" name="cookie" type="checkbox">
+            </form>
+          </div>
+		  
+                <div class="post-area-wapper-foot" id="quickrebottom">
+          <form id="foot_tform" name="foot_tform" action="" method="post" onkeydown="if(event.ctrlKey&amp;&amp;event.keyCode==13){check_form('foot_tform','foot');}">
+            <input name="username" id="username" value="文匯網友" type="hidden">
+            <input name="email" id="email" value="" type="hidden">
+            <input name="title" id="title" value="中大工程院17教授膺HKIE資深會員" type="hidden">
+            <div class="post-area-foot" id="reply_bottom-foot">
+              <textarea onkeyup="caculate_length('body');" onfocus="clearDefault(this)" onblur="clearDefault(this)" style="float:left;color: rgb(153, 153, 151);background:#FFFFFF url(images/logo6.jpg) no-repeat center" name="comment.content" id="quickrebottom_ccontent" class="ta">請理性評論</textarea><div style="clear:both;"></div>
+                                          <div class="post-area-action clear" style="float:left;height:40px;line-height:40px;"> <span class="left" style="float:left;width: 492px;text-align:left;">
+                                <div id="bottom_login_btn" class="bottom_login_btn"> <span class="msg" id="qsr_foot_error"> <em id="pop_login_tips" style="display: block;">(歡迎發言)</em> </span> </div>
+                                </span> <span class="right">
+                <input onclick="check_form('foot_tform','foot');" value="發表評論" id="bottom_post_btn" class="italk-bt" type="button">
+                </span> </div>
+            </div>
+          </form>
+        </div>
+		<!--</div>-->
+      </div>
+    </div>
+  
+
+
+
+<script type="text/javascript">
+function gg_click(id){
+	}
+
+
+
+</script> 
+
+<script>
+type=1;</script>
+<script language="javascript" src="paper_comment_sub_data/j.js"></script>
+</body></html>

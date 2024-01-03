@@ -1,0 +1,1 @@
+document.writeln("<embed src=\"http://image.wenweipo.com/paper/banner/paper_topad20120118.swf\" scale=Exactfit wmode=opaque quality=\"high\" pluginspage=http://www.macromedia.com/go/getflashplayer type=\"application/x-shockwave-flash\" width=\"708\" height=\"83\"></embed>")

@@ -1,0 +1,123 @@
+<html><head>
+<!-- DOCTYPE is removed for correct autostretch functionality in Firefox -->
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link type="text/css" rel="stylesheet" href="ljthis_data/general.css">
+	<title>Живой Журнал | Интеграция</title>
+
+	<script type="text/javascript" src="ljthis_data/x_core.js"></script>
+	<script type="text/javascript" src="ljthis_data/blogthis.js"></script>
+	<script type="text/javascript" src="ljthis_data/quickreply.js"></script>
+        <script type="text/javascript" src="ljthis_data/util.js"></script>
+
+	<script type="text/javascript">
+		document.domain = "runewsweek.ru";
+
+		function toggle_visibility() {
+		    var elem = document.getElementById('all');
+		    if (elem.style.visibility == 'hidden') {
+		        elem.style.visibility = 'visible';
+		    } else {
+		        elem.style.visibility = 'hidden';
+	            }
+		}
+
+		/* for Mozilla/Opera9 */
+		if (document.addEventListener) {
+			document.addEventListener("DOMContentLoaded", init, false);
+		}
+
+		/* for Internet Explorer */
+		/*@cc_on @*/
+		/*@if (@_win32)
+			document.write("<script id=__ie_onload defer src=javascript:void(0)><\/script>");
+			var script = document.getElementById("__ie_onload");
+			script.onreadystatechange = function() {
+				if (this.readyState == "complete") {
+					init(); // call the onload handler
+				}
+			};
+		/*@end @*/
+
+		/* for Safari */
+		if (/WebKit/i.test(navigator.userAgent)) { // sniff
+			var _timer = setInterval(function() {
+				if (/loaded|complete/.test(document.readyState)) {
+					init(); // call the onload handler
+				}
+			}, 10);
+		}
+
+		/* for other browsers */
+		window.onload = init;
+	</script>
+</head><body>
+    <div id="all">
+	<div class="tabbed-title">
+		<table>
+			<tbody><tr>
+				<td class="selected"><div>Поместить в LiveJournal</div></td>
+				<td onmouseover="this.className='hover';" onmouseout="this.className='normal';"><a href="http://lj.runewsweek.ru/blogthis?docId=24854&amp;docHash=">Поместить в другой блог</a></td>
+			</tr>
+		</tbody></table>
+	</div>
+	<div class="main-subtitle">
+		<a class="help" href="http://www.livejournal.com/support/faq.bml" target="_blank">Помощь</a>&nbsp;<a class="question-mark" href="http://www.livejournal.com/support/faq.bml" target="_blank">?</a>&nbsp;&nbsp;
+	</div>
+
+	<div class="lj-authorization">
+		<a href="http://www.livejournal.ru/" target="_blank"><img class="logo" src="ljthis_data/lj-logo.gif" alt="LiveJournal" width="50" height="50"></a>
+		<div class="auth-form">
+
+<table class="lj-login-table">
+	<tbody><tr>
+<form action="http://www.livejournal.com/login.bml?nojs=1" class="loginlj_form" id="loginlj" method="post" name="loginlj"></form><input id="submitted_loginlj" name="submitted__loginlj" value="1" type="hidden">
+<input class="loginlj_hidden" id="ret" name="ret" value="http://account.livejournal.ru/login/ljwho?back=http%3a%2f%2flj%2erunewsweek%2eru%2fljthis%3fdocId%3d24854" type="hidden">
+<input class="loginlj_hidden" id="ret_fail" name="ret_fail" value="http://account.livejournal.ru/login/ljfault?back=http%3a%2f%2flj%2erunewsweek%2eru%2fljthis%3fdocId%3d24854&amp;code=" type="hidden">
+		<td><input class="lj-login-field" name="user" size="15" value="имя пользователя" onfocus="if (this.value=='имя пользователя') this.value='';" onblur="if (this.value=='') this.value='имя пользователя';" type="text"></td>
+		<td><input class="lj-login-field" name="password" size="15" value="пароль" onfocus="if (this.value=='пароль') this.value='';" onblur="if (this.value=='') this.value='пароль';" type="password"></td>
+		<td><input class="lj_enter_button" id="loginlj_submit" name="_submit" value="войти" onclick="this.value='вход...'; this.disabled=true; this.form.submit();" type="submit"></td>
+
+	</tr>
+	<tr>
+		<td class="help-link"><a href="http://www.livejournal.com/create.bml" target="_blank">Создать дневник в LiveJournal</a></td>
+		<td class="help-link"><a href="http://www.livejournal.com/lostinfo.bml" target="_blank">Забыли пароль?</a></td>
+		<td></td>
+	</tr>
+</tbody></table>
+</div>
+		
+		
+	</div>
+
+	
+	
+	<div class="blogthis-form">
+		<form action="" name="frm_post_lj" method="post">
+			<div class="label">Тема</div>
+			<input class="post-subject" name="subject" value="" size="50" maxlength="100" type="text">
+			<div class="label">Сообщение</div>
+			<div class="sub-label">Сообщение будет опубликовано под анонсом статьи</div>
+			<textarea class="post-body" name="comment" rows="7" cols="50"></textarea>
+			<input name="art_announce" value="&lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot;&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #CFCFCF;padding:10px;color:#333;font-family:Arial, Tahoma;&quot;&gt;&lt;a href=&quot;http://www.runewsweek.ru/&quot;&gt;&lt;img src=&quot;http://www.runewsweek.ru/images/logo120x50.jpg&quot; width=&quot;120&quot; height=&quot;50&quot; alt=&quot;Русский Newsweek&quot; border=&quot;0&quot; style=&quot;margin-bottom:10px;&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;font size=&quot;+1&quot;&gt;&lt;b&gt;&lt;a href=&quot;http://www.runewsweek.ru/science/24854/&quot; style=&quot;color:#000;&quot;&gt;Крутые миражи&lt;/a&gt;&lt;/b&gt;&lt;/font&gt;&lt;p style=&quot;font-size:12px;&quot;&gt;Пока психологи пытались объяснить механизм восприятия оптических иллюзий, дизайнерам и программистам удалось автоматизировать их производство... &lt;a href=&quot;http://www.runewsweek.ru/science/24854/&quot; style=&quot;color:#000;&quot;&gt;Далее&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" type="hidden">
+			<div class="buttons">
+				<input class="submit-button" value="Поместить в LiveJournal *" disabled="1" type="submit">&nbsp;
+				<script type="text/javascript"><!--
+					if (document.getElementById) {
+						document.writeln('<input type="button" class="submit-button" style="width: 120px;" value="Предпросмотр" onClick="show_lj_preview(this.form);" \/>');
+					}
+				//--></script><input class="submit-button" style="width: 120px;" value="Предпросмотр" onclick="show_lj_preview(this.form);" type="button">
+
+				<div class="text-notice">* Для размещения статьи, пожалуйста, авторизуйтесь</div>
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript">
+	    if (parent.article_announce) {
+		document.forms.frm_post_lj.art_announce.value = parent.article_announce;
+	    }
+	</script>
+	
+	
+    </div>
+</body></html>

@@ -1,0 +1,483 @@
+
+
+
+
+/* GENERAL FONT AND LINK SETTINGS */
+BODY,
+PRE,
+TR,
+TD,
+TH,
+P,
+.portlet-font,
+.portlet-section-body,
+.portlet-section-footer,
+.portlet-section-text,
+.portlet-table-text {font-family: Arial, Helvetica, sans-serif;
+                     font-size: small;
+                     color: #000000;
+                     font-weight: normal;
+                     font-style: normal }
+
+P {margin-top: 0px;
+   margin-bottom: 1em }
+
+TH {font-weight: bold }
+
+.epi-fontSm,
+.wsui-font-small {font-size: x-small }
+
+.epi-font,
+.wsui-font {font-size: small }
+
+.epi-fontLg,
+.wsui-font-large {font-size: medium }
+
+a:link {color: #000066;
+        text-decoration: underline }
+
+a:visited {color: #000066;
+           text-decoration: underline }
+
+a:active,
+a:hover {color: #660000;
+         text-decoration: underline }
+
+a.epi-headline {font-weight: normal;
+                text-decoration: underline !important }
+
+/* FOR TRAIL, PAGE, AND SECTION TITLES */
+/* NAVIGATION TRAILS */
+.epi-trail,
+.wsui-trail {font-family: Arial, Helvetica, sans-serif;
+             font-size: small;
+             color: #666666;
+             font-weight: normal;
+             margin-bottom: 0px }
+
+.epi-trail a,
+.wsui-trail a {color: #666666 !important;
+               text-decoration: none !important }
+
+.epi-trail a:hover,
+.wsui-trail a:hover {color: #666666;
+                     text-decoration: underline !important }
+
+.epi-trailOn,
+.wsui-trail-current {font-family: Arial, Helvetica, sans-serif;
+                     font-size: small;
+                     color: #000000;
+                     font-weight: bold;
+                     margin-bottom: 0px }
+
+/* PAGE TITLES */
+h1,
+.epi-pageTitle,
+.wsui-page-title,
+.portlet-section-header {font-family: Arial, Helvetica, sans-serif;
+                         font-size: medium;
+                         color: #663300;
+                         font-weight: bold;
+                         margin-bottom: 0px }
+
+/* SECTION TITLES */
+h2,
+.epi-sectionTitle,
+.wsui-section-title,
+.portlet-section-subheader,
+.portlet-form-label {font-family: Arial, Helvetica, sans-serif;
+                     font-size: small;
+                     color: #663300;
+                     font-weight: bold;
+                     margin-top: 0px;
+                     margin-bottom: .5em }
+
+.epi-sectionTitleBG {background-color: #F0F0EF }
+
+/* ERROR AND CONFIRMATION MESSAGE COLORS */
+.epi-error,
+.wsui-error,
+.portlet-msg-error,
+.portlet-msg-alert {color: #ff0000 !important }
+
+.epi-ok,
+.wsui-ok,
+.portlet-msg-success {color: #FF0000 !important }
+
+.epi-dim,
+.wsui-dim,
+.portlet-font-dim {color: #666666 !important }
+
+/* NAVIGATIONAL MENUS AND LINKS */
+.epi-menu,
+.wsui-menu {color: #003366 !important }
+
+.epi-menuOn,
+.wsui-menu-current {color: #000000 !important;
+                    font-weight: bold }
+
+a.epi-menu,
+a.wsui-menu {color: #003366 !important;
+             text-decoration: none !important }
+
+a.epi-menuOn,
+a.wsui-menu-current {color: #000000 !important;
+                     font-weight: bold }
+
+.epi-nextPrev {color: #003366 !important;
+               text-decoration: none !important }
+
+a.epi-menu:hover,
+a.epi-menuOn:hover,
+.epi-nextPrev:hover,
+a.wsui-menu:hover,
+a.wsui-menu-current:hover {color: #000000;
+                           text-decoration: underline !important }
+
+/* FORM ELEMENTS */
+/* FOR LAYOUT TABLES THAT CONTAIN FORMS -- CONVENIENTLY PROVIDES FOR APPROPRIATE SPACING */
+table.epi-formTable td {padding-top: .25em;
+                        padding-bottom: .25em }
+
+table.epi-formTable td table td {padding: 0em }
+
+table.epi-formTable td.epi-spacerCell {font-size: 0px;
+                                       height: 1em }
+
+/* FORM LABELS */
+.epi-formLabel,
+.wsui-form-label,
+.portlet-form-field-label,
+.portlet-icon-label,
+.portlet-dlg-icon-label {font-weight: bold;
+                         text-align: left;
+                         padding-right: .75em }
+
+/* FORM INPUT ELEMENTS */
+select,
+textarea,
+.epi-input,
+.portlet-form-input-field {font-family: Arial, Helvetica, sans-serif;
+                           font-size: small;
+                           color: #000000;
+                           background-color: #ffffff }
+
+/* FORM HTML BUTTONS */
+.epi-button,
+.portlet-form-button {font-family: Arial, Helvetica, sans-serif;
+                      font-size: small;
+                      color: #000000;
+                      background-color: #dddddd }
+
+/* FOR LINKS THAT BEHAVE LIKE BUTTONS */
+.epi-buttonLink {color: #003366 !important;
+                 text-decoration: underline !important }
+
+.epi-buttonLink:hover {color: #000000 !important;
+                       text-decoration: underline !important }
+
+/* MISC. UI ELEMENTS */
+HR {color: #cccccc;
+    height: 1px }
+
+.epi-lineBreak {background-color: #cccccc }
+
+.epi-block {background-color: #F0F0EF;
+            border: #b8d1e6 1px solid }
+
+.wsui-block-bgcolor {background-color: #F0F0EF }
+
+.epi-blockBorder {background-color: #b8d1e6 }
+
+li {padding: .2em .2em }
+
+/* STANDARD DATA TABLES */
+.epi-dataTable,
+.wsui-table,
+.portlet-table-body {border-bottom: #ffffff 1px solid;
+                     border-left: #ffffff 1px solid;
+                     border-right: #ffffff 0px solid }
+
+.epi-dataTable TH,
+.wsui-table TH,
+.portlet-table-header TH,
+.portlet-table-header TD {color: #222222;
+                          background-color: #b8d1e6;
+                          border-top: #ffffff 1px solid;
+                          border-right: #ffffff 1px solid;
+                          padding: .5em }
+
+.epi-dataTable TH a,
+.wsui-table TH a,
+.portlet-table-header a {color: #222222 !important;
+                         text-decoration: none }
+
+.epi-dataTable TH.epi-rowHeadSorted,
+.epi-dataTable TH.epi-rowHeadSorted a {color: #000000 !important;
+                                       background-color: #9cbfdd;
+                                       text-decoration: none }
+
+.epi-dataTable TD,
+.wsui-table TD,
+.portlet-table-body TD {border-top: #ffffff 1px solid;
+                        border-right: #ffffff 1px solid;
+                        padding-top: .3em;
+                        padding-bottom: .3em;
+                        padding-left: .5em;
+                        padding-right: .5em }
+
+.epi-dataTable .epi-padRight {padding-right: 2em }
+
+/* DATA TABLE LITE: generally not used with background colors on odd and even rows */
+.epi-dataTableLite {border-bottom: #ffffff 1px solid;
+                    border-left: #ffffff 1px solid;
+                    border-right: #ffffff 1px solid }
+
+.epi-dataTableLite TH {color: #000066;
+                       background-color: #f7fafc;
+                       border-top: #ffffff 1px solid;
+                       border-right: #ffffff 0px solid;
+                       padding: .5em }
+
+.epi-dataTableLite TH a {color: #000066 !important;
+                         text-decoration: none }
+
+.epi-dataTableLite TD {border-top: #ffffff 1px solid;
+                       border-right: #ffffff 0px solid;
+                       padding-top: .3em;
+                       padding-bottom: .3em;
+                       padding-left: .5em;
+                       padding-right: .5em }
+
+.epi-dataTableLite epi-padRight {padding-right: 2em }
+
+/* DATA TREE */
+.epi-dataTree {border-bottom: #ffffff 1px solid;
+               border-left: #ffffff 1px solid;
+               border-right: #ffffff 1px solid }
+
+.epi-dataTree TH {color: #222222;
+                  background-color: #b8d1e6;
+                  border-top: #ffffff 1px solid;
+                  border-bottom: #ffffff 1px solid;
+                  padding-top: .3em;
+                  padding-bottom: .3em }
+
+.epi-dataTree TH a {color: #222222 !important;
+                    text-decoration: none }
+
+.epi-dataTree .epi-padding {padding-right: 1em;
+                            padding-left: 1em }
+
+.epi-dataTree .epi-padLeft {padding: 0px 0px 0px 3px }
+
+/* TABLES WITHIN DATA TABLES: BORDERS AND PADDING */
+.epi-dataTable .epi-embeddedTable TD,
+.epi-dataTableLite .epi-embeddedTable TD,
+.epi-dataTree .epi-embeddedTable TD {border: 0px;
+                                     padding: 0px }
+
+/* SHARED BACKGROUND COLORS */
+.epi-rowOdd,
+.wsui-table-row-odd,
+.portlet-table-body {background-color: #f7fafc }
+
+.epi-rowEven,
+.wsui-table-row-even,
+.portlet-table-alternate {background-color: #f2f6fa }
+
+.epi-rowSpecial1,
+.wsui-table-row-sectionheader,
+.portlet-table-subheader {color: #000000;
+                          background-color: #d1e1ef }
+
+.epi-rowFooter,
+.portlet-table-footer {color: #000000;
+                       background-color: #dce8f3 }
+
+.epi-rowHighlight,
+.epi-rowHighlight td,
+.epi-rowHighlight td a,
+.portlet-table-selected,
+.portlet-table-selected a {color: #336699 !important;
+                           background-color: #dfebf6 }
+
+.epi-dataTableBorder {background-color: #ffffff }
+
+/* EPI-ROWHEAD: used only to simulate the effect of a data table's header row; not necessary if using <th> */
+.epi-rowHead,
+.wsui-table-row-header {color: #222222;
+                        font-weight: bold;
+                        background-color: #b8d1e6;
+                        padding-top: .3em;
+                        padding-bottom: .3em }
+
+.epi-rowHead a,
+.wsui-table-row-header a {color: #222222 !important;
+                          text-decoration: none }
+
+.epi-rowHeadSorted {color: #000000;
+                    font-weight: bold;
+                    background-color: #9cbfdd;
+                    padding-top: .3em;
+                    padding-bottom: .3em }
+
+.epi-rowHeadSorted a {color: #000000 !important;
+                      text-decoration: none }
+
+/* CHROME, PAGE, AND ALIGNMENT CLASSES */
+.epi-pageBG {background-color: #ffffff }
+
+.epi-chromeHeader {font-family: Arial, Helvetica, sans-serif;
+                   font-size: small;
+                   color: #FFFFFF;
+                   background-color: #003366 }
+
+.epi-chromeBG {background-color: #FFFFFF }
+
+.epi-chromeBorder {background-color: #999999 }
+
+/* GENERIC COLORS: used only in custom styles and custom secondary pages */
+.epi-BG1 {background-color: #123f7b }
+
+.epi-BG2 {background-color: #FFFFFF }
+
+.epi-BG3 {background-color: #ffffff }
+
+.epi-BG4 {background-color: #e6e6e6 }
+
+.epi-font1 {font-family: Arial, Helvetica, sans-serif;
+            font-size: x-small;
+            color: #003366 }
+
+.epi-font2 {font-family: Verdana, Geneva, sans-serif;
+            font-size: x-small;
+            color: #660033 }
+
+.epi-font3 {font-family: Verdana, Geneva, sans-serif;
+            font-size: small;
+            color: #000000 }
+
+.epi-font4 {font-family: Verdana, Geneva, sans-serif;
+            font-size: small;
+            color: #660033 }
+
+.epi-link1,
+.epi-link1:link,
+.epi-link1:visited {color: #000000;
+                    text-decoration: none }
+
+.epi-link1:active,
+.epi-link1:hover {color: #000000;
+                  text-decoration: underline }
+
+.epi-link2,
+.epi-link2:link,
+.epi-link2:visited {color: #000000;
+                    text-decoration: none }
+
+.epi-link2:active,
+.epi-link2:hover {color: #000000;
+                  text-decoration: underline }
+
+.epi-link3,
+.epi-link3:link,
+.epi-link3:visited {color: #000000;
+                    text-decoration: none }
+
+.epi-link3:active,
+.epi-link3:hover {color: #000000;
+                  text-decoration: underline }
+
+.epi-link4,
+.epi-link4:link,
+.epi-link4:visited {color: #000000;
+                    text-decoration: none }
+
+.epi-link4:active,
+.epi-link4:hover {color: #000000;
+                  text-decoration: underline }
+
+/* DEPRECATED: do not use in new code */
+.epi-align {text-align: left }
+
+.epi-rowSpecial2 {background-color: #dce8f3 }
+
+.epi-errorColor,
+.epi-errorSm,
+.wsui-error-small {color: #ff0000 !important }
+
+.epi-okColor,
+.epi-okSm,
+.wsui-ok-small {color: #FF0000 !important }
+
+.epi-dimColor,
+.epi-dimSm,
+.wsui-dim-small {color: #666666 !important }
+
+.epi-buttonSm,
+.wsui-button-small {font-family: Arial, Helvetica, sans-serif;
+                    font-size: small;
+                    color: #000000;
+                    background-color: #dddddd }
+
+.epi-form,
+.epi-formSm {font-family: Arial, Helvetica, sans-serif;
+             font-size: small;
+             color: #000000;
+             background-color: #ffffff }
+
+.epi-buttonLinkSm {color: #003366;
+                   text-decoration: underline }
+
+.epi-buttonLinkSm:hover {color: #000000;
+                         text-decoration: underline }
+
+.epi-blockBGColor {background-color: #F0F0EF }
+
+.epi-chromeHeaderFont {font-family: Arial, Helvetica, sans-serif;
+                       font-size: small;
+                       color: #FFFFFF;
+                       font-weight: bold }
+
+.epi-chromeHeaderBG {background-color: #003366 }
+
+.epi-rowSubHead {color: #000000;
+                 background-color: #d1e1ef }
+
+/* DEPRECATED MY PAGES CLASSES: do NOT use for normal code */
+.epi-button-normal {background-color: #9cbfdd;
+                    cursor: normal }
+
+.epi-button-normal table.rollover {background-color: #f2f6fa }
+
+.epi-button-normal a {color: #000066 !important;
+                      text-decoration: none !important }
+
+.epi-button-rollover {background-color: #9cbfdd;
+                      cursor: hand }
+
+.epi-button-rollover table.rollover {background-color: #b8d1e6 }
+
+.epi-button-rollover a {color: #222222 !important;
+                        text-decoration: none !important }
+
+.epi-button-current,
+.epi-button-current table.rollover {background-color: #9cbfdd }
+
+.epi-button-current a {color: #000000 !important;
+                       font-weight: bold;
+                       text-decoration: none !important }
+
+.epi-button-current-rollover {background-color: #9cbfdd;
+                              cursor: hand }
+
+.epi-button-current-rollover table.rollover {background-color: #b8d1e6 }
+
+.epi-button-current-rollover a {color: #222222 !important;
+                                font-weight: bold;
+                                text-decoration: none !important }
+
+.epi-button-line {border-bottom: #ffffff 1px solid }
+
+
