@@ -1,0 +1,45 @@
+<html>
+<title>Warp the City</title>
+<body background="/icon/desktop.jpg">
+<h2>Warp the City</h2>
+<p>
+
+
+Tien-Tsin Wong, Chi-Wing Fu and Pheng-Ann Heng.
+"Warp the City", 
+Technical Slide,
+<i>SIGGRAPH'99</i>.
+<p>
+
+<h3> Image </h3>
+<center>
+<table border=2>
+<tr><td><img src="warpcity.jpg"></td></tr>
+</table>
+</center>
+
+
+<h3>Description</h3> 
+
+
+McMillan proposed a pixel-by-pixel warping technique for view interpolation,
+The visibility is solved WITHOUT depth-buffering. However it does not work
+for arbitrary triangles (if we subdivide the image into triangles), hence
+cannot utilize the rendering hardware to speedup the warping. We propose a
+triangle-by-triangle image warping technique derived from epipolar geometry.
+By drawing the triangles in an order determined by topological sort (O(n)),
+the visibility problem is solved WITHOUT depth-buffering. We also generalize
+the warping technique to cylindrical panorama. The slide shows three frames
+extracted from the interpolation sequence. Note how the visibility is
+correctly solved for the moving buildings.
+<p>
+
+
+<b>Hardware:</b> Any UNIX platform.<br>
+
+<b>Software:</b> Experimental image warping prototype <br>
+
+
+</html>
+
+

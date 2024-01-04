@@ -1,0 +1,53 @@
+<html>
+<title>The 2D Illusion of Attic</title>
+<body background="/icon/desktop.jpg">
+<h2>The 2D Illusion of Attic</h2>
+<p>
+
+
+Tien-Tsin Wong, Chi-Wing Fu and Pheng-Ann Heng.
+"The 2D Illusion of Attic", 
+Technical Slide,
+<i>SIGGRAPH'99</i>.
+<p>
+
+<h3> Image </h3>
+<center>
+<table border=2>
+<tr><td><img src="attcwarp.jpg"></td></tr>
+</table>
+</center>
+
+
+<h3>Description</h3> 
+
+McMillian proposed an image warping technique for view interpolation. It can
+correctly resolve the visibility problem (several pixels mapped to the same
+location) WITHOUT DEPTH BUFFERING. The problem is solved by drawing pixel in
+some order. However it works for warping pixel-sized entities only. Hence it
+is computationally intensive. Instead of warping image in a pixel-by-pixel
+manner, we have developed an efficient warping technique which warps image
+in a triangle-by-triangle manner. It is based on epipolar geometry. The
+visibility is solved by drawing arbitrary-sized triangles in a specific
+order while no depth-buffering is required. The drawing order is determined
+by the linear-time O(n) topological sort. The technique is first applied to
+warp a given perspective image. The upper left image is the reference
+perspective image. The correctness can be verified by the lower left image
+(warped attic scene). Note how the front trunk occludes the barrel. The
+right column shows the corresponding triangulation and the drawing order.
+The darker the color of the triangle is, the earlier the triangle should be
+drawn. The upper right image shows a random drawing order (random darkness)
+because the drawing order is irrelevant for the original image.
+
+<p>
+
+
+<b>Hardware:</b> Any UNIX platform.<br>
+
+<b>Software:</b> Experimental image warping prototype <br>
+
+
+
+</html>
+
+
