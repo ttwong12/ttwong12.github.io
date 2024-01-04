@@ -1,0 +1,153 @@
+<html>
+<body background="/icon/desktop.jpg">
+<title>
+The Design and Applications of Shape Similarity in Computer Graphics
+</title>
+
+<blockquote>
+<font face="Verdana" size="2">
+<div align = justify>
+
+<table><tr><td width=80 height=75 valign=center>
+  <img src="../figure/xmxu.jpg">
+</td><td>
+  <font face="Verdana" size="4"><b>The Design and Applications of Shape
+Similarity in Computer Graphics</b></font><br>
+  <font face="Verdana" size="2"><a href="https://scut-mm.github.io/people.html">Xuemiao Xu</a>
+
+<!----------------------------------------------------------------------------------------------------->
+</font>
+</td></tr></table>
+<p>
+
+<dd>
+
+Shape analysis is a fundamental problem in computer vision and has
+been widely adopted in many applications of computer graphics. In
+particular, shape similarity, as one of the core techniques of
+shape analysis, plays an important role in shape retrieval,
+recognition and classification, alignment and registration, and
+approximation and simplification. Its applications in computer
+graphics include shape-based image morphing, image mosaic, 3D
+reconstruction, image editing, motion inference, and motion
+tracking, etc.
+<p>
+
+Shape similarity has been deeply studied by many researchers.
+However, challenges still remain. The first challenge is the
+invariance. Since shape in many applications is often discussed
+based on the property of invariance, shape similarity is expected
+to be invariant to the transformations (e.g. translation, scale,
+orientation). The second one is tolerance. As noise, blur, crack
+and deformation are usually introduced when extracting the shape
+of an object from an image, a shape similarity metric is required
+to be robust to these imperfections. During the design of shape
+similarity metrics, it is usually difficult to achieve these
+objectives.
+<p>
+
+Shape similarity is application dependent. Different applications
+may have different requirements on invariance and tolerance. Thus,
+it is almost impossible to design an universal metric which is
+suitable for all applications. Nowadays, many techniques have
+attempted to solve these problems to some extent. But, most of
+them only focus on the applications where shape is invariant to
+transformation. And the cases where shape transformations may be
+taken into account when measuring the shape similarity are seldom
+discussed.
+<p>
+
+
+We further explore the applications of shape similarity in
+computer graphics. And we especially concentrate on some
+challenging problems. Since shape similarity is application
+dependent, we need to tailor-make the design of shape similarity
+metric in order to satisfy the specific application. In this
+thesis, we mainly discuss two applications, animating animal
+motion from a still picture, and outline-based ASCII art
+generation. Both of them are regarded as challenging problems and
+hard to be solved with existing techniques. It is our great
+contribution that we observe that the complexity of these
+applications can be largely reduced by applying the concept of
+shape similarity, so that the corresponding problems become
+solvable. In addition, for the first application some existing
+shape similarity metrics can be directly applied, while in the
+second application the design of a new shape similarity metric is
+required.
+<p>
+
+Animating animal motion from a still picture, has been regarded as
+an impossible task due to the lack of temporal information in a
+single picture. However, considering a picture of a moving animal
+group, different individuals in the picture usually suggest how
+this species moves. This is because different individuals have
+similar look and behave asynchronously, so that they can be
+regarded as the snapshots of one individual during the motion. And
+these snapshots form the key frames of the motion cycle. Hence,
+our key contribution is to determine an optimal ordering of
+snapshots in order to reconstruct the motion cycle. To achieve
+this, we construct a snapshot graph using shape context, an
+invariant shape similarity metric. Then the ordered snapshots
+(which correspond to the motion cycle) can be deduced from this
+graph by minimizing an objective function. To alleviate the pose,
+morphology, and appearance variation of the snapshots along the
+motion path, we further propose to perform consistency refinement.
+Finally, a smooth motion sequence can be synthesized by morphing
+among the ordered snapshots.
+<p>
+
+Outline-based ASCII art generation is another typical application
+of shape similarity. The wide availability and popularity of
+text-based communication channels encourage the usage of ASCII art
+in representing images. Outline-based ASCII art approximates the
+major line structure of the underlying image content. We mimic how
+ASCII artists deform the underlying image in order to approximate
+the image content with the limited variety of character font
+structure. The generation is formulated as an optimization problem
+that minimizes the shape dissimilarity, the text resolution, and
+the text grid deformation. Shape similarity for character matching
+is the basic technique in this application. Here shapes are not
+invariant to transformations when we try to measure the similarity
+between the shape of characters and the underlying structure.
+Moreover, the compared shapes can be substantially different.
+Therefore, an alignment-insensitive shape similarity metric which
+is variant to transformations as well as robust to misalignment is
+also proposed.
+
+<p>
+</div>
+
+
+<font face="Arial,Helvetica" size="3"><b>Related publication:</b></font>
+<font face="Verdana" size=-1><ul>
+<li>"<a href="/papers/flock/flock.html">
+Animating Animal Motion from Still</a>",<br>
+X. Xu, L. Wan, X. Liu, T. T. Wong, L. Wang and C. S. Leung,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH Asia 2008 issue)</i>,
+Vol. 27, December 2008, pp. 117:1-117:8.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+<li>"<a href="/papers/asciiart/asciiart.html">Structure-based ASCII Art</a>",<br>
+X. Xu, L. Zhang and T. T. Wong,<br>
+<i>ACM Transactions on Graphics (SIGGRAPH 2010 issue)</i>,
+Vol. 29, No. 4, July 2010, pp. 52-1-52:9.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+</ul>
+</font>
+
+
+
+
+
+
+
+</font>
+</blockquote>
+</html>

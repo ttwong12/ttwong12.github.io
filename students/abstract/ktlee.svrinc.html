@@ -1,0 +1,59 @@
+<html>
+<body background="/icon/desktop.jpg">
+<title> Fusing Scattered Images with Multiresolution Point-Based Model</title>
+
+<blockquote>
+<font face="Verdana" size="2">
+<div align = justify>
+
+<table><tr><td width=80 height=75 valign=bottom>
+  <img src="../figure/ktlee.jpg">
+</td><td>
+  <font face="Verdana" size="4"><b>Fusing Scattered Images with Multiresolution Point-Based Model</b></font><br>
+  <font face="Verdana" size="2"><!--#include virtual="papers/_author/ktlee.html"--></font>
+</td></tr></table>
+<p>
+
+<dd> 
+To create a realistic three dimensional digital model, one of the
+ways is to directly capture the model from real object.
+Information including geometry and images is acquired from real
+object. Then, the model is constructed by fusing scattered images
+onto the geometry. To reproduce the appearance of the original
+object, existing methods usually fit the data using parameterized
+reflectance model such as Lambertian model, Torrance-Sparrow
+model, etc. However, these models usually are restricted for
+specific surface properties, so a more robust
+approach is needed.<p>
+<dd>
+Addressing the problem, a new system is proposed in this thesis.
+In the system, instead of considering the parameterized
+reflectance model, we interpolate the scattered radiance samples
+(image pixels) over a spherical function for each surface point.
+As a result, we can approximate the reflected radiance looking
+from different directions. Besides, for efficient data storage,
+radiances are encoded into spherical harmonic coefficients. Then
+during rendering, the reflected radiance is decoded from the
+coefficients according to the viewing direction. Thus, the
+appearance of the object is preserved and the method is
+independent of the surface property of the object.<p>
+<dd>
+Besides, to display the model interactively, we represent the
+object as a multiresolution point-based model and render with
+level-of-detail control. A multiresolution point-based viewer is
+implemented. Using the viewer, the model is displayed at low
+resolution when looking from far away or moving it, and at high
+resolution when idle. As a result, interactive frame rate is
+achieved.
+<p>
+
+
+</div>
+
+
+
+
+
+</font>
+</blockquote>
+</html>

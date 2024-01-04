@@ -1,0 +1,105 @@
+<html>
+<body background="/icon/desktop.jpg">
+<title>
+Texture Aware Approaches for Enhancing Visual Appearance 
+</title>
+
+<blockquote>
+<font face="Verdana" size="2">
+<div align = justify>
+
+<table><tr><td width=80 height=75 valign=center>
+  <img src="../figure/wmpang2.jpg">
+</td><td>
+  <font face="Verdana" size="4"><b>Texture Aware Approaches for Enhancing
+Visual Appearance </b></font><br>
+  <font face="Verdana" size="2"><!--#include virtual="papers/_author/wmpang.html"--></font>
+</td></tr></table>
+<p>
+
+<dd> Textures appear on most of the object surfaces or scenes around our
+daily lives. They are something perceptual, as they only appear when certain
+amount of details are perceived in a suitable scale by our eyes. In computer
+graphics, they are essential in enriching the perceptual appearance and
+improving realism in rendering. Although their nature and mechanism on how
+human vision system perceives and interprets textures are not well
+understood until now, the demand for better textural quality in rendering
+and imaging increases continuously. Therefore, texture related researches
+are becoming popular topics in the graphics community in recent years. This
+thesis presents several novel texture aware techniques with applications for
+both 3D graphics and 2D imaging. They are namely texture aware halftoning,
+richness-preserved screening for automated manga production, and tileable
+bidirectional texture function (BTF). Although these applications are from
+different domains in computer graphics, they are sharing a common goal of
+improving the texture presentation in the final outcome. Major techniques
+involve a texture preservation technique in halftoning process, automated
+manga screening method with richness preservation by pattern variety, and an
+effective texture tile synthesis approach for high dimensional bidirectional
+textures.
+<p>
+
+For texture aware halftoning, we are tackling the lost texture details in
+the <i>bitonal images</i> generated with traditional halftoning methods. We
+present an optimization-based halftoning technique that preserves the
+texture and tone similarities between the original and the halftone images. 
+By optimizing an objective function consisting of both the texture and the
+tone metrics, the generated halftone images preserve human visual sensitive
+details as well as the local tone. It possesses the blue-noise property and
+does not introduce annoying pattern. Unlike existing edge-enhancement
+halftoning, the proposed method does not suffer from the inability of edge
+detector. Our method is experimented with a various kinds of images. From
+the multiple experiments and the user survey, our method consistently
+obtains the best scores among all tested methods.
+<p>
+
+In richness-preserved screening for automated manga production, we propose a
+framework to generate manga-style backgrounds from real photographs. It
+frees manga artists from tedious and time-consuming background production.
+Our method divides the photo-to-manga conversion into two major process,
+screening and line abstraction. During the screening, our goal is to
+preserve the visual richness in the original photograph. The key is to
+exploit the pattern variety in the screening space to best maintaining the
+original richness in reference image in terms of texture and color. To
+achieve this, we select screens for different regions in the image according
+to tone similarity, texture similarity, and chromaticity distinguishability.
+Multi-dimensional scaling technique is employed for the color-to-pattern
+mapping. For the line abstraction, we propose a simple and effective line
+importance model that ranks the lines based on their geometric natures. With
+the line importance model, users can interactively control the level of
+details by tunning only a few parameters. A number of results are presented
+to demonstrate the effectiveness and convenience of the proposed framework.
+<p>
+
+Finally, in the tileable bidirectional texture function (BTF), we present a
+modular approach to apply the BTF, which is a <i>high dimensional
+texture</i> with variable lighting and viewing directions, onto object
+surfaces. The basic building blocks are the BTF tiles. By constructing one
+set of BTF tiles, a wide variety of objects can be textured seamlessly
+without resynthesizing the BTF. The proposed approach can nicely decouple
+the surface appearance from the geometry. With this appearance geometry
+decoupling, one can build a library of BTF tile sets to instantaneously
+dress and render various objects under variable lighting and viewing
+conditions. The core of the proposed method is the seamless synthesis of
+multi-dimensional BTF tiles. To tackle the enormous data, we perform
+synthesis in frequency domain. This not just allows the handling of large
+BTF data during the synthesis, but also facilitates compact storage of the
+BTF in GPU memory. <p> </div>
+
+
+<font face="Arial,Helvetica" size="3"><b>Related publication:</b></font>
+<font face="Verdana" size=-1><ul>
+<li><!--#include virtual="papers/_reference/qu-2008-richness.html"-->
+<li><!--#include virtual="papers/_reference/pang-2008-structure.html"-->
+<li><!--#include virtual="papers/_reference/leung-2007-tileable.html"-->
+</ul>
+</font>
+
+
+
+
+
+
+
+</font>
+</blockquote>
+</html>

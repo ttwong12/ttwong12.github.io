@@ -1,0 +1,48 @@
+<html>
+<body background="/icon/desktop.jpg">
+<title> Compressing the Illumination-Adjustable Images with Principal Component Analysis </title>
+
+<blockquote>
+<font face="Verdana" size="2">
+<div align = justify>
+
+<table><tr><td width=80 height=75 valign=bottom>
+  <img src="../figure/pmho1.jpg">
+</td><td>
+  <font face="Verdana" size="4"><b>Compressing the Illumination-Adjustable
+	Images with Principal Component Analysis</b></font><br>
+  <font face="Verdana" size="2"><!--#include virtual="papers/_author/pmho1.html"--></font>
+</td></tr></table>
+<p>
+
+<dd> The ability to change illumination is a crucial factor in image-based
+modeling and rendering. Image-based relighting offers such capability.
+However, the trade-off is the enormous increase of storage requirement.  In
+this thesis, we propose a compression scheme that effectively reduces the
+data volume while maintaining the real-time relighting capability. The
+proposed method is based on principal component analysis (PCA). A block-wise
+PCA is used to practically process the huge input data. The output of PCA is
+a set of eigenimages and the corresponding relighting coefficients. By
+dropping those low-energy eigenimages, the data size is drastically reduced.
+To further compress the data, eigenimages left are compressed using
+transform coding and quantization while the relighting coefficients are
+compressed using uniform quantization. We also suggest the suitable target
+bit rate for each phase of the compression method in order to preserve the
+visual quality. Finally, we proposed real-time engine that relights images
+from the compressed data.
+</div>
+<p>
+
+
+<font face="Arial,Helvetica" size="3"><b>Related publication:</b></font>
+<font face="Verdana" size=-1><ul>
+<li><!--#include virtual="papers/_reference/ho-2005-compressing.html"-->
+<li><!--#include virtual="papers/_reference/ho-2003-pca.html"-->
+</ul></font>
+
+
+
+</font>
+
+</blockquote>
+</html>

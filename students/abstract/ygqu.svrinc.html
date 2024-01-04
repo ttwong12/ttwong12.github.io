@@ -1,0 +1,102 @@
+<html>
+<body background="/icon/desktop.jpg">
+<title>
+Representing Spherical Functions with Rhombic Dodecahedron
+</title>
+
+<blockquote>
+<font face="Verdana" size="2">
+<div align = justify>
+
+<table><tr><td width=80 height=75 valign=center>
+  <img src="../figure/ygqu.jpg">
+</td><td>
+  <font face="Verdana" size="4"><b>Level Set Method for Image Segmentation and Manga
+Stylization</b></font><br>
+  <font face="Verdana" size="2"><!--#include virtual="papers/_author/ygqu.html"--></font>
+</td></tr></table>
+<p>
+
+<dd>
+Segmentation has always been a crucial and challenging topic in
+various computer vision and graphics applications. Information
+from image features can be incorporated into image segmentation
+techniques to make the process more accurate and robust. This
+dissertation focuses on encoding these feature information into
+the image processing procedures, including image segmentation and
+manga stylization rendering.
+<p>
+
+
+The fundamental part of this dissertation includes the discussion
+on the construction of the speed function, which is important in
+applying the curve-evolution based image segmentation. We firstly
+investigate the curvature term in the speed function, and then
+show how to transform the image segmentation problem into an
+interface propagating problem. We propose two formulations to
+enhance the speed function in level set methods, in order to
+tackle the segmentation problem of tagged MR images. First, a
+relaxation factor is introduced, aiming at relaxing the boundary
+condition when the boundary is unclear or blurry. Second, in order
+to incorporate human visual sensitive information from the image,
+a simple and general model is introduced to incorporate shape,
+texture and color features. By further extending this model, we
+present a unified approach for segmenting and tracking of the
+high-resolution color anatomical Chinese Visible Human (CVH) data.
+The underlying relationship of these two applications relies on
+the proposed variational framework for the speed function. Our
+proposed method can be used to segment the first slice of the
+volume data. Then based on the extracted boundary on the first
+slice, our method can also be adapted to track the boundary of the
+homogeneous organs among the subsequent serial images. In addition
+to the promising segmentation results, the tracking procedure
+requires only a small amount of user intervention.
+<p>
+
+Our method can be naturally applied in the application of manga
+stylization rendering. We proposes a novel colorization technique
+that propagates color over manga regions exhibiting
+pattern-continuity as well as intensity-continuity. The proposed
+method works effectively on colorizing black-and-white manga which
+contains intensive amount of strokes, hatching, halftoning and
+screening. Once the user scribbles on the drawing, a local,
+statistical based pattern feature obtained with Gabor wavelet
+filters is applied to measure the pattern-continuity. The boundary
+is then propagated by the level set method that monitors the
+pattern-continuity. Regions with open boundaries or multiple
+disjointed regions with similar patterns can be sensibly segmented
+by a single scribble. With the segmented regions, various
+colorization techniques can be applied to replace colors, colorize
+with stroke preservation, or even convert pattern to shading. Base
+on the observation of the manga features, we then propose a
+framework to generate manga-style backgrounds from real
+photographs. It frees manga artists from the tedious and
+time-consuming background production. To mimic how manga artists
+produce the tidy background, it composes of two major steps, the
+line drawing and the screen laying. A line importance model is
+proposed to simplify and embolden lines in a stylish way. During
+the screen laying, texture analysis is utilized to automatically
+match the regions in photographs with screens in the database. Two
+types of screening mechanisms are proposed for matching shading &
+texture as well as the high-level structures.
+<p>
+</div>
+
+
+<font face="Arial,Helvetica" size="3"><b>Related publication:</b></font>
+<font face="Verdana" size=-1><ul>
+<li><!--#include virtual="papers/_reference/qu-2006-manga.html"-->
+<li><!--#include virtual="papers/_reference/qu-2007-image.html"-->
+<li><!--#include virtual="papers/_reference/qu-2004-segmentation.html"-->
+</ul>
+</font>
+
+
+
+
+
+
+
+</font>
+</blockquote>
+</html>

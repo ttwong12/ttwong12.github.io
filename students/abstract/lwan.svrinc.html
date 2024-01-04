@@ -1,0 +1,91 @@
+<html>
+<body background="/icon/desktop.jpg">
+<title>
+Representing Spherical Functions with Rhombic Dodecahedron
+</title>
+
+<blockquote>
+<font face="Verdana" size="2">
+<div align = justify>
+
+<table><tr><td width=80 height=75 valign=center>
+  <img src="../figure/lwan.jpg">
+</td><td>
+  <font face="Verdana" size="4"><b>Equal-Area Spherical Maps for Compute Graphics</b></font><br>
+  <font face="Verdana" size="2"><!--#include virtual="papers/_author/lwan.html"--></font>
+</td></tr></table>
+<p>
+
+<dd>
+Spherical map is the foundation for many applications in computer
+graphics, such as environment mapping, precomputed radiance
+transfer, radiosity and image-based rendering. For these
+applications that involve intensive computation on spherical domain,
+it is generally desirable to employ equal-area and uniform spherical
+maps as the underlying parameterization. However, equal-area
+spherical maps are less exploited in graphics.
+<p>
+
+In this dissertation, we first introduce an equal-area spherical
+map, HEALPix, which is borrowed from astrophysics. Its associated
+sample pattern is uniformly distributed over the sphere surface.
+Then we discuss its application in environment mapping. Although the
+HEALPix representation is more balanced than the traditional
+cubemap, it cannot utilize the built-in hardware operations like
+cubemap, and the mipmapping construction is more complicated.
+Therefore, its rendering speed is not comparable to that of the
+cubemap. This motivates us to invent a new six-face spherical map,
+called isocube. Unlike cubemap, isocube is an equal-area mapping,
+i.e., each texel spans the same area and is equally important. Due
+to the six-face representation, isocube can fit nicely into the
+cubemap hardware and hence can fully exploit the hardware operations
+tailored for cubemap. In addition, its mapping computation only
+involves a small overhead. Therefore the look-up speed for isocube
+is very fast.
+<p>
+
+Next we discuss another application of HEALPix map, the dynamic
+environment sequence sampling. Previous work only considers the
+static case where the environment map is approximated by finite
+directional light sources. In the dynamic case, the individual
+regeneration of samples for each frame may introduce abrupt changes
+in the rendering animation. To handle this temporal inconsistency
+problem, we propose spherical q$^2$-tree based on HEALPix map. The
+adaptiveness of the quadtree can suppress the abrupt changes between
+consecutive frames,
+and hence a rather smooth rendering can be produced. This method,
+however, generates sample pattern independently for each environment
+frame, and therefore it may still cause unexpected jumps in some
+situations. To fully utilize the temporal coherence in the sequence,
+we present a global sampling approach which treats the
+dynamic environment sequence as a 3D volume and performs sampling in
+the volume.
+The volumetric sampling adapts the sample number according to each
+frame and restricts the temporal/spatial changes within small
+subdivided volumes, and hence ensures a smooth sampling sequence.
+Within the framework, we present a volumetric importance metric and
+develop a binary-quad tree to perform stratification.
+Experimental results show that our volumetric sampling method can
+generate light samples with a better temporal consistency.
+<p>
+</div>
+
+
+<font face="Arial,Helvetica" size="3"><b>Related publication:</b></font>
+<font face="Verdana" size=-1><ul>
+<li><!--#include virtual="papers/_reference/wan-2007-isocube.html"-->
+<li><!--#include virtual="papers/_reference/wan-2007-sphere.html"-->
+<li><!--#include virtual="papers/_reference/wong-2006-real.html"-->
+<li><!--#include virtual="papers/_reference/wan-2005-spherical.html"-->
+</ul>
+</font>
+
+
+
+
+
+
+
+</font>
+</blockquote>
+</html>
