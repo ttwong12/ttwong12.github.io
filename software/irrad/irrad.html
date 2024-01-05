@@ -1,0 +1,241 @@
+<html>
+<title>
+irrad demo version 1.0
+</title>
+<body background="icon/desktop.jpg">
+
+
+<blockquote>
+<center><table border=0>
+<tr><td>
+<img src="iirrad.jpg">
+</td><td width=30></td><td width=600>
+<h2>irrad demo version 1.0</h2>
+<p>
+Program code contributors:<br>
+<blockquote>
+<!--#include virtual="papers/_author/ttwong.html"--><br>
+<!--#include virtual="papers/_author/cwfu.html"--><br>
+</blockquote>
+</td></tr>
+</table></center>
+
+
+
+<h3>Introduction</h3> 
+<DIV ALIGN = JUSTIFY> 
+<dl><dd> 
+
+<dd> The ability to change illumination (<i>relight</i>) under the framework
+of IBMR (Image-Based Modeling and Rendering) is a necessity for graphics
+purpose. Hence, <i>image-based relighting</i> receives much attention
+recently. Current problem in relighting includes data compression and speed
+optimization. In 1997, we presented a multidimensional image representation
+called <i>apparent pixel BRDF</i> to represent image with illumination
+information. Since it stores data using spherical harmonic transform which
+requires substantial computation.
+
+<dd> A new image representation that incorporates
+illumination is proposed. It can be
+regarded as the dual of light field representation. The light source
+position (point source) is sampled on an additional light-source plane
+(<i>qr</i>). However, the 4D function
+<i>does not</i> directly represent the irradiance incident on
+object surface, since it is the radiance that is seen by the
+observer. Instead, it stores the <i>reflected irradiance</i> of
+light when a point source is located at <i>(q,r)</i>. Hence, we call this
+four-dimensional function of <i>(q, r, s, t)</i> the <i>reflected
+irradiance field</i>.
+
+<dd> The following diagram compares the light field and the reflected
+irradiance field. Since it is simple and can be accelerated by ordinary
+texture mapping hardware, it can relight image in <i>real-time</i> on
+<i>ordinary PC equipped with standard graphics board</i>. To demonstrate its
+applicability, we prepared data sets of both synthetic and real scenes.
+</dl>
+
+<p>
+
+
+<center><table>
+<tr><td>
+
+<center><table>
+<img src="triplane.gif"></td></tr><tr><td align=center>
+<i>Triplanar parameterization</i></td></tr>
+</table></center>
+
+</td><td width=20>
+</td><td>
+
+<center><table>
+<tr><td>
+<img src="viewslab.gif"></td><td>
+<img src="lightslab.gif">
+</td></tr><tr><td align=center>
+<i>light field</i></td><td align=center>
+<i>reflected irradiance field</i></td>
+</tr></td>
+</table></center>
+
+</td></tr>
+</table></center>
+
+
+
+
+
+<h3>System Requirement</h3>
+
+<dl> 
+<dd> Hardware: Pentium III or above, GeForce 2 or above, texture memory
+     of 64MB or more 
+<dd> OS: Windows 98/NT/2000/XP, with OpenGL 
+</dl>
+
+
+<h3>Installation Instruction</h3> 
+
+<dl>
+<dd>
+    (1) Download the InstallShield of irrad demo 1.0, 
+    <b><a href="irrad-install.zip">
+    irrad-install.zip</a></b><br>
+    (2) Extract the files and run "setup.exe"
+</dl>
+
+<dl>
+<DIV ALIGN = JUSTIFY> 
+<dd> 
+<b>Note</b>: 
+   <dl><dd>
+   To execute the demo, Windows 2000/XP users have to change
+   path to the install path to start the demo in command line.
+   This is because the InstallShield cannot successfully set the working 
+   path for Windows 2000/XP.
+   </dl>
+</dl>
+
+
+
+
+
+<h3>User Manual</h3> 
+<dl><dd>
+
+<script language="JavaScript">
+//<!--
+function Restoredescript()
+{
+document.desform.desArea.value = "";
+}
+
+function showdescript(index)
+{
+
+	var description = "";
+
+		switch ( index  )
+		{
+			case 1 : 
+				description = 
+"Direction Control:\nClick-drag the window to control the lighting direction (the dot represents the light source direction)";
+			break
+			case 2 :
+				description = 
+"Select Current Light Source:\nPress '<' and '>' to select the current light source for manipulation";
+			break
+			case 3 :
+				description = 
+"Add/Delete Light Source:\nPress these buttons to add/delete the current light source ";
+			break
+			case 4 :
+				description = 
+"Light Color Control:\nUse these scroll bars to change the RGB intensity of the current light source. The color bar on the right hand side shows the selected color.\nPress 'apply' button below to activate the change.";
+			break
+			case 6 :
+				description = 
+"Apply Changes:\nPress this button to activate the change of color";
+			break
+			case 7:
+				description = 
+"Quit:\nSelect this to quit the demo";
+			break
+			case 8:
+				description = 
+"Relighting Result:\nThe relit image is shown in this window.";
+			break
+
+
+
+		}		
+		
+		document.desform.desArea.value = description;
+}
+
+//-->
+</script>
+<map name="ViewerArea">
+<area shape="rect" alt="Quit" coords="7,53,57,74" href="irrad.html" title="Toggle Direction Sign" onMouseOver="showdescript(7);return false;" onMouseOut="Restoredescript()">
+<area shape="rect" alt="Relighted Scene" coords="7,77,353,395" href="irrad.html" title="Relighted Scene" onMouseOver="showdescript(8);return false;" onMouseOut="Restoredescript()">
+</map>
+
+<map name="PanelArea">
+<area shape="rect" alt="Direction control" coords="30,20,184,175" href="irrad.html" title="Direction control" onMouseOver="showdescript(1);return false;" onMouseOut="Restoredescript()">
+<area shape="rect" alt="Select current light source" coords="116,176,149,198" href="irrad.html" title="Select current light source" onMouseOver="showdescript(2);return false;" onMouseOut="Restoredescript()">
+<area shape="rect" alt="Add/Delete light source" coords="47,200,167,220" href="irrad.html" title="Add/Delete light source" onMouseOver="showdescript(3);return false;" onMouseOut="Restoredescript()">
+<area shape="rect" alt="Light color control" coords="6,225,204,320" href="irrad.html" title="Light color control" onMouseOver="showdescript(4);return false;" onMouseOut="Restoredescript()">
+<area shape="rect" alt="Apply changes" coords="91,325,122,346" href="irrad.html" title="Apply changes" onMouseOver="showdescript(6);return false;" onMouseOut="Restoredescript()">
+
+</map>
+
+<center>
+<table>
+<tr>
+<td>
+<img src="lightcontrol.png" USEMAP="#PanelArea" border=0>
+</td><td>
+<img src="display.png" USEMAP="#ViewerArea" border=0>
+</td><td>
+</tr>
+</table>
+
+<h4> Instructions: (Move the mouse cursor over the above interface to see
+the function of each widget)</h4>
+
+<form name="desform"> 
+<textarea name="desArea" cols=60 rows=5 disabled WRAP="virtual">
+</textarea> 
+</form> 
+</center>
+
+</dl>
+
+
+
+<h3>Publication</h3>
+<ul>
+<!--#include virtual="papers/_reference/lin-2002-relighting.html"-->
+<!--#include virtual="papers/_reference/lin-2001-relighting.html"-->
+</ul>
+<p>
+<p>
+
+<h3>Related Publication </h3>
+<ul>
+<!--#include virtual="papers/_reference/wong-1997-image.html"-->
+<!--#include virtual="papers/_reference/wong-2001-interactive.html"-->
+</ul>
+
+
+<h3>Related Demo</h3>
+<ul>
+<a href="/software/panoview/panoview.html">panoview demo 1.0</a>
+</ul>
+
+
+
+
+</blockquote>
+
+</html>

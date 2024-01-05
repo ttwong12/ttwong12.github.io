@@ -1,0 +1,137 @@
+<html>
+<title>
+panoshader demo version 1.0
+</title>
+<body background="/~ttwong/icon/desktop.jpg">
+
+
+<blockquote>
+<center><table border=0>
+<tr><td>
+        <TABLE cellSpacing=0 cellPadding=0 border=0 walign="center">
+          <TBODY>
+          <TR>
+            <TD><IMG 
+              src="ipanoshader.gif"></TD>
+            <TD><IMG 
+              src="shadowleft.jpg"></TD>
+          <TR>
+            <TD><IMG 
+              src="shadowbottom.jpg"></TD>
+            <TD><IMG 
+              src="shadowbottomleft.jpg"></TD></TR></TBODY></TABLE>
+</td><td width=30></td><td width=600>
+<h2>panoshader demo version 1.0<br>(Low-level Shader Implementation)</h2>
+<p>
+Program code contributors:<br>
+<blockquote>
+<!--#include virtual="/~ttwong/papers/_author/shor.html"--><br>
+<!--#include virtual="/~ttwong/papers/_author/cwfu.html"--><br>
+<!--#include virtual="/~ttwong/papers/_author/ttwong.html"--><br>
+</blockquote>
+</td></tr>
+</table></center>
+
+
+<DIV ALIGN = JUSTIFY>	
+<h3>Introduction</h3> 
+<dl><dd>
+<dd> 
+
+This program demonstrates the ability to perform <b>real-time dynamic 
+lighting</b> on <b>highly compressed</b> panoramic images. This kind of 
+<b>relightable (illumination-adjustable)</b> panorama is especially useful for 
+representing large-scale complex backgrounds in computer games. The real-time 
+relighting is implemented by writing shaders on programmable graphics hardware. 
+<p>
+<dd>An image-based scene, "forbid" (less than 3MB in size), comes with this demo. 
+There are two programs, one for directional-source relighting and the other for 
+point-source relighting. In both cases, the same data set "forbid" is loaded. To 
+demonstrate the real-time performance, the light sources change in color, 
+direction or position during the run-time.
+</dl> </dl>
+
+
+
+
+
+<h3>System Requirement</h3>
+
+<dl>
+<dd>Hardware: Pentium III or above, 128MB RAM, installed with nVidia GeForce3/4/FX graphics accelerator. 
+<dd>OS: Windows 98/NT/2000/XP, with OpenGL
+</dl>
+
+
+
+<h3>Installation Instruction</h3> 
+
+<dl>
+<DIV ALIGN = JUSTIFY>	
+<dd>
+(1) Download <b><a href="http://appsrv.cse.cuhk.edu.hk/~ttwong/cgi-bin/demo-panoshader1/download.cgi">
+    panoshader</a></b> <br>
+(2) Unzip the panoshader into a subdirectory, say <tt>panoshader</tt><br>
+(3) Run one of the two demos: 
+  <dl><dd>
+     - dir.exe (for directional-source relighting)<br>
+     - pt.exe  (for point-source relighting )<br>
+  </dl>
+</dl>
+
+
+<h3>User Manual</h3> 
+
+
+<center>
+    <TABLE cellSpacing=0 cellPadding=0 border=0 walign="center">
+    <TR><TD align=left width=250 valign=top><IMG src="idir.jpg"></TD>
+    <TD width=600>
+    <h4>Directional-source relighting:</h4>    
+    Start "dir.exe" to run the demo.
+    Once the program is started, a directional light source moves around and illuminates
+    the scene forever. It changes its color from time to time.<br>
+    Drag inside the window to accelerate the change of illumination.<br>
+    Press "a" or "A" to pause/resume the change of illumination.<br>
+    Press "q" or "Q" or escape to quit the demo.<br>
+    </TD></TR><TR><TD height=50></TD></TR>
+    </TABLE></center>
+<center>
+    <TABLE cellSpacing=0 cellPadding=0 border=0 walign="center">
+    <TR><TD align=left width=250 valign=top><IMG src="ipt.jpg"></TD>
+    <TD width=600>
+    <h4>Point-source relighting:</h4>
+    Start "pt.exe" to run the demo.
+    Once the program is started, a point light source moves around in the scene
+    and illuminates the scene with changing color and intensity.
+    It follows the animation script defined in "animation.txt".
+    Inappropriate modification to this script file may cause program fault.<br>
+    Press "a" or "A" to pause/resume the change of illumination.<br>
+    Press "q" or "Q" or escape to quit the demo.<br>
+    Press "t" or "T" to toggle the display of the attenuation map.<br>
+    </TD></TR>
+    </TABLE></center>
+
+
+
+
+
+<h3>Related Publication</h3>
+<ul>
+<li><!--#include virtual="/~ttwong/papers/_reference/wong-2003-real.html"-->
+<li><!--#include virtual="/~ttwong/papers/_reference/wong-2001-interactive.html"-->
+<li><!--#include virtual="/~ttwong/papers/_reference/wong-1997-image.html"-->
+</ul>
+
+
+<h3>Contact Person</h3> 
+<dl><dd>
+<a href="http://www.cse.cuhk.edu.hk/~ttwong/myself.html">Tien-Tsin Wong</a>
+(<A HREF="mailto:ttwong@acm.org">ttwong@acm.org</A>)
+</dl>
+
+
+
+<!--#include virtual="/~ttwong/footer1.html"-->
+
+</blockquote>

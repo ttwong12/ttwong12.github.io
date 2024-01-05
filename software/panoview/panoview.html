@@ -1,0 +1,242 @@
+<html>
+<title>
+panoview demo version 1.0
+</title>
+<body background="/icon/desktop.jpg">
+
+
+<blockquote>
+<center><table border=0>
+<tr><td>
+<img src="ipanoview.jpg">
+</td><td width=30></td><td width=600>
+<h2>panoview demo version 1.0</h2>
+<p>
+Program code contributors:<br>
+<blockquote>
+<a href="/myself.html">Tien-Tsin Wong</a>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+<br>
+<a href="http://www.cse.cuhk.edu.hk/~cwfu/">Chi-Wing Fu</a>
+
+<!----------------------------------------------------------------------------------------------------->
+<br>
+<a href="http://www.cihe.edu.hk/~wmpang/">Wai-Man Pang</a>
+
+
+<!----------------------------------------------------------------------------------------------------->
+<br>
+</blockquote>
+</td></tr>
+</table></center>
+
+
+<DIV ALIGN = JUSTIFY>	
+<h3>Introduction</h3> 
+<dl><dd>
+<dd> 
+This program demonstrates the ability to <b>interactively</b> relight an
+<b>illumination-adjustable</b> panoramic image.  Users are allowed not just
+to pan, rotate and zoom within an panoramic environment as in QuickTime VR
+but also to <b>change the lighting condition</b> interactively. As many
+web-based applications make use of panoramic image representation, the data
+size must be very compact. The <b>compact</b> data sets come with this
+package demonstrate the effectiveness of our compression engine so as to
+facilitate efficient data transfer throught the Internet. </dl>
+</dl>
+
+
+
+<h3>System Requirement</h3>
+
+<dl>
+<dd>Hardware: Pentium III or above, 128MB RAM. 
+<dd>OS: Windows 98/NT/2000, with OpenGL
+</dl>
+
+
+<h3>Installation Instruction</h3> 
+
+<DIV ALIGN = JUSTIFY>	
+
+<dl>
+<dd>
+    (1) Download the InstallShield of panoview demo 1.0, 
+        <b><a href="panoview-install.zip">
+        panoview-install.zip</a></b> <br>
+    (2)  Extract the files and run "setup.exe"<br>
+</dl>
+
+<dl>
+<dd> 
+<b>Note</b>: 
+   <dl><dd>
+   To execute the demo, Windows 2000/XP users have to change
+   path to the install path to start the demo in command line.
+   This is because the InstallShield cannot successfully set the working 
+   path for Windows 2000/XP.
+   </dl>
+</dl>
+
+
+
+
+
+
+<h3>User Manual</h3> 
+<dl><dd>
+
+<script language="JavaScript">
+//<!--
+function Restoredescript()
+{
+document.desform.desArea.value = "";
+}
+
+function showdescript(index)
+{
+
+	var description = "";
+
+		switch ( index  )
+		{
+			case 1 : 
+				description = 
+"Positional/Directional Control:\nClick-drag the window to control the lighting direction/position (the dot represents the light source direction/position)";
+			break
+			case 2 :
+				description = 
+"Select Current Light Source:\nPress '<' and '>' to select the current light source for processing";
+			break
+			case 3 :
+				description = 
+"Add/Delete Light Source:\nPress these buttons to add/delete the current light source ";
+			break
+			case 4 :
+				description = 
+"Light Color Control:\nUse these scroll bars to change the RGB intensity of the current light source. The color bar on the right hand side shows the selected color.\nPress 'apply' button below to activate the change.";
+			break
+			case 5 :
+				description = 
+"Light Source Type:\nChoose the type of ALL the light sources, either directional or spot light.\nPress 'apply' button below to activate the change.";
+			break
+			case 6 :
+				description = 
+"Apply Changes:\nPress this button to activate the change of color and source type";
+			break
+			case 7:
+				description = 
+"Toggle Direction Sign:\nThis option toggles the display of direction signs 'N', 'S', 'W' & 'E' in the relighting window below";
+			break
+			case 8:
+				description = 
+"Relighting Result:\nThe relighted panorama will be shown (through a perspective camera) in this window.\nYou can click-drag the left button to pan while the right button is for zooming in/out";
+			break
+
+
+
+		}		
+		
+		document.desform.desArea.value = description;
+}
+
+//-->
+</script>
+<map name="ViewerArea">
+<area shape="rect" alt="Toggle Direction Sign" coords="29,41,134,64" href="panoview.html" title="Toggle Direction Sign" onMouseOver="showdescript(7);return false;" onMouseOut="Restoredescript()">
+<area shape="rect" alt="Relighted Scene" coords="4,63,361,400" href="panoview.html" title="Relighted Scene" onMouseOver="showdescript(8);return false;" onMouseOut="Restoredescript()">
+</map>
+
+<map name="PanelArea">
+<area shape="rect" alt="Positional control" coords="25,16,175,166" href="panoview.html" title="Positional control" onMouseOver="showdescript(1);return false;" onMouseOut="Restoredescript()">
+<area shape="rect" alt="select current light source" coords="56,170,146,185" href="panoview.html" title="select current light source" onMouseOver="showdescript(2);return false;" onMouseOut="Restoredescript()">
+<area shape="rect" alt="Add/Delete light source" coords="43,187,158,210" href="panoview.html" title="Add/Delete light source" onMouseOver="showdescript(3);return false;" onMouseOut="Restoredescript()">
+<area shape="rect" alt="Light color control" coords="4,213,195,307" href="panoview.html" title="Light color control" onMouseOver="showdescript(4);return false;" onMouseOut="Restoredescript()">
+<area shape="rect" alt="Light source type" coords="42,310,155,327" href="panoview.html" title="Light source type" onMouseOver="showdescript(5);return false;" onMouseOut="Restoredescript()">
+<area shape="rect" alt="Apply changes" coords="81,329,121,351" href="panoview.html" title="Apply changes" onMouseOver="showdescript(6);return false;" onMouseOut="Restoredescript()">
+
+</map>
+
+<center>
+<table>
+<tr>
+<td>
+<img src="panel.png" USEMAP="#PanelArea" border=0>
+</td><td>
+<img src="viewer.png" USEMAP="#ViewerArea" border=0>
+</td><td>
+</tr>
+</table>
+
+<h4> Instructions: (Move the mouse cursor over the above interface to see
+the function of each widget)</h4>
+
+<form name="desform"> 
+<textarea name="desArea" cols=60 rows=5 disabled WRAP="virtual">
+</textarea> 
+</form> 
+</center>
+
+</dl>
+
+
+
+<h3>Publication</h3>
+<ul>
+"<a href="/papers/pano/pano.html">
+Interactive Relighting of Panoramas</a>",<br>
+T. T. Wong, C. W. Fu and P. A. Heng,<br>
+<i>IEEE Computer Graphics & Applications</i>,
+Vol. 21, No. 2, March-April 2001, pp. 32-41.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+</ul>
+
+
+<h3>Related Publication</h3>
+<ul>
+<li>"<a href="/papers/lightfld/lightfld.html">
+Image-based Rendering with Controllable Illumination</a>",<br>
+T. T. Wong, P. A. Heng, S. H. Or and W. Y. Ng,<br>
+in <i>Proceedings of the 8-th Eurographics Workshop on Rendering (Rendering Techniques'97)</i>,
+St. Etienne, France, June 1997, pp. 13-22.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+<li>"<a href="/papers/plenill2/plenill2.html">
+The Plenoptic Illumination Function</a>",<br>
+T. T. Wong, C. W. Fu, P. A. Heng and C. S. Leung,<br>
+<i>IEEE Transactions on Multimedia</i>,
+Vol. 4, No. 3, September 2002, pp. 361-371.<br>
+(This paper received the IEEE Transactions on Multimedia Prize Paper Award
+2005.)<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+</ul>
+
+
+<h3>Contact Person</h3> 
+<dl><dd>
+<a href="/myself.html">Tien-Tsin Wong</a>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+
+(<A HREF="mailto:ttwong@acm.org">ttwong@acm.org</A>)
+</dl>
+
+
+
+</blockquote>

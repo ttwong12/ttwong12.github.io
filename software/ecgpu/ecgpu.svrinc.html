@@ -1,0 +1,196 @@
+<html>
+<title>EPGPU</title>
+<body background="/icon/desktop.jpg">
+
+
+<blockquote>
+<center><table border=0>
+<tr><td>
+       <TABLE cellSpacing=0 cellPadding=0 border=0 walign="center">
+          <TBODY>
+          <TR>
+            <TD><IMG 
+              src="iecgpu.gif"></TD>
+            <TD><IMG 
+              src="shadowleft.jpg"></TD>
+          <TR>
+            <TD><IMG 
+              src="shadowbottom.jpg"></TD>
+            <TD><IMG 
+              src="shadowbottomleft.jpg"></TD></TR></TBODY></TABLE>
+      <td width=30></td><td width=600>
+<h2>epgpu version 0.99</h2>
+<p>
+Designed and Developed by:<br>
+<blockquote>
+<table><tr>
+<td>  
+<!--#include virtual="papers/_author/ttwong.html"--><br>
+<!--#include virtual="papers/_author/mlwong.html"--><br>
+<!--#include virtual="papers/_author/klfok.html"--><br>
+</p>
+</td></tr>
+</table>
+</blockquote>
+</td></tr>
+</table></center>
+
+
+<DIV ALIGN = JUSTIFY>	
+<h3>Introduction</h3> 
+<dl><dd>
+  <dd>
+      <div align="justify"> epgpu performs <strong>Evolutionary Programming</strong> 
+        on GPU. Evolutionary Algorithms (EAs) are effective and robust methods 
+        for solving many practical problems such as feature selection, electrical 
+        circuit synthesis, and data mining. However, they may execute for a long 
+        time for some difficult problems, because several fitness evaluations 
+        must be performed. We implement a parallel EA on consumer-level graphics 
+        cards. Our approach shows the success of using GPU to perform evolutionary 
+        computation, and giving a promising parallel solution. We also show that 
+        there is not feasible to generate high quality random number on GPU for 
+        scientific computation due to the pseudo-integer modulation operators, 
+        and short repetition period.</div>
+    <p align="justify">
+  <dd>
+    <div align="justify"> This software is <b>free</b> for both non-commercial usage
+      and commercial usages, registration (free of charge) is required</b>. 
+      Please give us an email for registration and download request.
+      We will send you the source code once we grant your request. </div>
+</dl> </dl>
+
+
+
+
+
+<h3>System Requirement</h3>
+
+<dl>
+  <dd>Hardware: Pentium III or above, 128MB RAM, Nvidia GeForce 6 series graphics 
+    card<br>
+<dd>OS: Windows 98/NT/2000/XP, with OpenGL 
+</dl>
+
+
+
+
+
+<h3>License Agreement</h3>
+
+<blockquote>
+Our program is basically a free software. The only requirement is as follow:
+once you have received our program, you are agreed to cite our official
+paper below in your publications/work that based on our software.
+<ul>
+<li><!--#include virtual="papers/_reference/fok-2007-evolutionary.html"-->
+</blockquote>
+</ul>
+
+
+
+<h3>Installation Instruction</h3> 
+  <ol>
+    <li> Unzip the <a href="epgpu-0.99b.zip"><tt>epgpu-0.99.zip </tt></a>into a subdirectory, say <tt>epgpu</tt><br>
+    <li> Simply run <tt>ep.exe </tt> with the argument setting stated in the 
+      <tt>README.txt</tt>
+    <li> A window will pop up to visualize the convergence. When you see
+         the clear B/W checkerboard, the population converges. The clearer
+         the B/W checker pattern is, the more accurate the solution is.
+  </ol>
+
+
+<a name="random">
+<h3>Why Current GPU Is No Good for High-Quality Random Numbers Generation?</h3>
+
+<blockquote>
+For evolutionary computing, the quality of random numbers is extremely
+important for generating accurate solution. Serious research requires 
+high-quality random numbers with very long repeating period. <p>
+
+Due to the lack of high-precision integer and bitwise operations, we would
+like to point out that current GPUs cannot generate high-quality random
+numbers because we cannot use large prime numbers in shader program.
+Although our current program supports <b>GPU-based</b> random number
+generation, we <b> don't recommend</b> it for serious evolutionary computing
+research. We <b>highly recommend</b> users to use the <b>software-based</b>
+random number generator. Even such software-based random numbers are used,
+we still get significant speed-up thank to the GPU parallelization of other
+operators.<p>
+
+To demonstrate how the solution accuracy is affected by the quality of
+random number, we compare the results of GPU-based and software-based random
+number generations. The faster the population converges to the B/W
+checkboard pattern (below), the higher the quality of random number is. From the
+following screenshots, it can be shown that the quality of random numbers
+significantly affects the accuracy. In fact, the population computed with
+the GPU-generated random numbers will <b>not</b> converge to the optimal
+values as the one with high-quality random numbers. Therefore, in our work,
+we do not use GPU for speeding up the random number generation, because we
+pay particular attention to the accuracy of result. <p></blockquote>
+
+<center>
+<TABLE> <TBODY></TBODY></TABLE>
+<center>Software-based random number generator<br></center> <table
+width="720" height="120" border="1" padding=0>
+  <tr>
+      <td align=center width=120>
+         <img src="softrand-0.jpg">
+      </td>
+      <td align=center width=120>
+         <img src="softrand-500.jpg">
+      </td>
+      <td align=center width=120>
+         <img src="softrand-1000.jpg">
+      </td></tr>
+      <td><center>Generation 0</center></td>
+      <td><center>Generation 500</center></td>
+      <td><center>Generation 1000</center></td>
+</tr>
+</table>
+<br>
+<center>GPU-based random number generator (Shader implementation of linear
+        congruential generator)<br></center>
+<table width="720" height="120" border="1" padding=0>
+  <tr><td align=center width=120>
+         <img src="hardrand-0.jpg">
+      </td>
+      <td align=center width=120>
+         <img src="hardrand-500.jpg">
+      </td>
+      <td align=center width=120>
+         <img src="hardrand-1000.jpg">
+      </td></tr>
+      <td><center>Generation 0</center></td>
+      <td><center>Generation 500</center></td>
+      <td><center>Generation 1000</center></td>
+  </tr>
+</table>
+</center>
+
+
+<h3>Related Publications</h3>
+
+<ul>
+<li><!--#include virtual="./papers/_reference/fok-2007-evolutionary.html"-->
+    (<i>submitted 2004; revised April 2005; accepted July 2005</i>)
+<p>
+
+<li><!--#include virtual="papers/_reference/wong-2005-parallelb.html"-->
+<p>
+</ul>
+
+
+
+
+
+<h3>Contact Person</h3> 
+<dl><dd>
+<a href="/myself.html">Tien-Tsin Wong</a>
+</dl>
+
+
+
+
+
+
+</blockquote>

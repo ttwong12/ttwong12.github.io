@@ -1,0 +1,25 @@
+<h3>Discrete Wavelet Transform on GPU</h3>
+
+The algorithm is designed and developed by the <a 
+href="http://www.cse.cuhk.edu.hk/~crc/">graphics team</a> 
+(<a href="http://www.cse.cuhk.edu.hk/~jqwang/">Jianqing Wang</a>,
+<a href="http://www.cse.cuhk.edu.hk/~ttwong/">Tien-Tsin Wong</a>,
+<a href="http://www.cse.cuhk.edu.hk/~pheng/">Pheng-Ann Heng</a> and
+<a href="mailto:eeleungc@cityu.edu.hk">Chi-Sing Leung</a>)
+in <a 
+href="http://www.cse.cuhk.edu.hk/">The Chinese University of Hong Kong</a>. We 
+propose a fast GPU algorithm to perform the discrete wavelet transform featuring 
+flexible boundary extension schemes, flexible wavelet kernels, Cg shader 
+implementation,and high precision. One major beauty of 
+our method is that both forward and inverse wavelet transforms are unified using
+our position-dependent filtering/convolution 
+and the indirect addressing technique.  The software is <b>OPEN SOURCE</b> and 
+<b>FREE</b> for any commercial or academic usage.  It is currently beta-released
+(version 0.9b) in two forms: (A) <b>Jasper unofficial GPU extension</b>, and (B) <b>standalone DWTGPU C++
+class module</b> with demo program. Yes, we have successfully integrated the
+software into the well-known JPEG2000 software Jasper. All source codes and
+binaries can be downloaded at:
+
+<a href="http://www.cse.cuhk.edu.hk/~ttwong/software/dwtgpu/dwtgpu.html">
+http://www.cse.cuhk.edu.hk/~ttwong/software/dwtgpu/dwtgpu.html
+</a>

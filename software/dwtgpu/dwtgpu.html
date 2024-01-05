@@ -1,0 +1,365 @@
+<HTML>
+<HEAD>
+<TITLE>Discrete Wavelet Transform on GPU</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
+<link href="style.css" rel="stylesheet" type="text/css">
+</HEAD>
+<BODY BGCOLOR=#000000 LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0>
+<span class="content"><a name="intro"></a></span> 
+<TABLE WIDTH=770 BORDER=0 align="center" CELLPADDING=0 CELLSPACING=0>
+  <TR> 
+    <TD COLSPAN=8> <IMG SRC="images/index_01.gif" ALT="" WIDTH=770 HEIGHT=140 border="0" usemap="#Map3"></TD>
+  </TR>
+  <TR> 
+    <TD COLSPAN=8> <IMG SRC="images/index_02.gif" ALT="" WIDTH=770 HEIGHT=30 border="0" usemap="#Map"></TD>
+  </TR>
+  <TR> 
+    <TD COLSPAN=8> <IMG SRC="images/index_03.gif" WIDTH=770 HEIGHT=41 ALT=""></TD>
+  </TR>
+  <TR> 
+    <TD height="131" ROWSPAN=2 bgcolor="#000000">&nbsp; </TD>
+    <TD background="images/index_05.gif"> <IMG SRC="images/index_05.gif" WIDTH=16 HEIGHT=114 ALT=""></TD>
+    <TD COLSPAN=4 bgcolor="#000000"><DIV ALIGN = JUSTIFY><span class="content">Discrete 
+      wavelet transform (DWT) has been heavily studied and developed in several 
+      computer graphics applications. However, when dealing with enormous data 
+      volume in computer graphics, its performance may drastically reduce. 
+      <p> To solve this problem, we developed a DWT shader that runs on existing 
+        GPU hardwares. We implement the convolutionary based DWT and propose an 
+        indirect addressing technique that supports various boundary extension 
+        schemes. The proposed technique also unifies the computation of both forward 
+        and inverse DWT, hence making the shaders for FDWT and IDWT are basically 
+        the same. This may simplify the future hardware implementation. The software 
+        has already been successfully integrated into the well-known JPEG2000 
+        codec, JasPer. 
+      <p> To popularize the usage of DWT on GPU, we release both the <b>full source 
+        code</b> and binary. The software is released in two forms:<br>
+        1) JasPer unofficial GPU extension (both source code and compiled binary), 
+        <br>
+        2) Standalone DWT-GPU C++ Class (source code with example program).
+      <p> </span> <p><span class="content">The JasPer Software is an open-source 
+        initiative to provide a free software-based reference implementation of 
+        the codec specified in the JPEG2000 Part 1 standard. More information 
+        about JasPer can be found <a href="http://www.ece.uvic.ca/%7Emdadams/jasper/" target="_blank">here</a>. 
+        We have successfully integrated our GPU-DWT class into the JasPer software, 
+        which significantly accelerates the encoding/decoding process and is useful 
+        for handling high-resolution images. </span> </p>
+      <p class="content">The DWT-GPU C++ class is a free open souce software module 
+        which you can incorporate into your application and perform fast discrete 
+        wavelet transform on large data set using the parallel power of current 
+        generation GPUs.</p></TD>
+    <TD background="images/index_07.gif"> <IMG SRC="images/index_07.gif" WIDTH=13 HEIGHT=114 ALT=""></TD>
+    <TD height="131" ROWSPAN=2 bgcolor="#000000">&nbsp; </TD>
+  </TR>
+  <TR> 
+    <TD COLSPAN=6> <IMG SRC="images/index_09.gif" WIDTH=729 HEIGHT=17 ALT=""></TD>
+  </TR>
+  <TR> 
+    <TD height="31" COLSPAN=8 bgcolor="#000000"><a name="feature"></a> </TD>
+  </TR>
+  <TR> 
+    <TD COLSPAN=8> <IMG SRC="images/index_11.gif" WIDTH=770 HEIGHT=31 ALT=""></TD>
+  </TR>
+  <TR> 
+    <TD height="317" COLSPAN=3 ROWSPAN=3 bgcolor="#000000"> <ul>
+        <li class="content">Free and open source </li>
+        <li class="content">Fast DWT shader using GPU</li>
+        <li class="content">Modifiable filter kernel and boundary extension scheme</li>
+        <li class="content">Completely integrated in JPEG2000 codec, JasPer</li>
+        <li class="content">Also as standalone C++ Class, with example usage. 
+          Easy integration into your own applications.</li>
+        <li class="content">Can be used to handle geometric, image, or any other 
+          data in 2D grid structure.</li>
+      </ul></TD>
+    <TD COLSPAN=5> <IMG SRC="images/index_13.gif" WIDTH=444 HEIGHT=55 ALT=""></TD>
+  </TR>
+  <TR> 
+    <TD ROWSPAN=2> <IMG SRC="images/index_14.gif" WIDTH=13 HEIGHT=262 ALT=""></TD>
+    <TD height="209" BGCOLOR=#000000> 
+	<a href="dwtgpu.1.0.zip">dwtgpu.1.0.zip</a>
+	</TD>
+    <TD COLSPAN=3 ROWSPAN=2> <IMG SRC="images/index_16.gif" WIDTH=57 HEIGHT=262 ALT=""></TD>
+  </TR>
+  <TR> 
+    <TD> <IMG SRC="images/index_17.gif" WIDTH=374 HEIGHT=53 ALT=""></TD>
+  </TR>
+  <TR> <a name="jasper"></a> 
+    <TD COLSPAN=8> <IMG SRC="images/index_18.gif" WIDTH=770 HEIGHT=27 ALT=""></TD>
+  </TR>
+  <TR> 
+    <TD height="231" COLSPAN=8 bgcolor="#000000" class="content"> 
+      <p><font color="#FFFFFF"><em>Version 
+        :1.0 (Released on 18 July 2006)</em></font></p>
+      <p><font color="#FFFFFF"><em>System Requirement</em></font><br>
+        <br>
+        Hardware: Pentium III or above, 128MB RAM, installed with graphics boards 
+        including nVidia GeForce FX, Quadro FX or above (large video RAM preferred)<br>
+        OS: Windows 2000/XP, with OpenGL 1.4 </p>
+      <p><font color="#FFFFFF"><em>Installation and Example Usage (Compiled Binary)</em></font></p>
+      <ol>
+        <li>Simply expand the zip to a directory, e.g. c:\jasper-1.701.0.gpu</li>
+        <li>The program can be executed with GPU acceleration enabled (GPU mode) 
+          or disabled (software mode, i.e. original JasPer).</li>
+      </ol>
+      <blockquote> 
+        <p>Encoding a .bmp into .jpc using <font color="#FFFFFF"><em>GPU mode</em></font><br>
+          <font color="#FFFFFF"><strong>c:\jasper-1.701.0.gpu\bin\&gt; jasper 
+          -f myfile.bmp -t bmp -F myfile.jpc -T jpc -O mode=real -O rate=0.9</strong></font></p>
+        <p>Decoding a .jpc into .bmp using <font color="#FFFFFF"><em>GPU mode</em></font><br>
+          <strong> <font color="#FFFFFF">c:\<strong>jasper-1.701.0.gpu\bin</strong>\&gt;</font> 
+          <font color="#FFFFFF">jasper -f myfile.jpc -t jpc -F myfile.bmp -T bmp</font></strong></p>
+        <p>Encoding a .bmp into .jpc using <font color="#FFFFFF"><em>software 
+          mode (original JasPer)</em></font><br>
+          <font color="#FFFFFF"> <strong>c:\jasper-1.701.0.gpu\bin\&gt; jasper 
+          -f myfile.bmp -t bmp -F myfile.jpc -T jpc -O mode=real -O rate=0.9 -O 
+          nogpu</strong></font></p>
+        <p>Decoding a .jpc into .bmp using <font color="#FFFFFF"><em>software 
+          mode (original JasPer)</em></font><br>
+          <font color="#FFFFFF"><strong>c:\jasper-1.701.0.gpu\bin\&gt;</strong></font> 
+          <strong><font color="#FFFFFF">jasper -f myfile.jpc -t jpc -F myfile.bmp 
+          -T bmp -o nogpu</font></strong></p>
+        <p>for other options, please refer to the japser manual. </p>
+        <p><em><font color="#FFFFFF">Screen Shot</font></em></p>
+        <p align="center"><em><font color="#FFFFFF"><img src="images/screen.gif" ></font></em></p>
+        <p align="center">&nbsp;</p>
+      </blockquote>
+      <p><font color="#FFFFFF"><em>Compilation Instructions (Source Code)</em></font></p>
+      <ol>
+        <li>Download the zip file and extract to a directory, e.g.
+c:\jasper-1.701.0.gpu</li>
+        <li> Start .dsw project file with Visual C++ 
+        <li> Compile and run the executable as above</li>
+      </ol>
+      <p><font color="#FFFFFF"><em>Note:</em></font></p>
+      <ul>
+        <li>The performance of the GPU-accelerated JPEG2000 coding may vary depending 
+          on the current usage of graphics card resources, and the drivers from 
+          vendor</li>
+        <li>Large video memory preferred, or it may be unable to create the necessary 
+          textures. In case of problem, please switch to software mode using the 
+          -O nogpu (or -o nogpu if decoding a .jpc file).</li>
+      </ul>
+      <p><font color="#FFFFFF"><em>JPEG2000 Viewer</em></font></p>
+      <ul>
+        <li>You can use the JasPer image viewer jiv.exe to view the .jpc files</li>
+        <li>You can also download the Irfanview software for viewing jpc files 
+          at <a href="http://www.irfanview.com/" target="_blank">http://www.irfanview.com/</a></li>
+      </ul>
+      <p><font color="#FFFFFF"><em><a name="gpudwt"></a><br>
+        </em></font></p></TD>
+  </TR>
+  <TR> 
+    <TD COLSPAN=8> <IMG SRC="images/index_20.gif" WIDTH=770 HEIGHT=27 ALT=""></TD>
+  </TR>
+  <TR> 
+    <TD height="174" COLSPAN=8 bgcolor="#000000"> <p class="content"><font color="#FFFFFF"><em>Version 
+        : 1.0 (Released on 18 July 2006)</em></font></p>
+      <p class="content"><font color="#FFFFFF"><em>System Requirement</em></font><br>
+        <br>
+        Hardware: Pentium III or above, 128MB RAM, installed with graphics boards 
+        including nVidia GeForce FX, Quadro FX or above (large video RAM preferred)<br>
+        OS: Windows 2000/XP, with OpenGL 1.4 </p>
+      <p class="content"><font color="#FFFFFF"><em>Installation Instructions (source 
+        code)</em></font></p>
+      <ol>
+        <li class="content">Download the zip file and extract to a directory, 
+          e.g. c:\jasper</li>
+        <li class="content"> Start demo.dsw project file with Visual C++ </li>
+        <li class="content"> Compile and run the executable demo.exe</li>
+      </ol>
+      <p class="content"><font color="#FFFFFF"><em>C++ Class API:</em></font></p>
+      <blockquote> 
+        <p class="content"><span class="content">// DWT transform, suitable for 
+          tasks that only do forward or inverse DWT once<br>
+          // detail information about the parameters please see comment inside 
+          the cpp file</span><br>
+          <font color="#FFFFFF"> bool dwtallinone(extmode mode, int imagewidth, 
+          int imageheight, float* imagebuffer, int level, bool isforward, bool 
+          initGL, bool initGLEW);<br>
+          bool dwtallinone(extmode mode, int imagewidth, int imageheight, float* 
+          imagebuffer, int beg_level, int end_level, bool isforward, bool initGL, 
+          bool initGLEW);</font></p>
+        <p class="content">// initialize and feed in the buffer, both forward 
+          and inverse dwt are available for call after return<br>
+          <font color="#FFFFFF">bool initialize(extmode mode, int imagewidth, 
+          int imageheight, float* imagebuffer, bool initGL, bool initGLEW);</font></p>
+        <p class="content"> //render input image data to texture<br>
+          <font color="#FFFFFF">bool createImgTex( float *imgbuffer); </font></p>
+        <p class="content"> // the forward and inverse dwt function<br>
+          <font color="#FFFFFF">bool forwarddwt(int level);<br>
+          bool inversedwt(int level);</font><br>
+          <br>
+          // retrieve the transformed buffer back<br>
+          <font color="#FFFFFF">void getbuffer(float *myfloatbuffer); </font><a name="video"></a></p>
+      </blockquote></ul>
+      <span class="content"><font color="#FFFFFF"><em>Example Usage<br>
+      </em></font> </span>
+        <p><span class="content">There are<font color="#0000FF" size="4"> <strong>2</strong></font> 
+          major ways to use this class. </span> 
+        <ol>
+          <li class="content"><span class="content">For those who need to 
+            do either forward or inverse DWT  only once. You only need to call
+            the function <font color="#FFFFFF"> 
+            dwtallinone() </font> that handles everything and performs
+            flexible levels of transform on your data. (Please note that levels 
+            start from 0, i.e. level 0 transform gives you 4 subbands, and level 
+            1 will further process on the LL subband of level 0)<br>
+            <br>
+            e.g. do 2 levels of forward DWT to the imgbuffer<br>
+            <br>
+            <font color="#FFFFFF">imgbuffer=(float*)malloc(imgwidth*imgheight*3*sizeof(float));<br>
+            <br>
+            CDwtObj * mydwtobj = new CDwtObj;</font></span> <font color="#FFFFFF"><br>
+            mydwtobj-&gt;dwtallinone(symper,imgwidth,imgheight,imgbuffer,2,true,true,true); 
+            <br>
+            delete mydwtobj;<span class="content"> </span></font><span class="content"><br>
+            <br>
+            <br>
+            </span></li>
+          <li class="content">For those who need to get more control 
+            of the tranform process and <span class="content">do some processing 
+            to the data in the wavelet domain. Please use <font color="#FFFFFF">initialize(), 
+            forwarddwt(), inversedwt(), createImgTex()</font> and <font
+           color="#FFFFFF">getbuffer()</font>.<br>
+            <font color="#FFFFFF"><br>
+            </font>e.g. data processing in the wavelet domain<font color="#FFFFFF"> 
+            <br>
+            <br>
+            imgbuffer=(float*)malloc(imgwidth*imgheight*3*sizeof(float));<br>
+            CDwtObj *mydwtobj=new CDwtObj;<br>
+            ......<br>
+            <br>
+            mydwtobj-&gt;initialize(symper,imgwidth,imgheight,imgbuffer,false,true);<br>
+            mydwtobj-&gt;forwarddwt(0);<br>
+            mydwtobj-&gt;forwarddwt(1);<br>
+            mydwtobj-&gt;getbuffer(imgbuffer);</font></span> <span class="content"> 
+            <br>
+            <font color="#FFFFFF"> <br>
+            </font>// do my processing to imgbuffer in the wavelet domain<font color="#FFFFFF"><br>
+            ......<br>
+            <br>
+            </font>// reinput the updated buffer <font color="#FFFFFF"><br>
+            mydwtobj-&gt;createImgTex(imgbuffer); <br>
+            <br>
+            </font>// inverse transform back <font color="#FFFFFF"><br>
+            mydwtobj-&gt;inverse_dwt(1);<br>
+            mydwtobj-&gt;inverse_dwt(0);<br>
+            mydwtobj-&gt;getbuffer(imgbuffer); <br>
+            <br>
+            delete mydwtobj;</font> </span></li>
+        </ol>
+        </p> </TD>
+  </TR>
+  <TR> 
+    <TD COLSPAN=8> <IMG SRC="images/index_22.gif" WIDTH=770 HEIGHT=24 ALT=""></TD>
+  </TR>
+  <TR> 
+    <TD COLSPAN=8> <IMG SRC="images/index_23.gif" WIDTH=770 HEIGHT=167 ALT=""></TD>
+  </TR>
+  <TR> 
+    <TD COLSPAN=8> <IMG SRC="images/index_24.gif" ALT="" WIDTH=770 HEIGHT=188 border="0" usemap="#Map2"></TD>
+  </TR>
+  <TR> 
+    <TD COLSPAN=8> <IMG SRC="images/index_25.gif" WIDTH=770 HEIGHT=28 ALT=""></TD>
+  </TR>
+  <TR> 
+    <TD height="25" COLSPAN=8 class="mylink"> <div align="center"> 
+        <p align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+          <span class="mylink"><font color="#FFFFFF">&nbsp;<a href="images/starry.swf" target="_blank">&lt; 
+          Stylish Image Processing &gt;</a> &nbsp;&nbsp;<a name="contact"></a> 
+          &nbsp;&nbsp;<a href="images/thwall.swf" target="_blank">&lt;Illumination 
+          - Texture Decoupling&gt;</a></font></span></p>
+        <p align="left">&nbsp;</p>
+      </div></TD>
+  </TR>
+
+
+  <TR> 
+    <TD COLSPAN=8> 
+      <div align="left" class="content">&nbsp; &nbsp;<img src="images/publication.gif" width="770" ></div></TD>
+  </TR>
+  <TR>
+    <TD height="13" COLSPAN=8 class="content"><p>
+ <blockquote><p>
+<ul> 
+<li>"<a href="/papers/dwtgpu/dwtgpu.html">
+Discrete Wavelet Transform on Consumer-Level Graphics Hardware</a>",<br>
+T. T. Wong, C. S. Leung, P. A. Heng and J. Wang,<br>
+<i>IEEE Transactions on Multimedia</i>,
+Vol. 9, No. 3, April 2007, pp. 668-673.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+<p>
+<li>"<u>Discrete Wavelet Transform on GPU</u>",<br>
+J. Wang, T. T. Wong, P. A. Heng and C. S. Leung,<br>
+in <i>Proceedings of ACM Workshop on General Purpose Computing on Graphics Processors</i>,
+Los Angeles, USA, August 2004, pp. C-41.<p>
+
+
+
+<!----------------------------------------------------------------------------------------------------->
+<p>
+</ul>
+</blockquote>
+      </TD>
+  </TR>
+
+
+
+  <TR> 
+    <TD height="20" COLSPAN=8> 
+      <div align="left" class="content">&nbsp; &nbsp;<img src="images/contact.gif" width="770" height="28"></div></TD>
+  </TR>
+  <TR>
+    <TD height="13" COLSPAN=8 class="content"><p>
+ <blockquote><p>
+      Please send any bug report to 
+         <a href="mailto:jqwang@cse.cuhk.edu.hk">Jianqing Wang</a><p>
+      For other queries, please contact
+         <a href="mailto:ttwong@cse.cuhk.edu.hk">Tien-Tsin Wong</a><p>
+      </p>
+</blockquote>
+      </TD>
+  </TR>
+  <TR>
+    <TD height="25" COLSPAN=8><div align="center" class="content"><font color="#FFFFFF"> 
+    <a href="/~ttwong/">Home</a></font></div></TD>
+  </TR>
+  <TR>
+    <TD height="25" COLSPAN=8><div align="center" class="content"><font color="#FFFFFF">2004 
+        &copy; The Chinese Univeristy of Hong Kong</font></div></TD>
+  </TR>
+  <TR> 
+    <TD> <IMG SRC="images/spacer.gif" WIDTH=21 HEIGHT=1 ALT=""></TD>
+    <TD> <IMG SRC="images/spacer.gif" WIDTH=16 HEIGHT=1 ALT=""></TD>
+    <TD> <IMG SRC="images/spacer.gif" WIDTH=289 HEIGHT=1 ALT=""></TD>
+    <TD> <IMG SRC="images/spacer.gif" WIDTH=13 HEIGHT=1 ALT=""></TD>
+    <TD> <IMG SRC="images/spacer.gif" WIDTH=374 HEIGHT=1 ALT=""></TD>
+    <TD> <IMG SRC="images/spacer.gif" WIDTH=24 HEIGHT=1 ALT=""></TD>
+    <TD> <IMG SRC="images/spacer.gif" WIDTH=13 HEIGHT=1 ALT=""></TD>
+    <TD> <IMG SRC="images/spacer.gif" WIDTH=20 HEIGHT=1 ALT=""></TD>
+  </TR>
+</TABLE>
+<!-- End ImageReady Slices -->
+<map name="Map">
+  <area shape="rect" coords="76,7,142,26" href="#feature">
+  <area shape="rect" coords="152,8,226,25" href="#feature">
+  <area shape="rect" coords="232,5,474,25" href="#jasper">
+  <area shape="rect" coords="600,6,682,23" href="#video">
+  <area shape="rect" coords="692,6,753,24" href="#contact">
+  <area shape="rect" coords="483,1,594,24" href="#gpudwt">
+  <area shape="rect" coords="13,6,65,25" href="#intro">
+</map>
+<map name="Map2">
+  <area shape="rect" coords="4,4,374,185" href="images/thwall.swf" target="_blank" alt="Animation of Illumination - Texture Decoupling">
+  <area shape="rect" coords="382,4,759,186" href="images/starry.swf" target="_blank" alt="Animation of Stylish Image Processing">
+</map>
+<map name="Map3">
+  <area shape="rect" coords="318,79,405,99" href="www.rendercat.com" target="_blank">
+  <area shape="rect" coords="415,80,496,98" href="http://www.cse.cuhk.edu.hk/%7Ettwong" target="_blank">
+  <area shape="rect" coords="503,78,591,98" href="http://www.cse.cuhk.edu.hk/%7Epheng" target="_blank">
+  <area shape="rect" coords="605,79,686,98" href="http://www.ee.cityu.edu.hk/%7Ecsleung" target="_blank">
+</map>
+</BODY>
+</HTML>

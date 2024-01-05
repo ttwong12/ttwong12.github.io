@@ -1,0 +1,200 @@
+<html>
+<title>
+toon demo version 1.0
+</title>
+<body background="/icon/desktop.jpg">
+
+
+<blockquote>
+<center><table border=0>
+<tr><td>
+<img src="itoon.jpg">
+</td><td width=30></td><td width=600>
+<h2>toon demo version 1.0</h2>
+<p>
+Program code contributors:<br>
+<blockquote>
+ Ping-Hay Lai<br>
+ Yiu-Kei Cheung<br>
+<!--#include virtual="./papers/_author/ttwong.html"--><br>
+<!--#include virtual="./papers/_author/wmpang1.html"--><br>
+</blockquote>
+</td></tr>
+</table></center>
+
+
+<DIV ALIGN = JUSTIFY>	
+<h3>Introduction</h3> 
+<dl><dd>
+<dd> 
+
+This program demonstrates the ability to render <b>cartoon style images from
+3D geometric models</b> in <b>real-time on commodity PC</b>. It uses the
+shader programmability of the current graphics accelerators to shade object
+and draw cartoon-style edges. Unfortunately, the current development (Nov
+2002) of shader graphics hardware is still very limited and not yet
+standardized. This program is an attempt to utilize such limited platform to
+achieve one kind of non-photorealistic rendering. All codes are now
+implemented on top of nVidia extension of OpenGL (vertex shader, texture
+shader and register combiner).
+<p>
+This demo also allows you to load <b>your own model</b> (Alias|Wavefront .obj format
+only) and shade it in a cartoon style. You may freely use it as a tool for
+illustration purpose.
+</dl>
+</dl>
+
+
+
+<h3>System Requirement</h3>
+
+<dl>
+<dd>Hardware: GeForce 3 or above, Pentium III or above, 128MB RAM
+<dd>OS: Windows 98/NT/2000
+<dd>Software: installed with nVidia extension for OpenGL, there should NOT
+be nv30 installed<br> (There seems to have a compatibility problem between
+nv30 and the development platform we used)
+</dl>
+
+
+<h3>Installation Instruction</h3> 
+
+<dl>
+<dd>
+(1) Download the InstallShield of toon demo 1.0, 
+    <b><a href="toon-demo-1.0-install.zip">
+    toon-demo-1.0-install.zip</a></b>, <br>
+(2) Extract the files and run "setup.exe"
+</dl>
+
+<dl>
+<DIV ALIGN = JUSTIFY>	
+<dd> 
+<b>Note</b>: 
+   <dl><dd>
+   To execute the demo, Windows 2000/XP users have to change
+   path to the install path to start the demo in command line.
+   This is because the InstallShield cannot successfully set the working 
+   path for Windows 2000/XP.
+   </dl>
+</dl>
+
+
+
+
+
+
+    
+</dl>
+</dl>
+
+
+<h3>User Manual</h3> 
+<dl><dd>
+
+<script language="JavaScript">
+//<!--
+function Restoredescript()
+{
+document.desform.desArea.value = "";
+}
+
+function showdescript(index)
+{
+
+	var description = "";
+
+		switch ( index  )
+		{
+			case 1 : 
+				description = 
+"Select Object: (Hot-key [1-7])\nRight-click to pop-up the menu.\nSelect the object to render. There can be altogether 7 objects in memory.\n";
+			break
+			case 2 :
+				description = 
+"Load Object: (Hot-key [f])\nRight-click to pop-up the menu.\nThis option allows user to load an object (Alias|Wavefront .obj format) into the current object slot (except object slot #1). It pops up the file-open dialog box.";
+			break
+			case 3 :
+				description = 
+"Toon Shade Mode: (Hot-key [z])\nRight-click to pop-up the menu.\nDefault edge drawing mode (toon shading + edge). If the drawing mode is switched to soften mode, user can select this option to switch back to edge drawing mode.";
+			break
+			case 4 :
+				description = 
+"Soften Mode: (Hot-key [x])\nRight-click to pop-up the menu.\nSwitch to soften mode. The image is soften and no edge is drawn.";
+			break
+			case 5 :
+				description = 
+"Edge Thickness Toggle: (Hot-key [t])\nRight-click to pop-up the menu.\nChange the edge thickness. Toggle between thin and thick edge.";
+			break
+			case 6 :
+				description = 
+"Edge-Only Mode Toggle: (Hot-key [e])\nRight-click to pop-up the menu.\nSwitch to edge-only mode. No toon shading. Only edges are drawn.";
+			break
+			case 7:
+				description = 
+"Edge Color Lighter: (Hot-key [+])\nRight-click to pop-up the menu.\nIncrease the intensity of edge.";
+			break
+			case 8:
+				description = 
+"Edge Color Darker: (Hot-key [-])\nRight-click to pop-up the menu.\nDecrease the intensity of edge.";
+			break
+			case 9:
+				description = 
+"Toon Image:\nThe toon-shaded object is drawn here.\nYou can click-drag the left mouse button to rotate the object. Frame rate and object index are shown at the top-left corner. ";
+			break
+
+
+
+		}		
+		
+		document.desform.desArea.value = description;
+}
+
+//-->
+</script>
+<map name="ViewerArea">
+<area shape="rect" alt="Select Object" coords="220,141,340,238" href="toon.html" title="Select Object" onMouseOver="showdescript(1);return false;" onMouseOut="Restoredescript()">
+<area shape="rect" alt="Load Object" coords="220,239,340,252" href="toon.html" title="Load Object" onMouseOver="showdescript(2);return false;" onMouseOut="Restoredescript()">
+<area shape="rect" alt="Draw Edge" coords="220,253,340,267" href="toon.html" title="Draw Edge " onMouseOver="showdescript(3);return false;" onMouseOut="Restoredescript()">
+<area shape="rect" alt="Soften Image" coords="220,268,340,280" href="toon.html" title="Soften Image" onMouseOver="showdescript(4);return false;" onMouseOut="Restoredescript()">
+<area shape="rect" alt="Toggle Edge Thickness " coords="220,281,340,294" href="toon.html" title="Toggle Edge Thickness" onMouseOver="showdescript(5);return false;" onMouseOut="Restoredescript()">
+<area shape="rect" alt="Edge-Only Mode Toggle" coords="220,295,340,308" href="toon.html" title="Edge-Only Mode Toggle" onMouseOver="showdescript(6);return false;" onMouseOut="Restoredescript()">
+<area shape="rect" alt="Edge Color Lighter" coords="220,309,340,322" href="toon.html" title="Edge Color Lighter" onMouseOver="showdescript(7);return false;" onMouseOut="Restoredescript()">
+<area shape="rect" alt="Edge Color Darker" coords="220,322,340,337" href="toon.html" title="Edge Color Darker" onMouseOver="showdescript(8);return false;" onMouseOut="Restoredescript()">
+<area shape="rect" alt="Toon Image" coords="1,19,345,347" href="toon.html" title="Toon Image" onMouseOver="showdescript(9);return false;" onMouseOut="Restoredescript()">
+</map>
+
+
+<center>
+<table>
+<tr>
+<td>
+<img src="toon-interface.jpg" USEMAP="#ViewerArea" border=0>
+</td><td>
+</tr>
+</table>
+
+<h4> Instructions: (Move the mouse cursor over the above interface to see
+the function of each widget)</h4>
+
+<form name="desform"> 
+<textarea name="desArea" cols=60 rows=6 disabled WRAP="virtual">
+</textarea> 
+</form> 
+</center>
+
+</dl>
+
+
+
+
+
+<h3>Contact Person</h3> 
+<dl><dd>
+<!--#include virtual="./papers/_author/ttwong.html"-->
+(<A HREF="mailto:ttwong@acm.org">ttwong@acm.org</A>)
+</dl>
+
+
+
+</blockquote>
