@@ -266,10 +266,8 @@ the control of dynamics, we design a more explicit way to specify the dynamics a
 
 Video stylization converts a given video into the desired style or effect. 
 Existing text-to-image diffusion models offer a convenient and high-quality
-style transfer for still picture by just typing a text prompt.  However,
-extending to video is challenging to preserve the
-temporal consistency (consistency of visual content in all
-scales),  high degree of visual detail, and sharpness. By assigning a
+style transfer for still picture by just typing a text prompt. This work utilizes an image 
+diffusion model (instead of a video one) to stylize a video. By assigning a
 diffusion process for each frame and sychronized among them, we are able to
 synthesize temporal consistent in all visual scales, rich detailed, and
 sharp video stylization.
